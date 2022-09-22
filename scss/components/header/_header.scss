@@ -6,11 +6,7 @@
   @include flex-center-column;
   @include w100;
   z-index: 100;
-  height: size(112);
-
-  @include breakpoint(tab992) {
-    height: size(104);
-  }
+  height: size(104);
   
   &-content {
     @include flex-column;
@@ -210,25 +206,29 @@
     }
   }
   
-  &-bottom {
-    @include flex-center;
-    text-align: center;
-    height: size(48);
-    text-align: center;
+  &-offer {
+    @include w100;
 
-    @include breakpoint(tab992) {
+    &-content {
+      @include flex-center;
+      @include w100;
       height: size(40);
-    }
+      text-align: center;
 
-    .offer-text {
-      @include font($primaryFont, 12, normal, normal, 15.6);
-  
-      @include breakpoint(mobile768) {
-        font-size: size(14);
-      }
-  
-      @include breakpoint(tab992) {
-        font-size: size(16);
+      .offertext {
+        @include font($primaryFont, 12, normal, normal, 15.6);
+    
+        @include breakpoint(mobile768) {
+          font-size: size(14);
+        }
+    
+        @include breakpoint(tab992) {
+          font-size: size(16);
+        }
+
+        .offercode {
+          font-weight: 600;
+        }
       }
     }
   }

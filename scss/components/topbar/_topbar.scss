@@ -3,11 +3,15 @@
 
 .topbar {
   background: $primaryLight;
-  height: size(40);
   display: none;
 
   @include breakpoint(tab992) {
+    display: block;
+  }
+
+  &-content {
     @include flex-center;
+    height: size(40);
   }
 
   &-text {
