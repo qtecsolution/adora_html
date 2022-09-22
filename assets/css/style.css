@@ -1451,7 +1451,7 @@ button:focus,
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #fcf6f3;
+  background: #fbf2ef;
 }
 .preloader .loader-box {
   height: 1.875rem;
