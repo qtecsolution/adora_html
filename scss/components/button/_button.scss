@@ -1,0 +1,87 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+button, 
+[type='button'], 
+[type='reset'], 
+[type='submit'] {
+  cursor: pointer;
+  border: none;
+  @include transparent-button;
+  opacity: 1;
+  margin: 0;
+  padding: 0;
+
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.btn-appointment {
+  width: size(91);
+  height: size(36);
+  @include radius(4);
+  @include setBgColor($primary, $headingText);
+  @include flex-center;
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor(darken($primary, 10%), $white);
+  }
+}
+
+.btn-booking {
+  width: size(204);
+  height: size(54);
+  @include radius(4);
+  @include setBgColor($primary, $black);
+  @include font($primaryFont, 16, normal, normal, 22.4);
+  text-align: center;
+  position: relative;
+  @include flex-center;
+  @include transitionsall;
+
+  @include breakpoint(tab992) {
+    font-size: size(19);
+  }
+
+  @include breakpoint(desktop1200) {
+    font-size: size(21);
+  }
+
+  .btnbox {
+    position: absolute;
+    left: size(20);
+    right: size(20);
+    top: auto;
+    bottom: size(-13.5);
+    background: $primary;
+    filter: blur(size(27.5));
+    width: size(164);
+    height: size(27);
+    z-index: 10;
+  }
+
+  @include hover {
+    background: darken($primary, 10%);
+    color: $white;
+  }
+}
+
+.btn-bookappointment {
+  @include setBgColor(transparent, $headingText);
+  @include border(solid, 0.5, $primaryText);
+  @include radius(4);
+  width: size(244);
+  height: size(44);
+  @include flex-center;
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor($headingText, $white);
+    border-color: $headingText;
+  }
+}

@@ -1,0 +1,54 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+/**======= HOME-BANNER =======**/
+.home-banner {
+  position: relative;
+  min-height: 60vh;
+
+  @include breakpoint(tab992) {
+    height: calc(100vh - size(144));
+  }
+}
+
+
+/**======= TOP-RATED =======**/
+.toprated {
+  padding: size(64) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(112) size(0);
+  }
+
+  &-info {
+    @include flex-column;
+    gap: size(24);
+
+    @include breakpoint(tab992) {
+      gap: size(40);
+    }
+  }
+}
+
+
+/**======= BOOK-APPOINTMENT =======**/
+.bookappointment {
+  background: $sectionbg;
+  padding: size(64) size(0);
+  
+  @include breakpoint(tab992) {
+    padding: size(96) size(0);
+  }
+}
+
+
+/**======= HOME-FEATURED =======**/
+.featured {
+  padding: size(64) size(0);
+  
+  @include breakpoint(tab992) {
+    padding: size(96) size(0);
+  }
+
+  
+}

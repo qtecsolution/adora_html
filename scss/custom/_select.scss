@@ -1,0 +1,108 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.customselect {
+	@include w100;
+
+	.selector {
+		position: relative;
+		cursor: pointer;
+		z-index: 1;
+
+		.selected {
+			background: $white;
+			// @include border(solid, 1, $checkborder);
+			@include radius(8);
+			@include flex-center-between;
+			// gap: size(8);
+			padding: size(8) size(12);
+			min-width: size(104);
+	
+			.label {
+				width: calc(100% - size(16));
+				// color: $textPrimary;
+				// @include font($primaryFont, 14, medium, normal, 20);
+				letter-spacing: size(0.04);
+
+				&::selection {
+					color: inherit;
+					background: transparent;
+				}
+	
+				span {
+					color: inherit;
+					font: inherit;
+
+					&::selection {
+						color: inherit;
+						background: transparent;
+					}
+				}
+			}
+	
+			.arrow {
+				transform: rotateZ(0deg);
+				transition-duration: 0.3s;
+				transition-timing-function: cubic-bezier(.59,1.39,.37,1.01);
+				width: size(16);
+				@include flex-center;
+	
+				.icon {
+					width: size(11);
+					height: size(6);
+					@include flex-center;
+					overflow: hidden;
+					margin-top: size(-3);
+	
+					svg {
+						@include wh100;
+					}
+				}
+	
+				&.expanded {
+					transform: rotateZ(180deg);
+
+					.icon {
+						margin-top: size(3);
+					}
+				}
+			}
+		}
+	}
+
+	ul {
+		width: 100%;
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+		position: absolute;
+		z-index: 1;
+		// @include setBgColor($white, $textPrimary);
+		// @include border(solid, 1, $checkborder);
+		@include radius(8);
+		letter-spacing: size(0.04);
+
+		li {
+			color: inherit;
+			// @include font($primaryFont, 14, normal, normal, 20);
+			cursor: pointer;
+			padding: size(8) size(12);
+			
+			@include hover {
+				@include setBgColor($primary, $white);
+			}
+		}
+	}
+
+	.current {
+		// background: darken($bodybg, 3%);
+	}
+
+	.hidden {
+		visibility: hidden;
+	}
+
+	.visible {
+		visibility: visible;
+	}
+}
