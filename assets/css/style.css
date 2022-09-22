@@ -1451,7 +1451,7 @@ button:focus,
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: hsl(0deg, 0%, 100%);
+  background: #fcf6f3;
 }
 .preloader .loader-box {
   height: 1.875rem;
@@ -1467,7 +1467,7 @@ button:focus,
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #f6e3da;
+  background: #f1d3c6;
   color: #e1a389;
   text-align: center;
   font-size: 1.25rem;
@@ -1500,9 +1500,9 @@ button:focus,
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   }
   to {
-    transform: scale(1.5) translateY(-24px) rotateX(45deg);
-    box-shadow: 0 1.5rem 2.5rem #f1d3c6;
     background: #f6e3da;
+    box-shadow: 0 1.5rem 2.5rem #f1d3c6;
+    transform: scale(1.5) translateY(-1.5rem) rotateX(45deg);
   }
 }
 @keyframes movement {
@@ -1511,9 +1511,9 @@ button:focus,
     box-shadow: 0 0 0 rgba(0, 0, 0, 0);
   }
   to {
-    transform: scale(1.5) translateY(-24px) rotateX(45deg);
-    box-shadow: 0 1.5rem 2.5rem #f1d3c6;
     background: #f6e3da;
+    box-shadow: 0 1.5rem 2.5rem #f1d3c6;
+    transform: scale(1.5) translateY(-1.5rem) rotateX(45deg);
   }
 }
 

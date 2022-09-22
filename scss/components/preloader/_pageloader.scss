@@ -7,7 +7,8 @@
   height: 100vh;
   z-index: 99999;
   @include flex-center;
-  background-color: $white;
+  // background: $white;
+  background: lighten($primary, 16%);
 
   .loader {
     &-box {
@@ -20,7 +21,7 @@
         @include square(30);
         @include flex-center;
         // @include setBgColor(darken($primary, 10%), $white);
-        @include setBgColor(lighten($primary, 10%), darken($primary, 10%));
+        @include setBgColor(lighten($primary, 5%), darken($primary, 10%));
         text-align: center;
         font-size: size(20);
         text-transform: uppercase;
@@ -52,9 +53,9 @@
             box-shadow: 0 0 0 rgba(0, 0, 0, 0);
           }
           to {
-            transform: scale(1.5) translateY(-24px) rotateX(45deg);
-            box-shadow: 0 size(24) size(40) lighten($primary, 5%);
             background: lighten($primary, 10%);
+            box-shadow: 0 size(24) size(40) lighten($primary, 5%);
+            @include transform(scale(1.5) translateY(size(-24)) rotateX(45deg));
           }
         }
       }
