@@ -27,8 +27,14 @@
 
   &-top {
     .footerinfo {
-      @include flex-column;
+      @include flex-center-column;
       gap: size(16);
+      text-align: center;
+
+      @include breakpoint(tab992) {
+        align-items: flex-start;
+        text-align: left;
+      }
       
       .footlogo {
         width: size(130);
@@ -138,7 +144,7 @@
     &-body {
       .footerlist {
         @include list-vertical;
-        gap: size(5);
+        gap: size(8);
 
         &-link {
           color: $primaryText;
@@ -179,6 +185,15 @@
             }
           }
         }
+      }
+    }
+
+    &.booking {
+      text-align: center;
+
+      @include breakpoint(tab992) {
+        align-items: flex-start;
+        text-align: left;
       }
     }
   }

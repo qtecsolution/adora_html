@@ -3,14 +3,79 @@
 
 .offcanvas {
 
+  &.offcanvas-top {
+    border-bottom: 0;
+    height: 100vh;
+
+    .offcanvas-header {
+      height: size(48);
+    }
+
+    .offcanvas-body {
+      
+    }
+
+    .offcanvas-footer {
+      @include double-radius(bottom, left, 8, bottom, right, 8);
+      overflow: hidden;
+
+      .logout {
+        background: $primary;
+        @include flex-center-vert;
+        gap: size(8);
+        padding: size(10) size(16);
+
+        .icon {
+          @include square(20);
+          @include flex-center;
+
+          svg {
+            @include wh100;
+          }
+        }
+
+        .title {
+          color: $headingText;
+          @include font($primaryFont, 13, light, normal, 18);
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+
+  &.offcanvas-bottom {
+    border-top: 0;
+  }
+
   &.offcanvas-start {
     border-right: 0;
-    width: size(280);
+  }
+
+  &.offcanvas-end {
+    border-left: 0;
+  }
+
+  &.offcanvas-start {
+    border-right: 0;
+    @include w100;
+
+    @include breakpoint(mobile576) {
+      width: size(280);
+    }
   }
 
   &-header {
     .logo {
-      width: size(110);
+      width: size(100);
+      height: size(24);
+      @include flex-center;
+      overflow: hidden;
+      margin-left: 0;
+
+      img {
+        @include wh100;
+        object-fit: contain;
+      }
     }
 
     .btn-close {
@@ -32,7 +97,7 @@
 
         svg {
           path {
-            stroke: rgba($white, .8);
+            stroke: $danger;
           }
         }
       }
@@ -40,6 +105,111 @@
   }
 
   &-body {
+
+    .mobilelist {
+      @include list-vertical;
+
+      &-link {
+        display: inline-block;
+        @include w100;
+        padding: size(10) size(16);
+        @include setBgColor($white, $headingText);
+        @include border-single(bottom, solid, 1, $linkborder);
+        @include font($primaryFont, 13, light, normal, 18);
+        text-transform: uppercase;
+
+        &.active {
+          @include setBgColor($primaryLight, $headingText);
+        }
+
+        &:hover:not(.active) {
+          @include setBgColor($primaryLight, $headingText);
+        }
+      }
+
+      .accordion {
+        border: none;
+        border-radius: 0;
+        @include border-single(bottom, solid, 1, $linkborder);
+
+        &-item {
+          border: none;
+
+          &:first-of-type {
+            border-top-left-radius: 0;
+            border-top-right-radius: 0;
+            .accordion-button {
+              border-top-left-radius: 0;
+              border-top-right-radius: 0;
+            }
+          }
+
+          &:last-of-type {
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
+            .accordion-button {
+              border-bottom-left-radius: 0;
+              border-bottom-right-radius: 0;
+            }
+          }
+        }
+
+        &-button {
+          @include font($primaryFont, 13, light, normal, 18);
+          text-transform: uppercase;
+          padding: size(10) size(16);
+
+          &:not(.collapsed) {
+            box-shadow: none;
+            @include setBgColor($white, $headingText);
+            @include border-single(bottom, solid, 1, $linkborder);
+
+            &::after {
+              background-image: var(--bs-accordion-btn-icon);
+            }
+          }
+
+          &:focus {
+            border-color: $linkborder;
+          }
+        }
+
+        &-body {
+          @include flex-column;
+          gap: size(8);
+
+          .sublink {
+            color: $headingText;
+            @include font($primaryFont, 13, light, normal, 18);
+            text-transform: uppercase;
+            @include transitionscolor;
+
+            @include hover {
+              color: darken($primary, 20%);
+            }
+          }
+        }
+
+        &.active {
+          border-color: $primaryLight;
+
+          .accordion-button {
+            @include setBgColor($primaryLight, $headingText);
+            border-color: $primaryLight;
+          }
+        }
+
+        &:hover:not(.active) {
+          border-color: $primaryLight;
+          
+          .accordion-button {
+            @include setBgColor($primaryLight, $headingText);
+            border-color: $primaryLight;
+          }
+        }
+      }
+    }
+
 
 		&::-webkit-scrollbar {
 			background: transparent;

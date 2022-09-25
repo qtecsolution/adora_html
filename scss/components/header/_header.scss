@@ -19,7 +19,7 @@
     @include w100;
     @include flex-center-vert;
 
-    &-content {
+    .navigation {
       @include flex-center-between;
     }
 
@@ -46,7 +46,7 @@
         @include hover {
           svg {
             path {
-              stroke: $primary;
+              fill: $primary;
             }
           }
         }
@@ -58,10 +58,12 @@
       height: size(24);
       @include flex-center;
       overflow: hidden;
+      margin-left: size(20);
 
       @include breakpoint(tab992) {
         width: size(130);
         height: size(32);
+        margin-left: size(0);
       }
 
       img {
@@ -69,107 +71,109 @@
         object-fit: contain;
       }
     }
-
-    .desktopmenu {
+    
+    .desktoplist {
       display: none;
+      position: relative;
 
       @include breakpoint(tab992) {
-        display: block;
+        @include list-horizontal;
       }
 
-      .desktoplist {
-        @include list-horizontal;
-        position: relative;
+      @include breakpoint(desktop1400) {
+        gap: size(20);
+      }
 
-        @include breakpoint(desktop1400) {
-          gap: size(20);
+      &-link {
+        color: $primaryText;
+        @include font($primaryFont, 14, normal, normal, 14);
+        @include flex-center-vert;
+        gap: size(6);
+        @include transitionsall;
+        text-transform: uppercase;
+
+        .icon {
+          @include flex-center;
+          @include square(15);
         }
 
-        &-link {
-          @include flex-center-vert;
-          gap: size(6);
-          @include transitionsall;
+        .text {
+          color: inherit;
+          font: inherit;
+        }
 
-          .icon {
-            @include flex-center;
-            @include square(15);
-          }
+        &.active {
+          color: $headingText;
 
           .text {
+            color: inherit;
+          }
+
+          .icon {
+            svg {
+              path {
+                stroke: $headingText;
+              }
+            }
+          }
+        }
+
+        &:hover:not(.active) {
+          color: $headingText;
+
+          .text {
+            color:inherit;
+          }
+
+          .icon {
+            svg {
+              path {
+                stroke: $headingText;
+              }
+            }
+          }
+        }
+      }
+
+      &-item {
+        height: size(64);
+        @include flex-center;
+        padding: size(0) size(20);
+        cursor: pointer;
+        position: relative;
+
+        @include hover {
+          .subdropdown {
+            display: block;
+          }
+        }
+      }
+
+      .subdropdown {
+        background: $white;
+        position: absolute;
+        top: 100%;
+        min-width: size(180);
+        @include border-single(top, solid, 2, darken($primary, 25%));
+        display: none;
+        @extend %animation;
+        @extend %slideUpIn;
+
+        .submenu {
+          @include list-vertical;
+
+          &-link {
             color: $primaryText;
-            @include font($primaryFont, 14, normal, normal, 14);
+            display: inline-block;
+            @include font($primaryFont, 12, normal, normal, 12);
+            padding: size(14) size(16);
+            @include w100;
             text-transform: uppercase;
-          }
+            @include transitionscolor;
 
-          &.router-link-active {
-            .text {
-              color: $headingText;
-            }
-
-            .icon {
-              svg {
-                path {
-                  stroke: $headingText;
-                }
-              }
-            }
-          }
-
-          &:hover:not(.router-link-active) {
-            .text {
-              color: $headingText;
-            }
-
-            .icon {
-              svg {
-                path {
-                  stroke: $headingText;
-                }
-              }
-            }
-          }
-        }
-
-        &-item {
-          height: size(64);
-          @include flex-center;
-          padding: size(0) size(20);
-          cursor: pointer;
-          position: relative;
-
-          @include hover {
-            .subdropdown {
-              display: block;
-            }
-          }
-        }
-
-        .subdropdown {
-          background: $white;
-          position: absolute;
-          top: 100%;
-          min-width: size(180);
-          @include border-single(top, solid, 2, darken($primary, 25%));
-          display: none;
-          @extend %animation;
-          @extend %slideUpIn;
-
-          .submenu {
-            @include list-vertical;
-
-            &-link {
-              color: $primaryText;
-              display: inline-block;
-              @include font($primaryFont, 12, normal, normal, 12);
-              padding: size(14) size(16);
-              @include w100;
-              text-transform: uppercase;
-              @include transitionscolor;
-
-              @include hover {
-                @include setBgColor(darken($primary, 10%), $headingText);
-                @include setBgColor($primary, $headingText);
-              }
+            @include hover {
+              @include setBgColor(darken($primary, 10%), $headingText);
+              @include setBgColor($primary, $headingText);
             }
           }
         }
@@ -177,8 +181,41 @@
     }
 
     .authmenu {
-      @include flex-center-vert;
-      gap: size(40);
+      @include list-horizontal;
+      gap: size(8);
+      position: relative;
+
+      @include breakpoint(tab992) {
+        gap: size(40);
+      }
+
+      .authitem {
+        @include flex-center-vert;
+
+        @include breakpoint(tab992) {
+          display: none;
+        }
+      }
+
+      &-link {
+        @include square(15);
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          path {
+            @include transitionsall;
+          }
+        }
+
+        @include hover {
+          svg {
+            path {
+              stroke: $black;
+            }
+          }
+        }
+      }
 
       .joinlink {
         color: $primaryText;
@@ -188,6 +225,30 @@
 
         @include hover {
           color: $headingText;
+        }
+      }
+
+      .userlink {
+        @include square(40);
+        @include circle;
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+          @include wh100;
+          object-fit: contain;
+        }
+      }
+
+      .mobuserlink {
+        @include square(32);
+        @include circle;
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+          @include wh100;
+          object-fit: contain;
         }
       }
 
@@ -201,6 +262,117 @@
 
         @include breakpoint(tab992) {
           @include flex-center;
+        }
+      }
+
+      &-item {
+        height: size(64);
+
+        &:hover,
+        &:focus {
+          .subdropdown {
+            display: block;
+          }
+        }
+      }
+
+      .subdropdown {
+        position: absolute;
+        top: 100%;
+        left: -50%;
+        background: $white;
+        min-width: size(220);
+        @include border-single(top, solid, 2, darken($primary, 25%));
+        display: none;
+        @extend %animation;
+        @extend %slideUpIn;
+
+        .submenu {
+          @include flex-column;
+          gap: size(40);
+          @include double-radius(bottom, left, 8, bottom, right, 8);
+          overflow: hidden;
+
+          &-header {
+            padding: size(16) size(16) size(0);
+  
+            .userlist {
+              @include list-vertical;
+              gap: size(16);
+
+              &-link {
+                @include flex-center-vert;
+                gap: size(8);
+                
+                .icon {
+                  @include square(20);
+                  @include flex-center;
+
+                  svg {
+                    @include wh100;
+                  }
+                }
+
+                .title {
+                  color: $headingText;
+                  @include font($primaryFont, 13, light, normal, 18);
+                  text-transform: uppercase;
+                }
+
+                &:hover:not(.active) {
+                  .icon {
+                    svg {
+                      path {
+                        fill: darken($primary, 20%);
+                      }
+                    }
+                  }
+
+                  .title {
+                    color: darken($primary, 20%);
+                  }
+                }
+
+                &.active {
+                  .icon {
+                    svg {
+                      path {
+                        fill: darken($primary, 20%);
+                      }
+                    }
+                  }
+
+                  .title {
+                    color: darken($primary, 20%);
+                  }
+                }
+              }
+            }
+          }
+
+          &-body {
+            .logout {
+              background: $primary;
+              @include flex-center-vert;
+              gap: size(8);
+              padding: size(10) size(16);
+  
+              .icon {
+                @include square(20);
+                @include flex-center;
+
+                svg {
+                  @include wh100;
+                }
+              }
+  
+              .title {
+                color: $headingText;
+                @include font($primaryFont, 13, light, normal, 18);
+                text-transform: uppercase;
+              }
+            }
+          }
         }
       }
     }
