@@ -1151,6 +1151,8 @@ button:focus,
 }
 .header-nav .authmenu-item {
   height: 4rem;
+  display: flex;
+  align-items: center;
 }
 .header-nav .authmenu-item:hover .subdropdown, .header-nav .authmenu-item:focus .subdropdown {
   display: block;

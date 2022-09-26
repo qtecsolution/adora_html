@@ -269,6 +269,7 @@
 
       &-item {
         height: size(64);
+        @include flex-center-vert;
 
         &:hover,
         &:focus {
