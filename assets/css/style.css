@@ -1767,7 +1767,7 @@ button:focus,
 .footer-top .footerinfo .footersocial .social-list-link:not([disabled]):hover svg g path {
   fill: hsl(0deg, 0%, 29%);
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 62rem) {
   .footer-top .evencol .footer-details {
     align-items: flex-end;
     text-align: right;
@@ -1783,7 +1783,7 @@ button:focus,
   align-items: flex-end;
   text-align: right;
 }
-@media screen and (min-width: 48rem) {
+@media screen and (min-width: 62rem) {
   .footer-top .mobcol .footer-details {
     align-items: flex-start;
     text-align: left;

@@ -98,7 +98,7 @@
 
     .evencol {
       .footer-details {
-        @include breakpoint(mobile768) {
+        @include breakpoint(tab992) {
           align-items: flex-end;
           text-align: right;
         }
@@ -115,7 +115,7 @@
         align-items: flex-end;
         text-align: right;
 
-        @include breakpoint(mobile768) {
+        @include breakpoint(tab992) {
           align-items: flex-start;
           text-align: left;
         }
