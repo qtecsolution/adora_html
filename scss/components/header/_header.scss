@@ -255,7 +255,9 @@
       .booklink {
         width: size(96);
         height: size(64);
+        font-weight: 500;
         @include setBgColor($primary, $headingText);
+
         text-align: center;
 
         display: none;
