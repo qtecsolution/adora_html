@@ -1284,10 +1284,119 @@ button:focus,
 }
 .offcanvas.offcanvas-top .offcanvas-header {
   height: 3rem;
+  background: hsl(0deg, 0%, 100%);
+}
+.offcanvas.offcanvas-top .offcanvas-body {
+  padding: 0;
+  background: hsl(216deg, 100%, 99%);
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
+  background: hsl(0deg, 0%, 100%);
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-header .user-thumbnail {
+  width: 7.5rem;
+  height: 7.5rem;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-header .user-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-header .name {
+  color: hsl(0deg, 0%, 7%);
+  font-weight: 500;
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-body .usrlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-body .usrlist-link {
+  padding: 0.625rem 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: solid 0.0625rem rgba(75, 75, 75, 0.3);
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-body .usrlist-link .icontitle {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  width: calc(100% - 0.3125rem);
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-body .usrlist-link .icontitle .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-body .usrlist-link .icontitle .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-body .usrlist-link .icontitle .title {
+  color: hsl(0deg, 0%, 7%);
+  font-family: "Outfit", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.2857142857;
+  width: calc(100% - 1.75rem);
+  text-transform: uppercase;
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-body .usrlist-link .arrow {
+  width: 0.3125rem;
+  height: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-body .usrlist-link .arrow svg {
+  width: 100%;
+  height: 100%;
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-body .usrlist-link:hover:not(.active) .icontitle .icon svg path {
+  fill: #d2744b;
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-body .usrlist-link:hover:not(.active) .icontitle .title {
+  color: #d2744b;
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-body .usrlist-link:hover:not(.active) .arrow svg path {
+  fill: #d2744b;
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-body .usrlist-link.active .icontitle .icon svg path {
+  fill: #d2744b;
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-body .usrlist-link.active .icontitle .title {
+  color: #d2744b;
+}
+.offcanvas.offcanvas-top .offcanvas-body .mobprofile-body .usrlist-link.active .arrow svg path {
+  fill: #d2744b;
 }
 .offcanvas.offcanvas-top .offcanvas-footer {
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
   overflow: hidden;
 }
 .offcanvas.offcanvas-top .offcanvas-footer .logout {
@@ -1295,7 +1404,7 @@ button:focus,
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.625rem 1rem;
+  padding: 0.875rem 1rem;
 }
 .offcanvas.offcanvas-top .offcanvas-footer .logout .icon {
   width: 1.25rem;
@@ -1398,10 +1507,12 @@ button:focus,
 .offcanvas-body .mobilelist-link.active {
   background: hsl(13deg, 47%, 94%);
   color: hsl(0deg, 0%, 7%);
+  border-color: hsl(13deg, 47%, 94%);
 }
 .offcanvas-body .mobilelist-link:hover:not(.active) {
   background: hsl(13deg, 47%, 94%);
   color: hsl(0deg, 0%, 7%);
+  border-color: hsl(13deg, 47%, 94%);
 }
 .offcanvas-body .mobilelist .accordion {
   border: none;
