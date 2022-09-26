@@ -1136,6 +1136,7 @@ button:focus,
 .header-nav .authmenu .booklink {
   width: 6rem;
   height: 4rem;
+  font-weight: 500;
   background: hsl(18deg, 60%, 81%);
   color: hsl(0deg, 0%, 7%);
   text-align: center;
