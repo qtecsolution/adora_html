@@ -2,12 +2,44 @@
 @use '../partials' as *;
 
 /**======= HOME-BANNER =======**/
-.home-banner {
+.homebanner {
   position: relative;
-  min-height: 60vh;
+  height: 60vh;
 
   @include breakpoint(tab992) {
     height: calc(100vh - size(144));
+  }
+
+  .swiper {
+    @include h100;
+
+    &-slide {
+      @include h100;
+      @include flex-center-vert;
+
+      .slidebg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        @include wh100;
+        z-index: -1;
+
+        img {
+          @include wh100;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
+  .slide-content {
+    @include flex-center-column;
+    gap: size(32);
+    text-align: center;
+
+    .bannerinfo {
+      margin-bottom: size(16);
+    }
   }
 }
 

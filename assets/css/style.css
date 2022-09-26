@@ -272,7 +272,6 @@ h1::selection, h2::selection, h3::selection, h4::selection, h5::selection, h6::s
 }
 
 img {
-  aspect-ratio: 1/1;
   max-width: 100%;
   display: block;
   -o-object-fit: cover;
@@ -2158,14 +2157,47 @@ button:focus,
                   AUTHENTICATIONS END
 **=======================================================**/
 /**======= HOME-BANNER =======**/
-.home-banner {
+.homebanner {
   position: relative;
-  min-height: 60vh;
+  height: 60vh;
 }
 @media screen and (min-width: 62rem) {
-  .home-banner {
+  .homebanner {
     height: calc(100vh - 9rem);
   }
+}
+.homebanner .swiper {
+  height: 100%;
+}
+.homebanner .swiper-slide {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.homebanner .swiper-slide .slidebg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.homebanner .swiper-slide .slidebg img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.homebanner .slide-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+.homebanner .slide-content .bannerinfo {
+  margin-bottom: 1rem;
 }
 
 /**======= TOP-RATED =======**/
