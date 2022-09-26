@@ -29,6 +29,10 @@
           object-fit: cover;
         }
       }
+
+      .row > * {
+        flex-shrink: 1;
+      }
     }
   }
 
@@ -62,17 +66,30 @@
   }
 }
 
+/**======= HOME-FULLBanner =======**/
+.fullbanner {
+  @include w100;
+  height: size(250);
+  @include flex-center;
+  overflow: hidden;
 
-/**======= BOOK-APPOINTMENT =======**/
-.bookappointment {
-  background: $sectionbg;
-  padding: size(64) size(0);
-  
-  @include breakpoint(tab992) {
-    padding: size(96) size(0);
+  @include breakpoint(mobile576) {
+    height: size(320);
+  }
+
+  @include breakpoint(mobile768) {
+    height: size(400);
+  }
+
+  @include breakpoint(desktop1200) {
+    height: size(500);
+  }
+
+  img {
+    @include wh100;
+    object-fit: cover;
   }
 }
-
 
 /**======= HOME-FEATURED =======**/
 .featured {
@@ -82,5 +99,22 @@
     padding: size(96) size(0);
   }
 
+  &-details {
+    @include flex-column;
+    gap: size(32);
+
+    @include breakpoint(tab992) {
+      gap: size(64);
+    }
+  }
+}
+
+/**======= BOOK-APPOINTMENT =======**/
+.bookappointment {
+  background: $sectionbg;
+  padding: size(64) size(0);
   
+  @include breakpoint(tab992) {
+    padding: size(96) size(0);
+  }
 }

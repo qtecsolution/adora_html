@@ -602,6 +602,11 @@ button:focus,
   border-color: hsl(0deg, 0%, 7%);
 }
 
+.up-btn {
+  opacity: 1;
+  padding: 0.75rem;
+}
+
 .carousel {
   width: 100%;
   height: 100%;
@@ -867,6 +872,9 @@ button:focus,
   transform: translateY(-0.75rem);
 }
 
+.card-featured-header .feature-thumbnail .hover-thumbnail {
+  display: none;
+}
 .header {
   background: hsl(13deg, 47%, 94%);
   display: flex;
@@ -2188,6 +2196,9 @@ button:focus,
   -o-object-fit: cover;
      object-fit: cover;
 }
+.homebanner .swiper-slide .row > * {
+  flex-shrink: 1;
+}
 .homebanner .slide-content {
   display: flex;
   align-items: center;
@@ -2220,15 +2231,35 @@ button:focus,
   }
 }
 
-/**======= BOOK-APPOINTMENT =======**/
-.bookappointment {
-  background: linear-gradient(94.09deg, rgba(219, 169, 148, 0.5) 1.12%, rgba(246, 225, 217, 0.5) 100%);
-  padding: 4rem 0rem;
+/**======= HOME-FULLBanner =======**/
+.fullbanner {
+  width: 100%;
+  height: 15.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
 }
-@media screen and (min-width: 62rem) {
-  .bookappointment {
-    padding: 6rem 0rem;
+@media screen and (min-width: 36rem) {
+  .fullbanner {
+    height: 20rem;
   }
+}
+@media screen and (min-width: 48rem) {
+  .fullbanner {
+    height: 25rem;
+  }
+}
+@media screen and (min-width: 75rem) {
+  .fullbanner {
+    height: 31.25rem;
+  }
+}
+.fullbanner img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /**======= HOME-FEATURED =======**/
@@ -2237,6 +2268,27 @@ button:focus,
 }
 @media screen and (min-width: 62rem) {
   .featured {
+    padding: 6rem 0rem;
+  }
+}
+.featured-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+@media screen and (min-width: 62rem) {
+  .featured-details {
+    gap: 4rem;
+  }
+}
+
+/**======= BOOK-APPOINTMENT =======**/
+.bookappointment {
+  background: linear-gradient(94.09deg, rgba(219, 169, 148, 0.5) 1.12%, rgba(246, 225, 217, 0.5) 100%);
+  padding: 4rem 0rem;
+}
+@media screen and (min-width: 62rem) {
+  .bookappointment {
     padding: 6rem 0rem;
   }
 }

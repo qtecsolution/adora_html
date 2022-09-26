@@ -1,0 +1,40 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.card-featured {
+  &-header {
+    .feature-thumbnail {
+      .default-thumbnail {}
+      
+      .hover-thumbnail {
+        display: none;
+      }
+    }
+
+    .badges {
+      .featurebadge {
+
+      }
+    }
+  }
+
+  &-body {
+    h6 {
+
+    }
+
+    p {
+
+    }
+
+    .rating {
+      .icon {
+
+      }
+
+      h6 {
+
+      }
+    }
+  }
+}
