@@ -19,10 +19,6 @@
       @include wh100;
     }
 
-    &.swiper-button-disabled {
-
-    }
-
     &:hover:not(.swiper-button-disabled) {
       background: $primary;
       border-color: $primary;
