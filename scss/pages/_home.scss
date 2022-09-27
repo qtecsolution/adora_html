@@ -109,6 +109,239 @@
   }
 }
 
+/**======= MEET-SPECIALIST =======**/
+.meetspecialist {
+  padding-bottom: size(96);
+
+  @include breakpoint(desktop1200) {
+    padding-bottom: size(168);
+  }
+
+  &-content {
+    @include flex-column;
+  }
+
+  &-header {
+    @include flex-center-column;
+    text-align: center;
+
+    .titlebox {
+      position: relative;
+      // background: rebeccapurple;
+
+      .icon {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        @include square(80);
+        @include flex-center;
+        overflow: hidden;
+        z-index: -1;
+        @include translate(-50%, -50%);
+
+        @include breakpoint(mobile768) {
+          @include square(96);
+        }
+
+        @include breakpoint(tab992) {
+          @include square(165);
+          left: 90%;
+        }
+
+        svg {
+          @include wh100;
+        }
+      }
+    }
+  }
+
+  &-body {
+    .sliderinfo {
+      @include flex-center-column;
+      gap: size(24);
+      padding-top: size(80);
+  
+      @include breakpoint(desktop1200) {
+        padding-top: size(96);
+      }
+
+      .thumbnail {
+        width: size(315);
+        height: size(300);
+        position: relative;
+        @include radius(16);
+
+        @include breakpoint(mobile768) {
+          height: size(440);
+        }
+
+        img {
+          @include radius(16);
+          @include wh100;
+        }
+
+        .rating {
+          position: absolute;
+          top: size(0);
+          left: size(0);
+          @include square(64);
+          @include flex-center;
+          background: $badgebg;
+          @include circle;
+
+          @include breakpoint(mobile576) {
+            top: size(-24);
+            left: size(-24);
+          }
+
+          @include breakpoint(mobile768) {
+            top: size(-40);
+            left: size(-40);
+            @include square(80);
+          }
+    
+          @include breakpoint(tab992) {
+            top: size(-48);
+            left: size(-48);
+            @include square(96);
+          }
+  
+          .ratenumber {
+            @include flex-center;
+            color: $primaryText;
+            font-size: size(16);
+            font-weight: 600;
+
+            @include breakpoint(mobile576) {
+              font-size: size(18);
+            }
+
+            @include breakpoint(mobile768) {
+              font-size: size(20);
+            }
+
+            @include breakpoint(tab992) {
+              font-size: size(24);
+            }
+  
+            sup {
+              @include square(12);
+              @include flex-center;
+              overflow: hidden;
+  
+              svg {
+                @include wh100;
+              }
+            }
+          }
+        }
+      }
+
+      .detail {
+        @include flex-center-column;
+        gap: size(8);
+        text-align: center;
+
+        .title {
+          color: $headingText;
+        }
+
+        .descript {
+          @include flex-center;
+          gap: size(8);
+
+          .divider {
+            display: inline-block;
+            margin-top: size(-4);
+          }
+
+          .text {
+            font-size: size(14);
+            color: $primaryText;
+          }
+        }
+
+        .appointmentdescript {
+          margin-top: size(16);
+          display: block;
+
+          @include breakpoint(tab992) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    .slidedetails {
+      padding-top: size(80);
+      @include flex-column;
+      gap: size(48);
+  
+      @include breakpoint(desktop1200) {
+        padding-top: size(96);
+      }
+
+      &-header {
+        @include flex-column;
+        gap: size(16);
+        padding-bottom: size(10);
+
+        .badges {
+          @include flex-center-vert;
+          gap: size(5);
+          flex-wrap: wrap;
+
+          .slidebadge {
+            @include setBgColor($primary, $headingText);
+            @include radius(12.5);
+            @include flex-center;
+            padding: size(4) size(10);
+            font-size: size(10);
+            text-align: center;
+          }
+        }
+
+        .titles {
+          .subtitle,
+          .title {
+            color: $headingText;
+          }
+
+          .title {
+            font-weight: 500;
+          }
+        }
+      }
+
+      &-body {
+        position: relative;
+
+        .info {
+          .text {
+            color: $primaryText;
+          }
+        }
+
+        .icon {
+          width: size(204);
+          height: size(163);
+          @include flex-center;
+          overflow: hidden;
+          
+          position: absolute;
+          top: size(-48);
+          left: 0;
+          z-index: -1;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+    }
+  }
+}
+
 /**======= BOOK-APPOINTMENT =======**/
 .bookappointment {
   background: $sectionbg;

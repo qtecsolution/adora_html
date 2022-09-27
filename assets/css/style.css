@@ -607,6 +607,24 @@ button:focus,
   padding: 0.75rem;
 }
 
+.btn-book {
+  background: hsl(18deg, 60%, 81%);
+  color: hsl(0deg, 0%, 7%);
+  width: 15rem;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  text-align: center;
+  transition: all 350ms ease-in-out;
+}
+.btn-book:not([disabled]):hover {
+  background: #d78460;
+  color: hsl(0deg, 0%, 7%);
+}
+
 .carousel {
   width: 100%;
   height: 100%;
@@ -872,9 +890,183 @@ button:focus,
   transform: translateY(-0.75rem);
 }
 
-.card-featured-header .feature-thumbnail .hover-thumbnail {
-  display: none;
+.card-featured {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0.625rem 0.625rem 1.5rem;
+  border-radius: 1rem;
+  border-radius: 1rem;
+  height: 100%;
+  background: transparent;
+  position: relative;
 }
+.card-featured-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  height: 11rem;
+}
+.card-featured-header .feature-thumbnail {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.card-featured-header .feature-thumbnail img {
+  width: 100%;
+  height: 100%;
+  transition: transform 350ms ease-in-out;
+}
+.card-featured-header .feature-thumbnail .default-thumbnail {
+  opacity: 1;
+  visibility: visible;
+  position: relative;
+}
+.card-featured-header .feature-thumbnail .hover-thumbnail {
+  opacity: 0;
+  visibility: hidden;
+  position: absolute;
+  transform: scale(1.1);
+}
+.card-featured-header .feature-thumbnail:not([disabled]):hover .default-thumbnail {
+  opacity: 0;
+  visibility: hidden;
+}
+.card-featured-header .feature-thumbnail:not([disabled]):hover .hover-thumbnail {
+  opacity: 1;
+  visibility: visible;
+  transform: scale(1);
+}
+.card-featured-header .badges {
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+  flex-wrap: wrap;
+}
+.card-featured-header .badges .featurebadge {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 7%);
+  border-radius: 0.78125rem;
+  border-radius: 0.78125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+  text-align: center;
+  height: 1.5rem;
+  font-size: 0.625rem;
+}
+.card-featured-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.card-featured-body h6 {
+  color: hsl(0deg, 0%, 7%);
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 350ms ease-in-out;
+}
+@media screen and (min-width: 36rem) {
+  .card-featured-body h6 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 2;
+    max-height: 3rem;
+  }
+}
+.card-featured-body h6:not([disabled]):hover {
+  color: #d78460;
+}
+.card-featured-body p {
+  color: hsl(0deg, 0%, 29%);
+  font-size: 0.875rem;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+}
+.card-featured-body .detailsinfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.5rem;
+}
+.card-featured-body .detailsinfo .rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.card-featured-body .detailsinfo .rating .icon {
+  width: 1.0625rem;
+  height: 1.0625rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.card-featured-body .detailsinfo .rating .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.card-featured-body .detailsinfo .rating h6 {
+  color: hsl(0deg, 0%, 7%);
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+.card-featured-body .detailsinfo .detailslink .linktext {
+  color: hsl(0deg, 0%, 7%);
+  font-family: "Outfit", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.2857142857;
+  opacity: 0;
+  visibility: hidden;
+  transition: color 350ms ease-in-out;
+}
+.card-featured-body .detailsinfo .detailslink .linktext:not([disabled]):hover {
+  color: #d2744b;
+}
+.card-featured .shadowbox {
+  width: 17.5rem;
+  height: 2.5rem;
+  background: rgba(74, 74, 74, 0.15);
+  filter: blur(1.15625rem);
+  position: absolute;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: -0.5rem;
+  display: none;
+  z-index: -1;
+}
+.card-featured:not([disabled]):hover {
+  background: hsl(0deg, 0%, 100%);
+}
+.card-featured:not([disabled]):hover .card-featured-body .detailsinfo .detailslink .linktext {
+  opacity: 1;
+  visibility: visible;
+}
+.card-featured:not([disabled]):hover .shadowbox {
+  display: block;
+}
+
 .header {
   background: hsl(13deg, 47%, 94%);
   display: flex;
@@ -1632,6 +1824,38 @@ button:focus,
 .modal-header .btn-close:not([disabled]):hover svg {
   transform: rotate(90deg);
 }
+.swiper-button-next, .swiper-button-prev {
+  display: none;
+  width: 3rem;
+  height: 3rem;
+  overflow: hidden;
+  padding: 1rem;
+  border: solid 0.0625rem hsl(0deg, 0%, 29%);
+  border-radius: 100%;
+}
+@media screen and (min-width: 48rem) {
+  .swiper-button-next, .swiper-button-prev {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.swiper-button-next svg, .swiper-button-prev svg {
+  width: 100%;
+  height: 100%;
+}
+.swiper-button-next:hover:not(.swiper-button-disabled), .swiper-button-prev:hover:not(.swiper-button-disabled) {
+  background: hsl(18deg, 60%, 81%);
+  border-color: hsl(18deg, 60%, 81%);
+}
+.swiper-button-next::after, .swiper-button-prev::after {
+  font-size: 0;
+  line-height: 0;
+  width: 0;
+  height: 0;
+  display: none;
+}
+
 .vue-custom-tooltip:before {
   border-top-color: hsl(18deg, 60%, 81%) !important;
 }
@@ -2280,6 +2504,258 @@ button:focus,
   .featured-details {
     gap: 4rem;
   }
+}
+
+/**======= MEET-SPECIALIST =======**/
+.meetspecialist {
+  padding-bottom: 6rem;
+}
+@media screen and (min-width: 75rem) {
+  .meetspecialist {
+    padding-bottom: 10.5rem;
+  }
+}
+.meetspecialist-content {
+  display: flex;
+  flex-direction: column;
+}
+.meetspecialist-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.meetspecialist-header .titlebox {
+  position: relative;
+}
+.meetspecialist-header .titlebox .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 48rem) {
+  .meetspecialist-header .titlebox .icon {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .meetspecialist-header .titlebox .icon {
+    width: 10.3125rem;
+    height: 10.3125rem;
+    left: 90%;
+  }
+}
+.meetspecialist-header .titlebox .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.meetspecialist-body .sliderinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-top: 5rem;
+}
+@media screen and (min-width: 75rem) {
+  .meetspecialist-body .sliderinfo {
+    padding-top: 6rem;
+  }
+}
+.meetspecialist-body .sliderinfo .thumbnail {
+  width: 19.6875rem;
+  height: 18.75rem;
+  position: relative;
+  border-radius: 1rem;
+  border-radius: 1rem;
+}
+@media screen and (min-width: 48rem) {
+  .meetspecialist-body .sliderinfo .thumbnail {
+    height: 27.5rem;
+  }
+}
+.meetspecialist-body .sliderinfo .thumbnail img {
+  border-radius: 1rem;
+  border-radius: 1rem;
+  width: 100%;
+  height: 100%;
+}
+.meetspecialist-body .sliderinfo .thumbnail .rating {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: hsl(13deg, 44%, 94%);
+  border-radius: 100%;
+}
+@media screen and (min-width: 36rem) {
+  .meetspecialist-body .sliderinfo .thumbnail .rating {
+    top: -1.5rem;
+    left: -1.5rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .meetspecialist-body .sliderinfo .thumbnail .rating {
+    top: -2.5rem;
+    left: -2.5rem;
+    width: 5rem;
+    height: 5rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .meetspecialist-body .sliderinfo .thumbnail .rating {
+    top: -3rem;
+    left: -3rem;
+    width: 6rem;
+    height: 6rem;
+  }
+}
+.meetspecialist-body .sliderinfo .thumbnail .rating .ratenumber {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: hsl(0deg, 0%, 29%);
+  font-size: 1rem;
+  font-weight: 600;
+}
+@media screen and (min-width: 36rem) {
+  .meetspecialist-body .sliderinfo .thumbnail .rating .ratenumber {
+    font-size: 1.125rem;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .meetspecialist-body .sliderinfo .thumbnail .rating .ratenumber {
+    font-size: 1.25rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .meetspecialist-body .sliderinfo .thumbnail .rating .ratenumber {
+    font-size: 1.5rem;
+  }
+}
+.meetspecialist-body .sliderinfo .thumbnail .rating .ratenumber sup {
+  width: 0.75rem;
+  height: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.meetspecialist-body .sliderinfo .thumbnail .rating .ratenumber sup svg {
+  width: 100%;
+  height: 100%;
+}
+.meetspecialist-body .sliderinfo .detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  text-align: center;
+}
+.meetspecialist-body .sliderinfo .detail .title {
+  color: hsl(0deg, 0%, 7%);
+}
+.meetspecialist-body .sliderinfo .detail .descript {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.meetspecialist-body .sliderinfo .detail .descript .divider {
+  display: inline-block;
+  margin-top: -0.25rem;
+}
+.meetspecialist-body .sliderinfo .detail .descript .text {
+  font-size: 0.875rem;
+  color: hsl(0deg, 0%, 29%);
+}
+.meetspecialist-body .sliderinfo .detail .appointmentdescript {
+  margin-top: 1rem;
+  display: block;
+}
+@media screen and (min-width: 62rem) {
+  .meetspecialist-body .sliderinfo .detail .appointmentdescript {
+    display: none;
+  }
+}
+.meetspecialist-body .slidedetails {
+  padding-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 75rem) {
+  .meetspecialist-body .slidedetails {
+    padding-top: 6rem;
+  }
+}
+.meetspecialist-body .slidedetails-header {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-bottom: 0.625rem;
+}
+.meetspecialist-body .slidedetails-header .badges {
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+  flex-wrap: wrap;
+}
+.meetspecialist-body .slidedetails-header .badges .slidebadge {
+  background: hsl(18deg, 60%, 81%);
+  color: hsl(0deg, 0%, 7%);
+  border-radius: 0.78125rem;
+  border-radius: 0.78125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.625rem;
+  text-align: center;
+}
+.meetspecialist-body .slidedetails-header .titles .subtitle,
+.meetspecialist-body .slidedetails-header .titles .title {
+  color: hsl(0deg, 0%, 7%);
+}
+.meetspecialist-body .slidedetails-header .titles .title {
+  font-weight: 500;
+}
+.meetspecialist-body .slidedetails-body {
+  position: relative;
+}
+.meetspecialist-body .slidedetails-body .info .text {
+  color: hsl(0deg, 0%, 29%);
+}
+.meetspecialist-body .slidedetails-body .icon {
+  width: 12.75rem;
+  height: 10.1875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  z-index: -1;
+}
+.meetspecialist-body .slidedetails-body .icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 /**======= BOOK-APPOINTMENT =======**/
