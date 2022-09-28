@@ -3258,6 +3258,7 @@ button:focus,
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1.25rem;
 }
 .authentic-main .authentic {
   display: flex;
