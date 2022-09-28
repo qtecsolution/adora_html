@@ -6,9 +6,6 @@
   min-height: 100vh;
   @include flex-center;
 
-  background: rgb(208, 170, 247);
-
-
   .authentic {
     @include flex-column;
 
@@ -20,6 +17,37 @@
         @include flex-center-column;
         gap: size(16);
         text-align: center;
+      }
+    }
+  }
+
+  .confirmedchanged {
+    @include flex-center-column;
+    gap: size(24);
+
+    .icon {
+      @include square(194);
+      @include flex-center;
+      overflow: hidden;
+
+      svg {
+        @include wh100;
+      }
+    }
+    
+    .info {
+      @include flex-center-column;
+      gap: size(12);
+      text-align: center;
+    
+      .link {
+        color: $headingText;
+        @include font($primaryFont, 16, medium, normal, 24);
+        @include transitionscolor;
+
+        @include hover {
+          color: darken($primary, 20%);
+        }
       }
     }
   }
