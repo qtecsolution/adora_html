@@ -347,7 +347,7 @@
         display: none;
 
         @include breakpoint(mobile576) {
-          display: block;
+          display: flex;
         }
 
         svg {
@@ -398,7 +398,7 @@
         display: none;
 
         @include breakpoint(mobile576) {
-          display: block;
+          display: flex;
         }
 
         svg {
