@@ -26,7 +26,8 @@
 
     &-body {
 
-      .forgotbox {
+      .forgotbox,
+      .changepassword {
         @include flex-column;
         gap: size(16);
       }
@@ -70,6 +71,70 @@
           .error-message {
             display: block;
           }
+
+          .inputinfo {
+            .inputfield {
+              border-color: $danger;
+            }
+          }
+        }
+
+        .inputinfo {
+          position: relative;
+
+          .passfield {
+            padding-right: size(48);
+          }
+
+          .btn-toggle {
+            @include square(20);
+            @include flex-center;
+            overflow: hidden;
+            position: absolute;
+            top: 50%;
+            @include translateY(-50%);
+            right: size(20);
+
+            svg {
+              @include wh100;
+            }
+
+            .showpassicon {
+              display: block;
+            }
+
+            .hidepassicon {
+              display: none;
+            }
+
+            &.active {
+              .showpassicon {
+                display: none;
+              }
+  
+              .hidepassicon {
+                display: block;
+              }
+            }
+
+            @include hover {
+              .showpassicon  {
+                path {
+                  fill: $primary;
+                }
+              }
+
+              .hidepassicon  {
+                g {
+                  opacity: 1;
+
+                  path {
+                    fill: $primary;
+                  }
+                }
+              }
+            }
+          }
         }
       }
 
@@ -88,6 +153,14 @@
               color: darken($primary, 20%);
             }
           }
+        }
+      }
+
+      .info {
+        .text {
+          color: rgba($primaryText, 0.3);
+          font-size: size(14);
+          font-weight: 400;
         }
       }
 
