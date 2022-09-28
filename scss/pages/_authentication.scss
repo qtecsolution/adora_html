@@ -69,6 +69,24 @@
           }
         }
       }
+
+      .infobox {
+        margin-top: size(8);
+        @include flex-center;
+        text-align: center;
+
+        .text {
+          .link {
+            font-weight: 500;
+            color: $primaryText;
+            @include transitionscolor;
+
+            @include hover {
+              color: darken($primary, 20%);
+            }
+          }
+        }
+      }
     }
   }
 

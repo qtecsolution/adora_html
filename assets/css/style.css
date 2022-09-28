@@ -3325,6 +3325,21 @@ button:focus,
 .authentic-main .authentic-body .inputbox.error .error-message {
   display: block;
 }
+.authentic-main .authentic-body .infobox {
+  margin-top: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.authentic-main .authentic-body .infobox .text .link {
+  font-weight: 500;
+  color: hsl(0deg, 0%, 29%);
+  transition: color 350ms ease-in-out;
+}
+.authentic-main .authentic-body .infobox .text .link:not([disabled]):hover {
+  color: #d78460;
+}
 .authentic-main .confirmedchanged {
   display: flex;
   align-items: center;
