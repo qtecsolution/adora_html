@@ -680,113 +680,6 @@ button:focus,
      object-fit: cover;
 }
 
-.product {
-  background: hsl(0deg, 0%, 100%);
-  border-radius: 0.625rem;
-  border-radius: 0.625rem;
-  transition: all 350ms ease-in-out;
-}
-.product-header {
-  width: 100%;
-  height: 10rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  overflow: hidden;
-}
-.product-thumbnail {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-.product-thumbnail img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  transform: scale(0.8);
-  transition: transform 350ms ease-in-out;
-}
-.product-thumbnail:not([disabled]):hover img {
-  transform: scale(0.9);
-}
-.product-body {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-  padding: 0.75rem;
-}
-.product-body .category {
-  text-transform: uppercase;
-  font-size: 0.625rem;
-  font-weight: 500;
-  line-height: 1.4;
-  letter-spacing: 0.02rem;
-}
-.product-body .titlebox {
-  height: 2.5rem;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-}
-.product-body .titlebox .product-title {
-  color: #404040;
-  font-size: 0.875rem;
-  font-weight: normal;
-  display: flex;
-  align-items: center;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  -webkit-line-clamp: 2;
-  transition: color 350ms ease-in-out;
-}
-.product-body .titlebox .product-title:not([disabled]):hover {
-  color: hsl(0deg, 0%, 0%);
-  font-weight: 500;
-}
-.product-body .prices {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-.product-body .prices .current-price {
-  color: hsl(0deg, 0%, 0%);
-  font: inherit;
-  font-weight: 600;
-  font-size: 0.875rem;
-}
-.product-body .prices .previous-price {
-  font-size: 0.875rem;
-  font-weight: 600;
-  text-decoration: line-through;
-}
-.product-body .product-reviews {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-.product-body .product-reviews .reviewlist {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: flex;
-  align-items: center;
-  gap: 0.25rem;
-}
-.product-body .product-reviews .reviewcount {
-  font-size: 0.75rem;
-  font-weight: 400;
-}
-.product:not([disabled]):hover .product-header .productlist {
-  transform: translateX(0rem);
-}
-
 .card-wellness {
   display: flex;
   flex-direction: column;
@@ -1065,6 +958,95 @@ button:focus,
 }
 .card-featured:not([disabled]):hover .shadowbox {
   display: block;
+}
+
+.popularcard {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.popularcard-header {
+  height: 13.4375rem;
+  background: hsl(0deg, 0%, 100%);
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.popularcard-thumbnail {
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.popularcard-thumbnail img {
+  width: 100%;
+  height: 100%;
+  transition: transform 350ms ease-in-out;
+}
+.popularcard-thumbnail:not([disabled]):hover img {
+  transform: scale(1.1);
+}
+.popularcard .divider {
+  width: 100%;
+  height: 0.0625rem;
+  background: rgba(74, 74, 74, 0.5);
+}
+@media screen and (min-width: 62rem) {
+  .popularcard .divider {
+    margin-top: 0.5rem;
+  }
+}
+.popularcard-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.popularcard-body .title {
+  color: hsl(0deg, 0%, 7%);
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.25;
+  transition: color 350ms ease-in-out;
+}
+.popularcard-body .title:not([disabled]):hover {
+  color: #d78460;
+}
+.popularcard-body .info {
+  margin-bottom: 0.625rem;
+}
+.popularcard-body .info .text {
+  color: hsl(0deg, 0%, 29%);
+  font-family: "Outfit", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.2857142857;
+}
+.popularcard-body .priceinfo span {
+  color: hsl(0deg, 0%, 29%);
+  font-family: "Outfit", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 300;
+  font-style: normal;
+  line-height: 1.2857142857;
+}
+.popularcard-body .priceinfo .price {
+  color: hsl(0deg, 0%, 7%);
+  font-family: "Outfit", sans-serif;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-style: normal;
+  line-height: 1.2857142857;
 }
 
 .header {
@@ -1825,19 +1807,21 @@ button:focus,
   transform: rotate(90deg);
 }
 .swiper-button-next, .swiper-button-prev {
-  display: none;
-  width: 3rem;
-  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
   overflow: hidden;
-  padding: 1rem;
+  padding: 0.5rem;
   border: solid 0.0625rem hsl(0deg, 0%, 29%);
   border-radius: 100%;
 }
 @media screen and (min-width: 48rem) {
   .swiper-button-next, .swiper-button-prev {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    padding: 1rem;
   }
 }
 .swiper-button-next svg, .swiper-button-prev svg {
@@ -2756,6 +2740,223 @@ button:focus,
 .meetspecialist-body .slidedetails-body .icon svg {
   width: 100%;
   height: 100%;
+}
+.meetspecialist-body .swiper-button-next, .meetspecialist-body .swiper-button-prev {
+  border-color: hsl(0deg, 0%, 100%);
+}
+.meetspecialist-body .swiper-button-next svg path, .meetspecialist-body .swiper-button-prev svg path {
+  fill: hsl(0deg, 0%, 100%);
+}
+@media screen and (min-width: 48rem) {
+  .meetspecialist-body .swiper-button-next, .meetspecialist-body .swiper-button-prev {
+    border-color: hsl(0deg, 0%, 29%);
+  }
+  .meetspecialist-body .swiper-button-next svg path, .meetspecialist-body .swiper-button-prev svg path {
+    fill: hsl(0deg, 0%, 29%);
+  }
+}
+
+/**======= POPULAR-SERVICES =======**/
+.popularservices {
+  background: linear-gradient(94.09deg, rgba(219, 169, 148, 0.5) 1.12%, rgba(246, 225, 217, 0.5) 100%);
+  padding: 4rem 0rem;
+}
+@media screen and (min-width: 62rem) {
+  .popularservices {
+    padding: 6rem 0rem;
+  }
+}
+.popularservices-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .popularservices-content {
+    gap: 6rem;
+  }
+}
+.popularservices-body {
+  position: relative;
+}
+
+/**======= JOIN-PROGRAM =======**/
+.joinprogram {
+  padding: 4rem 0rem;
+}
+@media screen and (min-width: 62rem) {
+  .joinprogram {
+    padding: 6rem 0rem;
+  }
+}
+.joinprogram-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+@media screen and (min-width: 62rem) {
+  .joinprogram-content {
+    gap: 3.5rem;
+  }
+}
+.joinprogram-header {
+  width: 100%;
+}
+.joinprogram-header .headerinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.joinprogram-header .headerinfo .titlebox {
+  position: relative;
+}
+.joinprogram-header .headerinfo .titlebox .icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5rem;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: -1;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 48rem) {
+  .joinprogram-header .headerinfo .titlebox .icon {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .joinprogram-header .headerinfo .titlebox .icon {
+    width: 10.3125rem;
+    height: 10.3125rem;
+    left: 90%;
+  }
+}
+.joinprogram-header .headerinfo .titlebox .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.joinprogram-header .headerinfo .detail {
+  max-width: 26.25rem;
+  margin-inline: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.joinprogram-body {
+  width: 100%;
+}
+.joinprogram-body .jointhumbnail {
+  width: 100%;
+  height: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.joinprogram-body .jointhumbnail img {
+  width: 100%;
+  height: 100%;
+}
+
+/**======= FIND-SALON =======**/
+.findsalon {
+  background: hsl(0deg, 0%, 100%);
+  padding: 4rem 0rem;
+}
+@media screen and (min-width: 62rem) {
+  .findsalon {
+    padding: 6rem 0rem;
+  }
+}
+.findsalon-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2.25rem;
+}
+@media screen and (min-width: 62rem) {
+  .findsalon-content {
+    gap: 3.5rem;
+  }
+}
+.findsalon-header {
+  width: 100%;
+  text-align: center;
+}
+.findsalon-body {
+  width: 100%;
+}
+.findsalon-body .nav {
+  flex-wrap: nowrap;
+  gap: 1.25rem;
+  justify-content: flex-start;
+  max-width: 95%;
+  overflow: hidden;
+  overflow-x: scroll;
+  padding-bottom: 0.5rem;
+}
+.findsalon-body .nav::-webkit-scrollbar {
+  height: 0.25rem;
+}
+.findsalon-body .nav::-webkit-scrollbar-thumb {
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  height: 0.25rem;
+  background: rgba(74, 74, 74, 0.4);
+}
+@media screen and (min-width: 62rem) {
+  .findsalon-body .nav {
+    gap: 1.875rem;
+    justify-content: center;
+  }
+}
+.findsalon-body .nav-tabs {
+  border: 0;
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+.findsalon-body .nav-tabs .nav-link {
+  margin-bottom: 0;
+  border: 0;
+  border-radius: 0rem;
+  border-radius: 0rem;
+  color: hsl(0deg, 0%, 29%);
+  font-family: "Outfit", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  font-style: normal;
+  line-height: 1.5;
+}
+@media screen and (min-width: 48rem) {
+  .findsalon-body .nav-tabs .nav-link {
+    font-size: 1.1875rem;
+  }
+}
+@media screen and (min-width: 62rem) {
+  .findsalon-body .nav-tabs .nav-link {
+    font-size: 1.3125rem;
+  }
+}
+.findsalon-body .nav-tabs .nav-link.active {
+  border-color: transparent;
+  background: transparent;
+  color: hsl(18deg, 50%, 72%);
+}
+.findsalon-body .nav-tabs .nav-link:hover:not(.active) {
+  border-color: transparent;
+  background: transparent;
+  color: hsl(18deg, 50%, 72%);
 }
 
 /**======= BOOK-APPOINTMENT =======**/

@@ -5,6 +5,7 @@ const bannerSwiper = new Swiper(".bannerslider", {
   },
   loop: true,
   centeredSlides: true,
+  grabCursor: true,
   breakpoints: {
     992: {
       direction: "vertical"

@@ -5,8 +5,9 @@ const makeupSlider = new Swiper(".makeupSlider", {
   },
   loop: true,
   centeredSlides: true,
+  grabCursor: true,
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
-  },
+  }
 })

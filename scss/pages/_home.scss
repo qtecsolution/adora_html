@@ -1,5 +1,5 @@
-@use '../global' as *;
-@use '../partials' as *;
+@use '../global'as *;
+@use '../partials'as *;
 
 /**======= HOME-BANNER =======**/
 .homebanner {
@@ -30,7 +30,7 @@
         }
       }
 
-      .row > * {
+      .row>* {
         flex-shrink: 1;
       }
     }
@@ -93,7 +93,7 @@
 /**======= HOME-FEATURED =======**/
 .featured {
   padding: size(64) size(0);
-  
+
   @include breakpoint(tab992) {
     padding: size(96) size(0);
   }
@@ -159,7 +159,7 @@
       @include flex-center-column;
       gap: size(24);
       padding-top: size(80);
-  
+
       @include breakpoint(desktop1200) {
         padding-top: size(96);
       }
@@ -198,13 +198,13 @@
             left: size(-40);
             @include square(80);
           }
-    
+
           @include breakpoint(tab992) {
             top: size(-48);
             left: size(-48);
             @include square(96);
           }
-  
+
           .ratenumber {
             @include flex-center;
             color: $primaryText;
@@ -222,12 +222,12 @@
             @include breakpoint(tab992) {
               font-size: size(24);
             }
-  
+
             sup {
               @include square(12);
               @include flex-center;
               overflow: hidden;
-  
+
               svg {
                 @include wh100;
               }
@@ -275,7 +275,7 @@
       padding-top: size(80);
       @include flex-column;
       gap: size(48);
-  
+
       @include breakpoint(desktop1200) {
         padding-top: size(96);
       }
@@ -301,6 +301,7 @@
         }
 
         .titles {
+
           .subtitle,
           .title {
             color: $headingText;
@@ -326,7 +327,7 @@
           height: size(163);
           @include flex-center;
           overflow: hidden;
-          
+
           position: absolute;
           top: size(-48);
           left: 0;
@@ -338,6 +339,215 @@
         }
       }
     }
+
+    .swiper {
+
+      &-button-next,
+      &-button-prev {
+        border-color: $white;
+
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+
+        @include breakpoint(mobile768) {
+          border-color: $primaryText;
+
+          svg {
+            path {
+              fill: $primaryText;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/**======= POPULAR-SERVICES =======**/
+.popularservices {
+  background: $sectionbg;
+  padding: size(64) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(96) size(0);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(tab992) {
+      gap: size(96);
+    }
+  }
+
+  &-body {
+    position: relative;
+  }
+}
+
+/**======= JOIN-PROGRAM =======**/
+.joinprogram {
+  padding: size(64) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(96) size(0);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(36);
+
+    @include breakpoint(tab992) {
+      gap: size(56);
+    }
+  }
+
+  &-header {
+    @include w100;
+
+    .headerinfo {
+      @include flex-center-column;
+      gap: size(16);
+
+      .titlebox {
+        position: relative;
+        // background: rebeccapurple;
+
+        .icon {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          @include square(80);
+          @include flex-center;
+          overflow: hidden;
+          z-index: -1;
+          @include translate(-50%, -50%);
+
+          @include breakpoint(mobile768) {
+            @include square(96);
+          }
+
+          @include breakpoint(tab992) {
+            @include square(165);
+            left: 90%;
+          }
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+
+      .detail {
+        max-width: size(420);
+        margin-inline: auto;
+        @include flex-center;
+        text-align: center;
+      }
+    }
+  }
+
+  &-body {
+    @include w100;
+
+    .jointhumbnail {
+      @include w100;
+      height: size(240);
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+      }
+    }
+  }
+}
+
+/**======= FIND-SALON =======**/
+.findsalon {
+  background: $white;
+  padding: size(64) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(96) size(0);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(36);
+
+    @include breakpoint(tab992) {
+      gap: size(56);
+    }
+  }
+
+  &-header {
+    @include w100;
+    text-align: center;
+  }
+
+  &-body {
+    @include w100;
+
+    .nav {
+      flex-wrap: nowrap;
+      gap: size(20);
+      justify-content: flex-start;
+      max-width: 95%;
+      overflow: hidden;
+      overflow-x: scroll;
+      padding-bottom: size(8);
+
+      &::-webkit-scrollbar {
+        height: size(4);
+      }
+
+      &::-webkit-scrollbar-thumb {
+        @include radius(4);
+        height: size(4);
+        background: rgba($primaryText, 0.4);
+      }
+
+      @include breakpoint(tab992) {
+        gap: size(30);
+        justify-content: center;
+      }
+
+      &-tabs {
+        border: 0;
+        @include radius(0);
+
+        .nav-link {
+          margin-bottom: 0;
+          border: 0;
+          @include radius(0);
+          color: $primaryText;
+          @include font($primaryFont, 16, medium, normal, 24);
+
+          @include breakpoint(mobile768) {
+            font-size: size(19);
+          }
+
+          @include breakpoint(tab992) {
+            font-size: size(21);
+          }
+
+          &.active {
+            border-color: transparent;
+            @include setBgColor(transparent, $primaryDark);
+          }
+
+          &:hover:not(.active) {
+            border-color: transparent;
+            @include setBgColor(transparent, $primaryDark);
+          }
+        }
+      }
+    }
   }
 }
 
@@ -345,7 +555,7 @@
 .bookappointment {
   background: $sectionbg;
   padding: size(64) size(0);
-  
+
   @include breakpoint(tab992) {
     padding: size(96) size(0);
   }

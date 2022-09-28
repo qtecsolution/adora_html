@@ -4,15 +4,16 @@
 .swiper {
   &-button-next,
   &-button-prev {
-    display: none;
-    @include square(48);
+    @include flex-center;
+    @include square(32);
     overflow: hidden;
-    padding: size(16);
+    padding: size(8);
     @include border(solid, 1, $primaryText);
     @include circle;
 
     @include breakpoint(mobile768) {
-      @include flex-center;
+      @include square(48);
+      padding: size(16);
     }
 
     svg {
