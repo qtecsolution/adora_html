@@ -1,3 +1,26 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.authentic-main {
+  @include w100;
+  min-height: 100vh;
+  @include flex-center;
+
+  background: rgb(208, 170, 247);
+
+
+  .authentic {
+    @include flex-column;
+
+    &-header {
+      @include flex-center-column;
+      gap: size(24);
+
+      .headerinfo {
+        @include flex-center-column;
+        gap: size(16);
+        text-align: center;
+      }
+    }
+  }
+}
