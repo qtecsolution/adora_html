@@ -3264,6 +3264,8 @@ button:focus,
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  max-width: 31.25rem;
+  margin-inline: auto;
 }
 .authentic-main .authentic-header {
   display: flex;
@@ -3340,6 +3342,40 @@ button:focus,
 }
 .authentic-main .authentic-body .infobox .text .link:not([disabled]):hover {
   color: #d78460;
+}
+.authentic-main .authentic-body .verifications .verify {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+}
+.authentic-main .authentic-body .verifications .verify-input {
+  width: 4.25rem;
+  height: 4.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: solid 0.0625rem rgba(75, 75, 75, 0.3);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 29%);
+  font-size: 1.5rem;
+  font-weight: 500;
+  transition: all 350ms ease-in-out;
+  text-align: center;
+}
+.authentic-main .authentic-body .verifications .verify-input:focus {
+  border-color: hsl(18deg, 60%, 81%);
+}
+.authentic-main .authentic-body .verifications .verify-input::-moz-placeholder {
+  color: rgba(74, 74, 74, 0.3);
+}
+.authentic-main .authentic-body .verifications .verify-input:-ms-input-placeholder {
+  color: rgba(74, 74, 74, 0.3);
+}
+.authentic-main .authentic-body .verifications .verify-input::placeholder {
+  color: rgba(74, 74, 74, 0.3);
 }
 .authentic-main .confirmedchanged {
   display: flex;

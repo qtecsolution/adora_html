@@ -10,6 +10,8 @@
   .authentic {
     @include flex-column;
     gap: size(32);
+    max-width: size(500);
+    margin-inline: auto;
 
     &-header {
       @include flex-center-column;
@@ -84,6 +86,33 @@
 
             @include hover {
               color: darken($primary, 20%);
+            }
+          }
+        }
+      }
+
+      .verifications {
+        .verify {
+          @include flex-center;
+          gap: size(20);
+
+          &-input {
+            @include square(68);
+            @include flex-center;
+            @include border(solid, 1, $linkborder);
+            @include radius(4);
+            @include setBgColor($white, $primaryText);
+            font-size: size(24);
+            font-weight: 500;
+            @include transitionsall;
+            text-align: center;
+  
+            &:focus {
+              border-color: $primary;
+            }
+  
+            &::placeholder {
+              color: rgba($primaryText, 0.3);
             }
           }
         }
