@@ -492,6 +492,12 @@
 
   &-body {
     @include w100;
+    @include flex-column;
+    gap: size(36);
+
+    @include breakpoint(tab992) {
+      gap: size(56);
+    }
 
     .nav {
       flex-wrap: nowrap;
@@ -500,10 +506,11 @@
       max-width: 95%;
       overflow: hidden;
       overflow-x: scroll;
-      padding-bottom: size(8);
+      // padding-bottom: size(8);
 
       &::-webkit-scrollbar {
         height: size(4);
+        display: none;
       }
 
       &::-webkit-scrollbar-thumb {
@@ -548,8 +555,97 @@
         }
       }
     }
+
+    .results {
+      @include flex-start;
+      gap: size(24);
+      justify-content: center;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      max-width: 95%;
+      overflow: hidden;
+      overflow-x: scroll;
+      // padding-bottom: size(8);
+
+      &::-webkit-scrollbar {
+        height: size(4);
+        display: none;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        @include radius(4);
+        height: size(4);
+        background: rgba($primaryText, 0.4);
+      }
+
+      @include breakpoint(tab992) {
+        gap: size(36);
+      }
+
+      .resultlist {
+        @include list-vertical;
+        gap: size(12);
+        min-width: size(176);
+      }
+    }
   }
 }
+
+/**======= AUTO-COUNTER =======**/
+.autocounters {
+  padding: size(64) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(96) size(0);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(48);
+
+    @include breakpoint(tab992) {
+      gap: size(80);
+    }
+
+    @include breakpoint(desktop1200) {
+      gap: size(96);
+    }
+  }
+  
+  &-header {
+    .counterbox {
+      @include flex-center-column;
+      gap: size(12);
+      text-align: center;
+
+      h1, h4 {
+        color: $headingText;
+      }
+    }
+  }
+  
+  &-body {
+    @include flex-center;
+
+    .brand {
+      @include w100;
+      height: size(80);
+      @include flex-center;
+      overflow: hidden;
+
+      img {
+        @include wh100;
+        filter: grayscale(100);
+        @include transitionsall;
+
+        @include hover {
+          filter: grayscale(0);
+        }
+      }
+    }
+  }
+}
+
 
 /**======= BOOK-APPOINTMENT =======**/
 .bookappointment {
@@ -558,5 +654,24 @@
 
   @include breakpoint(tab992) {
     padding: size(96) size(0);
+  }
+}
+
+/**======= BOOK-APPOINTMENT =======**/
+.clientreviews {
+  background: $white;
+  padding: size(64) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(96) size(0);
+  }
+
+  &-content {
+    @include flex-center-column;
+    gap: size(40);
+
+    @include breakpoint(tab992) {
+      gap: size(56);
+    }
   }
 }
