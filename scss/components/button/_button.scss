@@ -104,3 +104,18 @@ button,
     @include setBgColor(darken($primary, 20%), $headingText);
   }
 }
+
+.btn-submit {
+  @include w100;
+  height: size(48);
+  @include radius(4);
+  @include setBgColor($primary, $headingText);
+  font-weight: 500;
+  @include flex-center;
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor(darken($primary, 20%), $headingText);
+  }
+}
