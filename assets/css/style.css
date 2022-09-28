@@ -2835,6 +2835,12 @@ button:focus,
 }
 .meetspecialist-body .swiper-button-next, .meetspecialist-body .swiper-button-prev {
   border-color: hsl(0deg, 0%, 100%);
+  display: none;
+}
+@media screen and (min-width: 36rem) {
+  .meetspecialist-body .swiper-button-next, .meetspecialist-body .swiper-button-prev {
+    display: block;
+  }
 }
 .meetspecialist-body .swiper-button-next svg path, .meetspecialist-body .swiper-button-prev svg path {
   fill: hsl(0deg, 0%, 100%);
@@ -2870,6 +2876,26 @@ button:focus,
 }
 .popularservices-body {
   position: relative;
+}
+.popularservices-body .swiper-button-next, .popularservices-body .swiper-button-prev {
+  border-color: hsl(0deg, 0%, 100%);
+  display: none;
+}
+@media screen and (min-width: 36rem) {
+  .popularservices-body .swiper-button-next, .popularservices-body .swiper-button-prev {
+    display: block;
+  }
+}
+.popularservices-body .swiper-button-next svg path, .popularservices-body .swiper-button-prev svg path {
+  fill: hsl(0deg, 0%, 100%);
+}
+@media screen and (min-width: 48rem) {
+  .popularservices-body .swiper-button-next, .popularservices-body .swiper-button-prev {
+    border-color: hsl(0deg, 0%, 29%);
+  }
+  .popularservices-body .swiper-button-next svg path, .popularservices-body .swiper-button-prev svg path {
+    fill: hsl(0deg, 0%, 29%);
+  }
 }
 
 /**======= JOIN-PROGRAM =======**/

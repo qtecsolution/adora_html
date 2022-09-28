@@ -341,10 +341,14 @@
     }
 
     .swiper {
-
       &-button-next,
       &-button-prev {
         border-color: $white;
+        display: none;
+
+        @include breakpoint(mobile576) {
+          display: block;
+        }
 
         svg {
           path {
@@ -386,6 +390,34 @@
 
   &-body {
     position: relative;
+
+    .swiper {
+      &-button-next,
+      &-button-prev {
+        border-color: $white;
+        display: none;
+
+        @include breakpoint(mobile576) {
+          display: block;
+        }
+
+        svg {
+          path {
+            fill: $white;
+          }
+        }
+
+        @include breakpoint(mobile768) {
+          border-color: $primaryText;
+
+          svg {
+            path {
+              fill: $primaryText;
+            }
+          }
+        }
+      }
+    }
   }
 }
 
