@@ -6,8 +6,8 @@
   &-box {
     &:checked ~ .customcheck-label {
       &::before {
-        background: $primary;
-        border-color: $primary;
+        background: $primaryText;
+        border-color: $primaryText;
       }
 
       &::after {
@@ -19,10 +19,23 @@
 
   &-label {
     position: relative;
-    // color: $textPrimary;
+    color: $primaryText;
     font: inherit;
+    font-weight: 300;
     padding-left: size(26);
     cursor: pointer;
+
+    .link {
+      color: inherit;
+      font-weight: 400;
+      text-decoration: underline;
+      @include transitionsall;
+      
+      @include hover {
+        text-decoration: none;
+        color: darken($primary, 20%);
+      }
+    }
 
     &::before,
     &::after {
@@ -33,7 +46,7 @@
     &::before {
       @include square(18);
       @include radius(4);
-      // @include border(solid, 1, $checkborder);
+      @include border(solid, 1, $linkborder);
       @include translateY(-50%);
       @include transitionsall;
     }
@@ -52,7 +65,7 @@
     }
 
     &::selection {
-      // @include setBgColor(transparent, $textPrimary);
+      @include setBgColor(transparent, $primaryText);
     }
   }
 }
