@@ -119,3 +119,18 @@ button,
     @include setBgColor(darken($primary, 20%), $headingText);
   }
 }
+
+.btn-booknow {
+  @include setBgColor(transparent, $headingText);
+  @include border(solid, 0.5, $primaryText);
+  @include radius(4);
+  @include flex-center;
+  width: size(200);
+  height: size(44);
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor($primaryText, $white);
+  }
+}
