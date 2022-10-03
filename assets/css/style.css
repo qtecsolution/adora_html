@@ -2510,6 +2510,9 @@ button:focus,
 .nice-select:focus {
   border-color: hsl(18deg, 60%, 81%);
 }
+.nice-select .current {
+  color: hsl(0deg, 0%, 29%);
+}
 .nice-select .list {
   background: hsl(0deg, 0%, 100%);
 }
@@ -2521,6 +2524,9 @@ button:focus,
 .nice-select.open::after {
   transform: rotateX(180deg) !important;
   top: auto;
+}
+.nice-select.open .current {
+  color: rgba(74, 74, 74, 0.3);
 }
 
 /**=======================================================**
