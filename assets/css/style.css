@@ -1226,6 +1226,7 @@ button:focus,
   border-radius: 0.5rem;
   padding: 1.25rem;
   height: 100%;
+  transition: transform 350ms ease-in-out;
 }
 .reviewcard-header {
   display: flex;
@@ -1291,6 +1292,9 @@ button:focus,
   color: hsl(0deg, 0%, 29%);
   font-size: 0.875rem;
   font-weight: 300;
+}
+.reviewcard:not([disabled]):hover {
+  transform: translateY(-0.75rem);
 }
 
 .header {
