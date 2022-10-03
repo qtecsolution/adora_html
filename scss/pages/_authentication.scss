@@ -111,7 +111,7 @@
         gap: size(8);
 
         .inputfield {
-          @include border(solid, 1, $linkborder);
+          @include border(solid, 1, $signinborder);
           @include radius(4);
           @include setBgColor($white, $primaryText);
           @include w100;

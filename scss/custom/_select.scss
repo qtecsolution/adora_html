@@ -1,147 +1,32 @@
 @use '../global' as *;
 @use '../partials' as *;
 
-.customselect {
+.nice-select {
+	@include flex-center-vert;
+	border-color: $signinborder !important;
 	@include w100;
+	height: size(48);
+	line-height: size(48);
 
-	.selector {
-		position: relative;
-		cursor: pointer;
-		z-index: 1;
-
-		.selected {
-			background: $white;
-			@include border(solid, 1, $linkborder);
-			@include radius(8);
-			@include flex-center-between;
-			gap: size(8);
-			padding: size(8) size(12);
-			min-width: size(104);
-	
-			.label {
-				width: calc(100% - size(16));
-				color: $primaryText;
-				// @include font($primaryFont, 14, medium, normal, 20);
-				letter-spacing: size(0.04);
-
-				&::selection {
-					color: inherit;
-					background: transparent;
-				}
-	
-				span {
-					color: inherit;
-					font: inherit;
-
-					&::selection {
-						color: inherit;
-						background: transparent;
-					}
-				}
-			}
-	
-			.arrow {
-				transform: rotateZ(0deg);
-				transition-duration: 0.3s;
-				transition-timing-function: cubic-bezier(.59,1.39,.37,1.01);
-				width: size(16);
-				@include flex-center;
-	
-				.icon {
-					width: size(11);
-					height: size(6);
-					@include flex-center;
-					overflow: hidden;
-					margin-top: size(-3);
-	
-					svg {
-						@include wh100;
-					}
-				}
-	
-				&.expanded {
-					transform: rotateZ(180deg);
-
-					.icon {
-						margin-top: size(3);
-					}
-				}
-			}
-		}
+	&::after {
+		border: none;
+		content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23212529'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+		width: size(18);
+		height: size(10);
+		// @include rotate(0);
 	}
 
-	ul {
-		width: 100%;
-		list-style-type: none;
-		padding: 0;
-		margin: 0;
-		position: absolute;
-		z-index: 1;
-		@include setBgColor($white, $primaryText);
-		@include border(solid, 1, $linkborder);
-		@include radius(8);
-		letter-spacing: size(0.04);
-
-		li {
-			color: inherit;
-			// @include font($primaryFont, 14, normal, normal, 20);
-			cursor: pointer;
-			padding: size(8) size(12);
-			
-			@include hover {
-				@include setBgColor($primary, $white);
-			}
-		}
+	&:focus {
+		border-color: $primary;
 	}
 
 	.current {
-		background: darken($bodybg, 3%);
+
 	}
 
-	.hidden {
-		visibility: hidden;
-	}
-
-	.visible {
-		visibility: visible;
-	}
-}
-
-.customselect {
-	.select-wrapper {
-		.select {
-			&-trigger {
-				height: size(44);
-				@include border(solid, 1, $linkborder);
-				@include radius(6);
-				background: $white;
-				@include transitionsall;
-
-				.selectedvalue {
-					opacity: 1;
-					padding-left: size(16);
-					width: calc(100% - size(40));
-					@include font($primaryFont, 16, normal, normal, 24);
-					color: $black;
-				}
-
-				.arrow {
-					@include radius(0);
-					background: transparent;
-				}
-			}
-
-			.custom-options {
-				.custom-option {
-					@include font($primaryFont, 14, normal, normal, 20);
-				}
-			}
-
-			&.open {
-				.select-trigger {
-					border-color: $primary;
-				}
-			}
-		}
+	&-dropdown {
+		@include w100;
+		border-color: $linkborder;
+		box-shadow: none !important;
 	}
 }

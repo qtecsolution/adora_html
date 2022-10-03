@@ -1,0 +1,1 @@
+NiceSelect.bind(document.getElementById('select-gender'), {searchable: false});
