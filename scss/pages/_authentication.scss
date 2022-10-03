@@ -35,6 +35,21 @@
           @include flex-column;
           gap: size(16);
           @include w100;
+
+          .rememberforgot {
+            @include flex-center-between;
+
+            .forgotpass {
+              .link {
+                color: $primaryText;
+                @include transitionscolor;
+
+                @include hover {
+                  color: $black;
+                }
+              }
+            }
+          }
         }
 
         &-body {
@@ -270,6 +285,7 @@
   .confirmedchanged {
     @include flex-center-column;
     gap: size(24);
+    height: 100vh;
 
     .icon {
       @include square(194);

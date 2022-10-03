@@ -1,0 +1,405 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+/**======= HOME-BANNER =======**/
+.salonbanner {
+  padding: size(10) size(0) size(40);
+
+  @include breakpoint(tab992) {
+    padding: size(10) size(0) size(44);
+  }
+
+  .leftcontent {
+    @include flex-column;
+    gap: size(40);
+    background: rgba($primary, 0.3);
+    @include radius(8);
+    padding: size(20) size(16);
+
+    @include breakpoint(tab992) {
+      padding: size(40) size(24);
+    }
+
+    &-header {
+      @include flex-column;
+      gap: size(16);
+
+      .badges {
+        @include flex-center-vert;
+        gap: size(5);
+        flex-wrap: wrap;
+      }
+
+      .info {
+        .text {
+          letter-spacing: size(0.32);
+        }
+      }
+
+      .ratings-favorite {
+        @include flex-center-between;
+
+        .ratings {
+          @include flex-center-vert;
+          gap: size(8);
+
+          .ratinglist {
+            @include list-horizontal;
+            gap: size(4);
+
+            &-item {
+              @include square(18);
+              @include flex-center;
+              overflow: hidden;
+
+              svg {
+                @include wh100;
+              }
+            }
+          }
+
+          .ratingnumber {
+            color: $headingText;
+            font-weight: 400;
+          }
+        }
+
+        .favorite {
+          .btn-favorite {
+            @include flex-center-vert;
+            gap: size(4);
+
+            .icon {
+              @include square(21);
+              @include flex-center;
+              overflow: hidden;
+
+              svg {
+                @include wh100;
+              }
+            }
+
+            .text {
+              color: $headingText;
+              font-weight: 400;
+            }
+
+            @include hover {
+              .icon {
+                svg {
+                  path {
+                    fill: darken($primary, 20%);
+                  }
+                }
+              }
+              .text {
+                color: darken($primary, 20%);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &-body {
+      @include flex-center;
+
+      .bookinfo {
+        width: size(200);
+      }
+    }
+  }
+
+  .rightcontent {
+    @include radius(8);
+    max-height: size(480);
+    overflow: hidden;
+
+    img {
+      @include w100;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+      @include square(36);
+      padding: size(10);
+      border-color: $white;
+
+      svg {
+        path {
+          fill: $white;
+        }
+      }
+
+      @include hover {
+        background: darken($primary, 20%);
+        border-color: darken($primary, 20%);
+      }
+    }
+
+    .swiper-button-next {
+      right: size(20);
+    }
+
+    .swiper-button-prev {
+      left: size(20);
+    }
+  }
+}
+
+/**======= FEATURED-SALON =======**/
+.featured-salon {
+  padding: size(48) size(0);
+
+  @include breakpoint(tab992) {
+    padding: size(72) size(0) size(64);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(24);
+
+    @include breakpoint(tab992) {
+      gap: size(36);
+    }
+  }
+
+  &-header {
+    .title {
+      font-weight: 500;
+    }
+  }
+}
+
+/**======= BOOKING-US =======**/
+.bookus {
+  position: relative;
+  height: size(410);
+  @include flex-center;
+  overflow: hidden;
+
+  &-content {
+    @include w100;
+    @include flex-center-column;
+    gap: size(24);
+
+    .info {
+      max-width: size(300);
+      margin-inline: auto;
+      text-align: center;
+    }
+
+  }
+
+  &-bg {
+    position: absolute;
+    @include wh100;
+    @include flex-center;
+    overflow: hidden;
+    z-index: -1;
+
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+}
+
+/**======= CUSTOMER-REVIEW =======**/
+.custreview {
+  &-content {
+    @include flex-column;
+    gap: size(32);
+    
+    @include breakpoint(tab992) {
+      gap: size(36);
+    }
+  }
+
+  &-header {
+    @include w100;
+    
+    @include breakpoint(tab992) {
+      margin-bottom: size(8);
+    }
+
+    h3 {
+      font-weight: 500;
+    }
+  }
+
+  &-body {
+    @include w100;
+
+    .seeall {
+      @include flex-end;
+
+      .link {
+        color: $blue;
+        @include transitionscolor;
+
+        @include hover {
+          color: darken($blue, 15%);
+        }
+      }
+    }
+  }
+  
+  &-footer {
+    @include w100;
+    @include flex-center;
+
+    .reviewinfo {
+      background: $greenbg;
+      @include radius(10);
+      @include flex-center-vert;
+      gap: size(20);
+      padding: size(24);
+      width: size(445);
+      overflow: hidden;
+
+      .icon {
+        background: rgba($green, 0.15);
+        @include square(70);
+        @include circle;
+        @include flex-center;
+      }
+
+      .details {
+        @include flex-column;
+        width: calc(100% - size(94));
+
+        .title {
+          color: $headingText;
+        }
+
+        .text {
+          color: $primaryText;
+          font-size: size(15);
+        }
+      }
+    }
+  }
+}
+
+/**======= ALL-REVIEWS [PAGE] =======**/
+.allreviews {
+  @include flex-column;
+  gap: size(16);
+
+  &-content {
+    @include flex-column;
+    gap: size(24);
+    
+    @include breakpoint(tab992) {
+      gap: size(40);
+    }
+  }
+
+  &-header {
+    background: $white;
+    @include flex-center-between;
+    padding: size(16) size(20);
+
+    .title {
+      font-weight: 500;
+    }
+
+    .btn-back {
+      @include square(24);
+      @include flex-center;
+      overflow: hidden;
+
+      svg {
+        @include transitiontransform;
+        path {
+          @include transitionsall;
+        }
+      }
+
+      @include hover {
+        svg {
+          @include rotate(90);
+
+          path {
+            stroke: $danger;
+          }
+        }
+      }
+    }
+  }
+
+  &-body {
+    @include flex-column;
+    gap: size(40);
+
+    .singlereview {
+      @include flex-column;
+      gap: size(16);
+      padding-bottom: size(38);
+      @include border-single(bottom, solid, 1, rgba($primaryText, 0.2));
+
+      &-header {
+        @include flex-center-vert;
+        gap: size(16);
+    
+        .nameicon {
+          @include setBgColor($bluebg, $blue);
+          @include square(48);
+          @include circle;
+          @include flex-center;
+          font-size: size(16);
+          font-weight: 600;
+          overflow: hidden;
+          padding: size(16);
+          text-transform: uppercase;
+        }
+    
+        .userinfo {
+          @include flex-column;
+    
+          .username {
+            color: $headingText;
+            font-weight: 400;
+          }
+    
+          .date {
+            color: $primaryText;
+            font-size: size(14);
+            font-weight: 300;
+          }
+        }
+      }
+
+      &-body {
+        @include flex-column;
+        gap: size(16);
+
+        .reviewlist {
+          @include list-horizontal;
+          gap: size(4);
+    
+          &-item {
+            @include square(19);
+            @include flex-center;
+            overflow: hidden;
+    
+            svg {
+              @include wh100;
+            }
+          }
+        }
+
+        .vendorname {
+          .name {
+            color: $headingText;
+          }
+
+          .info {
+            color: $blue;
+          }
+        }
+      }
+    }
+  }
+}
