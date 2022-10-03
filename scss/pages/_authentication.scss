@@ -5,6 +5,8 @@
   @include w100;
   min-height: 100vh;
   padding: size(20);
+  @include flex-center-vert;
+  height: 100vh;
 
   .authentic {
     @include flex-column;
@@ -253,6 +255,7 @@
         }
       }
 
+
       .verifications {
         .verify {
           @include flex-center;
@@ -285,7 +288,8 @@
   .confirmedchanged {
     @include flex-center-column;
     gap: size(24);
-    height: 100vh;
+    margin: auto;
+    text-align: center;
 
     .icon {
       @include square(194);
@@ -300,7 +304,6 @@
     .info {
       @include flex-center-column;
       gap: size(12);
-      text-align: center;
     
       .link {
         color: $headingText;

@@ -3721,6 +3721,9 @@ button:focus,
   width: 100%;
   min-height: 100vh;
   padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  height: 100vh;
 }
 .authentic-main .authentic {
   display: flex;
@@ -3997,7 +4000,8 @@ button:focus,
   justify-content: center;
   flex-direction: column;
   gap: 1.5rem;
-  height: 100vh;
+  margin: auto;
+  text-align: center;
 }
 .authentic-main .confirmedchanged .icon {
   width: 12.125rem;
@@ -4017,7 +4021,6 @@ button:focus,
   justify-content: center;
   flex-direction: column;
   gap: 0.75rem;
-  text-align: center;
 }
 .authentic-main .confirmedchanged .info .link {
   color: hsl(0deg, 0%, 7%);
