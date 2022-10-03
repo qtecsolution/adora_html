@@ -506,8 +506,9 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.25rem 0.625rem;
   font-size: 0.625rem;
+  font-weight: 400;
+  padding: 0.25rem 0.625rem;
   text-align: center;
 }
 
@@ -519,10 +520,35 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
+  font-size: 0.625rem;
+  font-weight: 400;
   padding: 0.5rem;
   text-align: center;
   height: 1.5rem;
+}
+
+.salonbadge {
+  width: 4.25rem;
+  background: transparent;
+  color: hsl(0deg, 0%, 7%);
+  border-radius: 0.78125rem;
+  border-radius: 0.78125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 0.625rem;
+  font-weight: 500;
+  padding: 0.5rem;
+  text-align: center;
+  height: 1.5rem;
+}
+.salonbadge.open {
+  background: hsl(18deg, 60%, 81%);
+  color: hsl(0deg, 0%, 7%);
+}
+.salonbadge.closed {
+  background: hsl(0deg, 100%, 61%);
+  color: hsl(0deg, 0%, 100%);
 }
 
 button,
@@ -3426,12 +3452,17 @@ button:focus,
   width: 12.5rem;
 }
 .salonbanner .rightcontent {
-  border-radius: 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
   max-height: 30rem;
   overflow: hidden;
 }
-.salonbanner .rightcontent img {
+.salonbanner .rightcontent .swiper-slide {
+  border-radius: 0.625rem;
+  border-radius: 0.625rem;
+  overflow: hidden;
+}
+.salonbanner .rightcontent .swiper-slide img {
   width: 100%;
 }
 .salonbanner .rightcontent .swiper-button-next,
@@ -3440,6 +3471,8 @@ button:focus,
   height: 2.25rem;
   padding: 0.625rem;
   border-color: hsl(0deg, 0%, 100%);
+  top: 45%;
+  transform: translateY(-50%);
 }
 .salonbanner .rightcontent .swiper-button-next svg path,
 .salonbanner .rightcontent .swiper-button-prev svg path {
@@ -3768,6 +3801,121 @@ button:focus,
 .allreviews-body .singlereview-body .vendorname .info {
   color: hsl(202deg, 100%, 56%);
   font-weight: 300;
+}
+
+/**======= SALON-DESCRIPTIONS =======**/
+.salondescriptions {
+  padding-bottom: 2rem;
+}
+@media screen and (min-width: 62rem) {
+  .salondescriptions {
+    padding-bottom: 4rem;
+  }
+}
+.salondescriptions .aboutsalon {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.salondescriptions .aboutsalon .title {
+  font-weight: 500;
+}
+.salondescriptions .aboutsalon .infolist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+@media screen and (min-width: 62rem) {
+  .salondescriptions .aboutsalon .infolist {
+    gap: 1.5rem;
+  }
+}
+.salondescriptions .aboutsalon .infolist-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.salondescriptions .aboutsalon .infolist-item .icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.salondescriptions .aboutsalon .infolist-item .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.salondescriptions .opening {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.salondescriptions .opening-header {
+  padding-bottom: 0.875rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  border-bottom: solid 0.0625rem rgba(74, 74, 74, 0.3);
+}
+.salondescriptions .opening-header .titlebox {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.salondescriptions .opening-header .titlebox .title {
+  font-weight: 500;
+}
+.salondescriptions .opening-header .titlebox .salonbadge {
+  margin-top: 0.25rem;
+}
+.salondescriptions .opening-header .schedulelist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.salondescriptions .opening-header .schedulelist-item .time {
+  font-weight: 400;
+}
+.salondescriptions .opening-body {
+  display: flex;
+  align-items: center;
+}
+.salondescriptions .opening-body .location {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.salondescriptions .opening-body .location .text {
+  letter-spacing: 0.02rem;
+}
+.salondescriptions .opening-body .location .link {
+  color: hsl(202deg, 100%, 56%);
+  letter-spacing: 0.02rem;
+  transition: color 350ms ease-in-out;
+}
+.salondescriptions .opening-body .location .link:not([disabled]):hover {
+  color: #0074b8;
+}
+.salondescriptions .opening-body .icon {
+  width: 4.125rem;
+  height: 4.125rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.salondescriptions .opening-body .icon svg {
+  width: 100%;
+  height: 100%;
 }
 
 .authentic-main {

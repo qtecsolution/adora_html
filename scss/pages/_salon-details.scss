@@ -112,24 +112,30 @@
   }
 
   .rightcontent {
-    @include radius(8);
+    @include radius(10);
     max-height: size(480);
     overflow: hidden;
+
+    .swiper-slide {
+      @include radius(10);
+      overflow: hidden;
+
+      img {
+        @include w100;
+      }
+    }
 
     // @include breakpoint(tab992) {
     //   @include h100;
     // }
-
-    img {
-      @include w100;
-    }
 
     .swiper-button-next,
     .swiper-button-prev {
       @include square(36);
       padding: size(10);
       border-color: $white;
-
+      top: 45%;
+      @include translateY(-50%);
       svg {
         path {
           fill: $white;
@@ -286,7 +292,6 @@
     }
   }
 }
-
 
 /**======= DOMLOADED-CONTENT =======**/
 .domloaded {
@@ -451,6 +456,118 @@
             color: $blue;
             font-weight: 300;
           }
+        }
+      }
+    }
+  }
+}
+
+/**======= SALON-DESCRIPTIONS =======**/
+.salondescriptions {
+  padding-bottom: size(32);
+
+  @include breakpoint(tab992) {
+    padding-bottom: size(64);
+  }
+
+  .aboutsalon {
+    @include flex-column;
+    gap: size(24);
+
+    .title {
+      font-weight: 500;
+    }
+
+    .infolist {
+      @include list-horizontal;
+      flex-wrap: wrap;
+      gap: size(12);
+
+      @include breakpoint(tab992) {
+        gap: size(24);
+      }
+
+      &-item {
+        @include flex-center-vert;
+        gap: size(8);
+
+        .icon {
+          @include square(24);
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+    }
+  }
+
+  .opening {
+    @include flex-column;
+    gap: size(16);
+
+    &-header {
+      padding-bottom: size(14);
+      @include flex-column;
+      gap: size(20);
+      @include border-single(bottom, solid, 1, rgba($primaryText, 0.3));
+
+      .titlebox {
+        @include flex-center-vert;
+        gap: size(16);
+      
+        .title {
+          font-weight: 500;
+        }
+
+        .salonbadge {
+          margin-top: size(4);
+        }
+      }
+
+      .schedulelist {
+        @include list-horizontal;
+        justify-content: space-between;
+
+        &-item {
+          .time {
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    
+    &-body {
+      @include flex-center-vert;
+
+      .location {
+        @include flex-column;
+        gap: size(4);
+
+        .text {
+          letter-spacing: size(0.32);
+        }
+
+        .link {
+          color: $blue;
+          letter-spacing: size(0.32);
+          @include transitionscolor;
+
+          @include hover {
+            color: darken($blue, 20%);
+          }
+        }
+      }
+
+      .icon {
+        @include square(66);
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          @include wh100;
         }
       }
     }

@@ -5,8 +5,9 @@
   @include setBgColor($primary, $headingText);
   @include radius(12.5);
   @include flex-center;
-  padding: size(4) size(10);
   font-size: size(10);
+  font-weight: 400;
+  padding: size(4) size(10);
   text-align: center;
 }
 
@@ -14,8 +15,29 @@
   @include setBgColor($white, $headingText);
   @include radius(12.5);
   @include flex-center;
+  font-size: size(10);
+  font-weight: 400;
   padding: size(8);
   text-align: center;
   height: size(24);
+}
+
+.salonbadge {
+  width: size(68);
+  @include setBgColor(transparent, $headingText);
+  @include radius(12.5);
+  @include flex-center;
   font-size: size(10);
+  font-weight: 500;
+  padding: size(8);
+  text-align: center;
+  height: size(24);
+
+  &.open {
+    @include setBgColor($primary, $headingText);
+  }
+
+  &.closed {
+    @include setBgColor($danger, $white);
+  }
 }
