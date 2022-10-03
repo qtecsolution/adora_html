@@ -3661,7 +3661,7 @@ button:focus,
   }
 }
 .allreviews-header {
-  background: hsl(0deg, 0%, 100%);
+  background: hsl(216deg, 100%, 99%);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3763,9 +3763,11 @@ button:focus,
 }
 .allreviews-body .singlereview-body .vendorname .name {
   color: hsl(0deg, 0%, 7%);
+  font-weight: 400;
 }
 .allreviews-body .singlereview-body .vendorname .info {
   color: hsl(202deg, 100%, 56%);
+  font-weight: 300;
 }
 
 .authentic-main {

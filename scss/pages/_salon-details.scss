@@ -348,7 +348,7 @@
   }
 
   &-header {
-    background: $white;
+    background: $bodybg;
     @include flex-center-between;
     padding: size(16) size(20);
 
@@ -444,10 +444,12 @@
         .vendorname {
           .name {
             color: $headingText;
+            font-weight: 400;
           }
 
           .info {
             color: $blue;
+            font-weight: 300;
           }
         }
       }
