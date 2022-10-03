@@ -1,8 +1,8 @@
 up({
     // bottom position
-    bottom: '2.75rem',
+    bottom: '4rem',
     // right position
-    right: '1.5rem',
+    right: '1rem',
     // width
     width: '2.75rem',
     // height

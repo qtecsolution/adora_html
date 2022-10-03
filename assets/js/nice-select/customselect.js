@@ -1,1 +1,6 @@
-NiceSelect.bind(document.getElementById('select-gender'), {searchable: false});
+const selectGender = document.querySelector('#select-gender');
+
+const instance = NiceSelect.bind(selectGender, {
+  searchable: false,
+  placeholder: 'Select your gender',
+});

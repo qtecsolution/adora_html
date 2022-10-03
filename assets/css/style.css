@@ -3338,6 +3338,7 @@ button:focus,
 @media screen and (min-width: 62rem) {
   .salonbanner .leftcontent {
     padding: 2.5rem 1.5rem;
+    height: 100%;
   }
 }
 .salonbanner .leftcontent-header {
@@ -3591,6 +3592,56 @@ button:focus,
 .custreview-footer .reviewinfo .details .text {
   color: hsl(0deg, 0%, 29%);
   font-size: 0.9375rem;
+}
+
+/**======= DOMLOADED-CONTENT =======**/
+.domloaded {
+  background: hsl(0deg, 0%, 100%);
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 5rem;
+  z-index: 500;
+  border-top: solid 0.0625rem rgba(75, 75, 75, 0.1);
+  display: flex;
+  align-items: center;
+}
+.domloaded-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.domloaded-content .leftcontent {
+  display: none;
+}
+@media screen and (min-width: 62rem) {
+  .domloaded-content .leftcontent {
+    display: block;
+  }
+}
+.domloaded-content .rightcontent {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  width: 100%;
+  justify-content: space-between;
+}
+@media screen and (min-width: 62rem) {
+  .domloaded-content .rightcontent {
+    width: auto;
+    justify-content: flex-end;
+  }
+}
+.domloaded-content .rightcontent .bookinfo {
+  width: 8.75rem;
+}
+@media screen and (min-width: 62rem) {
+  .domloaded-content .rightcontent .bookinfo {
+    width: 12.5rem;
+  }
 }
 
 /**======= ALL-REVIEWS [PAGE] =======**/
