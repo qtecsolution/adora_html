@@ -528,7 +528,8 @@ h6 {
 }
 
 .salonbadge {
-  width: 4.25rem;
+  max-width: 5rem;
+  min-width: 4.25rem;
   background: transparent;
   color: hsl(0deg, 0%, 7%);
   border-radius: 0.78125rem;
@@ -3475,8 +3476,13 @@ button:focus,
   height: 2.25rem;
   padding: 0.625rem;
   border-color: hsl(0deg, 0%, 100%);
-  top: 45%;
-  transform: translateY(-50%);
+}
+@media screen and (min-width: 62rem) {
+  .salonbanner .rightcontent .swiper-button-next,
+.salonbanner .rightcontent .swiper-button-prev {
+    top: 45%;
+    transform: translateY(-50%);
+  }
 }
 .salonbanner .rightcontent .swiper-button-next svg path,
 .salonbanner .rightcontent .swiper-button-prev svg path {
@@ -3631,6 +3637,76 @@ button:focus,
   font-size: 0.9375rem;
 }
 
+/**======= SERVICES =======**/
+.services-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.services-header .title {
+  font-weight: 500;
+}
+.services-body .navbar .nav-pills {
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+.services-body .navbar .nav {
+  gap: 1rem;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  overflow-x: scroll;
+  max-width: 99%;
+  padding-bottom: 0.625rem;
+}
+@media screen and (min-width: 48rem) {
+  .services-body .navbar .nav {
+    overflow: hidden;
+    padding-bottom: 0;
+    max-width: 100%;
+  }
+}
+.services-body .navbar .nav::-webkit-scrollbar {
+  background: transparent;
+  height: 0.25rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+.services-body .navbar .nav::-webkit-scrollbar-thumb {
+  background: rgba(74, 74, 74, 0.3);
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+}
+.services-body .navbar .nav-link {
+  width: 100%;
+  border: solid 0.03125rem rgba(74, 74, 74, 0.3);
+  border-radius: 1.15625rem;
+  border-radius: 1.15625rem;
+  padding: 0.25rem 0.25rem 0.25rem 0.9375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+@media screen and (min-width: 48rem) {
+  .services-body .navbar .nav-link {
+    width: auto;
+  }
+}
+.services-body .navbar .nav-link .titlebox {
+  width: calc(100% - 2.5rem);
+}
+.services-body .navbar .nav-link .counter {
+  width: 1.875rem;
+  height: 1.875rem;
+  border: solid 0.03125rem rgba(74, 74, 74, 0.3);
+  border-radius: 100%;
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 7%);
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
 /**======= DOMLOADED-CONTENT =======**/
 .domloaded {
   background: hsl(0deg, 0%, 100%);

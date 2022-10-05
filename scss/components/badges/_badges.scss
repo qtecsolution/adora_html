@@ -23,7 +23,8 @@
 }
 
 .salonbadge {
-  width: size(68);
+  max-width: size(80);
+  min-width: size(68);
   @include setBgColor(transparent, $headingText);
   @include radius(12.5);
   @include flex-center;

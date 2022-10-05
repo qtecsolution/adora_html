@@ -134,8 +134,12 @@
       @include square(36);
       padding: size(10);
       border-color: $white;
-      top: 45%;
-      @include translateY(-50%);
+
+      @include breakpoint(tab992) {
+        top: 45%;
+        @include translateY(-50%);
+      }
+      
       svg {
         path {
           fill: $white;
@@ -287,6 +291,90 @@
         .text {
           color: $primaryText;
           font-size: size(15);
+        }
+      }
+    }
+  }
+}
+
+/**======= SERVICES =======**/
+.services {
+  &-content {
+    @include flex-column;
+    gap: size(24);
+  }
+
+  &-header {
+    .title {
+      font-weight: 500;
+    }
+  }
+
+  &-body {
+    .navbar {
+      .nav-pills {
+        @include radius(0);
+      }
+      
+      .nav {
+        gap: size(16);
+        flex-wrap: nowrap;
+        overflow: hidden;
+        overflow-x: scroll;
+        max-width: 99%;
+        padding-bottom: size(10);
+
+        @include breakpoint(mobile768) {
+          overflow: hidden;
+          padding-bottom: 0;
+          max-width: 100%;
+        }
+
+        &::-webkit-scrollbar {
+          background: transparent;
+          height: size(4);
+          @include radius(8);
+        }
+
+        &::-webkit-scrollbar-thumb {
+          background: rgba($primaryText, 0.3);
+          @include radius(8);
+        }
+
+        &-item {
+        }
+
+        &-link {
+          @include w100;
+          @include border(solid, 0.5, rgba($primaryText, 0.3));
+          @include radius(18.5);
+          padding: size(4) size(4) size(4) size(15);
+          @include flex-center-vert;
+          gap: size(10);
+
+          @include breakpoint(mobile768) {
+            width: auto;
+          }
+
+          .titlebox {
+            width: calc(100% - size(40));
+
+            // .title {}
+          }
+
+          .counter {
+            @include square(30);
+            @include border(solid, 0.5, rgba($primaryText, 0.3));
+            @include circle;
+            @include setBgColor($white, $headingText);
+            font-weight: 400;
+            @include flex-center;
+            text-align: center;
+          }
+
+          &.active {
+
+          }
         }
       }
     }
