@@ -10,11 +10,16 @@ $primaryDark: hsl(18, 50%, 72%); //#DBA994
 
 // BACKGROUND-COLORS
 $reviewhoverbg: hsla(18, 60%, 81%, 0.2); //rgba(236, 195, 178, 0.2)
-$sectionbg: linear-gradient(94.09deg, rgba(219, 169, 148, 0.5) 1.12%, rgba(246, 225, 217, 0.5) 100%);
+$sectionbg: linear-gradient(
+  94.09deg,
+  rgba(219, 169, 148, 0.5) 1.12%,
+  rgba(246, 225, 217, 0.5) 100%
+);
 $badgebg: hsl(13, 44%, 94%); //#F6EBE8
 $bluebg: hsla(202, 100%, 56%, 0.15); //rgba(29, 174, 255, 0.15)
 $green: hsl(173, 83%, 37%); //#10AB99
 $greenbg: hsl(220, 100%, 96%); //#EDF3FF
+$pillbg: hsla(0, 0%, 85%, 0.3); //rgba(217, 217, 217, 0.3)
 
 // TEXT-COLORS
 $headingText: hsl(0, 0%, 7%); //#121212
