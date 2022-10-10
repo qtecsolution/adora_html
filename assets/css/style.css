@@ -3751,8 +3751,13 @@ button:focus,
   max-height: 35.3125rem;
   overflow: hidden;
   overflow-y: scroll;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 .services-body .servicetopic::-webkit-scrollbar {
+  display: none;
+}
+.services-body .servicetopic::-webkit-scrollbar-thumb {
   display: none;
 }
 .services-body .servicetopic .spycheck {
