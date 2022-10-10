@@ -417,6 +417,10 @@
       overflow: hidden;
       overflow-y: scroll;
 
+      &::-webkit-scrollbar {
+        display: none;
+      }
+
       .spycheck {
         padding-bottom: size(16);
         @include border-single(bottom, solid, 1, rgba($primaryText, 0.3));
