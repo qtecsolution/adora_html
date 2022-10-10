@@ -3689,7 +3689,6 @@ button:focus,
 }
 .services-body .navbar .nav-link {
   background: hsl(0deg, 0%, 100%);
-  min-width: 11.25rem;
   border: solid 0.03125rem rgba(74, 74, 74, 0.3);
   border-radius: 1.15625rem;
   border-radius: 1.15625rem;
@@ -3698,12 +3697,6 @@ button:focus,
   align-items: center;
   gap: 0.625rem;
 }
-@media screen and (min-width: 48rem) {
-  .services-body .navbar .nav-link {
-    width: auto;
-    min-width: auto;
-  }
-}
 .services-body .navbar .nav-link .titlebox {
   width: calc(100% - 2.5rem);
 }
@@ -3711,6 +3704,11 @@ button:focus,
   color: hsl(0deg, 0%, 7%);
   font-size: 0.875rem;
   font-weight: 400;
+  width: 100%;
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .services-body .navbar .nav-link .counter {
   width: 1.875rem;
@@ -3759,7 +3757,8 @@ button:focus,
   display: none;
 }
 .services-body .servicetopic::-webkit-scrollbar-thumb {
-  display: none;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
 }
 .services-body .servicetopic .spycheck {
   padding-bottom: 1rem;

@@ -349,17 +349,11 @@
 
         &-link {
           background: $white;
-          min-width: size(180);
           @include border(solid, 0.5, rgba($primaryText, 0.3));
           @include radius(18.5);
           padding: size(4) size(4) size(4) size(15);
           @include flex-center-vert;
           gap: size(10);
-
-          @include breakpoint(mobile768) {
-            width: auto;
-            min-width: auto;
-          }
 
           .titlebox {
             width: calc(100% - size(40));
@@ -368,6 +362,8 @@
               color: $headingText;
               font-size: size(14);
               font-weight: 400;
+              @include w100;
+              @include text-overflow;
             }
           }
 
@@ -424,7 +420,8 @@
       }
 
       &::-webkit-scrollbar-thumb {
-        display: none;
+        // background: darken($primary, 25%);
+        @include radius(8);
       }
 
       .spycheck {
