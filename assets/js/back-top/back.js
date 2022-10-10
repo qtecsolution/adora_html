@@ -4,7 +4,7 @@
 // up button
 // ===============================================
  function up(set) {
-  const upBtn = document.createElement('div');
+  const upBtn = document.createElement('button');
   let upBtnImg;
 
   upBtn.classList.add('up-btn', 'up-btn__hide');

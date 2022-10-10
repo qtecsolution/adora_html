@@ -89,6 +89,7 @@ button,
 .up-btn {
   opacity: 1;
   padding: size(12);
+  @include border(solid, 1, $primaryText);
 }
 
 .btn-book {
