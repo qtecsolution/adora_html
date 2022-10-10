@@ -348,7 +348,7 @@
         }
 
         &-link {
-          background: $pillbg;
+          background: $white;
           min-width: size(180);
           @include border(solid, 0.5, rgba($primaryText, 0.3));
           @include radius(18.5);
@@ -358,6 +358,7 @@
 
           @include breakpoint(mobile768) {
             width: auto;
+            min-width: auto;
           }
 
           .titlebox {
@@ -381,12 +382,25 @@
             text-align: center;
           }
 
+          &:hover:not(.active) {
+            background: $pillbg;
+          }
+
           &.active {
-            background: $primary;
-            border-color: $primary;
+            background: rgba($primary, 0.3);
+            border-color: rgba($primary, 0.3);
 
             .counter {
-              border-color: $primary;
+              border-color: rgba($primary, 0.3);
+            }
+          }
+
+          &:active {
+            background: rgba($primary, 0.3);
+            border-color: rgba($primary, 0.3);
+
+            .counter {
+              border-color: rgba($primary, 0.3);
             }
           }
         }

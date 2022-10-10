@@ -3687,7 +3687,7 @@ button:focus,
   border-radius: 0.5rem;
 }
 .services-body .navbar .nav-link {
-  background: hsla(0deg, 0%, 85%, 0.3);
+  background: hsl(0deg, 0%, 100%);
   min-width: 11.25rem;
   border: solid 0.03125rem rgba(74, 74, 74, 0.3);
   border-radius: 1.15625rem;
@@ -3700,6 +3700,7 @@ button:focus,
 @media screen and (min-width: 48rem) {
   .services-body .navbar .nav-link {
     width: auto;
+    min-width: auto;
   }
 }
 .services-body .navbar .nav-link .titlebox {
@@ -3724,12 +3725,22 @@ button:focus,
   justify-content: center;
   text-align: center;
 }
+.services-body .navbar .nav-link:hover:not(.active) {
+  background: hsla(0deg, 0%, 85%, 0.3);
+}
 .services-body .navbar .nav-link.active {
-  background: hsl(18deg, 60%, 81%);
-  border-color: hsl(18deg, 60%, 81%);
+  background: rgba(236, 195, 177, 0.3);
+  border-color: rgba(236, 195, 177, 0.3);
 }
 .services-body .navbar .nav-link.active .counter {
-  border-color: hsl(18deg, 60%, 81%);
+  border-color: rgba(236, 195, 177, 0.3);
+}
+.services-body .navbar .nav-link:active {
+  background: rgba(236, 195, 177, 0.3);
+  border-color: rgba(236, 195, 177, 0.3);
+}
+.services-body .navbar .nav-link:active .counter {
+  border-color: rgba(236, 195, 177, 0.3);
 }
 .services-body .scrollspy-example {
   display: flex;
