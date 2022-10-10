@@ -531,6 +531,11 @@
   z-index: 500;
   @include border-single(top, solid, 1, $signinborder);
   @include flex-center-vert;
+  z-index: 3000;
+
+  @include breakpoint(tab992) {
+    z-index: 1900;
+  }
 
   &-content {
     @include flex-center-between;

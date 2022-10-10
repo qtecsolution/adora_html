@@ -3851,6 +3851,12 @@ button:focus,
   border-top: solid 0.0625rem rgba(75, 75, 75, 0.1);
   display: flex;
   align-items: center;
+  z-index: 3000;
+}
+@media screen and (min-width: 62rem) {
+  .domloaded {
+    z-index: 1900;
+  }
 }
 .domloaded-content {
   display: flex;
