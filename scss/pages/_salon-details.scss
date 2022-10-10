@@ -310,12 +310,14 @@
   }
 
   &-body {
-    position: sticky;
-    top: size(104);
-    left: 0;
-    @include w100;
-
     .navbar {
+      position: sticky;
+      top: size(104);
+      left: 0;
+      @include w100;
+      background: $bodybg;
+      z-index: 10;
+
       .nav-pills {
         @include radius(0);
       }
@@ -347,7 +349,7 @@
 
         &-link {
           background: $pillbg;
-          @include w100;
+          min-width: size(180);
           @include border(solid, 0.5, rgba($primaryText, 0.3));
           @include radius(18.5);
           padding: size(4) size(4) size(4) size(15);

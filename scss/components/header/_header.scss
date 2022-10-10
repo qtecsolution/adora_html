@@ -283,6 +283,7 @@
         position: absolute;
         top: 100%;
         left: -50%;
+        left: 0;
         background: $white;
         min-width: size(220);
         @include border-single(top, solid, 2, darken($primary, 25%));
