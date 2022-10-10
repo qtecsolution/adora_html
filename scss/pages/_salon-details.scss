@@ -427,6 +427,7 @@
       .spycheck {
         padding-bottom: size(16);
         @include border-single(bottom, solid, 1, rgba($primaryText, 0.3));
+        @include h100;
 
         .spycheckbox {
           &:checked ~ .spylabel {
