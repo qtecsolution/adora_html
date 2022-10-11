@@ -1,0 +1,139 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+/**======= STEP-PROGRESS =======**/
+.stepprogress {
+  position: sticky;
+  top: size(60);
+
+  @include breakpoint(tab992) {
+    top: size(88);
+  }
+
+  .progress {
+    background: transparent;
+    height: size(5);
+    @include radius(0);
+
+    &-bar {
+      background: $primary;
+    }
+  }
+}
+
+/**======= BOOKING-SERVICES =======**/
+.bookingservices {
+  padding: size(24) size(0) size(76);
+
+  .selectservices {
+    min-height: 500vh;
+
+  }
+
+  .bookingside {
+    background: $sidebg;
+    @include border(solid, 1, $sideborder);
+    @include radius(8);
+    box-shadow: $sideshadow;
+    @include flex-column;
+    gap: size(20);
+    padding: size(24);
+    position: sticky;
+    top: size(117);
+
+    &-header {
+      @include flex-column;
+      gap: size(10);
+
+      .title {
+        color: $headingText;
+        font-weight: 500;
+      }
+
+      .info {
+        .location {
+          color: $headingText;
+          font-size: size(14);
+          letter-spacing: size(0.32);
+          line-height: 1.7;
+        }
+      }
+    }
+
+    &-body {
+      @include flex-column;
+
+      .serviceinfo,
+      .subtotal,
+      .total {
+        @include border-single(top, dashed, 1.5, rgba($headingText, 0.3));
+        padding: size(20) size(0);
+      }
+
+      .serviceinfo {
+        @include flex-center-between;
+
+        .title-duration {
+          @include flex-column;
+
+          .servicetitle {
+            color: $headingText;
+          }
+
+          .duration {
+            color: $headingText;
+            font-size: size(14);
+          }
+        }
+
+        .prices {
+          @include flex-column;
+          
+          .currentprice {
+            color: $headingText;
+          }
+
+          .previousprice {
+            color: rgba($headingText, 0.6);
+            font-size: size(14);
+            text-decoration: line-through;
+          }
+        }
+      }
+
+      .subtotal {
+        @include flex-column;
+        gap: size(10);
+
+        .subtotalinfo {
+          @include flex-center-between;
+
+          .title,
+          .price {
+            font-weight: 400;
+          }
+        }
+
+        .couponinfo {
+          @include flex-center-between;
+
+          .title,
+          .coupon {
+            color: rgba($headingText, 0.6);
+            font-weight: 400;
+          }
+        }
+      }
+
+      .total {
+        @include flex-center-between;
+
+        .title,
+        .totalprice {
+          color: $headingText;
+          font-weight: 500;
+        }
+      }
+    }
+  }
+}

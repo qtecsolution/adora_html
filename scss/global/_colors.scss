@@ -20,6 +20,7 @@ $bluebg: hsla(202, 100%, 56%, 0.15); //rgba(29, 174, 255, 0.15)
 $green: hsl(173, 83%, 37%); //#10AB99
 $greenbg: hsl(220, 100%, 96%); //#EDF3FF
 $pillbg: hsla(0, 0%, 85%, 0.3); //rgba(217, 217, 217, 0.3)
+$sidebg: hsla(18, 60%, 81%, 0.1); //rgba(236, 195, 178, 0.1)
 
 // TEXT-COLORS
 $headingText: hsl(0, 0%, 7%); //#121212
@@ -29,9 +30,12 @@ $danger: hsl(0, 100%, 61%); //#FF3636
 $blue: hsl(202, 100%, 56%); //#1DAEFF
 
 // BORDER-COLORS
-$linkborder: rgba(75, 75, 75, 0.3);
-$signinborder: rgba(75, 75, 75, 0.1);
+$linkborder: hsla(0, 0%, 29%, 0.3); //rgba(75, 75, 75, 0.3)
+$signinborder: hsla(0, 0%, 29%, 0.1); //rgba(75, 75, 75, 0.1)
+$sideborder: hsla(0, 0%, 7%, 0.1); //rgba(18, 18, 18, 0.1)
 
 // SHADOWS
 
 // BOX-SHADOWS
+$dropshadow: drop-shadow(0 .125rem .375rem rgba(18, 18, 18, 0.05));
+$sideshadow: 0 .125rem .625rem rgba(183, 203, 255, 0.2);
