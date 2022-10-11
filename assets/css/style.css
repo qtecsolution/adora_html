@@ -4231,9 +4231,6 @@ button:focus,
 .bookingservices {
   padding: 1.5rem 0rem 4.75rem;
 }
-.bookingservices .selectservices {
-  min-height: 500vh;
-}
 .bookingservices .bookingside {
   background: hsla(18deg, 60%, 81%, 0.1);
   border: solid 0.0625rem hsla(0deg, 0%, 7%, 0.1);
