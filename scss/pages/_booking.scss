@@ -26,7 +26,143 @@
   padding: size(24) size(0) size(76);
 
   .selectservices {
+    &-header {
+      @include border-single(bottom, solid, 1, rgba($primaryText, 0.2));
+      padding-bottom: size(8);
+
+      .title {
+        font-weight: 500;
+      }
+    }
+
+    &-body {
+      position: relative;
+      @include flex-column;
+      gap: size(24);
+
+      .swiper-button-prev,
+      .swiper-button-next {
+        @include square(28);
+        padding: size(4);
+        border: none;
+        top: 4.5%;
+
+        svg {
+          @include wh100;
+        }
+
+        @include hover {
+          background: transparent;
+          border: transparent;
+        }
+      }
+
+      .swiper-button-prev {
+        left: size(-10);
+
+        @include breakpoint(mobile576) {
+          left: size(0);
+        }
+      }
+
+      .swiper-button-next {
+        right: size(-10);
+
+        @include breakpoint(mobile576) {
+          right: size(0);
+        }
+      }
+
+      .serviceselects {
+        padding: size(16) size(0);
+
+        .nav {
+          flex-wrap: nowrap;
+          border: none;
+
+          &-tabs {
+            .nav-link {
+              @include h100;
+              width: 92%;
+              border: none;
+              @include radius(0);
+              margin: 0;
+              @include setBgColor($white, $headingText);
+              @include border(solid, 0.5, $linkborder);
+              @include radius(18.5);
+              padding: size(3);
+              @include flex-center;
+              gap: size(10);
+
+              @include breakpoint(mobile576) {
+                width: 94%;
+              }
+
+              .titlebox {
+                width: calc(100% - size(40));
     
+                .title {
+                  color: $headingText;
+                  font-size: size(14);
+                  font-weight: 400;
+                  @include w100;
+                  @include text-overflow;
+                }
+              }
+    
+              .count {
+                @include square(30);
+                @include border(solid, 0.5, rgba($primaryText, 0.3));
+                @include circle;
+                @include setBgColor($white, $headingText);
+                font-size: size(14);
+                font-weight: 400;
+                @include flex-center;
+                text-align: center;
+              }
+
+              &:hover:not(.active) {
+                background: $pillbg;
+              }
+
+              &.active {
+                background: rgba($primary, 0.3);
+                border-color: rgba($primary, 0.3);
+    
+                .counter {
+                  border-color: rgba($primary, 0.3);
+                }
+              }
+    
+              &:active {
+                background: rgba($primary, 0.3);
+                border-color: rgba($primary, 0.3);
+    
+                .counter {
+                  border-color: rgba($primary, 0.3);
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .service-detail {
+        @include flex-column;
+        gap: size(32);
+
+        &-header {
+          .title {
+            font-weight: 500;
+          }
+        }
+
+        &-body {
+          @include flex-column;
+          gap: size(20);
+        }
+      }
+    }
   }
 
   .bookingside {
@@ -136,3 +272,10 @@
     }
   }
 }
+
+// .bookingloaded {
+//   position: absolute;
+//   top: calc(100vh - size(80));
+//   bottom: 0;
+//   @include w100;
+// }

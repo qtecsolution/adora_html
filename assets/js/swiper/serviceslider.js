@@ -9,7 +9,7 @@ const popularService = new Swiper(".popularService", {
   },
   navigation: {
     nextEl: ".outnext",
-    prevEl: ".outprev",
+    prevEl: ".outprev"
   },
   breakpoints: {
     0: {

@@ -423,99 +423,106 @@
         // background: darken($primary, 25%);
         @include radius(8);
       }
+    }
+  }
+}
 
-      .spycheck {
-        padding-bottom: size(16);
-        @include border-single(bottom, solid, 1, rgba($primaryText, 0.3));
-        @include h100;
 
-        .spycheckbox {
-          &:checked ~ .spylabel {
-            &::before {
-              background: $textSuccess;
-              border-color: $textSuccess;
-            }
+.spycheck {
+  padding-bottom: size(16);
+  @include border-single(bottom, solid, 1, rgba($primaryText, 0.3));
+  @include h100;
 
-            &::after {
-              opacity: 1;
-              visibility: visible;
-            }
-          }
+  .spycheckbox {
+    &:checked ~ .spylabel {
+      &::before {
+        background: $textSuccess;
+        border-color: $textSuccess;
+      }
+
+      &::after {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+  }
+
+  .spylabel {
+    position: relative;
+    padding-left: size(56);
+    cursor: pointer;
+    @include flex-column;
+    gap: size(16);
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      // @include translateY(-50%);
+      @include square(36);
+      @include border(solid, 1, $primaryText);
+      @include circle;
+      @include transitionsall;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: size(11);
+      top: size(12);
+      width: size(15);
+      height: size(8);
+      @include border(solid, 2, $white);
+      border-top: 0;
+      border-right: 0;
+      @include rotate(-45);
+      opacity: 0;
+      visibility: hidden;
+      @include transitionsall;
+    }
+
+    &-header {
+      @include flex-center-between;
+
+      .leftcontent {
+        width: 75%;
+
+        .servicename {
+          color: $headingText;
+          font-weight: 400;
+          @include text-overflow;
         }
 
-        .spylabel {
-          position: relative;
-          padding-left: size(56);
-          cursor: pointer;
-          @include flex-column;
-          gap: size(16);
-
-          &::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            // @include translateY(-50%);
-            @include square(36);
-            @include border(solid, 1, $primaryText);
-            @include circle;
-            @include transitionsall;
-          }
-
-          &::after {
-            content: "";
-            position: absolute;
-            left: size(11);
-            top: size(12);
-            width: size(15);
-            height: size(8);
-            @include border(solid, 2, $white);
-            border-top: 0;
-            border-right: 0;
-            @include rotate(-45);
-            opacity: 0;
-            visibility: hidden;
-            @include transitionsall;
-          }
-
-          &-header {
-            @include flex-center-between;
-
-            .leftcontent {
-              .servicename {
-                color: $headingText;
-                font-weight: 400;
-              }
-
-              .duration {
-                color: $primaryText;
-                font-size: size(14);
-                font-weight: 400;
-              }
-            }
-
-            .rightcontent {
-              @include flex-column;
-
-              .currentprice {
-                color: $primaryText;
-                font-weight: 500;
-              }
-
-              .previousprice {
-                font-size: size(14);
-                color: rgba($primaryText, 0.6);
-                text-decoration: line-through;
-              }
-            }
-          }
-
-          &-body {
-            .text {
-              color: $primaryText;
-            }
-          }
+        .duration {
+          color: $primaryText;
+          font-size: size(14);
+          font-weight: 400;
         }
+      }
+
+      .rightcontent {
+        @include flex-column;
+        align-items: flex-end;
+        width: 25%;
+        text-align: right;
+
+        .currentprice {
+          color: $primaryText;
+          font-weight: 500;
+        }
+
+        .previousprice {
+          font-size: size(14);
+          color: rgba($primaryText, 0.6);
+          text-decoration: line-through;
+        }
+      }
+    }
+
+    &-body {
+      .text {
+        color: $primaryText;
       }
     }
   }
