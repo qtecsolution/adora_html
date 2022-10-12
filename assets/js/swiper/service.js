@@ -4,13 +4,13 @@ const services = new Swiper(".serviceselects", {
   loopFillGroupWithBlank: true,
   autoplay: {
     delay: 5000,
-    disableOnInteraction: false
+    disableOnInteraction: true
   },
   spaceBetween: 10,
   slidesPerGroup: 1,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.slidenext',
+    prevEl: '.slideprev',
   },
   breakpoints: {
     0: {
