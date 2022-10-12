@@ -47,7 +47,7 @@
         @include square(28);
         padding: size(4);
         border: none;
-        top: 4.5%;
+        top: 4%;
 
         svg {
           @include wh100;
@@ -61,18 +61,10 @@
 
       .swiper-button-prev {
         left: size(-10);
-
-        // @include breakpoint(mobile576) {
-        //   left: size(0);
-        // }
       }
 
       .swiper-button-next {
         right: size(-10);
-
-        // @include breakpoint(mobile576) {
-        //   right: size(0);
-        // }
       }
 
       .serviceselects {
@@ -85,10 +77,11 @@
           &-tabs {
             .nav-link {
               @include h100;
-              width: 92%;
+              width: 93%;
               border: none;
               @include radius(0);
               margin: 0;
+              font-size: size(13);
               @include setBgColor($white, $headingText);
               @include border(solid, 0.5, $linkborder);
               @include radius(18.5);
@@ -96,12 +89,8 @@
               @include flex-center;
               gap: size(10);
 
-              @include breakpoint(mobile576) {
-                width: 94%;
-              }
-
               .titlebox {
-                width: calc(100% - size(40));
+                width: calc(100% - size(34));
     
                 .title {
                   color: $headingText;
@@ -113,11 +102,11 @@
               }
     
               .count {
-                @include square(30);
+                @include square(24);
                 @include border(solid, 0.5, rgba($primaryText, 0.3));
                 @include circle;
                 @include setBgColor($white, $headingText);
-                font-size: size(14);
+                font-size: size(13);
                 font-weight: 400;
                 @include flex-center;
                 text-align: center;
@@ -200,7 +189,7 @@
             @include square(28);
             padding: size(4);
             border: none;
-            top: 60%;
+            top: 62%;
     
             svg {
               @include wh100;
@@ -233,6 +222,7 @@
                   border: none;
                   @include radius(0);
                   margin: 0;
+                  font-size: size(13);
                   background: transparent;
                   color: $headingText;
                   @include flex-center-column;
@@ -399,6 +389,237 @@
     }
   }
 
+  .signup {
+    &-header {
+      @include border-single(bottom, solid, 1, rgba($primaryText, 0.2));
+      padding-bottom: size(12);
+      margin-bottom: size(48);
+
+      .title {
+        font-weight: 500;
+      }
+    }
+
+    &-body {
+      @include flex-center-column;
+      gap: size(24);
+
+      .login-body {
+        @include w100;
+        @include flex-center-column;
+        gap: size(24);
+
+        .titlebox {
+          @include flex-center-vert;
+          gap: size(14);
+          @include w100;
+          flex: 1;
+
+          .title {
+            width: size(120);
+          }
+
+          .line {
+            width: calc((100% - size(134)) / 2);
+            height: size(1);
+            @include flex-center;
+            overflow: hidden;
+
+            svg {
+              @include wh100;
+            }
+          }
+        }
+
+        .signwithsocial {
+          @include w100;
+          @include flex-center-between;
+          gap: size(10);
+          flex-wrap: wrap;
+
+          .btn-signin {
+            background: $white;
+            @include border(solid, 1, $signinborder);
+            @include radius(4);
+            @include flex-center;
+            gap: size(10);
+            padding: size(10) size(16);
+            @include w100;
+
+            @include breakpoint(mobile768) {
+              width: calc((100% / 2) - size(10));
+            }
+
+            .icon {
+              @include square(26);
+              @include flex-center;
+              overflow: hidden;
+
+              svg {
+                @include wh100;
+              }
+            }
+
+            .text {
+              color: $primaryText;
+              width: calc(100% - size(36));
+            }
+          }
+        }
+
+        .infobox {
+          margin-top: size(8);
+          @include flex-center;
+          text-align: center;
+  
+          .text {
+            .link {
+              font-weight: 500;
+              color: $primaryText;
+              @include transitionscolor;
+  
+              @include hover {
+                color: darken($primary, 20%);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .reviwconfirm {
+    &-header {
+      @include border-single(bottom, solid, 1, rgba($primaryText, 0.2));
+      padding-bottom: size(8);
+      margin-bottom: size(12);
+
+      .title {
+        font-weight: 500;
+      }
+    }
+
+    &-body {
+      @include flex-column;
+      gap: size(36);
+
+      .couponcode {
+        @include flex-column;
+        gap: size(16);
+
+        &-header {
+          @include flex-column;
+          gap: size(4);
+
+          .title {
+            font-weight: 500;
+          }
+
+          .text {
+            font-weight: 300;
+          }
+        }
+
+        &-body {
+          @include flex-column;
+          gap: size(6);
+
+          .couponbox {
+            background: $white;
+            @include flex-center-vert;
+            @include border(solid, 1, $signinborder);
+            @include radius(4);
+            overflow: hidden;
+            padding: size(10) size(0) size(12) size(16);
+            @include transitionsall;
+
+            .couponfleld {
+              width: calc(100% - size(80));
+              @include h100;
+
+              .couponinput {
+                @include wh100;
+                color: $primaryText;
+              }
+            }
+
+            .couponapply {
+              width: size(80);
+              @include h100;
+              @include flex-center;
+
+              .btn-apply {
+                color: rgba($primaryText, 0.6);
+                font-size: size(19);
+                @include transitionscolor;
+
+                @include hover {
+                  color: $primaryText;
+                }
+              }
+            }
+
+            &:focus-within {
+              border-color: $primary;
+            }
+          }
+
+          .text {
+            color: $green;
+            font-size: size(14);
+            font-weight: 300;
+          }
+        }
+      }
+
+      .bookingnotes {
+        @include flex-column;
+        gap: size(16);
+
+        &-header {
+          @include flex-column;
+          gap: size(4);
+
+          .title {
+            font-weight: 500;
+          }
+
+          .text {
+            font-weight: 300;
+          }
+        }
+
+        &-body {
+          .notebox {
+            @include setBgColor($white, $primaryText);
+            padding: size(16);
+            @include border(solid, 1, $signinborder);
+            @include radius(4);
+            @include transitionsall;
+            @include w100;
+
+            &:focus {
+              border-color: $primary;
+            }
+          }
+        }
+      }
+
+      .policy {
+        @include flex-column;
+        gap: size(4);
+
+        .title {
+          font-weight: 500;
+        }
+
+        .text {
+          font-weight: 300;
+        }
+      }
+    }
+  }
+
   .bookingside {
     background: $sidebg;
     @include border(solid, 1, $sideborder);
@@ -423,7 +644,7 @@
         .location {
           color: $headingText;
           font-size: size(14);
-          letter-spacing: size(0.32);
+          // letter-spacing: size(0.32);
           line-height: 1.7;
         }
       }
