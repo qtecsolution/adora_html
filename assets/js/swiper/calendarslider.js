@@ -2,10 +2,10 @@ const calendarslide = new Swiper(".calendarslider", {
   grabCursor: true,
   loop: true,
   loopFillGroupWithBlank: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: false
-  },
+  // autoplay: {
+  //   delay: 5000,
+  //   disableOnInteraction: false
+  // },
   spaceBetween: 16,
   slidesPerGroup: 1,
   navigation: {

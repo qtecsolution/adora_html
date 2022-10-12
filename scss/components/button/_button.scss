@@ -135,3 +135,18 @@ button,
     @include setBgColor($primaryText, $white);
   }
 }
+
+.btn-goto {
+  width: size(200);
+  height: size(44);
+  @include radius(4);
+  @include setBgColor($primary, $headingText);
+  font-weight: 500;
+  @include flex-center;
+  text-align: center;
+  @include transitionsall;
+
+  @include hover {
+    @include setBgColor(darken($primary, 20%), $headingText);
+  }
+}

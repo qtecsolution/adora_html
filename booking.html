@@ -2022,167 +2022,551 @@
               </div>
               
               <div class="selectdatetime-body">
-                <div class="swiper calendarslider col-10 mx-auto">
-                  <ul class="nav nav-tabs swiper-wrapper" id="servicesTab" role="tablist">
-                    <li class="nav-item swiper-slide" role="presentation">
-                      <button class="nav-link active" id="sunday-tab" data-bs-toggle="tab" data-bs-target="#sunday-tab-pane" type="button" role="tab" aria-controls="sunday-tab-pane" aria-selected="true">
-                        <span class="activeicon">
-                          <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.626953" width="25" height="6" rx="3" fill="#ECC3B2"/>
-                          </svg>
-                        </span>
+                <div class="calendarinfo">
+                  <div class="calendarinfo-header">
+                    <h4 class="title">October</h4>
+                  </div>
 
-                        <span class="linkinfo">
-                          <span class="date">6</span>
-                          <span class="day">sun</span>
-                        </span>
-                      </button>
-                    </li>
-  
-                    <li class="nav-item swiper-slide" role="presentation">
-                      <button class="nav-link" id="monday-tab" data-bs-toggle="tab" data-bs-target="#monday-tab-pane" type="button" role="tab" aria-controls="monday-tab-pane" aria-selected="false">
-                        <span class="activeicon">
-                          <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.626953" width="25" height="6" rx="3" fill="#ECC3B2"/>
-                          </svg>
-                        </span>
-
-                        <span class="linkinfo">
-                          <span class="date">7</span>
-                          <span class="day">mon</span>
-                        </span>
-                      </button>
-                    </li>
-  
-                    <li class="nav-item swiper-slide" role="presentation">
-                      <button class="nav-link" id="tuesday-tab" data-bs-toggle="tab" data-bs-target="#tuesday-tab-pane" type="button" role="tab" aria-controls="tuesday-tab-pane" aria-selected="false">
-                        <span class="activeicon">
-                          <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.626953" width="25" height="6" rx="3" fill="#ECC3B2"/>
-                          </svg>
-                        </span>
-
-                        <span class="linkinfo">
-                          <span class="date">8</span>
-                          <span class="day">thu</span>
-                        </span>
-                      </button>
-                    </li>
-  
-                    <li class="nav-item swiper-slide" role="presentation">
-                      <button class="nav-link" id="wednesday-tab" data-bs-toggle="tab" data-bs-target="#wednesday-tab-pane" type="button" role="tab" aria-controls="wednesday-tab-pane" aria-selected="false">
-                        <span class="activeicon">
-                          <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.626953" width="25" height="6" rx="3" fill="#ECC3B2"/>
-                          </svg>
-                        </span>
-
-                        <span class="linkinfo">
-                          <span class="date">9</span>
-                          <span class="day">wed</span>
-                        </span>
-                      </button>
-                    </li>
-  
-                    <li class="nav-item swiper-slide" role="presentation">
-                      <button class="nav-link" id="thursday-tab" data-bs-toggle="tab" data-bs-target="#thursday-tab-pane" type="button" role="tab" aria-controls="thursday-tab-pane" aria-selected="false">
-                        <span class="activeicon">
-                          <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.626953" width="25" height="6" rx="3" fill="#ECC3B2"/>
-                          </svg>
-                        </span>
-
-                        <div class="linkinfo">
-                          <span class="date">10</span>
-                          <span class="day">thu</span>
-                        </div>
-                      </button>
-                    </li>
-  
-                    <li class="nav-item swiper-slide" role="presentation">
-                      <button class="nav-link" id="friday-tab" data-bs-toggle="tab" data-bs-target="#friday-tab-pane" type="button" role="tab" aria-controls="friday-tab-pane" aria-selected="false">
-                        <span class="activeicon">
-                          <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.626953" width="25" height="6" rx="3" fill="#ECC3B2"/>
-                          </svg>
-                        </span>
-
-                        <span class="linkinfo">
-                          <span class="date">11</span>
-                          <span class="day">fri</span>
-                        </span>
-                      </button>
-                    </li>
-  
-                    <li class="nav-item swiper-slide" role="presentation">
-                      <button class="nav-link" id="saturday-tab" data-bs-toggle="tab" data-bs-target="#saturday-tab-pane" type="button" role="tab" aria-controls="saturday-tab-pane" aria-selected="false">
-                        <span class="activeicon">
-                          <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect x="0.626953" width="25" height="6" rx="3" fill="#ECC3B2"/>
-                          </svg>
-                        </span>
-
-                        <span class="linkinfo">
-                          <span class="date">12</span>
-                          <span class="day">sat</span>
-                        </span>
-                      </button>
-                    </li>
-                  </ul>
+                  <div class="calendarinfo-body">
+                    <div class="swiper calendarslider col-10 mx-auto">
+                      <ul class="nav nav-tabs swiper-wrapper" id="calenderTab" role="tablist">
+                        <li class="nav-item swiper-slide" role="presentation">
+                          <button class="nav-link active" id="sunday-tab" data-bs-toggle="tab" data-bs-target="#sunday-tab-pane" type="button" role="tab" aria-controls="sunday-tab-pane" aria-selected="true">
+                            <span class="activeicon">
+                              <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.626953" width="25" height="6" rx="3" fill="#ECC3B2"/>
+                              </svg>
+                            </span>
+    
+                            <span class="linkinfo">
+                              <span class="date">6</span>
+                              <span class="day">sun</span>
+                            </span>
+                          </button>
+                        </li>
+      
+                        <li class="nav-item swiper-slide" role="presentation">
+                          <button class="nav-link" id="monday-tab" data-bs-toggle="tab" data-bs-target="#monday-tab-pane" type="button" role="tab" aria-controls="monday-tab-pane" aria-selected="false">
+                            <span class="activeicon">
+                              <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.626953" width="25" height="6" rx="3" fill="#ECC3B2"/>
+                              </svg>
+                            </span>
+    
+                            <span class="linkinfo">
+                              <span class="date">7</span>
+                              <span class="day">mon</span>
+                            </span>
+                          </button>
+                        </li>
+      
+                        <li class="nav-item swiper-slide" role="presentation">
+                          <button class="nav-link" id="tuesday-tab" data-bs-toggle="tab" data-bs-target="#tuesday-tab-pane" type="button" role="tab" aria-controls="tuesday-tab-pane" aria-selected="false">
+                            <span class="activeicon">
+                              <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.626953" width="25" height="6" rx="3" fill="#ECC3B2"/>
+                              </svg>
+                            </span>
+    
+                            <span class="linkinfo">
+                              <span class="date">8</span>
+                              <span class="day">thu</span>
+                            </span>
+                          </button>
+                        </li>
+      
+                        <li class="nav-item swiper-slide" role="presentation">
+                          <button class="nav-link" id="wednesday-tab" data-bs-toggle="tab" data-bs-target="#wednesday-tab-pane" type="button" role="tab" aria-controls="wednesday-tab-pane" aria-selected="false">
+                            <span class="activeicon">
+                              <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.626953" width="25" height="6" rx="3" fill="#ECC3B2"/>
+                              </svg>
+                            </span>
+    
+                            <span class="linkinfo">
+                              <span class="date">9</span>
+                              <span class="day">wed</span>
+                            </span>
+                          </button>
+                        </li>
+      
+                        <li class="nav-item swiper-slide" role="presentation">
+                          <button class="nav-link" id="thursday-tab" data-bs-toggle="tab" data-bs-target="#thursday-tab-pane" type="button" role="tab" aria-controls="thursday-tab-pane" aria-selected="false">
+                            <span class="activeicon">
+                              <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.626953" width="25" height="6" rx="3" fill="#ECC3B2"/>
+                              </svg>
+                            </span>
+    
+                            <div class="linkinfo">
+                              <span class="date">10</span>
+                              <span class="day">thu</span>
+                            </div>
+                          </button>
+                        </li>
+      
+                        <li class="nav-item swiper-slide" role="presentation">
+                          <button class="nav-link" id="friday-tab" data-bs-toggle="tab" data-bs-target="#friday-tab-pane" type="button" role="tab" aria-controls="friday-tab-pane" aria-selected="false">
+                            <span class="activeicon">
+                              <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.626953" width="25" height="6" rx="3" fill="#ECC3B2"/>
+                              </svg>
+                            </span>
+    
+                            <span class="linkinfo">
+                              <span class="date">11</span>
+                              <span class="day">fri</span>
+                            </span>
+                          </button>
+                        </li>
+      
+                        <li class="nav-item swiper-slide" role="presentation">
+                          <button class="nav-link" id="saturday-tab" data-bs-toggle="tab" data-bs-target="#saturday-tab-pane" type="button" role="tab" aria-controls="saturday-tab-pane" aria-selected="false">
+                            <span class="activeicon">
+                              <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.626953" width="25" height="6" rx="3" fill="#ECC3B2"/>
+                              </svg>
+                            </span>
+    
+                            <span class="linkinfo">
+                              <span class="date">12</span>
+                              <span class="day">sat</span>
+                            </span>
+                          </button>
+                        </li>
+      
+                        <li class="nav-item swiper-slide" role="presentation">
+                          <button class="nav-link" id="another-tab" data-bs-toggle="tab" data-bs-target="#another-tab-pane" type="button" role="tab" aria-controls="another-tab-pane" aria-selected="false">
+                            <span class="activeicon">
+                              <svg width="26" height="6" viewBox="0 0 26 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <rect x="0.626953" width="25" height="6" rx="3" fill="#ECC3B2"/>
+                              </svg>
+                            </span>
+    
+                            <span class="linkinfo">
+                              <span class="date">13</span>
+                              <span class="day">sun</span>
+                            </span>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    
+                    <button class="swiper-button-next nextday">
+                      <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M0.961913 0.489517L1.1063 0.150562L0.961913 0.489517ZM0.960938 0.514957C0.960938 0.511385 0.961609 0.508081 0.962732 0.505169L6.57422 6.31617L6.57424 6.31619C6.58244 6.32468 6.5878 6.33701 6.5878 6.35075C6.5878 6.36449 6.58244 6.37681 6.57424 6.3853L6.57422 6.38532L0.963044 12.196C0.961734 12.1929 0.960938 12.1893 0.960938 12.1854C0.960938 12.178 0.963875 12.1717 0.967744 12.1677L0.968058 12.1673L6.25155 6.69814L6.58711 6.35078L6.25158 6.00339L0.968092 0.533086L0.967743 0.532725C0.963876 0.52873 0.960938 0.522429 0.960938 0.514957ZM0.95553 12.2038C0.955583 12.2037 0.955636 12.2037 0.9557 12.2036L0.95553 12.2038ZM0.961913 12.212L0.961916 12.212L0.961913 12.212L0.961909 12.212L0.961913 12.212Z" fill="white" stroke="#4B4B4B"/>
+                      </svg>
+                    </button>
+    
+                    <button class="swiper-button-prev prevday">
+                      <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M7.03809 1.36256L6.8937 1.02361L7.03809 1.36256ZM7.03906 1.388C7.03906 1.38443 7.03839 1.38113 7.03727 1.37822L1.42578 7.18921L1.42576 7.18924C1.41756 7.19773 1.4122 7.21005 1.4122 7.22379C1.4122 7.23753 1.41756 7.24986 1.42576 7.25835L1.42578 7.25837L7.03696 13.069C7.03827 13.066 7.03906 13.0624 7.03906 13.0585C7.03906 13.051 7.03612 13.0447 7.03226 13.0407L7.03194 13.0404L1.74845 7.57119L1.41289 7.22383L1.74842 6.87643L7.03191 1.40613L7.03226 1.40577C7.03612 1.40178 7.03906 1.39548 7.03906 1.388ZM7.04447 13.0768C7.04442 13.0768 7.04436 13.0767 7.0443 13.0767L7.04447 13.0768ZM7.03809 13.085L7.03808 13.085L7.03809 13.085L7.03809 13.085L7.03809 13.085Z" fill="white" stroke="#4B4B4B"/>
+                      </svg>
+                    </button>
+                  </div>
                 </div>
-                
-                <button class="swiper-button-next nextday">
-                  <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0.961913 0.489517L1.1063 0.150562L0.961913 0.489517ZM0.960938 0.514957C0.960938 0.511385 0.961609 0.508081 0.962732 0.505169L6.57422 6.31617L6.57424 6.31619C6.58244 6.32468 6.5878 6.33701 6.5878 6.35075C6.5878 6.36449 6.58244 6.37681 6.57424 6.3853L6.57422 6.38532L0.963044 12.196C0.961734 12.1929 0.960938 12.1893 0.960938 12.1854C0.960938 12.178 0.963875 12.1717 0.967744 12.1677L0.968058 12.1673L6.25155 6.69814L6.58711 6.35078L6.25158 6.00339L0.968092 0.533086L0.967743 0.532725C0.963876 0.52873 0.960938 0.522429 0.960938 0.514957ZM0.95553 12.2038C0.955583 12.2037 0.955636 12.2037 0.9557 12.2036L0.95553 12.2038ZM0.961913 12.212L0.961916 12.212L0.961913 12.212L0.961909 12.212L0.961913 12.212Z" fill="white" stroke="#4B4B4B"/>
-                  </svg>
-                </button>
 
-                <button class="swiper-button-prev prevday">
-                  <svg width="8" height="14" viewBox="0 0 8 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M7.03809 1.36256L6.8937 1.02361L7.03809 1.36256ZM7.03906 1.388C7.03906 1.38443 7.03839 1.38113 7.03727 1.37822L1.42578 7.18921L1.42576 7.18924C1.41756 7.19773 1.4122 7.21005 1.4122 7.22379C1.4122 7.23753 1.41756 7.24986 1.42576 7.25835L1.42578 7.25837L7.03696 13.069C7.03827 13.066 7.03906 13.0624 7.03906 13.0585C7.03906 13.051 7.03612 13.0447 7.03226 13.0407L7.03194 13.0404L1.74845 7.57119L1.41289 7.22383L1.74842 6.87643L7.03191 1.40613L7.03226 1.40577C7.03612 1.40178 7.03906 1.39548 7.03906 1.388ZM7.04447 13.0768C7.04442 13.0768 7.04436 13.0767 7.0443 13.0767L7.04447 13.0768ZM7.03809 13.085L7.03808 13.085L7.03809 13.085L7.03809 13.085L7.03809 13.085Z" fill="white" stroke="#4B4B4B"/>
-                  </svg>
-                </button>
-
-                <div class="tab-content" id="servicesTabContent">
+                <div class="tab-content" id="calenderTabContent">
                   <div class="tab-pane fade show active" id="sunday-tab-pane" role="tabpanel" aria-labelledby="sunday-tab" tabindex="0">
                     <div class="datetimeinfo">
-                      
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-1" class="timeradio" hidden checked>
+                        <label for="timeslot-1" class="timelabel">10:00 am</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-2" class="timeradio" hidden>
+                        <label for="timeslot-2" class="timelabel">10:30 am</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-3" class="timeradio" hidden>
+                        <label for="timeslot-3" class="timelabel">11:00 am</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-4" class="timeradio" hidden disabled>
+                        <label for="timeslot-4" class="timelabel">11:30 am</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-5" class="timeradio" hidden>
+                        <label for="timeslot-5" class="timelabel">12:00 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-6" class="timeradio" hidden>
+                        <label for="timeslot-6" class="timelabel">12:30 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-7" class="timeradio" hidden>
+                        <label for="timeslot-7" class="timelabel">01:00 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-8" class="timeradio" hidden>
+                        <label for="timeslot-8" class="timelabel">01:30 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-9" class="timeradio" hidden disabled>
+                        <label for="timeslot-9" class="timelabel">02:00 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-10" class="timeradio" hidden>
+                        <label for="timeslot-10" class="timelabel">02:30 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-11" class="timeradio" hidden>
+                        <label for="timeslot-11" class="timelabel">03:00 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-12" class="timeradio" hidden>
+                        <label for="timeslot-12" class="timelabel">03:30 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-13" class="timeradio" hidden disabled>
+                        <label for="timeslot-13" class="timelabel">04:00 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-14" class="timeradio" hidden>
+                        <label for="timeslot-14" class="timelabel">04:30 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-15" class="timeradio" hidden>
+                        <label for="timeslot-15" class="timelabel">05:00 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-16" class="timeradio" hidden disabled>
+                        <label for="timeslot-16" class="timelabel">05:30 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-17" class="timeradio" hidden>
+                        <label for="timeslot-17" class="timelabel">06:00 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-18" class="timeradio" hidden>
+                        <label for="timeslot-18" class="timelabel">06:30 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-19" class="timeradio" hidden disabled>
+                        <label for="timeslot-19" class="timelabel">07:00 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-20" class="timeradio" hidden>
+                        <label for="timeslot-20" class="timelabel">07:30 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-21" class="timeradio" hidden>
+                        <label for="timeslot-21" class="timelabel">08:00 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-22" class="timeradio" hidden>
+                        <label for="timeslot-22" class="timelabel">08:30 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-23" class="timeradio" hidden disabled>
+                        <label for="timeslot-23" class="timelabel">09:00 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-24" class="timeradio" hidden>
+                        <label for="timeslot-24" class="timelabel">09:30 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-25" class="timeradio" hidden disabled>
+                        <label for="timeslot-25" class="timelabel">10:00 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-26" class="timeradio" hidden>
+                        <label for="timeslot-26" class="timelabel">10:30 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-27" class="timeradio" hidden>
+                        <label for="timeslot-27" class="timelabel">11:00 pm</label>
+                      </div>
+
+                      <div class="timeslot">
+                        <input type="radio" name="timeslot" id="timeslot-28" class="timeradio" hidden>
+                        <label for="timeslot-28" class="timelabel">11:30 pm</label>
+                      </div>
                     </div>
                   </div>
 
                   <div class="tab-pane fade" id="monday-tab-pane" role="tabpanel" aria-labelledby="monday-tab" tabindex="0">
-                    <div class="datetimeinfo">
-                      
+                    <div class="closedinfo">
+                      <div class="closedinfo-header">
+                        <figure class="icon">
+                          <svg width="91" height="63" viewBox="0 0 91 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#closedicon)">
+                              <path d="M85.0106 26.6843C84.7155 26.6843 84.4165 26.6143 84.136 26.4655L45.3396 5.87201L6.54347 26.4657C5.61742 26.9574 4.47725 26.5955 3.99386 25.658C3.50865 24.7214 3.86667 23.5651 4.79089 23.0743L44.4634 2.01533C45.0132 1.72369 45.6663 1.72369 46.216 2.01533L85.8886 23.0743C86.8128 23.5651 87.1708 24.7214 86.6856 25.658C86.3482 26.3115 85.6914 26.6843 85.0106 26.6843Z" fill="#FFEAC6"/>
+                              <path d="M87.343 21H3.33058L1.80078 24.7692V58.3177C1.80078 60.3995 3.43771 62.0869 5.45663 62.0869H87.1937C89.2953 62.0869 90.9988 60.3303 90.9988 58.1637V24.7692C90.9988 22.6877 89.3621 21 87.343 21Z" fill="#FF5F7A"/>
+                              <path d="M3.77832 20.941H3.63007C1.62516 20.941 0 22.5882 0 24.6197V59.3801C0 61.4119 1.62539 63.0588 3.63007 63.0588H86.9019C88.9885 63.0588 90.6803 61.3444 90.6803 59.2299H11.3349C7.16155 59.2299 3.77832 55.8014 3.77832 51.5722V20.941Z" fill="#FB4455"/>
+                              <path d="M45.3408 7.54002C47.4275 7.54002 49.1191 5.82578 49.1191 3.71116C49.1191 1.59653 47.4275 -0.117706 45.3408 -0.117706C43.2541 -0.117706 41.5625 1.59653 41.5625 3.71116C41.5625 5.82578 43.2541 7.54002 45.3408 7.54002Z" fill="#F5C89D"/>
+                              <path d="M26.2432 45.2634V36.8214C26.2432 35.7642 25.3981 34.907 24.354 34.907C23.3099 34.907 22.4648 35.7642 22.4648 36.8214V47.2847C22.4648 48.1728 23.1134 48.9077 23.9788 49.0475C24.1662 49.0779 24.1081 49.0943 25.4111 49.0943C25.7579 49.0943 27.0917 49.0932 28.3304 49.0909C29.3773 49.0888 30.2214 48.2247 30.2152 47.1639C30.2091 46.1089 29.3638 45.2576 28.3227 45.2592C27.4995 45.2604 26.6334 45.262 26.2432 45.2634Z" fill="white"/>
+                              <path d="M65.0254 38.7823C66.0697 38.7823 66.9145 37.925 66.9145 36.8679C66.9145 35.8108 66.0695 34.9535 65.0254 34.9535H60.7563C59.712 34.9535 58.8672 35.8108 58.8672 36.8679V47.1318C58.8672 48.189 59.7123 49.0462 60.7563 49.0462H65.0254C66.0697 49.0462 66.9145 48.189 66.9145 47.1318C66.9145 46.0747 66.0695 45.2174 65.0254 45.2174H62.6455V43.9143H64.7099C65.7542 43.9143 66.5991 43.057 66.5991 41.9999C66.5991 40.9427 65.754 40.0854 64.7099 40.0854H62.6455V38.7823H65.0254Z" fill="white"/>
+                              <path d="M17.0209 44.493C16.9528 44.5753 16.8789 44.6518 16.8032 44.7202C16.3973 45.0867 15.8918 45.2643 15.2535 45.2643C13.4769 45.2643 12.0322 43.7994 12.0322 41.9999C12.0322 40.2005 13.4769 38.7356 15.2535 38.7356C15.9011 38.7356 16.5227 38.9282 17.0523 39.2908C17.9193 39.8843 19.0908 39.6524 19.6758 38.7784C20.2605 37.9026 20.0338 36.7117 19.1702 36.1199C18.0115 35.3263 16.6574 34.9065 15.2535 34.9065C11.394 34.9065 8.25391 38.0885 8.25391 41.9997C8.25391 45.9108 11.394 49.0929 15.2535 49.0929C16.8144 49.0929 18.2183 48.5694 19.3178 47.5777C19.5356 47.3813 19.7385 47.1683 19.9247 46.9402C20.5925 46.1269 20.4838 44.92 19.681 44.2442C18.8751 43.5675 17.6851 43.6807 17.0209 44.493Z" fill="white"/>
+                              <path d="M53.2341 40.2846C52.0644 39.8481 50.9869 39.3807 50.5646 39.1946L50.5941 39.1413C50.6145 39.0038 50.7547 38.8851 50.9778 38.8169C52.0976 38.471 53.1787 39.3216 53.2304 39.3638C54.0275 40.0312 55.2081 39.92 55.878 39.1181C56.5494 38.3095 56.4462 37.1016 55.6474 36.4212C54.6751 35.592 52.3671 34.3964 49.8895 35.1508C48.2477 35.6518 47.0853 36.9727 46.8547 38.5983C46.6369 40.1379 47.2955 41.6186 48.576 42.4636C48.659 42.5187 48.7475 42.5665 48.8379 42.6075C48.8379 42.6075 50.3027 43.2703 51.9262 43.877C52.6235 44.1378 52.9022 44.4557 52.8763 44.5978C52.8377 44.8231 52.4373 45.2643 51.6938 45.2643C50.4393 45.2643 49.7216 44.5707 49.5315 44.3576C48.8267 43.5752 47.6332 43.5154 46.862 44.2257C46.089 44.9362 46.0318 46.1466 46.7309 46.93C47.9615 48.304 49.7713 49.0931 51.6938 49.0931C54.1439 49.0931 56.2065 47.4854 56.5956 45.2708C56.8795 43.6573 56.171 41.383 53.2341 40.2846Z" fill="white"/>
+                              <path d="M37.7183 34.9067C33.8588 34.9067 30.7188 38.0887 30.7188 41.9999C30.7188 45.9111 33.8588 49.0931 37.7183 49.0931C41.5779 49.0931 44.7179 45.9111 44.7179 41.9999C44.7179 38.0887 41.5779 34.9067 37.7183 34.9067ZM37.7183 45.2643C35.9417 45.2643 34.4971 43.7993 34.4971 41.9999C34.4971 40.2005 35.9417 38.7355 37.7183 38.7355C39.4949 38.7355 40.9396 40.2005 40.9396 41.9999C40.9396 43.7993 39.4949 45.2643 37.7183 45.2643Z" fill="white"/>
+                              <path d="M73.826 35.0603H71.0181C70.5162 35.0603 70.0348 35.2622 69.6805 35.622C69.3263 35.9818 69.1271 36.4698 69.1289 36.9784L69.1493 47.0321C69.1511 47.5407 69.3522 48.0266 69.7084 48.3839C70.0607 48.7399 70.5404 48.94 71.0387 48.94H71.046C71.046 48.94 73.1344 48.9326 73.9424 48.9184C77.2909 48.8586 79.7224 45.9487 79.7224 42C79.7222 37.9141 77.298 35.0603 73.826 35.0603ZM73.8756 45.0896C73.6395 45.0942 73.2927 45.0979 72.9219 45.1007L72.9109 38.8891H73.826C75.7908 38.8891 75.9439 41.27 75.9439 42C75.9439 43.5199 75.3036 45.0643 73.8756 45.0896Z" fill="white"/>
+                            </g>
+                            <defs>
+                              <clipPath id="closedicon">
+                                <rect width="91" height="63" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </figure>
+
+                        <div class="headerinfo">
+                          <h5 class="title">Decadence Hair & Beauty is closed today</h5>
+                          <p class="text">but you can book for tomorrow, 7 Oct</p>
+                        </div>
+                      </div>
+
+                      <div class="closedinfo-body">
+                        <button class="btn-goto" type="button">Go to Monday, 7 Oct</button>
+                      </div>
                     </div>
                   </div>
 
                   <div class="tab-pane fade" id="tuesday-tab-pane" role="tabpanel" aria-labelledby="tuesday-tab" tabindex="0">
-                    <div class="datetimeinfo">
-                      
+                    <div class="closedinfo">
+                      <div class="closedinfo-header">
+                        <figure class="icon">
+                          <svg width="91" height="63" viewBox="0 0 91 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#closedicon)">
+                              <path d="M85.0106 26.6843C84.7155 26.6843 84.4165 26.6143 84.136 26.4655L45.3396 5.87201L6.54347 26.4657C5.61742 26.9574 4.47725 26.5955 3.99386 25.658C3.50865 24.7214 3.86667 23.5651 4.79089 23.0743L44.4634 2.01533C45.0132 1.72369 45.6663 1.72369 46.216 2.01533L85.8886 23.0743C86.8128 23.5651 87.1708 24.7214 86.6856 25.658C86.3482 26.3115 85.6914 26.6843 85.0106 26.6843Z" fill="#FFEAC6"/>
+                              <path d="M87.343 21H3.33058L1.80078 24.7692V58.3177C1.80078 60.3995 3.43771 62.0869 5.45663 62.0869H87.1937C89.2953 62.0869 90.9988 60.3303 90.9988 58.1637V24.7692C90.9988 22.6877 89.3621 21 87.343 21Z" fill="#FF5F7A"/>
+                              <path d="M3.77832 20.941H3.63007C1.62516 20.941 0 22.5882 0 24.6197V59.3801C0 61.4119 1.62539 63.0588 3.63007 63.0588H86.9019C88.9885 63.0588 90.6803 61.3444 90.6803 59.2299H11.3349C7.16155 59.2299 3.77832 55.8014 3.77832 51.5722V20.941Z" fill="#FB4455"/>
+                              <path d="M45.3408 7.54002C47.4275 7.54002 49.1191 5.82578 49.1191 3.71116C49.1191 1.59653 47.4275 -0.117706 45.3408 -0.117706C43.2541 -0.117706 41.5625 1.59653 41.5625 3.71116C41.5625 5.82578 43.2541 7.54002 45.3408 7.54002Z" fill="#F5C89D"/>
+                              <path d="M26.2432 45.2634V36.8214C26.2432 35.7642 25.3981 34.907 24.354 34.907C23.3099 34.907 22.4648 35.7642 22.4648 36.8214V47.2847C22.4648 48.1728 23.1134 48.9077 23.9788 49.0475C24.1662 49.0779 24.1081 49.0943 25.4111 49.0943C25.7579 49.0943 27.0917 49.0932 28.3304 49.0909C29.3773 49.0888 30.2214 48.2247 30.2152 47.1639C30.2091 46.1089 29.3638 45.2576 28.3227 45.2592C27.4995 45.2604 26.6334 45.262 26.2432 45.2634Z" fill="white"/>
+                              <path d="M65.0254 38.7823C66.0697 38.7823 66.9145 37.925 66.9145 36.8679C66.9145 35.8108 66.0695 34.9535 65.0254 34.9535H60.7563C59.712 34.9535 58.8672 35.8108 58.8672 36.8679V47.1318C58.8672 48.189 59.7123 49.0462 60.7563 49.0462H65.0254C66.0697 49.0462 66.9145 48.189 66.9145 47.1318C66.9145 46.0747 66.0695 45.2174 65.0254 45.2174H62.6455V43.9143H64.7099C65.7542 43.9143 66.5991 43.057 66.5991 41.9999C66.5991 40.9427 65.754 40.0854 64.7099 40.0854H62.6455V38.7823H65.0254Z" fill="white"/>
+                              <path d="M17.0209 44.493C16.9528 44.5753 16.8789 44.6518 16.8032 44.7202C16.3973 45.0867 15.8918 45.2643 15.2535 45.2643C13.4769 45.2643 12.0322 43.7994 12.0322 41.9999C12.0322 40.2005 13.4769 38.7356 15.2535 38.7356C15.9011 38.7356 16.5227 38.9282 17.0523 39.2908C17.9193 39.8843 19.0908 39.6524 19.6758 38.7784C20.2605 37.9026 20.0338 36.7117 19.1702 36.1199C18.0115 35.3263 16.6574 34.9065 15.2535 34.9065C11.394 34.9065 8.25391 38.0885 8.25391 41.9997C8.25391 45.9108 11.394 49.0929 15.2535 49.0929C16.8144 49.0929 18.2183 48.5694 19.3178 47.5777C19.5356 47.3813 19.7385 47.1683 19.9247 46.9402C20.5925 46.1269 20.4838 44.92 19.681 44.2442C18.8751 43.5675 17.6851 43.6807 17.0209 44.493Z" fill="white"/>
+                              <path d="M53.2341 40.2846C52.0644 39.8481 50.9869 39.3807 50.5646 39.1946L50.5941 39.1413C50.6145 39.0038 50.7547 38.8851 50.9778 38.8169C52.0976 38.471 53.1787 39.3216 53.2304 39.3638C54.0275 40.0312 55.2081 39.92 55.878 39.1181C56.5494 38.3095 56.4462 37.1016 55.6474 36.4212C54.6751 35.592 52.3671 34.3964 49.8895 35.1508C48.2477 35.6518 47.0853 36.9727 46.8547 38.5983C46.6369 40.1379 47.2955 41.6186 48.576 42.4636C48.659 42.5187 48.7475 42.5665 48.8379 42.6075C48.8379 42.6075 50.3027 43.2703 51.9262 43.877C52.6235 44.1378 52.9022 44.4557 52.8763 44.5978C52.8377 44.8231 52.4373 45.2643 51.6938 45.2643C50.4393 45.2643 49.7216 44.5707 49.5315 44.3576C48.8267 43.5752 47.6332 43.5154 46.862 44.2257C46.089 44.9362 46.0318 46.1466 46.7309 46.93C47.9615 48.304 49.7713 49.0931 51.6938 49.0931C54.1439 49.0931 56.2065 47.4854 56.5956 45.2708C56.8795 43.6573 56.171 41.383 53.2341 40.2846Z" fill="white"/>
+                              <path d="M37.7183 34.9067C33.8588 34.9067 30.7188 38.0887 30.7188 41.9999C30.7188 45.9111 33.8588 49.0931 37.7183 49.0931C41.5779 49.0931 44.7179 45.9111 44.7179 41.9999C44.7179 38.0887 41.5779 34.9067 37.7183 34.9067ZM37.7183 45.2643C35.9417 45.2643 34.4971 43.7993 34.4971 41.9999C34.4971 40.2005 35.9417 38.7355 37.7183 38.7355C39.4949 38.7355 40.9396 40.2005 40.9396 41.9999C40.9396 43.7993 39.4949 45.2643 37.7183 45.2643Z" fill="white"/>
+                              <path d="M73.826 35.0603H71.0181C70.5162 35.0603 70.0348 35.2622 69.6805 35.622C69.3263 35.9818 69.1271 36.4698 69.1289 36.9784L69.1493 47.0321C69.1511 47.5407 69.3522 48.0266 69.7084 48.3839C70.0607 48.7399 70.5404 48.94 71.0387 48.94H71.046C71.046 48.94 73.1344 48.9326 73.9424 48.9184C77.2909 48.8586 79.7224 45.9487 79.7224 42C79.7222 37.9141 77.298 35.0603 73.826 35.0603ZM73.8756 45.0896C73.6395 45.0942 73.2927 45.0979 72.9219 45.1007L72.9109 38.8891H73.826C75.7908 38.8891 75.9439 41.27 75.9439 42C75.9439 43.5199 75.3036 45.0643 73.8756 45.0896Z" fill="white"/>
+                            </g>
+                            <defs>
+                              <clipPath id="closedicon">
+                                <rect width="91" height="63" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </figure>
+
+                        <div class="headerinfo">
+                          <h5 class="title">Decadence Hair & Beauty is closed today</h5>
+                          <p class="text">but you can book for tomorrow, 7 Oct</p>
+                        </div>
+                      </div>
+
+                      <div class="closedinfo-body">
+                        <button class="btn-goto" type="button">Go to Monday, 7 Oct</button>
+                      </div>
                     </div>
                   </div>
 
                   <div class="tab-pane fade" id="wednesday-tab-pane" role="tabpanel" aria-labelledby="wednesday-tab" tabindex="0">
-                    <div class="datetimeinfo">
-                      
+                    <div class="closedinfo">
+                      <div class="closedinfo-header">
+                        <figure class="icon">
+                          <svg width="91" height="63" viewBox="0 0 91 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#closedicon)">
+                              <path d="M85.0106 26.6843C84.7155 26.6843 84.4165 26.6143 84.136 26.4655L45.3396 5.87201L6.54347 26.4657C5.61742 26.9574 4.47725 26.5955 3.99386 25.658C3.50865 24.7214 3.86667 23.5651 4.79089 23.0743L44.4634 2.01533C45.0132 1.72369 45.6663 1.72369 46.216 2.01533L85.8886 23.0743C86.8128 23.5651 87.1708 24.7214 86.6856 25.658C86.3482 26.3115 85.6914 26.6843 85.0106 26.6843Z" fill="#FFEAC6"/>
+                              <path d="M87.343 21H3.33058L1.80078 24.7692V58.3177C1.80078 60.3995 3.43771 62.0869 5.45663 62.0869H87.1937C89.2953 62.0869 90.9988 60.3303 90.9988 58.1637V24.7692C90.9988 22.6877 89.3621 21 87.343 21Z" fill="#FF5F7A"/>
+                              <path d="M3.77832 20.941H3.63007C1.62516 20.941 0 22.5882 0 24.6197V59.3801C0 61.4119 1.62539 63.0588 3.63007 63.0588H86.9019C88.9885 63.0588 90.6803 61.3444 90.6803 59.2299H11.3349C7.16155 59.2299 3.77832 55.8014 3.77832 51.5722V20.941Z" fill="#FB4455"/>
+                              <path d="M45.3408 7.54002C47.4275 7.54002 49.1191 5.82578 49.1191 3.71116C49.1191 1.59653 47.4275 -0.117706 45.3408 -0.117706C43.2541 -0.117706 41.5625 1.59653 41.5625 3.71116C41.5625 5.82578 43.2541 7.54002 45.3408 7.54002Z" fill="#F5C89D"/>
+                              <path d="M26.2432 45.2634V36.8214C26.2432 35.7642 25.3981 34.907 24.354 34.907C23.3099 34.907 22.4648 35.7642 22.4648 36.8214V47.2847C22.4648 48.1728 23.1134 48.9077 23.9788 49.0475C24.1662 49.0779 24.1081 49.0943 25.4111 49.0943C25.7579 49.0943 27.0917 49.0932 28.3304 49.0909C29.3773 49.0888 30.2214 48.2247 30.2152 47.1639C30.2091 46.1089 29.3638 45.2576 28.3227 45.2592C27.4995 45.2604 26.6334 45.262 26.2432 45.2634Z" fill="white"/>
+                              <path d="M65.0254 38.7823C66.0697 38.7823 66.9145 37.925 66.9145 36.8679C66.9145 35.8108 66.0695 34.9535 65.0254 34.9535H60.7563C59.712 34.9535 58.8672 35.8108 58.8672 36.8679V47.1318C58.8672 48.189 59.7123 49.0462 60.7563 49.0462H65.0254C66.0697 49.0462 66.9145 48.189 66.9145 47.1318C66.9145 46.0747 66.0695 45.2174 65.0254 45.2174H62.6455V43.9143H64.7099C65.7542 43.9143 66.5991 43.057 66.5991 41.9999C66.5991 40.9427 65.754 40.0854 64.7099 40.0854H62.6455V38.7823H65.0254Z" fill="white"/>
+                              <path d="M17.0209 44.493C16.9528 44.5753 16.8789 44.6518 16.8032 44.7202C16.3973 45.0867 15.8918 45.2643 15.2535 45.2643C13.4769 45.2643 12.0322 43.7994 12.0322 41.9999C12.0322 40.2005 13.4769 38.7356 15.2535 38.7356C15.9011 38.7356 16.5227 38.9282 17.0523 39.2908C17.9193 39.8843 19.0908 39.6524 19.6758 38.7784C20.2605 37.9026 20.0338 36.7117 19.1702 36.1199C18.0115 35.3263 16.6574 34.9065 15.2535 34.9065C11.394 34.9065 8.25391 38.0885 8.25391 41.9997C8.25391 45.9108 11.394 49.0929 15.2535 49.0929C16.8144 49.0929 18.2183 48.5694 19.3178 47.5777C19.5356 47.3813 19.7385 47.1683 19.9247 46.9402C20.5925 46.1269 20.4838 44.92 19.681 44.2442C18.8751 43.5675 17.6851 43.6807 17.0209 44.493Z" fill="white"/>
+                              <path d="M53.2341 40.2846C52.0644 39.8481 50.9869 39.3807 50.5646 39.1946L50.5941 39.1413C50.6145 39.0038 50.7547 38.8851 50.9778 38.8169C52.0976 38.471 53.1787 39.3216 53.2304 39.3638C54.0275 40.0312 55.2081 39.92 55.878 39.1181C56.5494 38.3095 56.4462 37.1016 55.6474 36.4212C54.6751 35.592 52.3671 34.3964 49.8895 35.1508C48.2477 35.6518 47.0853 36.9727 46.8547 38.5983C46.6369 40.1379 47.2955 41.6186 48.576 42.4636C48.659 42.5187 48.7475 42.5665 48.8379 42.6075C48.8379 42.6075 50.3027 43.2703 51.9262 43.877C52.6235 44.1378 52.9022 44.4557 52.8763 44.5978C52.8377 44.8231 52.4373 45.2643 51.6938 45.2643C50.4393 45.2643 49.7216 44.5707 49.5315 44.3576C48.8267 43.5752 47.6332 43.5154 46.862 44.2257C46.089 44.9362 46.0318 46.1466 46.7309 46.93C47.9615 48.304 49.7713 49.0931 51.6938 49.0931C54.1439 49.0931 56.2065 47.4854 56.5956 45.2708C56.8795 43.6573 56.171 41.383 53.2341 40.2846Z" fill="white"/>
+                              <path d="M37.7183 34.9067C33.8588 34.9067 30.7188 38.0887 30.7188 41.9999C30.7188 45.9111 33.8588 49.0931 37.7183 49.0931C41.5779 49.0931 44.7179 45.9111 44.7179 41.9999C44.7179 38.0887 41.5779 34.9067 37.7183 34.9067ZM37.7183 45.2643C35.9417 45.2643 34.4971 43.7993 34.4971 41.9999C34.4971 40.2005 35.9417 38.7355 37.7183 38.7355C39.4949 38.7355 40.9396 40.2005 40.9396 41.9999C40.9396 43.7993 39.4949 45.2643 37.7183 45.2643Z" fill="white"/>
+                              <path d="M73.826 35.0603H71.0181C70.5162 35.0603 70.0348 35.2622 69.6805 35.622C69.3263 35.9818 69.1271 36.4698 69.1289 36.9784L69.1493 47.0321C69.1511 47.5407 69.3522 48.0266 69.7084 48.3839C70.0607 48.7399 70.5404 48.94 71.0387 48.94H71.046C71.046 48.94 73.1344 48.9326 73.9424 48.9184C77.2909 48.8586 79.7224 45.9487 79.7224 42C79.7222 37.9141 77.298 35.0603 73.826 35.0603ZM73.8756 45.0896C73.6395 45.0942 73.2927 45.0979 72.9219 45.1007L72.9109 38.8891H73.826C75.7908 38.8891 75.9439 41.27 75.9439 42C75.9439 43.5199 75.3036 45.0643 73.8756 45.0896Z" fill="white"/>
+                            </g>
+                            <defs>
+                              <clipPath id="closedicon">
+                                <rect width="91" height="63" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </figure>
+
+                        <div class="headerinfo">
+                          <h5 class="title">Decadence Hair & Beauty is closed today</h5>
+                          <p class="text">but you can book for tomorrow, 7 Oct</p>
+                        </div>
+                      </div>
+
+                      <div class="closedinfo-body">
+                        <button class="btn-goto" type="button">Go to Monday, 7 Oct</button>
+                      </div>
                     </div>
                   </div>
 
                   <div class="tab-pane fade" id="thursday-tab-pane" role="tabpanel" aria-labelledby="thursday-tab" tabindex="0">
-                    <div class="datetimeinfo">
-                      
+                    <div class="closedinfo">
+                      <div class="closedinfo-header">
+                        <figure class="icon">
+                          <svg width="91" height="63" viewBox="0 0 91 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#closedicon)">
+                              <path d="M85.0106 26.6843C84.7155 26.6843 84.4165 26.6143 84.136 26.4655L45.3396 5.87201L6.54347 26.4657C5.61742 26.9574 4.47725 26.5955 3.99386 25.658C3.50865 24.7214 3.86667 23.5651 4.79089 23.0743L44.4634 2.01533C45.0132 1.72369 45.6663 1.72369 46.216 2.01533L85.8886 23.0743C86.8128 23.5651 87.1708 24.7214 86.6856 25.658C86.3482 26.3115 85.6914 26.6843 85.0106 26.6843Z" fill="#FFEAC6"/>
+                              <path d="M87.343 21H3.33058L1.80078 24.7692V58.3177C1.80078 60.3995 3.43771 62.0869 5.45663 62.0869H87.1937C89.2953 62.0869 90.9988 60.3303 90.9988 58.1637V24.7692C90.9988 22.6877 89.3621 21 87.343 21Z" fill="#FF5F7A"/>
+                              <path d="M3.77832 20.941H3.63007C1.62516 20.941 0 22.5882 0 24.6197V59.3801C0 61.4119 1.62539 63.0588 3.63007 63.0588H86.9019C88.9885 63.0588 90.6803 61.3444 90.6803 59.2299H11.3349C7.16155 59.2299 3.77832 55.8014 3.77832 51.5722V20.941Z" fill="#FB4455"/>
+                              <path d="M45.3408 7.54002C47.4275 7.54002 49.1191 5.82578 49.1191 3.71116C49.1191 1.59653 47.4275 -0.117706 45.3408 -0.117706C43.2541 -0.117706 41.5625 1.59653 41.5625 3.71116C41.5625 5.82578 43.2541 7.54002 45.3408 7.54002Z" fill="#F5C89D"/>
+                              <path d="M26.2432 45.2634V36.8214C26.2432 35.7642 25.3981 34.907 24.354 34.907C23.3099 34.907 22.4648 35.7642 22.4648 36.8214V47.2847C22.4648 48.1728 23.1134 48.9077 23.9788 49.0475C24.1662 49.0779 24.1081 49.0943 25.4111 49.0943C25.7579 49.0943 27.0917 49.0932 28.3304 49.0909C29.3773 49.0888 30.2214 48.2247 30.2152 47.1639C30.2091 46.1089 29.3638 45.2576 28.3227 45.2592C27.4995 45.2604 26.6334 45.262 26.2432 45.2634Z" fill="white"/>
+                              <path d="M65.0254 38.7823C66.0697 38.7823 66.9145 37.925 66.9145 36.8679C66.9145 35.8108 66.0695 34.9535 65.0254 34.9535H60.7563C59.712 34.9535 58.8672 35.8108 58.8672 36.8679V47.1318C58.8672 48.189 59.7123 49.0462 60.7563 49.0462H65.0254C66.0697 49.0462 66.9145 48.189 66.9145 47.1318C66.9145 46.0747 66.0695 45.2174 65.0254 45.2174H62.6455V43.9143H64.7099C65.7542 43.9143 66.5991 43.057 66.5991 41.9999C66.5991 40.9427 65.754 40.0854 64.7099 40.0854H62.6455V38.7823H65.0254Z" fill="white"/>
+                              <path d="M17.0209 44.493C16.9528 44.5753 16.8789 44.6518 16.8032 44.7202C16.3973 45.0867 15.8918 45.2643 15.2535 45.2643C13.4769 45.2643 12.0322 43.7994 12.0322 41.9999C12.0322 40.2005 13.4769 38.7356 15.2535 38.7356C15.9011 38.7356 16.5227 38.9282 17.0523 39.2908C17.9193 39.8843 19.0908 39.6524 19.6758 38.7784C20.2605 37.9026 20.0338 36.7117 19.1702 36.1199C18.0115 35.3263 16.6574 34.9065 15.2535 34.9065C11.394 34.9065 8.25391 38.0885 8.25391 41.9997C8.25391 45.9108 11.394 49.0929 15.2535 49.0929C16.8144 49.0929 18.2183 48.5694 19.3178 47.5777C19.5356 47.3813 19.7385 47.1683 19.9247 46.9402C20.5925 46.1269 20.4838 44.92 19.681 44.2442C18.8751 43.5675 17.6851 43.6807 17.0209 44.493Z" fill="white"/>
+                              <path d="M53.2341 40.2846C52.0644 39.8481 50.9869 39.3807 50.5646 39.1946L50.5941 39.1413C50.6145 39.0038 50.7547 38.8851 50.9778 38.8169C52.0976 38.471 53.1787 39.3216 53.2304 39.3638C54.0275 40.0312 55.2081 39.92 55.878 39.1181C56.5494 38.3095 56.4462 37.1016 55.6474 36.4212C54.6751 35.592 52.3671 34.3964 49.8895 35.1508C48.2477 35.6518 47.0853 36.9727 46.8547 38.5983C46.6369 40.1379 47.2955 41.6186 48.576 42.4636C48.659 42.5187 48.7475 42.5665 48.8379 42.6075C48.8379 42.6075 50.3027 43.2703 51.9262 43.877C52.6235 44.1378 52.9022 44.4557 52.8763 44.5978C52.8377 44.8231 52.4373 45.2643 51.6938 45.2643C50.4393 45.2643 49.7216 44.5707 49.5315 44.3576C48.8267 43.5752 47.6332 43.5154 46.862 44.2257C46.089 44.9362 46.0318 46.1466 46.7309 46.93C47.9615 48.304 49.7713 49.0931 51.6938 49.0931C54.1439 49.0931 56.2065 47.4854 56.5956 45.2708C56.8795 43.6573 56.171 41.383 53.2341 40.2846Z" fill="white"/>
+                              <path d="M37.7183 34.9067C33.8588 34.9067 30.7188 38.0887 30.7188 41.9999C30.7188 45.9111 33.8588 49.0931 37.7183 49.0931C41.5779 49.0931 44.7179 45.9111 44.7179 41.9999C44.7179 38.0887 41.5779 34.9067 37.7183 34.9067ZM37.7183 45.2643C35.9417 45.2643 34.4971 43.7993 34.4971 41.9999C34.4971 40.2005 35.9417 38.7355 37.7183 38.7355C39.4949 38.7355 40.9396 40.2005 40.9396 41.9999C40.9396 43.7993 39.4949 45.2643 37.7183 45.2643Z" fill="white"/>
+                              <path d="M73.826 35.0603H71.0181C70.5162 35.0603 70.0348 35.2622 69.6805 35.622C69.3263 35.9818 69.1271 36.4698 69.1289 36.9784L69.1493 47.0321C69.1511 47.5407 69.3522 48.0266 69.7084 48.3839C70.0607 48.7399 70.5404 48.94 71.0387 48.94H71.046C71.046 48.94 73.1344 48.9326 73.9424 48.9184C77.2909 48.8586 79.7224 45.9487 79.7224 42C79.7222 37.9141 77.298 35.0603 73.826 35.0603ZM73.8756 45.0896C73.6395 45.0942 73.2927 45.0979 72.9219 45.1007L72.9109 38.8891H73.826C75.7908 38.8891 75.9439 41.27 75.9439 42C75.9439 43.5199 75.3036 45.0643 73.8756 45.0896Z" fill="white"/>
+                            </g>
+                            <defs>
+                              <clipPath id="closedicon">
+                                <rect width="91" height="63" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </figure>
+
+                        <div class="headerinfo">
+                          <h5 class="title">Decadence Hair & Beauty is closed today</h5>
+                          <p class="text">but you can book for tomorrow, 7 Oct</p>
+                        </div>
+                      </div>
+
+                      <div class="closedinfo-body">
+                        <button class="btn-goto" type="button">Go to Monday, 7 Oct</button>
+                      </div>
                     </div>
                   </div>
 
                   <div class="tab-pane fade" id="friday-tab-pane" role="tabpanel" aria-labelledby="friday-tab" tabindex="0">
-                    <div class="datetimeinfo">
-                      
+                    <div class="closedinfo">
+                      <div class="closedinfo-header">
+                        <figure class="icon">
+                          <svg width="91" height="63" viewBox="0 0 91 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#closedicon)">
+                              <path d="M85.0106 26.6843C84.7155 26.6843 84.4165 26.6143 84.136 26.4655L45.3396 5.87201L6.54347 26.4657C5.61742 26.9574 4.47725 26.5955 3.99386 25.658C3.50865 24.7214 3.86667 23.5651 4.79089 23.0743L44.4634 2.01533C45.0132 1.72369 45.6663 1.72369 46.216 2.01533L85.8886 23.0743C86.8128 23.5651 87.1708 24.7214 86.6856 25.658C86.3482 26.3115 85.6914 26.6843 85.0106 26.6843Z" fill="#FFEAC6"/>
+                              <path d="M87.343 21H3.33058L1.80078 24.7692V58.3177C1.80078 60.3995 3.43771 62.0869 5.45663 62.0869H87.1937C89.2953 62.0869 90.9988 60.3303 90.9988 58.1637V24.7692C90.9988 22.6877 89.3621 21 87.343 21Z" fill="#FF5F7A"/>
+                              <path d="M3.77832 20.941H3.63007C1.62516 20.941 0 22.5882 0 24.6197V59.3801C0 61.4119 1.62539 63.0588 3.63007 63.0588H86.9019C88.9885 63.0588 90.6803 61.3444 90.6803 59.2299H11.3349C7.16155 59.2299 3.77832 55.8014 3.77832 51.5722V20.941Z" fill="#FB4455"/>
+                              <path d="M45.3408 7.54002C47.4275 7.54002 49.1191 5.82578 49.1191 3.71116C49.1191 1.59653 47.4275 -0.117706 45.3408 -0.117706C43.2541 -0.117706 41.5625 1.59653 41.5625 3.71116C41.5625 5.82578 43.2541 7.54002 45.3408 7.54002Z" fill="#F5C89D"/>
+                              <path d="M26.2432 45.2634V36.8214C26.2432 35.7642 25.3981 34.907 24.354 34.907C23.3099 34.907 22.4648 35.7642 22.4648 36.8214V47.2847C22.4648 48.1728 23.1134 48.9077 23.9788 49.0475C24.1662 49.0779 24.1081 49.0943 25.4111 49.0943C25.7579 49.0943 27.0917 49.0932 28.3304 49.0909C29.3773 49.0888 30.2214 48.2247 30.2152 47.1639C30.2091 46.1089 29.3638 45.2576 28.3227 45.2592C27.4995 45.2604 26.6334 45.262 26.2432 45.2634Z" fill="white"/>
+                              <path d="M65.0254 38.7823C66.0697 38.7823 66.9145 37.925 66.9145 36.8679C66.9145 35.8108 66.0695 34.9535 65.0254 34.9535H60.7563C59.712 34.9535 58.8672 35.8108 58.8672 36.8679V47.1318C58.8672 48.189 59.7123 49.0462 60.7563 49.0462H65.0254C66.0697 49.0462 66.9145 48.189 66.9145 47.1318C66.9145 46.0747 66.0695 45.2174 65.0254 45.2174H62.6455V43.9143H64.7099C65.7542 43.9143 66.5991 43.057 66.5991 41.9999C66.5991 40.9427 65.754 40.0854 64.7099 40.0854H62.6455V38.7823H65.0254Z" fill="white"/>
+                              <path d="M17.0209 44.493C16.9528 44.5753 16.8789 44.6518 16.8032 44.7202C16.3973 45.0867 15.8918 45.2643 15.2535 45.2643C13.4769 45.2643 12.0322 43.7994 12.0322 41.9999C12.0322 40.2005 13.4769 38.7356 15.2535 38.7356C15.9011 38.7356 16.5227 38.9282 17.0523 39.2908C17.9193 39.8843 19.0908 39.6524 19.6758 38.7784C20.2605 37.9026 20.0338 36.7117 19.1702 36.1199C18.0115 35.3263 16.6574 34.9065 15.2535 34.9065C11.394 34.9065 8.25391 38.0885 8.25391 41.9997C8.25391 45.9108 11.394 49.0929 15.2535 49.0929C16.8144 49.0929 18.2183 48.5694 19.3178 47.5777C19.5356 47.3813 19.7385 47.1683 19.9247 46.9402C20.5925 46.1269 20.4838 44.92 19.681 44.2442C18.8751 43.5675 17.6851 43.6807 17.0209 44.493Z" fill="white"/>
+                              <path d="M53.2341 40.2846C52.0644 39.8481 50.9869 39.3807 50.5646 39.1946L50.5941 39.1413C50.6145 39.0038 50.7547 38.8851 50.9778 38.8169C52.0976 38.471 53.1787 39.3216 53.2304 39.3638C54.0275 40.0312 55.2081 39.92 55.878 39.1181C56.5494 38.3095 56.4462 37.1016 55.6474 36.4212C54.6751 35.592 52.3671 34.3964 49.8895 35.1508C48.2477 35.6518 47.0853 36.9727 46.8547 38.5983C46.6369 40.1379 47.2955 41.6186 48.576 42.4636C48.659 42.5187 48.7475 42.5665 48.8379 42.6075C48.8379 42.6075 50.3027 43.2703 51.9262 43.877C52.6235 44.1378 52.9022 44.4557 52.8763 44.5978C52.8377 44.8231 52.4373 45.2643 51.6938 45.2643C50.4393 45.2643 49.7216 44.5707 49.5315 44.3576C48.8267 43.5752 47.6332 43.5154 46.862 44.2257C46.089 44.9362 46.0318 46.1466 46.7309 46.93C47.9615 48.304 49.7713 49.0931 51.6938 49.0931C54.1439 49.0931 56.2065 47.4854 56.5956 45.2708C56.8795 43.6573 56.171 41.383 53.2341 40.2846Z" fill="white"/>
+                              <path d="M37.7183 34.9067C33.8588 34.9067 30.7188 38.0887 30.7188 41.9999C30.7188 45.9111 33.8588 49.0931 37.7183 49.0931C41.5779 49.0931 44.7179 45.9111 44.7179 41.9999C44.7179 38.0887 41.5779 34.9067 37.7183 34.9067ZM37.7183 45.2643C35.9417 45.2643 34.4971 43.7993 34.4971 41.9999C34.4971 40.2005 35.9417 38.7355 37.7183 38.7355C39.4949 38.7355 40.9396 40.2005 40.9396 41.9999C40.9396 43.7993 39.4949 45.2643 37.7183 45.2643Z" fill="white"/>
+                              <path d="M73.826 35.0603H71.0181C70.5162 35.0603 70.0348 35.2622 69.6805 35.622C69.3263 35.9818 69.1271 36.4698 69.1289 36.9784L69.1493 47.0321C69.1511 47.5407 69.3522 48.0266 69.7084 48.3839C70.0607 48.7399 70.5404 48.94 71.0387 48.94H71.046C71.046 48.94 73.1344 48.9326 73.9424 48.9184C77.2909 48.8586 79.7224 45.9487 79.7224 42C79.7222 37.9141 77.298 35.0603 73.826 35.0603ZM73.8756 45.0896C73.6395 45.0942 73.2927 45.0979 72.9219 45.1007L72.9109 38.8891H73.826C75.7908 38.8891 75.9439 41.27 75.9439 42C75.9439 43.5199 75.3036 45.0643 73.8756 45.0896Z" fill="white"/>
+                            </g>
+                            <defs>
+                              <clipPath id="closedicon">
+                                <rect width="91" height="63" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </figure>
+
+                        <div class="headerinfo">
+                          <h5 class="title">Decadence Hair & Beauty is closed today</h5>
+                          <p class="text">but you can book for tomorrow, 7 Oct</p>
+                        </div>
+                      </div>
+
+                      <div class="closedinfo-body">
+                        <button class="btn-goto" type="button">Go to Monday, 7 Oct</button>
+                      </div>
                     </div>
                   </div>
 
                   <div class="tab-pane fade" id="saturday-tab-pane" role="tabpanel" aria-labelledby="saturday-tab" tabindex="0">
-                    <div class="datetimeinfo">
-                      
+                    <div class="closedinfo">
+                      <div class="closedinfo-header">
+                        <figure class="icon">
+                          <svg width="91" height="63" viewBox="0 0 91 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#closedicon)">
+                              <path d="M85.0106 26.6843C84.7155 26.6843 84.4165 26.6143 84.136 26.4655L45.3396 5.87201L6.54347 26.4657C5.61742 26.9574 4.47725 26.5955 3.99386 25.658C3.50865 24.7214 3.86667 23.5651 4.79089 23.0743L44.4634 2.01533C45.0132 1.72369 45.6663 1.72369 46.216 2.01533L85.8886 23.0743C86.8128 23.5651 87.1708 24.7214 86.6856 25.658C86.3482 26.3115 85.6914 26.6843 85.0106 26.6843Z" fill="#FFEAC6"/>
+                              <path d="M87.343 21H3.33058L1.80078 24.7692V58.3177C1.80078 60.3995 3.43771 62.0869 5.45663 62.0869H87.1937C89.2953 62.0869 90.9988 60.3303 90.9988 58.1637V24.7692C90.9988 22.6877 89.3621 21 87.343 21Z" fill="#FF5F7A"/>
+                              <path d="M3.77832 20.941H3.63007C1.62516 20.941 0 22.5882 0 24.6197V59.3801C0 61.4119 1.62539 63.0588 3.63007 63.0588H86.9019C88.9885 63.0588 90.6803 61.3444 90.6803 59.2299H11.3349C7.16155 59.2299 3.77832 55.8014 3.77832 51.5722V20.941Z" fill="#FB4455"/>
+                              <path d="M45.3408 7.54002C47.4275 7.54002 49.1191 5.82578 49.1191 3.71116C49.1191 1.59653 47.4275 -0.117706 45.3408 -0.117706C43.2541 -0.117706 41.5625 1.59653 41.5625 3.71116C41.5625 5.82578 43.2541 7.54002 45.3408 7.54002Z" fill="#F5C89D"/>
+                              <path d="M26.2432 45.2634V36.8214C26.2432 35.7642 25.3981 34.907 24.354 34.907C23.3099 34.907 22.4648 35.7642 22.4648 36.8214V47.2847C22.4648 48.1728 23.1134 48.9077 23.9788 49.0475C24.1662 49.0779 24.1081 49.0943 25.4111 49.0943C25.7579 49.0943 27.0917 49.0932 28.3304 49.0909C29.3773 49.0888 30.2214 48.2247 30.2152 47.1639C30.2091 46.1089 29.3638 45.2576 28.3227 45.2592C27.4995 45.2604 26.6334 45.262 26.2432 45.2634Z" fill="white"/>
+                              <path d="M65.0254 38.7823C66.0697 38.7823 66.9145 37.925 66.9145 36.8679C66.9145 35.8108 66.0695 34.9535 65.0254 34.9535H60.7563C59.712 34.9535 58.8672 35.8108 58.8672 36.8679V47.1318C58.8672 48.189 59.7123 49.0462 60.7563 49.0462H65.0254C66.0697 49.0462 66.9145 48.189 66.9145 47.1318C66.9145 46.0747 66.0695 45.2174 65.0254 45.2174H62.6455V43.9143H64.7099C65.7542 43.9143 66.5991 43.057 66.5991 41.9999C66.5991 40.9427 65.754 40.0854 64.7099 40.0854H62.6455V38.7823H65.0254Z" fill="white"/>
+                              <path d="M17.0209 44.493C16.9528 44.5753 16.8789 44.6518 16.8032 44.7202C16.3973 45.0867 15.8918 45.2643 15.2535 45.2643C13.4769 45.2643 12.0322 43.7994 12.0322 41.9999C12.0322 40.2005 13.4769 38.7356 15.2535 38.7356C15.9011 38.7356 16.5227 38.9282 17.0523 39.2908C17.9193 39.8843 19.0908 39.6524 19.6758 38.7784C20.2605 37.9026 20.0338 36.7117 19.1702 36.1199C18.0115 35.3263 16.6574 34.9065 15.2535 34.9065C11.394 34.9065 8.25391 38.0885 8.25391 41.9997C8.25391 45.9108 11.394 49.0929 15.2535 49.0929C16.8144 49.0929 18.2183 48.5694 19.3178 47.5777C19.5356 47.3813 19.7385 47.1683 19.9247 46.9402C20.5925 46.1269 20.4838 44.92 19.681 44.2442C18.8751 43.5675 17.6851 43.6807 17.0209 44.493Z" fill="white"/>
+                              <path d="M53.2341 40.2846C52.0644 39.8481 50.9869 39.3807 50.5646 39.1946L50.5941 39.1413C50.6145 39.0038 50.7547 38.8851 50.9778 38.8169C52.0976 38.471 53.1787 39.3216 53.2304 39.3638C54.0275 40.0312 55.2081 39.92 55.878 39.1181C56.5494 38.3095 56.4462 37.1016 55.6474 36.4212C54.6751 35.592 52.3671 34.3964 49.8895 35.1508C48.2477 35.6518 47.0853 36.9727 46.8547 38.5983C46.6369 40.1379 47.2955 41.6186 48.576 42.4636C48.659 42.5187 48.7475 42.5665 48.8379 42.6075C48.8379 42.6075 50.3027 43.2703 51.9262 43.877C52.6235 44.1378 52.9022 44.4557 52.8763 44.5978C52.8377 44.8231 52.4373 45.2643 51.6938 45.2643C50.4393 45.2643 49.7216 44.5707 49.5315 44.3576C48.8267 43.5752 47.6332 43.5154 46.862 44.2257C46.089 44.9362 46.0318 46.1466 46.7309 46.93C47.9615 48.304 49.7713 49.0931 51.6938 49.0931C54.1439 49.0931 56.2065 47.4854 56.5956 45.2708C56.8795 43.6573 56.171 41.383 53.2341 40.2846Z" fill="white"/>
+                              <path d="M37.7183 34.9067C33.8588 34.9067 30.7188 38.0887 30.7188 41.9999C30.7188 45.9111 33.8588 49.0931 37.7183 49.0931C41.5779 49.0931 44.7179 45.9111 44.7179 41.9999C44.7179 38.0887 41.5779 34.9067 37.7183 34.9067ZM37.7183 45.2643C35.9417 45.2643 34.4971 43.7993 34.4971 41.9999C34.4971 40.2005 35.9417 38.7355 37.7183 38.7355C39.4949 38.7355 40.9396 40.2005 40.9396 41.9999C40.9396 43.7993 39.4949 45.2643 37.7183 45.2643Z" fill="white"/>
+                              <path d="M73.826 35.0603H71.0181C70.5162 35.0603 70.0348 35.2622 69.6805 35.622C69.3263 35.9818 69.1271 36.4698 69.1289 36.9784L69.1493 47.0321C69.1511 47.5407 69.3522 48.0266 69.7084 48.3839C70.0607 48.7399 70.5404 48.94 71.0387 48.94H71.046C71.046 48.94 73.1344 48.9326 73.9424 48.9184C77.2909 48.8586 79.7224 45.9487 79.7224 42C79.7222 37.9141 77.298 35.0603 73.826 35.0603ZM73.8756 45.0896C73.6395 45.0942 73.2927 45.0979 72.9219 45.1007L72.9109 38.8891H73.826C75.7908 38.8891 75.9439 41.27 75.9439 42C75.9439 43.5199 75.3036 45.0643 73.8756 45.0896Z" fill="white"/>
+                            </g>
+                            <defs>
+                              <clipPath id="closedicon">
+                                <rect width="91" height="63" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </figure>
+
+                        <div class="headerinfo">
+                          <h5 class="title">Decadence Hair & Beauty is closed today</h5>
+                          <p class="text">but you can book for tomorrow, 7 Oct</p>
+                        </div>
+                      </div>
+
+                      <div class="closedinfo-body">
+                        <button class="btn-goto" type="button">Go to Monday, 7 Oct</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="tab-pane fade" id="another-tab-pane" role="tabpanel" aria-labelledby="another-tab" tabindex="0">
+                    <div class="closedinfo">
+                      <div class="closedinfo-header">
+                        <figure class="icon">
+                          <svg width="91" height="63" viewBox="0 0 91 63" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#closedicon)">
+                              <path d="M85.0106 26.6843C84.7155 26.6843 84.4165 26.6143 84.136 26.4655L45.3396 5.87201L6.54347 26.4657C5.61742 26.9574 4.47725 26.5955 3.99386 25.658C3.50865 24.7214 3.86667 23.5651 4.79089 23.0743L44.4634 2.01533C45.0132 1.72369 45.6663 1.72369 46.216 2.01533L85.8886 23.0743C86.8128 23.5651 87.1708 24.7214 86.6856 25.658C86.3482 26.3115 85.6914 26.6843 85.0106 26.6843Z" fill="#FFEAC6"/>
+                              <path d="M87.343 21H3.33058L1.80078 24.7692V58.3177C1.80078 60.3995 3.43771 62.0869 5.45663 62.0869H87.1937C89.2953 62.0869 90.9988 60.3303 90.9988 58.1637V24.7692C90.9988 22.6877 89.3621 21 87.343 21Z" fill="#FF5F7A"/>
+                              <path d="M3.77832 20.941H3.63007C1.62516 20.941 0 22.5882 0 24.6197V59.3801C0 61.4119 1.62539 63.0588 3.63007 63.0588H86.9019C88.9885 63.0588 90.6803 61.3444 90.6803 59.2299H11.3349C7.16155 59.2299 3.77832 55.8014 3.77832 51.5722V20.941Z" fill="#FB4455"/>
+                              <path d="M45.3408 7.54002C47.4275 7.54002 49.1191 5.82578 49.1191 3.71116C49.1191 1.59653 47.4275 -0.117706 45.3408 -0.117706C43.2541 -0.117706 41.5625 1.59653 41.5625 3.71116C41.5625 5.82578 43.2541 7.54002 45.3408 7.54002Z" fill="#F5C89D"/>
+                              <path d="M26.2432 45.2634V36.8214C26.2432 35.7642 25.3981 34.907 24.354 34.907C23.3099 34.907 22.4648 35.7642 22.4648 36.8214V47.2847C22.4648 48.1728 23.1134 48.9077 23.9788 49.0475C24.1662 49.0779 24.1081 49.0943 25.4111 49.0943C25.7579 49.0943 27.0917 49.0932 28.3304 49.0909C29.3773 49.0888 30.2214 48.2247 30.2152 47.1639C30.2091 46.1089 29.3638 45.2576 28.3227 45.2592C27.4995 45.2604 26.6334 45.262 26.2432 45.2634Z" fill="white"/>
+                              <path d="M65.0254 38.7823C66.0697 38.7823 66.9145 37.925 66.9145 36.8679C66.9145 35.8108 66.0695 34.9535 65.0254 34.9535H60.7563C59.712 34.9535 58.8672 35.8108 58.8672 36.8679V47.1318C58.8672 48.189 59.7123 49.0462 60.7563 49.0462H65.0254C66.0697 49.0462 66.9145 48.189 66.9145 47.1318C66.9145 46.0747 66.0695 45.2174 65.0254 45.2174H62.6455V43.9143H64.7099C65.7542 43.9143 66.5991 43.057 66.5991 41.9999C66.5991 40.9427 65.754 40.0854 64.7099 40.0854H62.6455V38.7823H65.0254Z" fill="white"/>
+                              <path d="M17.0209 44.493C16.9528 44.5753 16.8789 44.6518 16.8032 44.7202C16.3973 45.0867 15.8918 45.2643 15.2535 45.2643C13.4769 45.2643 12.0322 43.7994 12.0322 41.9999C12.0322 40.2005 13.4769 38.7356 15.2535 38.7356C15.9011 38.7356 16.5227 38.9282 17.0523 39.2908C17.9193 39.8843 19.0908 39.6524 19.6758 38.7784C20.2605 37.9026 20.0338 36.7117 19.1702 36.1199C18.0115 35.3263 16.6574 34.9065 15.2535 34.9065C11.394 34.9065 8.25391 38.0885 8.25391 41.9997C8.25391 45.9108 11.394 49.0929 15.2535 49.0929C16.8144 49.0929 18.2183 48.5694 19.3178 47.5777C19.5356 47.3813 19.7385 47.1683 19.9247 46.9402C20.5925 46.1269 20.4838 44.92 19.681 44.2442C18.8751 43.5675 17.6851 43.6807 17.0209 44.493Z" fill="white"/>
+                              <path d="M53.2341 40.2846C52.0644 39.8481 50.9869 39.3807 50.5646 39.1946L50.5941 39.1413C50.6145 39.0038 50.7547 38.8851 50.9778 38.8169C52.0976 38.471 53.1787 39.3216 53.2304 39.3638C54.0275 40.0312 55.2081 39.92 55.878 39.1181C56.5494 38.3095 56.4462 37.1016 55.6474 36.4212C54.6751 35.592 52.3671 34.3964 49.8895 35.1508C48.2477 35.6518 47.0853 36.9727 46.8547 38.5983C46.6369 40.1379 47.2955 41.6186 48.576 42.4636C48.659 42.5187 48.7475 42.5665 48.8379 42.6075C48.8379 42.6075 50.3027 43.2703 51.9262 43.877C52.6235 44.1378 52.9022 44.4557 52.8763 44.5978C52.8377 44.8231 52.4373 45.2643 51.6938 45.2643C50.4393 45.2643 49.7216 44.5707 49.5315 44.3576C48.8267 43.5752 47.6332 43.5154 46.862 44.2257C46.089 44.9362 46.0318 46.1466 46.7309 46.93C47.9615 48.304 49.7713 49.0931 51.6938 49.0931C54.1439 49.0931 56.2065 47.4854 56.5956 45.2708C56.8795 43.6573 56.171 41.383 53.2341 40.2846Z" fill="white"/>
+                              <path d="M37.7183 34.9067C33.8588 34.9067 30.7188 38.0887 30.7188 41.9999C30.7188 45.9111 33.8588 49.0931 37.7183 49.0931C41.5779 49.0931 44.7179 45.9111 44.7179 41.9999C44.7179 38.0887 41.5779 34.9067 37.7183 34.9067ZM37.7183 45.2643C35.9417 45.2643 34.4971 43.7993 34.4971 41.9999C34.4971 40.2005 35.9417 38.7355 37.7183 38.7355C39.4949 38.7355 40.9396 40.2005 40.9396 41.9999C40.9396 43.7993 39.4949 45.2643 37.7183 45.2643Z" fill="white"/>
+                              <path d="M73.826 35.0603H71.0181C70.5162 35.0603 70.0348 35.2622 69.6805 35.622C69.3263 35.9818 69.1271 36.4698 69.1289 36.9784L69.1493 47.0321C69.1511 47.5407 69.3522 48.0266 69.7084 48.3839C70.0607 48.7399 70.5404 48.94 71.0387 48.94H71.046C71.046 48.94 73.1344 48.9326 73.9424 48.9184C77.2909 48.8586 79.7224 45.9487 79.7224 42C79.7222 37.9141 77.298 35.0603 73.826 35.0603ZM73.8756 45.0896C73.6395 45.0942 73.2927 45.0979 72.9219 45.1007L72.9109 38.8891H73.826C75.7908 38.8891 75.9439 41.27 75.9439 42C75.9439 43.5199 75.3036 45.0643 73.8756 45.0896Z" fill="white"/>
+                            </g>
+                            <defs>
+                              <clipPath id="closedicon">
+                                <rect width="91" height="63" fill="white"/>
+                              </clipPath>
+                            </defs>
+                          </svg>
+                        </figure>
+
+                        <div class="headerinfo">
+                          <h5 class="title">Decadence Hair & Beauty is closed today</h5>
+                          <p class="text">but you can book for tomorrow, 7 Oct</p>
+                        </div>
+                      </div>
+
+                      <div class="closedinfo-body">
+                        <button class="btn-goto" type="button">Go to Monday, 7 Oct</button>
+                      </div>
                     </div>
                   </div>
                 </div>

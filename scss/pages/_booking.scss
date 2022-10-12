@@ -179,129 +179,221 @@
     }
 
     &-body {
-      position: relative;
       @include flex-column;
-      gap: size(24);
+      gap: size(48);
 
-      .swiper-button-prev,
-      .swiper-button-next {
-        @include square(28);
-        padding: size(4);
-        border: none;
-        top: 50%;
+      .calendarinfo {
+        @include flex-column;
+        gap: size(24);
 
-        svg {
-          @include wh100;
+        &-header {
+          .title {
+            font-weight: 500;
+          }
         }
 
-        @include hover {
-          background: transparent;
-          border: transparent;
-        }
-      }
+        &-body {
+          position: relative;
 
-      .swiper-button-prev {
-        left: size(-10);
-      }
-
-      .swiper-button-next {
-        right: size(-10);
-      }
-
-      .calendarslider {
-        padding: size(16) size(0);
-
-        .nav {
-          flex-wrap: nowrap;
-          border: none;
-
-          &-tabs {
-            .nav-link {
-              @include wh100;
-              border: none;
-              @include radius(0);
-              margin: 0;
-              background: transparent;
-              color: $headingText;
-              @include flex-center-column;
-              gap: size(14);
-
-              .activeicon {
-                @include flex-center;
-                width: size(26);
-                height: size(6);
-                overflow: hidden;
-                opacity: 0;
-                visibility: hidden;
-
-                svg {
-                  @include wh100;
-                }
-              }
-
-              .linkinfo {
-                @include flex-center-column;
-                gap: size(2);
-                text-align: center;
-
-                span {
-                  color: rgba($headingText, 0.3);
-                  @include font($primaryFont, 17, normal, normal, 24);
-                
-                  @include breakpoint(mobile768) {
-                    font-size: size(19);
-                  }
-                
-                  @include breakpoint(tab992) {
-                    font-size: size(21);
-                  }
-                }
-              }
-
-              &:hover:not(.active) {
-                background: transparent;
-                
-                .activeicon {
-                  opacity: 1;
-                  visibility: visible;
-                }
-
-                .linkinfo {
-                  span {
-                    color: $headingText;
-                  }
-                }
-              }
-
-              &.active {
-                background: transparent;
-
-                .activeicon {
-                  opacity: 1;
-                  visibility: visible;
-                }
-
-                .linkinfo {
-                  span {
-                    color: $headingText;
-                  }
-                }
-              }
+          .swiper-button-prev,
+          .swiper-button-next {
+            @include square(28);
+            padding: size(4);
+            border: none;
+            top: 60%;
     
-              &:active {
-                .activeicon {
-                  opacity: 1;
-                  visibility: visible;
-                }
-
-                .linkinfo {
-                  span {
-                    color: $headingText;
+            svg {
+              @include wh100;
+            }
+    
+            @include hover {
+              background: transparent;
+              border: transparent;
+            }
+          }
+    
+          .swiper-button-prev {
+            left: size(-10);
+          }
+    
+          .swiper-button-next {
+            right: size(-10);
+          }
+    
+          .calendarslider {
+            padding: size(16) size(0);
+    
+            .nav {
+              flex-wrap: nowrap;
+              border: none;
+    
+              &-tabs {
+                .nav-link {
+                  @include wh100;
+                  border: none;
+                  @include radius(0);
+                  margin: 0;
+                  background: transparent;
+                  color: $headingText;
+                  @include flex-center-column;
+                  gap: size(14);
+    
+                  .activeicon {
+                    @include flex-center;
+                    width: size(26);
+                    height: size(6);
+                    overflow: hidden;
+                    opacity: 0;
+                    visibility: hidden;
+    
+                    svg {
+                      @include wh100;
+                    }
+                  }
+    
+                  .linkinfo {
+                    @include flex-center-column;
+                    gap: size(2);
+                    text-align: center;
+    
+                    span {
+                      color: rgba($headingText, 0.3);
+                      @include font($primaryFont, 17, normal, normal, 24);
+                    
+                      @include breakpoint(mobile768) {
+                        font-size: size(19);
+                      }
+                    
+                      @include breakpoint(tab992) {
+                        font-size: size(21);
+                      }
+                    }
+                  }
+    
+                  &:hover:not(.active) {
+                    background: transparent;
+    
+                    .activeicon {
+                      opacity: 1;
+                      visibility: visible;
+                    }
+    
+                    .linkinfo {
+                      span {
+                        color: $headingText;
+                      }
+                    }
+                  }
+    
+                  &.active {
+                    background: transparent;
+    
+                    .activeicon {
+                      opacity: 1;
+                      visibility: visible;
+                    }
+    
+                    .linkinfo {
+                      span {
+                        color: $headingText;
+                      }
+                    }
+                  }
+        
+                  &:active {
+                    .activeicon {
+                      opacity: 1;
+                      visibility: visible;
+                    }
+    
+                    .linkinfo {
+                      span {
+                        color: $headingText;
+                      }
+                    }
                   }
                 }
               }
             }
           }
+        }
+      }
+
+      .datetimeinfo {
+        @include flex-center;
+        flex-wrap: wrap;
+        gap: size(12);
+
+        @include breakpoint(mobile576) {
+          gap: size(16);
+        }
+
+        .timeslot {
+          width: calc((100% / 4) - size(16));
+          flex-grow: 1;
+
+          .timeradio {
+            &:checked:not(:disabled) ~ .timelabel {
+              border-color: $green;
+              color: $headingText;
+            }
+
+            &:disabled ~ .timelabel {
+              color: rgba($primaryText, 0.3);
+              cursor: not-allowed;
+            }
+          }
+
+          .timelabel {
+            // width: size(120);
+            height: size(48);
+            @include setBgColor($white, $primaryText);
+            box-shadow: $timeshadow;
+            @include border(solid, 1, $white);
+            @include radius(8);
+            cursor: pointer;
+            @include flex-center;
+            text-align: center;
+            @include transitionsall;
+          }
+        }
+      }
+
+      .closedinfo {
+        @include flex-center-column;
+        gap: size(32);
+
+        &-header {
+          @include flex-center-column;
+          gap: size(20);
+
+          .icon {
+            width: size(90);
+            height: size(64);
+            @include flex-center;
+            overflow: hidden;
+
+            svg {
+              @include wh100;
+            }
+          }
+
+          .headerinfo {
+            @include flex-center-column;
+            text-align: center;
+
+            .title {
+              color: $primaryText;
+            }
+  
+            .text {
+              color: $primaryText;
+            }
+          }
+        }
+
+        &-body {
+          @include flex-center;
         }
       }
     }

@@ -718,6 +718,25 @@ button:focus,
   color: hsl(0deg, 0%, 100%);
 }
 
+.btn-goto {
+  width: 12.5rem;
+  height: 2.75rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  background: hsl(18deg, 60%, 81%);
+  color: hsl(0deg, 0%, 7%);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 350ms ease-in-out;
+}
+.btn-goto:not([disabled]):hover {
+  background: #d78460;
+  color: hsl(0deg, 0%, 7%);
+}
+
 .carousel {
   width: 100%;
   height: 100%;
@@ -4378,43 +4397,53 @@ button:focus,
   font-weight: 500;
 }
 .bookingservices .selectdatetime-body {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+.bookingservices .selectdatetime-body .calendarinfo {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-.bookingservices .selectdatetime-body .swiper-button-prev,
-.bookingservices .selectdatetime-body .swiper-button-next {
+.bookingservices .selectdatetime-body .calendarinfo-header .title {
+  font-weight: 500;
+}
+.bookingservices .selectdatetime-body .calendarinfo-body {
+  position: relative;
+}
+.bookingservices .selectdatetime-body .calendarinfo-body .swiper-button-prev,
+.bookingservices .selectdatetime-body .calendarinfo-body .swiper-button-next {
   width: 1.75rem;
   height: 1.75rem;
   padding: 0.25rem;
   border: none;
-  top: 50%;
+  top: 60%;
 }
-.bookingservices .selectdatetime-body .swiper-button-prev svg,
-.bookingservices .selectdatetime-body .swiper-button-next svg {
+.bookingservices .selectdatetime-body .calendarinfo-body .swiper-button-prev svg,
+.bookingservices .selectdatetime-body .calendarinfo-body .swiper-button-next svg {
   width: 100%;
   height: 100%;
 }
-.bookingservices .selectdatetime-body .swiper-button-prev:not([disabled]):hover,
-.bookingservices .selectdatetime-body .swiper-button-next:not([disabled]):hover {
+.bookingservices .selectdatetime-body .calendarinfo-body .swiper-button-prev:not([disabled]):hover,
+.bookingservices .selectdatetime-body .calendarinfo-body .swiper-button-next:not([disabled]):hover {
   background: transparent;
   border: transparent;
 }
-.bookingservices .selectdatetime-body .swiper-button-prev {
+.bookingservices .selectdatetime-body .calendarinfo-body .swiper-button-prev {
   left: -0.625rem;
 }
-.bookingservices .selectdatetime-body .swiper-button-next {
+.bookingservices .selectdatetime-body .calendarinfo-body .swiper-button-next {
   right: -0.625rem;
 }
-.bookingservices .selectdatetime-body .calendarslider {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider {
   padding: 1rem 0rem;
 }
-.bookingservices .selectdatetime-body .calendarslider .nav {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav {
   flex-wrap: nowrap;
   border: none;
 }
-.bookingservices .selectdatetime-body .calendarslider .nav-tabs .nav-link {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link {
   width: 100%;
   height: 100%;
   border: none;
@@ -4429,7 +4458,7 @@ button:focus,
   flex-direction: column;
   gap: 0.875rem;
 }
-.bookingservices .selectdatetime-body .calendarslider .nav-tabs .nav-link .activeicon {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link .activeicon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4439,11 +4468,11 @@ button:focus,
   opacity: 0;
   visibility: hidden;
 }
-.bookingservices .selectdatetime-body .calendarslider .nav-tabs .nav-link .activeicon svg {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link .activeicon svg {
   width: 100%;
   height: 100%;
 }
-.bookingservices .selectdatetime-body .calendarslider .nav-tabs .nav-link .linkinfo {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link .linkinfo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4451,7 +4480,7 @@ button:focus,
   gap: 0.125rem;
   text-align: center;
 }
-.bookingservices .selectdatetime-body .calendarslider .nav-tabs .nav-link .linkinfo span {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link .linkinfo span {
   color: rgba(18, 18, 18, 0.3);
   font-family: "Outfit", sans-serif;
   font-size: 1.0625rem;
@@ -4460,41 +4489,124 @@ button:focus,
   line-height: 1.4117647059;
 }
 @media screen and (min-width: 48rem) {
-  .bookingservices .selectdatetime-body .calendarslider .nav-tabs .nav-link .linkinfo span {
+  .bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link .linkinfo span {
     font-size: 1.1875rem;
   }
 }
 @media screen and (min-width: 62rem) {
-  .bookingservices .selectdatetime-body .calendarslider .nav-tabs .nav-link .linkinfo span {
+  .bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link .linkinfo span {
     font-size: 1.3125rem;
   }
 }
-.bookingservices .selectdatetime-body .calendarslider .nav-tabs .nav-link:hover:not(.active) {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link:hover:not(.active) {
   background: transparent;
 }
-.bookingservices .selectdatetime-body .calendarslider .nav-tabs .nav-link:hover:not(.active) .activeicon {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link:hover:not(.active) .activeicon {
   opacity: 1;
   visibility: visible;
 }
-.bookingservices .selectdatetime-body .calendarslider .nav-tabs .nav-link:hover:not(.active) .linkinfo span {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link:hover:not(.active) .linkinfo span {
   color: hsl(0deg, 0%, 7%);
 }
-.bookingservices .selectdatetime-body .calendarslider .nav-tabs .nav-link.active {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link.active {
   background: transparent;
 }
-.bookingservices .selectdatetime-body .calendarslider .nav-tabs .nav-link.active .activeicon {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link.active .activeicon {
   opacity: 1;
   visibility: visible;
 }
-.bookingservices .selectdatetime-body .calendarslider .nav-tabs .nav-link.active .linkinfo span {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link.active .linkinfo span {
   color: hsl(0deg, 0%, 7%);
 }
-.bookingservices .selectdatetime-body .calendarslider .nav-tabs .nav-link:active .activeicon {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link:active .activeicon {
   opacity: 1;
   visibility: visible;
 }
-.bookingservices .selectdatetime-body .calendarslider .nav-tabs .nav-link:active .linkinfo span {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link:active .linkinfo span {
   color: hsl(0deg, 0%, 7%);
+}
+.bookingservices .selectdatetime-body .datetimeinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+@media screen and (min-width: 36rem) {
+  .bookingservices .selectdatetime-body .datetimeinfo {
+    gap: 1rem;
+  }
+}
+.bookingservices .selectdatetime-body .datetimeinfo .timeslot {
+  width: calc(25% - 1rem);
+  flex-grow: 1;
+}
+.bookingservices .selectdatetime-body .datetimeinfo .timeslot .timeradio:checked:not(:disabled) ~ .timelabel {
+  border-color: hsl(173deg, 83%, 37%);
+  color: hsl(0deg, 0%, 7%);
+}
+.bookingservices .selectdatetime-body .datetimeinfo .timeslot .timeradio:disabled ~ .timelabel {
+  color: rgba(74, 74, 74, 0.3);
+  cursor: not-allowed;
+}
+.bookingservices .selectdatetime-body .datetimeinfo .timeslot .timelabel {
+  height: 3rem;
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 29%);
+  box-shadow: 0 0.125rem 0.625rem rgba(125, 162, 255, 0.1);
+  border: solid 0.0625rem hsl(0deg, 0%, 100%);
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transition: all 350ms ease-in-out;
+}
+.bookingservices .selectdatetime-body .closedinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+.bookingservices .selectdatetime-body .closedinfo-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.bookingservices .selectdatetime-body .closedinfo-header .icon {
+  width: 5.625rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.bookingservices .selectdatetime-body .closedinfo-header .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.bookingservices .selectdatetime-body .closedinfo-header .headerinfo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+}
+.bookingservices .selectdatetime-body .closedinfo-header .headerinfo .title {
+  color: hsl(0deg, 0%, 29%);
+}
+.bookingservices .selectdatetime-body .closedinfo-header .headerinfo .text {
+  color: hsl(0deg, 0%, 29%);
+}
+.bookingservices .selectdatetime-body .closedinfo-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .bookingservices .bookingside {
   background: hsla(18deg, 60%, 81%, 0.1);
