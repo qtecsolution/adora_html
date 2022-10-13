@@ -860,3 +860,43 @@
     }
   }
 }
+
+.bookingsuccessful {
+  @include flex-center-column;
+  gap: size(40);
+  height: calc(100vh - size(60));
+
+  @include breakpoint(tab992) {
+    height: calc(100vh - size(88));
+  }
+
+  &-header {
+    @include flex-center;
+
+    .icon {
+      width: size(134);
+      height: size(166);
+      @include flex-center;
+      overflow: hidden;
+
+      svg {
+        @include wh100;
+      }
+    }
+  }
+
+  &-body {
+    @include flex-center-column;
+    gap: size(12);
+    text-align: center;
+
+    .title {
+      color: $primaryText;
+      font-weight: 500;
+    }
+
+    .text {
+      letter-spacing: size(0.32);
+    }
+  }
+}
