@@ -23,10 +23,6 @@
 		@include transitiontransform;
 	}
 
-	&:focus {
-		border-color: $primary;
-	}
-
 	.current {
 		color: $primaryText;
 	}
@@ -42,6 +38,8 @@
 	}
 
 	&.open {
+		border-color: $primary !important;
+
 		&::after {
 			transform: rotateX(180deg) !important;
 			top: auto;

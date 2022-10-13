@@ -545,7 +545,7 @@
     z-index: 1900;
   }
 
-  &-content {
+  .default-content {
     @include flex-center-between;
 
     .leftcontent {
@@ -565,6 +565,41 @@
       @include breakpoint(tab992) {
         width: auto;
         justify-content: flex-end;
+      }
+
+      .bookinfo {
+        width: size(140);
+
+        @include breakpoint(tab992) {
+          width: size(200);
+        }
+      }
+    }
+  }
+
+  .changed-content {
+    @include flex-center-between;
+
+    .leftcontent {
+      @include flex-column;
+      gap: size(4);
+
+      .title {
+        color: $primaryText;
+        font-weight: 400;
+      }
+      
+      .price {
+        color: $primaryText;
+        font-weight: 400;
+      }
+    }
+
+    .rightcontent {
+      @include flex-end;
+
+      @include breakpoint(tab992) {
+        width: auto;
       }
 
       .bookinfo {

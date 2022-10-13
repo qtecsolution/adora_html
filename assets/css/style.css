@@ -2606,6 +2606,44 @@ button:focus,
   color: hsl(0deg, 0%, 29%);
 }
 
+.singleradio .radiolabel {
+  position: relative;
+  padding-left: 1.875rem;
+  cursor: pointer;
+}
+.singleradio .radiolabel::before, .singleradio .radiolabel::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+}
+.singleradio .radiolabel::before {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: solid 0.0625rem hsl(0deg, 0%, 29%);
+  border-radius: 100%;
+  background: hsl(0deg, 0%, 100%);
+  transition: all 350ms ease-in-out;
+}
+.singleradio .radiolabel::after {
+  width: 0.625rem;
+  height: 0.625rem;
+  background: hsl(18deg, 60%, 81%);
+  border-radius: 100%;
+  left: 0.3125rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 350ms ease-in-out;
+}
+.singleradio .radiofield:checked ~ .radiolabel::before {
+  border-color: hsl(18deg, 60%, 81%);
+}
+.singleradio .radiofield:checked ~ .radiolabel::after {
+  opacity: 1;
+  visibility: visible;
+}
+
 .nice-select {
   display: flex;
   align-items: center;
@@ -2630,9 +2668,6 @@ button:focus,
   justify-content: center;
   transition: transform 350ms ease-in-out;
 }
-.nice-select:focus {
-  border-color: hsl(18deg, 60%, 81%);
-}
 .nice-select .current {
   color: hsl(0deg, 0%, 29%);
 }
@@ -2643,6 +2678,9 @@ button:focus,
   width: 100%;
   border-color: hsla(0deg, 0%, 29%, 0.3);
   box-shadow: none !important;
+}
+.nice-select.open {
+  border-color: hsl(18deg, 60%, 81%) !important;
 }
 .nice-select.open::after {
   transform: rotateX(180deg) !important;
@@ -3960,21 +3998,21 @@ button:focus,
     z-index: 1900;
   }
 }
-.domloaded-content {
+.domloaded .default-content {
   display: flex;
   align-items: center;
   justify-content: space-between;
   align-items: center;
 }
-.domloaded-content .leftcontent {
+.domloaded .default-content .leftcontent {
   display: none;
 }
 @media screen and (min-width: 62rem) {
-  .domloaded-content .leftcontent {
+  .domloaded .default-content .leftcontent {
     display: block;
   }
 }
-.domloaded-content .rightcontent {
+.domloaded .default-content .rightcontent {
   display: flex;
   align-items: center;
   gap: 1.25rem;
@@ -3982,16 +4020,52 @@ button:focus,
   justify-content: space-between;
 }
 @media screen and (min-width: 62rem) {
-  .domloaded-content .rightcontent {
+  .domloaded .default-content .rightcontent {
     width: auto;
     justify-content: flex-end;
   }
 }
-.domloaded-content .rightcontent .bookinfo {
+.domloaded .default-content .rightcontent .bookinfo {
   width: 8.75rem;
 }
 @media screen and (min-width: 62rem) {
-  .domloaded-content .rightcontent .bookinfo {
+  .domloaded .default-content .rightcontent .bookinfo {
+    width: 12.5rem;
+  }
+}
+.domloaded .changed-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.domloaded .changed-content .leftcontent {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.domloaded .changed-content .leftcontent .title {
+  color: hsl(0deg, 0%, 29%);
+  font-weight: 400;
+}
+.domloaded .changed-content .leftcontent .price {
+  color: hsl(0deg, 0%, 29%);
+  font-weight: 400;
+}
+.domloaded .changed-content .rightcontent {
+  display: flex;
+  justify-content: flex-end;
+}
+@media screen and (min-width: 62rem) {
+  .domloaded .changed-content .rightcontent {
+    width: auto;
+  }
+}
+.domloaded .changed-content .rightcontent .bookinfo {
+  width: 8.75rem;
+}
+@media screen and (min-width: 62rem) {
+  .domloaded .changed-content .rightcontent .bookinfo {
     width: 12.5rem;
   }
 }
@@ -4309,8 +4383,8 @@ button:focus,
   border: none;
 }
 .bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link {
-  height: 100%;
   width: 93%;
+  height: 100%;
   border: none;
   border-radius: 0rem;
   border-radius: 0rem;
@@ -4329,16 +4403,17 @@ button:focus,
 }
 .bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link .titlebox {
   width: calc(100% - 2.125rem);
+  text-align: center;
+  overflow: hidden;
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link .titlebox .title {
   color: hsl(0deg, 0%, 7%);
   font-size: 0.875rem;
   font-weight: 400;
-  width: 100%;
-  max-width: 99%;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 .bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link .count {
   width: 1.5rem;
@@ -4359,17 +4434,17 @@ button:focus,
 }
 .bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link.active {
   background: rgba(236, 195, 177, 0.3);
-  border-color: rgba(236, 195, 177, 0.3);
+  border-color: transparent;
 }
-.bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link.active .counter {
-  border-color: rgba(236, 195, 177, 0.3);
+.bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link.active .count {
+  border-color: transparent;
 }
 .bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link:active {
   background: rgba(236, 195, 177, 0.3);
-  border-color: rgba(236, 195, 177, 0.3);
+  border-color: transparent;
 }
-.bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link:active .counter {
-  border-color: rgba(236, 195, 177, 0.3);
+.bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link:active .count {
+  border-color: transparent;
 }
 .bookingservices .selectservices-body .service-detail {
   display: flex;
@@ -4541,6 +4616,7 @@ button:focus,
 .bookingservices .selectdatetime-body .datetimeinfo .timeslot .timeradio:checked:not(:disabled) ~ .timelabel {
   border-color: hsl(173deg, 83%, 37%);
   color: hsl(0deg, 0%, 7%);
+  font-weight: 400;
 }
 .bookingservices .selectdatetime-body .datetimeinfo .timeslot .timeradio:disabled ~ .timelabel {
   color: rgba(74, 74, 74, 0.3);
@@ -4823,6 +4899,117 @@ button:focus,
 }
 .bookingservices .reviwconfirm-body .policy .text {
   font-weight: 300;
+}
+.bookingservices .makeupconsultancy-header {
+  border-bottom: solid 0.0625rem rgba(74, 74, 74, 0.2);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.bookingservices .makeupconsultancy-header .title {
+  font-weight: 500;
+}
+.bookingservices .makeupconsultancy-body .inputbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+.bookingservices .makeupconsultancy-body .inputbox .inputlabel {
+  font-weight: 400;
+}
+.bookingservices .makeupconsultancy-body .inputbox .inputlabel span {
+  color: hsl(0deg, 100%, 61%);
+}
+.bookingservices .makeupconsultancy-body .inputbox .inputfield,
+.bookingservices .makeupconsultancy-body .inputbox .textfield {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 29%);
+  border: solid 0.0625rem hsla(0deg, 0%, 29%, 0.1);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  transition: all 350ms ease-in-out;
+}
+.bookingservices .makeupconsultancy-body .inputbox .inputfield:focus,
+.bookingservices .makeupconsultancy-body .inputbox .textfield:focus {
+  border-color: hsl(18deg, 60%, 81%);
+}
+.bookingservices .makeupconsultancy-body .inputbox .inputfield {
+  height: 3rem;
+}
+.bookingservices .makeupconsultancy-body .selectbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+.bookingservices .makeupconsultancy-body .selectbox .selectlabel {
+  font-weight: 400;
+}
+.bookingservices .makeupconsultancy-body .selectbox .selectlabel span {
+  color: hsl(0deg, 100%, 61%);
+}
+.bookingservices .makeupconsultancy-body .selectbox .nice-select {
+  border-color: hsla(0deg, 0%, 29%, 0.1);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding-left: 1rem;
+}
+.bookingservices .dermatologyconsultancy-header {
+  border-bottom: solid 0.0625rem rgba(74, 74, 74, 0.2);
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.75rem;
+}
+.bookingservices .dermatologyconsultancy-header .title {
+  font-weight: 500;
+}
+.bookingservices .dermatologyconsultancy-body .inputbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+.bookingservices .dermatologyconsultancy-body .inputbox .inputlabel {
+  font-weight: 400;
+}
+.bookingservices .dermatologyconsultancy-body .inputbox .inputlabel span {
+  color: hsl(0deg, 100%, 61%);
+}
+.bookingservices .dermatologyconsultancy-body .inputbox .inputfield,
+.bookingservices .dermatologyconsultancy-body .inputbox .textfield {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 29%);
+  border: solid 0.0625rem hsla(0deg, 0%, 29%, 0.1);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  transition: all 350ms ease-in-out;
+}
+.bookingservices .dermatologyconsultancy-body .inputbox .inputfield:focus,
+.bookingservices .dermatologyconsultancy-body .inputbox .textfield:focus {
+  border-color: hsl(18deg, 60%, 81%);
+}
+.bookingservices .dermatologyconsultancy-body .inputbox .inputfield {
+  height: 3rem;
+}
+.bookingservices .dermatologyconsultancy-body .inputbox .radios {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.bookingservices .dermatologyconsultancy-body .selectbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+.bookingservices .dermatologyconsultancy-body .selectbox .selectlabel {
+  font-weight: 400;
+}
+.bookingservices .dermatologyconsultancy-body .selectbox .selectlabel span {
+  color: hsl(0deg, 100%, 61%);
+}
+.bookingservices .dermatologyconsultancy-body .selectbox .nice-select {
+  border-color: hsla(0deg, 0%, 29%, 0.1);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding-left: 1rem;
 }
 .bookingservices .bookingside {
   background: hsla(18deg, 60%, 81%, 0.1);

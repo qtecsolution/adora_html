@@ -1,11 +1,6 @@
 const services = new Swiper(".serviceselects", {
   grabCursor: true,
   loop: true,
-  loopFillGroupWithBlank: true,
-  autoplay: {
-    delay: 5000,
-    disableOnInteraction: true
-  },
   spaceBetween: 10,
   slidesPerGroup: 1,
   navigation: {

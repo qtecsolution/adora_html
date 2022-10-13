@@ -76,8 +76,8 @@
 
           &-tabs {
             .nav-link {
-              @include h100;
               width: 93%;
+              @include h100;
               border: none;
               @include radius(0);
               margin: 0;
@@ -91,13 +91,14 @@
 
               .titlebox {
                 width: calc(100% - size(34));
+                text-align: center;
+                overflow: hidden;
+                @include text-overflow;
     
                 .title {
                   color: $headingText;
                   font-size: size(14);
                   font-weight: 400;
-                  @include w100;
-                  @include text-overflow;
                 }
               }
     
@@ -118,19 +119,19 @@
 
               &.active {
                 background: rgba($primary, 0.3);
-                border-color: rgba($primary, 0.3);
+                border-color: transparent;
     
-                .counter {
-                  border-color: rgba($primary, 0.3);
+                .count {
+                  border-color: transparent;
                 }
               }
     
               &:active {
                 background: rgba($primary, 0.3);
-                border-color: rgba($primary, 0.3);
+                border-color: transparent;
     
-                .counter {
-                  border-color: rgba($primary, 0.3);
+                .count {
+                  border-color: transparent;
                 }
               }
             }
@@ -326,6 +327,7 @@
             &:checked:not(:disabled) ~ .timelabel {
               border-color: $green;
               color: $headingText;
+              font-weight: 400;
             }
 
             &:disabled ~ .timelabel {
@@ -620,6 +622,137 @@
     }
   }
 
+  .makeupconsultancy {
+    &-header {
+      @include border-single(bottom, solid, 1, rgba($primaryText, 0.2));
+      padding-bottom: size(8);
+      margin-bottom: size(12);
+
+      .title {
+        font-weight: 500;
+      }
+    }
+
+    &-body {
+      .inputbox {
+        @include flex-column;
+        gap: size(6);
+        
+        .inputlabel {
+          font-weight: 400;
+          
+          span {
+            color: $danger;
+          }
+        }
+
+        .inputfield,
+        .textfield {
+          @include setBgColor($white, $primaryText);
+          @include border(solid, 1, $signinborder);
+          @include radius(4);
+          padding: size(16);
+          @include transitionsall;
+
+          &:focus {
+            border-color: $primary;
+          }
+        }
+
+        .inputfield {
+          height: size(48);
+        }
+      }
+
+      .selectbox {
+        @include flex-column;
+        gap: size(6);
+        
+        .selectlabel {
+          font-weight: 400;
+
+          span {
+            color: $danger;
+          }
+        }
+
+        .nice-select {
+          border-color: $signinborder;
+          @include radius(4);
+          padding-left: size(16);
+        }
+      }
+    }
+  }
+
+  .dermatologyconsultancy {
+    &-header {
+      @include border-single(bottom, solid, 1, rgba($primaryText, 0.2));
+      padding-bottom: size(8);
+      margin-bottom: size(12);
+
+      .title {
+        font-weight: 500;
+      }
+    }
+
+    &-body {
+      .inputbox {
+        @include flex-column;
+        gap: size(6);
+        
+        .inputlabel {
+          font-weight: 400;
+          
+          span {
+            color: $danger;
+          }
+        }
+
+        .inputfield,
+        .textfield {
+          @include setBgColor($white, $primaryText);
+          @include border(solid, 1, $signinborder);
+          @include radius(4);
+          padding: size(16);
+          @include transitionsall;
+
+          &:focus {
+            border-color: $primary;
+          }
+        }
+
+        .inputfield {
+          height: size(48);
+        }
+
+        .radios {
+          @include flex-center-vert;
+          gap: size(32);
+        }
+      }
+
+      .selectbox {
+        @include flex-column;
+        gap: size(6);
+        
+        .selectlabel {
+          font-weight: 400;
+
+          span {
+            color: $danger;
+          }
+        }
+
+        .nice-select {
+          border-color: $signinborder;
+          @include radius(4);
+          padding-left: size(16);
+        }
+      }
+    }
+  }
+
   .bookingside {
     background: $sidebg;
     @include border(solid, 1, $sideborder);
@@ -727,10 +860,3 @@
     }
   }
 }
-
-// .bookingloaded {
-//   position: absolute;
-//   top: calc(100vh - size(80));
-//   bottom: 0;
-//   @include w100;
-// }
