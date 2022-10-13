@@ -4835,6 +4835,15 @@ button:focus,
   height: 100%;
   color: hsl(0deg, 0%, 29%);
 }
+.bookingservices .reviwconfirm-body .couponcode-body .couponbox .couponfleld .couponinput::-moz-placeholder {
+  color: rgba(74, 74, 74, 0.3);
+}
+.bookingservices .reviwconfirm-body .couponcode-body .couponbox .couponfleld .couponinput:-ms-input-placeholder {
+  color: rgba(74, 74, 74, 0.3);
+}
+.bookingservices .reviwconfirm-body .couponcode-body .couponbox .couponfleld .couponinput::placeholder {
+  color: rgba(74, 74, 74, 0.3);
+}
 .bookingservices .reviwconfirm-body .couponcode-body .couponbox .couponapply {
   width: 5rem;
   height: 100%;

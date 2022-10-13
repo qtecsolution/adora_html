@@ -541,6 +541,10 @@
               .couponinput {
                 @include wh100;
                 color: $primaryText;
+
+                &::placeholder {
+                  color: rgba($primaryText, 0.3);
+                }
               }
             }
 
