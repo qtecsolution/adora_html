@@ -4383,7 +4383,7 @@ button:focus,
   border: none;
 }
 .bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link {
-  width: 93%;
+  width: 92%;
   height: 100%;
   border: none;
   border-radius: 0rem;
@@ -4395,15 +4395,13 @@ button:focus,
   border: solid 0.03125rem hsla(0deg, 0%, 29%, 0.3);
   border-radius: 1.15625rem;
   border-radius: 1.15625rem;
-  padding: 0.1875rem;
+  padding: 0.25rem;
   display: flex;
   align-items: center;
-  justify-content: center;
   gap: 0.625rem;
 }
 .bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link .titlebox {
-  width: calc(100% - 2.125rem);
-  text-align: center;
+  width: calc(100% - 2.1875rem);
   overflow: hidden;
   max-width: 99%;
   white-space: nowrap;

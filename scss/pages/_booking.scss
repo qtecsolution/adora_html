@@ -76,7 +76,7 @@
 
           &-tabs {
             .nav-link {
-              width: 93%;
+              width: 92%;
               @include h100;
               border: none;
               @include radius(0);
@@ -85,13 +85,12 @@
               @include setBgColor($white, $headingText);
               @include border(solid, 0.5, $linkborder);
               @include radius(18.5);
-              padding: size(3);
-              @include flex-center;
+              padding: size(4);
+              @include flex-center-vert;
               gap: size(10);
 
               .titlebox {
-                width: calc(100% - size(34));
-                text-align: center;
+                width: calc(100% - size(35));
                 overflow: hidden;
                 @include text-overflow;
     
