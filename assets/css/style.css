@@ -4192,8 +4192,24 @@ button:focus,
   font-weight: 400;
 }
 .allreviews-body .singlereview-body .vendorname .info {
-  color: hsl(202deg, 100%, 56%);
+  color: hsl(173deg, 83%, 37%);
   font-weight: 300;
+}
+.allreviews-body .singlereview-body .reviewthumbnail {
+  width: 9.375rem;
+  height: 9.375rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.allreviews-body .singlereview-body .reviewthumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 /**======= SALON-DESCRIPTIONS =======**/
@@ -4346,43 +4362,48 @@ button:focus,
   font-weight: 500;
 }
 .bookingservices .selectservices-body {
-  position: relative;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-.bookingservices .selectservices-body .swiper-button-prev,
-.bookingservices .selectservices-body .swiper-button-next {
+.bookingservices .selectservices-body .servicesliderinfo {
+  position: relative;
+}
+.bookingservices .selectservices-body .servicesliderinfo .swiper-button-prev,
+.bookingservices .selectservices-body .servicesliderinfo .swiper-button-next {
   width: 1.75rem;
   height: 1.75rem;
   padding: 0.25rem;
   border: none;
-  top: 4%;
+  top: 60%;
 }
-.bookingservices .selectservices-body .swiper-button-prev svg,
-.bookingservices .selectservices-body .swiper-button-next svg {
+.bookingservices .selectservices-body .servicesliderinfo .swiper-button-prev svg,
+.bookingservices .selectservices-body .servicesliderinfo .swiper-button-next svg {
   width: 100%;
   height: 100%;
 }
-.bookingservices .selectservices-body .swiper-button-prev:not([disabled]):hover,
-.bookingservices .selectservices-body .swiper-button-next:not([disabled]):hover {
+.bookingservices .selectservices-body .servicesliderinfo .swiper-button-prev:not([disabled]):hover,
+.bookingservices .selectservices-body .servicesliderinfo .swiper-button-next:not([disabled]):hover {
   background: transparent;
   border: transparent;
 }
-.bookingservices .selectservices-body .swiper-button-prev {
+.bookingservices .selectservices-body .servicesliderinfo .swiper-button-prev {
   left: -0.625rem;
 }
-.bookingservices .selectservices-body .swiper-button-next {
+.bookingservices .selectservices-body .servicesliderinfo .swiper-button-next {
   right: -0.625rem;
 }
 .bookingservices .selectservices-body .serviceselects {
   padding: 1rem 0rem;
 }
-.bookingservices .selectservices-body .serviceselects .nav {
-  flex-wrap: nowrap;
-  border: none;
+.bookingservices .selectservices-body .serviceselects .servicelist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
-.bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link {
+.bookingservices .selectservices-body .serviceselects .servicelist-link {
   width: 92%;
   height: 100%;
   border: none;
@@ -4400,7 +4421,7 @@ button:focus,
   align-items: center;
   gap: 0.625rem;
 }
-.bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link .titlebox {
+.bookingservices .selectservices-body .serviceselects .servicelist-link .titlebox {
   width: calc(100% - 2.1875rem);
   overflow: hidden;
   max-width: 99%;
@@ -4408,12 +4429,12 @@ button:focus,
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link .titlebox .title {
+.bookingservices .selectservices-body .serviceselects .servicelist-link .titlebox .title {
   color: hsl(0deg, 0%, 7%);
   font-size: 0.875rem;
   font-weight: 400;
 }
-.bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link .count {
+.bookingservices .selectservices-body .serviceselects .servicelist-link .count {
   width: 1.5rem;
   height: 1.5rem;
   border: solid 0.03125rem rgba(74, 74, 74, 0.3);
@@ -4427,32 +4448,37 @@ button:focus,
   justify-content: center;
   text-align: center;
 }
-.bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link:hover:not(.active) {
+.bookingservices .selectservices-body .serviceselects .servicelist-link:hover:not(.active) {
   background: hsla(0deg, 0%, 85%, 0.3);
 }
-.bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link.active {
+.bookingservices .selectservices-body .serviceselects .servicelist-link.active {
   background: rgba(236, 195, 177, 0.3);
   border-color: transparent;
 }
-.bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link.active .count {
+.bookingservices .selectservices-body .serviceselects .servicelist-link.active .count {
   border-color: transparent;
 }
-.bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link:active {
+.bookingservices .selectservices-body .serviceselects .servicelist-link:active {
   background: rgba(236, 195, 177, 0.3);
   border-color: transparent;
 }
-.bookingservices .selectservices-body .serviceselects .nav-tabs .nav-link:active .count {
+.bookingservices .selectservices-body .serviceselects .servicelist-link:active .count {
   border-color: transparent;
 }
-.bookingservices .selectservices-body .service-detail {
+.bookingservices .selectservices-body .services {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.bookingservices .selectservices-body .services .service-detail {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
-.bookingservices .selectservices-body .service-detail-header .title {
+.bookingservices .selectservices-body .services .service-detail-header .title {
   font-weight: 500;
 }
-.bookingservices .selectservices-body .service-detail-body {
+.bookingservices .selectservices-body .services .service-detail-body {
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
@@ -4487,7 +4513,7 @@ button:focus,
   height: 1.75rem;
   padding: 0.25rem;
   border: none;
-  top: 62%;
+  top: 8.5%;
 }
 .bookingservices .selectdatetime-body .calendarinfo-body .swiper-button-prev svg,
 .bookingservices .selectdatetime-body .calendarinfo-body .swiper-button-next svg {
@@ -4507,12 +4533,19 @@ button:focus,
 }
 .bookingservices .selectdatetime-body .calendarinfo-body .calendarslider {
   padding: 1rem 0rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
 }
-.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav {
-  flex-wrap: nowrap;
-  border: none;
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  position: relative;
 }
-.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist-link {
   width: 100%;
   height: 100%;
   border: none;
@@ -4528,7 +4561,7 @@ button:focus,
   flex-direction: column;
   gap: 0.875rem;
 }
-.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link .activeicon {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist-link .activeicon {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4538,11 +4571,11 @@ button:focus,
   opacity: 0;
   visibility: hidden;
 }
-.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link .activeicon svg {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist-link .activeicon svg {
   width: 100%;
   height: 100%;
 }
-.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link .linkinfo {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist-link .linkinfo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -4550,7 +4583,7 @@ button:focus,
   gap: 0.125rem;
   text-align: center;
 }
-.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link .linkinfo span {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist-link .linkinfo span {
   color: rgba(18, 18, 18, 0.3);
   font-family: "Outfit", sans-serif;
   font-size: 1.0625rem;
@@ -4559,41 +4592,46 @@ button:focus,
   line-height: 1.4117647059;
 }
 @media screen and (min-width: 48rem) {
-  .bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link .linkinfo span {
+  .bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist-link .linkinfo span {
     font-size: 1.1875rem;
   }
 }
 @media screen and (min-width: 62rem) {
-  .bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link .linkinfo span {
+  .bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist-link .linkinfo span {
     font-size: 1.3125rem;
   }
 }
-.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link:hover:not(.active) {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist-link:hover:not(.active) {
   background: transparent;
 }
-.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link:hover:not(.active) .activeicon {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist-link:hover:not(.active) .activeicon {
   opacity: 1;
   visibility: visible;
 }
-.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link:hover:not(.active) .linkinfo span {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist-link:hover:not(.active) .linkinfo span {
   color: hsl(0deg, 0%, 7%);
 }
-.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link.active {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist-link.active {
   background: transparent;
 }
-.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link.active .activeicon {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist-link.active .activeicon {
   opacity: 1;
   visibility: visible;
 }
-.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link.active .linkinfo span {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist-link.active .linkinfo span {
   color: hsl(0deg, 0%, 7%);
 }
-.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link:active .activeicon {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist-link:active .activeicon {
   opacity: 1;
   visibility: visible;
 }
-.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .nav-tabs .nav-link:active .linkinfo span {
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .calendarlist-link:active .linkinfo span {
   color: hsl(0deg, 0%, 7%);
+}
+.bookingservices .selectdatetime-body .calendarinfo-body .calendarslider .sliderdetails {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 .bookingservices .selectdatetime-body .datetimeinfo {
   display: flex;

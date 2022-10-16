@@ -728,8 +728,20 @@
           }
 
           .info {
-            color: $blue;
+            color: $textSuccess;
             font-weight: 300;
+          }
+        }
+
+        .reviewthumbnail {
+          @include square(150);
+          @include radius(4);
+          @include flex-center;
+          overflow: hidden;
+
+          img {
+            @include wh100;
+            object-fit: cover;
           }
         }
       }

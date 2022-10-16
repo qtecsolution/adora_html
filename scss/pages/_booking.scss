@@ -38,119 +38,124 @@
     }
 
     &-body {
-      position: relative;
       @include flex-column;
       gap: size(24);
 
-      .swiper-button-prev,
-      .swiper-button-next {
-        @include square(28);
-        padding: size(4);
-        border: none;
-        top: 4%;
+      .servicesliderinfo {
+        position: relative;
 
-        svg {
-          @include wh100;
+        .swiper-button-prev,
+        .swiper-button-next {
+          @include square(28);
+          padding: size(4);
+          border: none;
+          top: 60%;
+  
+          svg {
+            @include wh100;
+          }
+  
+          @include hover {
+            background: transparent;
+            border: transparent;
+          }
         }
-
-        @include hover {
-          background: transparent;
-          border: transparent;
+  
+        .swiper-button-prev {
+          left: size(-10);
         }
-      }
-
-      .swiper-button-prev {
-        left: size(-10);
-      }
-
-      .swiper-button-next {
-        right: size(-10);
+  
+        .swiper-button-next {
+          right: size(-10);
+        }
       }
 
       .serviceselects {
         padding: size(16) size(0);
 
-        .nav {
-          flex-wrap: nowrap;
-          border: none;
+        .servicelist {
+          @include list-horizontal;
 
-          &-tabs {
-            .nav-link {
-              width: 92%;
-              @include h100;
-              border: none;
-              @include radius(0);
-              margin: 0;
-              font-size: size(13);
-              @include setBgColor($white, $headingText);
-              @include border(solid, 0.5, $linkborder);
-              @include radius(18.5);
-              padding: size(4);
-              @include flex-center-vert;
-              gap: size(10);
+          &-link {
+            width: 92%;
+            @include h100;
+            border: none;
+            @include radius(0);
+            margin: 0;
+            font-size: size(13);
+            @include setBgColor($white, $headingText);
+            @include border(solid, 0.5, $linkborder);
+            @include radius(18.5);
+            padding: size(4);
+            @include flex-center-vert;
+            gap: size(10);
 
-              .titlebox {
-                width: calc(100% - size(35));
-                overflow: hidden;
-                @include text-overflow;
-    
-                .title {
-                  color: $headingText;
-                  font-size: size(14);
-                  font-weight: 400;
-                }
-              }
-    
-              .count {
-                @include square(24);
-                @include border(solid, 0.5, rgba($primaryText, 0.3));
-                @include circle;
-                @include setBgColor($white, $headingText);
-                font-size: size(13);
+            .titlebox {
+              width: calc(100% - size(35));
+              overflow: hidden;
+              @include text-overflow;
+  
+              .title {
+                color: $headingText;
+                font-size: size(14);
                 font-weight: 400;
-                @include flex-center;
-                text-align: center;
               }
+            }
+  
+            .count {
+              @include square(24);
+              @include border(solid, 0.5, rgba($primaryText, 0.3));
+              @include circle;
+              @include setBgColor($white, $headingText);
+              font-size: size(13);
+              font-weight: 400;
+              @include flex-center;
+              text-align: center;
+            }
 
-              &:hover:not(.active) {
-                background: $pillbg;
-              }
+            &:hover:not(.active) {
+              background: $pillbg;
+            }
 
-              &.active {
-                background: rgba($primary, 0.3);
+            &.active {
+              background: rgba($primary, 0.3);
+              border-color: transparent;
+  
+              .count {
                 border-color: transparent;
-    
-                .count {
-                  border-color: transparent;
-                }
               }
-    
-              &:active {
-                background: rgba($primary, 0.3);
+            }
+  
+            &:active {
+              background: rgba($primary, 0.3);
+              border-color: transparent;
+  
+              .count {
                 border-color: transparent;
-    
-                .count {
-                  border-color: transparent;
-                }
               }
             }
           }
         }
       }
 
-      .service-detail {
+      .services {
         @include flex-column;
-        gap: size(32);
+        gap: size(24);
 
-        &-header {
-          .title {
-            font-weight: 500;
-          }
-        }
-
-        &-body {
+        .service-detail {
           @include flex-column;
-          gap: size(20);
+          gap: size(32);
+  
+          &-header {
+            .title {
+              font-weight: 500;
+            }
+          }
+  
+          &-body {
+            @include flex-column;
+            gap: size(20);
+          }
         }
       }
     }
@@ -189,7 +194,7 @@
             @include square(28);
             padding: size(4);
             border: none;
-            top: 62%;
+            top: 8.5%;
     
             svg {
               @include wh100;
@@ -211,99 +216,104 @@
     
           .calendarslider {
             padding: size(16) size(0);
+            @include flex-column;
+            gap: size(64);
     
-            .nav {
-              flex-wrap: nowrap;
-              border: none;
+            .calendarlist {
+              @include list-horizontal;
+              position: relative;
     
-              &-tabs {
-                .nav-link {
-                  @include wh100;
-                  border: none;
-                  @include radius(0);
-                  margin: 0;
-                  font-size: size(13);
-                  background: transparent;
-                  color: $headingText;
+              &-link {
+                @include wh100;
+                border: none;
+                @include radius(0);
+                margin: 0;
+                font-size: size(13);
+                background: transparent;
+                color: $headingText;
+                @include flex-center-column;
+                gap: size(14);
+  
+                .activeicon {
+                  @include flex-center;
+                  width: size(26);
+                  height: size(6);
+                  overflow: hidden;
+                  opacity: 0;
+                  visibility: hidden;
+  
+                  svg {
+                    @include wh100;
+                  }
+                }
+  
+                .linkinfo {
                   @include flex-center-column;
-                  gap: size(14);
-    
+                  gap: size(2);
+                  text-align: center;
+  
+                  span {
+                    color: rgba($headingText, 0.3);
+                    @include font($primaryFont, 17, normal, normal, 24);
+                  
+                    @include breakpoint(mobile768) {
+                      font-size: size(19);
+                    }
+                  
+                    @include breakpoint(tab992) {
+                      font-size: size(21);
+                    }
+                  }
+                }
+  
+                &:hover:not(.active) {
+                  background: transparent;
+  
                   .activeicon {
-                    @include flex-center;
-                    width: size(26);
-                    height: size(6);
-                    overflow: hidden;
-                    opacity: 0;
-                    visibility: hidden;
-    
-                    svg {
-                      @include wh100;
-                    }
+                    opacity: 1;
+                    visibility: visible;
                   }
-    
+  
                   .linkinfo {
-                    @include flex-center-column;
-                    gap: size(2);
-                    text-align: center;
-    
                     span {
-                      color: rgba($headingText, 0.3);
-                      @include font($primaryFont, 17, normal, normal, 24);
-                    
-                      @include breakpoint(mobile768) {
-                        font-size: size(19);
-                      }
-                    
-                      @include breakpoint(tab992) {
-                        font-size: size(21);
-                      }
+                      color: $headingText;
                     }
                   }
-    
-                  &:hover:not(.active) {
-                    background: transparent;
-    
-                    .activeicon {
-                      opacity: 1;
-                      visibility: visible;
-                    }
-    
-                    .linkinfo {
-                      span {
-                        color: $headingText;
-                      }
+                }
+  
+                &.active {
+                  background: transparent;
+  
+                  .activeicon {
+                    opacity: 1;
+                    visibility: visible;
+                  }
+  
+                  .linkinfo {
+                    span {
+                      color: $headingText;
                     }
                   }
-    
-                  &.active {
-                    background: transparent;
-    
-                    .activeicon {
-                      opacity: 1;
-                      visibility: visible;
-                    }
-    
-                    .linkinfo {
-                      span {
-                        color: $headingText;
-                      }
-                    }
+                }
+      
+                &:active {
+                  .activeicon {
+                    opacity: 1;
+                    visibility: visible;
                   }
-        
-                  &:active {
-                    .activeicon {
-                      opacity: 1;
-                      visibility: visible;
-                    }
-    
-                    .linkinfo {
-                      span {
-                        color: $headingText;
-                      }
+  
+                  .linkinfo {
+                    span {
+                      color: $headingText;
                     }
                   }
                 }
               }
+            }
+
+            .sliderdetails {
+              @include flex-column;
+              gap: size(32);
             }
           }
         }
