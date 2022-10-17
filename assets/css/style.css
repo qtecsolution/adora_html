@@ -552,6 +552,30 @@ h6 {
   color: hsl(0deg, 0%, 100%);
 }
 
+.status {
+  padding: 0.3125rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 500;
+  border-radius: 1.15625rem;
+  border-radius: 1.15625rem;
+}
+.status.pending {
+  background: hsla(47deg, 100%, 51%, 0.1);
+  color: hsl(47deg, 100%, 51%);
+}
+.status.confirmed {
+  background: hsla(173deg, 83%, 37%, 0.1);
+  color: hsl(173deg, 83%, 37%);
+}
+.status.cancelled {
+  background: rgba(255, 56, 56, 0.1);
+  color: hsl(0deg, 100%, 61%);
+}
+
 button,
 [type=button],
 [type=reset],
@@ -735,6 +759,26 @@ button:focus,
 .btn-goto:not([disabled]):hover {
   background: #d78460;
   color: hsl(0deg, 0%, 7%);
+}
+
+.btn-review {
+  width: 12.5rem;
+  height: 2.75rem;
+  background: transparent;
+  color: hsl(173deg, 83%, 37%);
+  border: solid 0.0625rem hsl(173deg, 83%, 37%);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 400;
+  text-align: center;
+  transition: background 350ms ease-in-out;
+}
+.btn-review:not([disabled]):hover {
+  background: hsl(173deg, 83%, 37%);
+  color: hsl(0deg, 0%, 100%);
 }
 
 .carousel {
@@ -5410,18 +5454,438 @@ button:focus,
   width: 100%;
 }
 
-.favorites {
+.myappointment {
   padding: 2rem 0rem 3rem;
 }
 @media screen and (min-width: 62rem) {
-  .favorites {
+  .myappointment {
     padding: 2rem 0rem 5rem;
   }
 }
-.favorites-content {
+.myappointment-content {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+}
+.myappointment-header {
+  padding-bottom: 1.25rem;
+  border-bottom: solid 0.0625rem rgba(74, 74, 74, 0.2);
+}
+.myappointment-header .title {
+  font-weight: 500;
+}
+.myappointment-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.myappointment-body .appointlist {
+  display: none;
+}
+@media screen and (min-width: 62rem) {
+  .myappointment-body .appointlist {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.625rem;
+    position: relative;
+    z-index: 10;
+  }
+}
+.myappointment-body .appointlist-link {
+  background: hsl(0deg, 0%, 100%);
+  border: solid 0.03125rem rgba(74, 74, 74, 0.3);
+  border-radius: 1.15625rem;
+  border-radius: 1.15625rem;
+  padding: 0.25rem 0.25rem 0.25rem 0.9375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.myappointment-body .appointlist-link .titlebox {
+  width: calc(100% - 2.5rem);
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.myappointment-body .appointlist-link .titlebox .title {
+  color: hsl(0deg, 0%, 7%);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.myappointment-body .appointlist-link .counter {
+  width: 1.875rem;
+  height: 1.875rem;
+  border: solid 0.03125rem rgba(74, 74, 74, 0.3);
+  border-radius: 100%;
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 7%);
+  font-size: 0.875rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.myappointment-body .appointlist-link:hover:not(.active) {
+  background: hsla(0deg, 0%, 85%, 0.3);
+}
+.myappointment-body .appointlist-link.active {
+  background: rgba(236, 195, 177, 0.3);
+  border-color: rgba(236, 195, 177, 0.3);
+}
+.myappointment-body .appointlist-link.active .counter {
+  border-color: rgba(236, 195, 177, 0.3);
+}
+.myappointment-body .appointlist-link:active {
+  background: rgba(236, 195, 177, 0.3);
+  border-color: rgba(236, 195, 177, 0.3);
+}
+.myappointment-body .appointlist-link:active .counter {
+  border-color: rgba(236, 195, 177, 0.3);
+}
+.myappointment-body .appointmobile {
+  display: block;
+}
+@media screen and (min-width: 62rem) {
+  .myappointment-body .appointmobile {
+    display: none;
+  }
+}
+.myappointment-body .appointmobile .appointmobinfo {
+  position: relative;
+}
+.myappointment-body .appointmobile .appointmobinfo .swiper-button-prev,
+.myappointment-body .appointmobile .appointmobinfo .swiper-button-next {
+  width: 1.75rem;
+  height: 1.75rem;
+  padding: 0.25rem;
+  border: none;
+  top: 70%;
+}
+.myappointment-body .appointmobile .appointmobinfo .swiper-button-prev svg,
+.myappointment-body .appointmobile .appointmobinfo .swiper-button-next svg {
+  width: 100%;
+  height: 100%;
+}
+.myappointment-body .appointmobile .appointmobinfo .swiper-button-prev:not([disabled]):hover,
+.myappointment-body .appointmobile .appointmobinfo .swiper-button-next:not([disabled]):hover {
+  background: transparent;
+  border: transparent;
+}
+.myappointment-body .appointmobile .appointmobinfo .swiper-button-prev {
+  left: -0.625rem;
+}
+.myappointment-body .appointmobile .appointmobinfo .swiper-button-next {
+  right: -0.625rem;
+}
+.myappointment-body .appointmobile .appointSlider {
+  max-width: 90%;
+}
+.myappointment-body .appointmobile .appointSlider .favlist-link {
+  background: hsl(0deg, 0%, 100%);
+  border: solid 0.03125rem rgba(74, 74, 74, 0.3);
+  border-radius: 1.15625rem;
+  border-radius: 1.15625rem;
+  padding: 0.25rem 0.25rem 0.25rem 0.9375rem;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+}
+.myappointment-body .appointmobile .appointSlider .favlist-link .titlebox {
+  width: calc(100% - 2.5rem);
+  max-width: 99%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 2.5rem);
+}
+.myappointment-body .appointmobile .appointSlider .favlist-link .titlebox .title {
+  color: hsl(0deg, 0%, 7%);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.myappointment-body .appointmobile .appointSlider .favlist-link .counter {
+  width: 1.875rem;
+  height: 1.875rem;
+  border: solid 0.03125rem rgba(74, 74, 74, 0.3);
+  border-radius: 100%;
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 7%);
+  font-size: 0.875rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.myappointment-body .appointmobile .appointSlider .favlist-link:hover:not(.active) {
+  background: hsla(0deg, 0%, 85%, 0.3);
+}
+.myappointment-body .appointmobile .appointSlider .favlist-link.active {
+  background: rgba(236, 195, 177, 0.3);
+  border-color: rgba(236, 195, 177, 0.3);
+}
+.myappointment-body .appointmobile .appointSlider .favlist-link.active .counter {
+  border-color: rgba(236, 195, 177, 0.3);
+}
+.myappointment-body .appointmobile .appointSlider .favlist-link:active {
+  background: rgba(236, 195, 177, 0.3);
+  border-color: rgba(236, 195, 177, 0.3);
+}
+.myappointment-body .appointmobile .appointSlider .favlist-link:active .counter {
+  border-color: rgba(236, 195, 177, 0.3);
+}
+.myappointment-body .accordion {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: transparent;
+}
+.myappointment-body .accordion-item {
+  border: none;
+  border-bottom: solid 0.0625rem rgba(74, 74, 74, 0.2);
+  background: transparent;
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+.myappointment-body .accordion-item:first-of-type .accordion-button, .myappointment-body .accordion-item:last-of-type .accordion-button {
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+.myappointment-body .accordion-button {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.25rem;
+  border-radius: 0rem;
+  border-radius: 0rem;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+  position: relative;
+}
+.myappointment-body .accordion-button:not(.collapsed) {
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  border-bottom: solid 0.0625rem rgba(74, 74, 74, 0.2);
+}
+.myappointment-body .accordion-button:not(.collapsed)::after {
+  background: transparent;
+  content: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='15.5' transform='rotate(90 16 16)' stroke='%234B4B4B'/%3E%3Cpath d='M21.6012 13.5006C21.5167 13.4188 21.4032 13.373 21.2851 13.373C21.167 13.373 21.0535 13.4188 20.969 13.5006L16.2379 18.0701L11.5078 13.5006C11.4233 13.4188 11.3098 13.373 11.1917 13.373C11.0736 13.373 10.9601 13.4188 10.8756 13.5006C10.8344 13.5404 10.8016 13.5879 10.7793 13.6404C10.7569 13.6929 10.7454 13.7493 10.7454 13.8063C10.7454 13.8633 10.7569 13.9197 10.7793 13.9722C10.8016 14.0247 10.8344 14.0723 10.8756 14.112L15.9076 18.9713C15.996 19.0566 16.1145 19.1044 16.2379 19.1044C16.3613 19.1044 16.4799 19.0566 16.5682 18.9713L21.6003 14.112C21.6415 14.0723 21.6742 14.0247 21.6966 13.9722C21.7189 13.9197 21.7305 13.8633 21.7305 13.8063C21.7305 13.7493 21.7189 13.6929 21.6966 13.6404C21.6742 13.5879 21.6415 13.5404 21.6003 13.5006H21.6012Z' fill='%234B4B4B'/%3E%3C/svg%3E%0A");
+}
+.myappointment-body .accordion-button::after {
+  width: auto;
+  height: auto;
+  background: transparent;
+  content: url("data:image/svg+xml,%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Ccircle cx='16' cy='16' r='15.5' transform='rotate(90 16 16)' stroke='%234B4B4B'/%3E%3Cpath d='M21.6012 13.5006C21.5167 13.4188 21.4032 13.373 21.2851 13.373C21.167 13.373 21.0535 13.4188 20.969 13.5006L16.2379 18.0701L11.5078 13.5006C11.4233 13.4188 11.3098 13.373 11.1917 13.373C11.0736 13.373 10.9601 13.4188 10.8756 13.5006C10.8344 13.5404 10.8016 13.5879 10.7793 13.6404C10.7569 13.6929 10.7454 13.7493 10.7454 13.8063C10.7454 13.8633 10.7569 13.9197 10.7793 13.9722C10.8016 14.0247 10.8344 14.0723 10.8756 14.112L15.9076 18.9713C15.996 19.0566 16.1145 19.1044 16.2379 19.1044C16.3613 19.1044 16.4799 19.0566 16.5682 18.9713L21.6003 14.112C21.6415 14.0723 21.6742 14.0247 21.6966 13.9722C21.7189 13.9197 21.7305 13.8633 21.7305 13.8063C21.7305 13.7493 21.7189 13.6929 21.6966 13.6404C21.6742 13.5879 21.6415 13.5404 21.6003 13.5006H21.6012Z' fill='%234B4B4B'/%3E%3C/svg%3E%0A");
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media screen and (min-width: 48rem) {
+  .myappointment-body .accordion-button::after {
+    position: static;
+  }
+}
+.myappointment-body .accordion-button .details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.myappointment-body .accordion-button .details .thumbnail {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.myappointment-body .accordion-button .details .thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.myappointment-body .accordion-button .details .description {
+  display: flex;
+  flex-direction: column;
+}
+.myappointment-body .accordion-button .details .description .title {
+  color: hsl(0deg, 0%, 7%);
+  font-weight: 500;
+}
+.myappointment-body .accordion-button .details .description .date {
+  color: hsla(0deg, 0%, 29%, 0.6);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.myappointment-body .accordion-button .details .description .time {
+  color: hsla(0deg, 0%, 29%, 0.6);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.myappointment-body .accordion-button .services,
+.myappointment-body .accordion-button .price {
+  color: hsl(0deg, 0%, 7%);
+  font-weight: 500;
+  display: none;
+}
+@media screen and (min-width: 48rem) {
+  .myappointment-body .accordion-button .services,
+.myappointment-body .accordion-button .price {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 48rem) {
+  .myappointment-body .accordion-button .services,
+.myappointment-body .accordion-button .price,
+.myappointment-body .accordion-button .status {
+    margin-left: auto;
+  }
+}
+.myappointment-body .accordion-body {
+  padding: 1.25rem 0rem;
+  background: transparent;
+}
+.myappointment-body .accordion-body .appointdetails {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.myappointment-body .accordion-body .appointdetails-header .text {
+  letter-spacing: 0.02rem;
+}
+.myappointment-body .accordion-body .appointdetails-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+@media screen and (min-width: 62rem) {
+  .myappointment-body .accordion-body .appointdetails-body {
+    flex-direction: row;
+    justify-content: flex-start;
+    gap: 1.25rem;
+  }
+}
+.myappointment-body .accordion-body .appointdetails-body .bookagain {
+  width: 100%;
+}
+@media screen and (min-width: 62rem) {
+  .myappointment-body .accordion-body .appointdetails-body .bookagain {
+    width: 12.5rem;
+  }
+}
+.myappointment-body .accordion-body .appointdetails-body .bookagain .btn-submit {
+  height: 2.75rem;
+}
+.myappointment-body .accordion-body .appointdetails-body .writereview {
+  width: 100%;
+}
+.myappointment-body .accordion-body .appointdetails-body .writereview .btn-review {
+  width: 100%;
+}
+@media screen and (min-width: 62rem) {
+  .myappointment-body .accordion-body .appointdetails-body .writereview {
+    width: 12.5rem;
+  }
+}
+.myappointment-body .accordion-body .appointmentservice {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.myappointment-body .accordion-body .appointmentservice .services {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  border-bottom: dashed 0.09375rem rgba(18, 18, 18, 0.3);
+  padding-bottom: 1.25rem;
+}
+.myappointment-body .accordion-body .appointmentservice .services .service {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.myappointment-body .accordion-body .appointmentservice .services .service .name-time {
+  display: flex;
+  flex-direction: column;
+}
+.myappointment-body .accordion-body .appointmentservice .services .service .name-time .name {
+  color: hsl(0deg, 0%, 7%);
+  font-size: 1rem;
+}
+.myappointment-body .accordion-body .appointmentservice .services .service .name-time .time {
+  color: hsl(0deg, 0%, 7%);
+  font-size: 0.875rem;
+}
+.myappointment-body .accordion-body .appointmentservice .services .service .prices {
+  display: flex;
+  flex-direction: column;
+}
+.myappointment-body .accordion-body .appointmentservice .services .service .prices .currentprice {
+  color: hsl(0deg, 0%, 7%);
+  font-size: 1rem;
+}
+.myappointment-body .accordion-body .appointmentservice .services .service .prices .previousprice {
+  color: rgba(18, 18, 18, 0.6);
+  font-size: 0.875rem;
+  -webkit-text-decoration-line: line-through;
+          text-decoration-line: line-through;
+}
+.myappointment-body .accordion-body .appointmentservice .subtotal {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+  border-bottom: dashed 0.09375rem rgba(18, 18, 18, 0.3);
+  padding-bottom: 1.25rem;
+}
+.myappointment-body .accordion-body .appointmentservice .subtotal .sub {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.myappointment-body .accordion-body .appointmentservice .subtotal .sub .title,
+.myappointment-body .accordion-body .appointmentservice .subtotal .sub .subtotalprice {
+  font-weight: 400;
+}
+.myappointment-body .accordion-body .appointmentservice .subtotal .coup {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.myappointment-body .accordion-body .appointmentservice .subtotal .coup .title,
+.myappointment-body .accordion-body .appointmentservice .subtotal .coup .couponprice {
+  color: rgba(18, 18, 18, 0.6);
+  font-weight: 400;
+}
+.myappointment-body .accordion-body .appointmentservice .total {
+  border-bottom: dashed 0.09375rem rgba(18, 18, 18, 0.3);
+  padding-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+}
+.myappointment-body .accordion-body .appointmentservice .total .title,
+.myappointment-body .accordion-body .appointmentservice .total .totalprice {
+  font-weight: 500;
+}
+.myappointment-body .accordion-body .appointmentservice .bookingid {
+  color: hsl(0deg, 0%, 29%);
+  font-weight: 400;
+  letter-spacing: 0.02rem;
 }
 
 .authentic-main {

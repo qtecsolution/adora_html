@@ -6,13 +6,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <!-- SITE-TITLE -->
-  <title>Adora Beauty | Favorites</title>
+  <title>Adora Beauty | My Appointments</title>
 
   <!-- FAVICON -->
   <link rel="shortcut icon" href="assets/images/logo/favicon.svg" type="image/svg+xml">
 
   <!-- BACK-TOP -->
   <link rel="stylesheet" href="assets/css/back-top/back.css">
+  <!-- SWIPER CSS -->
+  <link rel="stylesheet" href="assets/css/swiper/swiper-bundle.min.css">
   <!-- BOOTSTRAP (5.2) -->
   <link rel="stylesheet" href="assets/css/bootstrap/bootstrap.min.css">
   <!-- ADORA CSS -->
@@ -502,7 +504,446 @@
         <div class="myappointment-header">
           <h3 class="title">My Appointments</h3>
         </div>
-        <div class="myappointment-body"></div>
+
+        <div class="myappointment-body">
+          <ul class="appointlist">
+            <li class="appointlist-item">
+              <a href="#" class="appointlist-link active">
+                <span class="titlebox">
+                  <span class="title">Salon</span>
+                </span>
+                <span class="counter">1</span>
+              </a>
+            </li>
+            <li class="appointlist-item">
+              <a href="#" class="appointlist-link">
+                <span class="titlebox">
+                  <span class="title">Makeup Consultant</span>
+                </span>
+                <span class="counter">2</span>
+              </a>
+            </li>
+            <li class="appointlist-item">
+              <a href="#" class="appointlist-link">
+                <span class="titlebox">
+                  <span class="title">Skincare Consultant</span>
+                </span>
+                <span class="counter">3</span>
+              </a>
+            </li>
+            <li class="appointlist-item">
+              <a href="#" class="appointlist-link">
+                <span class="titlebox">
+                  <span class="title">Dermatologist</span>
+                </span>
+                <span class="counter">4</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="appointmobile">
+            <div class="appointmobinfo">
+              <div class="swiper appointSlider">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <a href="#" class="appointlist-link active">
+                      <span class="titlebox">
+                        <span class="title">Salon</span>
+                      </span>
+                      <span class="counter">1</span>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="#" class="appointlist-link">
+                      <span class="titlebox">
+                        <span class="title">Makeup Consultant</span>
+                      </span>
+                      <span class="counter">2</span>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="#" class="appointlist-link">
+                      <span class="titlebox">
+                        <span class="title">Skincare Consultant</span>
+                      </span>
+                      <span class="counter">3</span>
+                    </a>
+                  </div>
+
+                  <div class="swiper-slide">
+                    <a href="#" class="appointlist-link">
+                      <span class="titlebox">
+                        <span class="title">Dermatologist</span>
+                      </span>
+                      <span class="counter">4</span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+
+              <button class="swiper-button-next">
+                <svg
+                  width="12"
+                  height="24"
+                  viewBox="0 0 12 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M0.26712 0.770657C0.0958717 0.947604 0 1.18514 0 1.43249C0 1.67984 0.0958717 1.91737 0.26712 2.09432L9.83452 12L0.26712 21.9037C0.0958717 22.0806 0 22.3182 0 22.5655C0 22.8129 0.0958717 23.0504 0.26712 23.2274C0.350358 23.3136 0.44988 23.3822 0.55981 23.4291C0.66974 23.4759 0.787851 23.5 0.907171 23.5C1.02649 23.5 1.1446 23.4759 1.25453 23.4291C1.36446 23.3822 1.46399 23.3136 1.54722 23.2274L11.7213 12.6916C11.9 12.5065 12 12.2584 12 12C12 11.7416 11.9 11.4935 11.7213 11.3084L1.54722 0.772639C1.46399 0.686357 1.36446 0.617778 1.25453 0.570952C1.1446 0.524125 1.02649 0.5 0.907171 0.5C0.787851 0.5 0.66974 0.524125 0.55981 0.570952C0.44988 0.617778 0.350358 0.686357 0.26712 0.772639V0.770657Z"
+                    fill="#4B4B4B"
+                  />
+                </svg>
+              </button>
+
+              <button class="swiper-button-prev">
+                <svg
+                  width="12"
+                  height="24"
+                  viewBox="0 0 12 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M11.7329 0.770657C11.9041 0.947604 12 1.18514 12 1.43249C12 1.67984 11.9041 1.91737 11.7329 2.09432L2.16548 12L11.7329 21.9037C11.9041 22.0806 12 22.3182 12 22.5655C12 22.8129 11.9041 23.0504 11.7329 23.2274C11.6496 23.3136 11.5501 23.3822 11.4402 23.4291C11.3303 23.4759 11.2121 23.5 11.0928 23.5C10.9735 23.5 10.8554 23.4759 10.7455 23.4291C10.6355 23.3822 10.536 23.3136 10.4528 23.2274L0.2787 12.6916C0.100008 12.5065 0 12.2584 0 12C0 11.7416 0.100008 11.4935 0.2787 11.3084L10.4528 0.772639C10.536 0.686357 10.6355 0.617778 10.7455 0.570952C10.8554 0.524125 10.9735 0.5 11.0928 0.5C11.2121 0.5 11.3303 0.524125 11.4402 0.570952C11.5501 0.617778 11.6496 0.686357 11.7329 0.772639V0.770657Z"
+                    fill="#4B4B4B"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="accordion" id="accordionAppointments">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="appointment-1">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                  <span class="details">
+                    <figure class="thumbnail">
+                      <img src="https://images.pexels.com/photos/7755223/pexels-photo-7755223.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="appoint-thumbnail">
+                    </figure>
+
+                    <span class="description">
+                      <h6 class="title">Decadence Hair & Beauty</h6>
+                      <span class="date">21st september, 2022</span>
+                      <span class="time">2:30 pm</span>
+                    </span>
+                  </span>
+
+                  <span class="services">3 Services</span>
+
+                  <span class="price">850 bdt</span>
+
+                  <span class="status pending">Pending</span>
+                </button>
+              </h2>
+
+              <div id="collapse-1" class="accordion-collapse collapse show" aria-labelledby="appointment-1" data-bs-parent="#accordionAppointments">
+                <div class="accordion-body">
+                  <div class="row g-4">
+                    <div class="col-lg-5 col-md-6 order-1 order-md-0">
+                      <div class="appointdetails">
+                        <div class="appointdetails-header">
+                          <p class="text">36 Store Street, London (Bloomsbury), WC1E 7BS, England, Tube stations: Goodge Street (4 mins walk) & Tottenham Court Road (7 mins walk).</p>
+                        </div>
+
+                        <div class="appointdetails-body">
+                          <div class="bookagain">
+                            <a href="#" class="btn-submit">Book Again</a>
+                          </div>
+
+                          <div class="writereview">
+                            <button class="btn-review" type="button">Write a Review</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="offset-lg-2 offset-0 col-lg-5 col-md-6 order-0 order-md-1">
+                      <div class="appointmentservice">
+                        <div class="services">
+                          <div class="service">
+                            <span class="name-time">
+                              <span class="name">Haircut</span>
+                              <span class="time">1hr</span>
+                            </span>
+
+                            <div class="prices">
+                              <span class="currentprice">450 bdt</span>
+                              <span class="previousprice">550 bdt</span>
+                            </div>
+                          </div>
+
+                          <div class="service">
+                            <span class="name-time">
+                              <span class="name">Beard trim</span>
+                              <span class="time">1hr</span>
+                            </span>
+
+                            <div class="prices">
+                              <span class="currentprice">250 bdt</span>
+                            </div>
+                          </div>
+
+                          <div class="service">
+                            <span class="name-time">
+                              <span class="name">Regular face massage</span>
+                              <span class="time">1hr</span>
+                            </span>
+
+                            <div class="prices">
+                              <span class="currentprice">150 bdt</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="subtotal">
+                          <div class="sub">
+                            <span class="title">Sub total</span>
+                            <span class="subtotalprice">850 bdt</span>
+                          </div>
+
+                          <div class="coup">
+                            <span class="title">Coupon</span>
+                            <span class="couponprice">(-) 0 bdt</span>
+                          </div>
+                        </div>
+
+                        <div class="total">
+                          <span class="title">Total</span>
+                          <span class="totalprice">850 bdt</span>
+                        </div>
+
+                        <div class="bookingid">
+                          <p class="id">Booking ID : 3F54G5QG1</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="appointment-2">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">
+                  <span class="details">
+                    <figure class="thumbnail">
+                      <img src="https://cdn.pixabay.com/photo/2020/05/14/12/37/barber-5194406__340.jpg" alt="appoint-thumbnail">
+                    </figure>
+
+                    <span class="description">
+                      <h6 class="title">Decadence Hair & Beauty</h6>
+                      <span class="date">22nd september, 2022</span>
+                      <span class="time">4:30 pm</span>
+                    </span>
+                  </span>
+
+                  <span class="services">2 Services</span>
+
+                  <span class="price">550 bdt</span>
+
+                  <span class="status confirmed">Confirmed</span>
+                </button>
+              </h2>
+
+              <div id="collapse-2" class="accordion-collapse collapse" aria-labelledby="appointment-2" data-bs-parent="#accordionAppointments">
+                <div class="accordion-body">
+                  <div class="row g-4">
+                    <div class="col-lg-5 col-md-6 order-1 order-md-0">
+                      <div class="appointdetails">
+                        <div class="appointdetails-header">
+                          <p class="text">36 Store Street, London (Bloomsbury), WC1E 7BS, England, Tube stations: Goodge Street (4 mins walk) & Tottenham Court Road (7 mins walk).</p>
+                        </div>
+
+                        <div class="appointdetails-body">
+                          <div class="bookagain">
+                            <a href="#" class="btn-submit">Book Again</a>
+                          </div>
+
+                          <div class="writereview">
+                            <button class="btn-review" type="button">Write a Review</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="offset-lg-2 offset-0 col-lg-5 col-md-6 order-0 order-md-1">
+                      <div class="appointmentservice">
+                        <div class="services">
+                          <div class="service">
+                            <span class="name-time">
+                              <span class="name">Haircut</span>
+                              <span class="time">1hr</span>
+                            </span>
+
+                            <div class="prices">
+                              <span class="currentprice">450 bdt</span>
+                              <span class="previousprice">550 bdt</span>
+                            </div>
+                          </div>
+
+                          <div class="service">
+                            <span class="name-time">
+                              <span class="name">Beard trim</span>
+                              <span class="time">1hr</span>
+                            </span>
+
+                            <div class="prices">
+                              <span class="currentprice">250 bdt</span>
+                            </div>
+                          </div>
+
+                          <div class="service">
+                            <span class="name-time">
+                              <span class="name">Regular face massage</span>
+                              <span class="time">1hr</span>
+                            </span>
+
+                            <div class="prices">
+                              <span class="currentprice">150 bdt</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="subtotal">
+                          <div class="sub">
+                            <span class="title">Sub total</span>
+                            <span class="subtotalprice">850 bdt</span>
+                          </div>
+
+                          <div class="coup">
+                            <span class="title">Coupon</span>
+                            <span class="couponprice">(-) 0 bdt</span>
+                          </div>
+                        </div>
+
+                        <div class="total">
+                          <span class="title">Total</span>
+                          <span class="totalprice">850 bdt</span>
+                        </div>
+
+                        <div class="bookingid">
+                          <p class="id">Booking ID : 3F54G5QG1</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="appointment-3">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">
+                  <span class="details">
+                    <figure class="thumbnail">
+                      <img src="https://cdn.pixabay.com/photo/2017/08/05/13/13/people-2583493__340.jpg" alt="appoint-thumbnail">
+                    </figure>
+
+                    <span class="description">
+                      <h6 class="title">Decadence Hair & Beauty</h6>
+                      <span class="date">23rd september, 2022</span>
+                      <span class="time">2:00 pm</span>
+                    </span>
+                  </span>
+
+                  <span class="services">1 Service</span>
+
+                  <span class="price">350 bdt</span>
+
+                  <span class="status cancelled">Cancelled</span>
+                </button>
+              </h2>
+
+              <div id="collapse-3" class="accordion-collapse collapse" aria-labelledby="appointment-3" data-bs-parent="#accordionAppointments">
+                <div class="accordion-body">
+                  <div class="row g-4">
+                    <div class="col-lg-5 col-md-6 order-1 order-md-0">
+                      <div class="appointdetails">
+                        <div class="appointdetails-header">
+                          <p class="text">36 Store Street, London (Bloomsbury), WC1E 7BS, England, Tube stations: Goodge Street (4 mins walk) & Tottenham Court Road (7 mins walk).</p>
+                        </div>
+
+                        <div class="appointdetails-body">
+                          <div class="bookagain">
+                            <a href="#" class="btn-submit">Book Again</a>
+                          </div>
+
+                          <div class="writereview">
+                            <button class="btn-review" type="button">Write a Review</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="offset-lg-2 offset-0 col-lg-5 col-md-6 order-0 order-md-1">
+                      <div class="appointmentservice">
+                        <div class="services">
+                          <div class="service">
+                            <span class="name-time">
+                              <span class="name">Haircut</span>
+                              <span class="time">1hr</span>
+                            </span>
+
+                            <div class="prices">
+                              <span class="currentprice">450 bdt</span>
+                              <span class="previousprice">550 bdt</span>
+                            </div>
+                          </div>
+
+                          <div class="service">
+                            <span class="name-time">
+                              <span class="name">Beard trim</span>
+                              <span class="time">1hr</span>
+                            </span>
+
+                            <div class="prices">
+                              <span class="currentprice">250 bdt</span>
+                            </div>
+                          </div>
+
+                          <div class="service">
+                            <span class="name-time">
+                              <span class="name">Regular face massage</span>
+                              <span class="time">1hr</span>
+                            </span>
+
+                            <div class="prices">
+                              <span class="currentprice">150 bdt</span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="subtotal">
+                          <div class="sub">
+                            <span class="title">Sub total</span>
+                            <span class="subtotalprice">850 bdt</span>
+                          </div>
+
+                          <div class="coup">
+                            <span class="title">Coupon</span>
+                            <span class="couponprice">(-) 0 bdt</span>
+                          </div>
+                        </div>
+
+                        <div class="total">
+                          <span class="title">Total</span>
+                          <span class="totalprice">850 bdt</span>
+                        </div>
+
+                        <div class="bookingid">
+                          <p class="id">Booking ID : 3F54G5QG1</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -669,5 +1110,10 @@
   <!-- BACK-TOP -->
   <script src="assets/js/back-top/back.js"></script>
   <script src="assets/js/back-top/back-top.js"></script>
+  <!-- SWIPER JS -->
+  <script src="assets/js/swiper/swiper-bundle.min.js"></script>
+  <!-- FAVORITE SLIDER -->
+  <script src="assets/js/swiper/appoint.js"></script>
+</body>
 </body>
 </html>

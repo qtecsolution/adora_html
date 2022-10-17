@@ -150,3 +150,19 @@ button,
     @include setBgColor(darken($primary, 20%), $headingText);
   }
 }
+
+.btn-review {
+  width: size(200);
+  height: size(44);
+  @include setBgColor(transparent, $confirmedcolor);
+  @include border(solid, 1, $confirmedcolor);
+  @include radius(4);
+  @include flex-center;
+  font-weight: 400;
+  text-align: center;
+  @include transitionsbackground;
+
+  @include hover {
+    @include setBgColor($confirmedcolor, $white);
+  }
+}

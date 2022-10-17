@@ -42,3 +42,24 @@
     @include setBgColor($danger, $white);
   }
 }
+
+.status {
+  padding: size(5) size(24);
+  @include flex-center;
+  text-align: center;
+  font-size: size(16);
+  font-weight: 500;
+  @include radius(18.5);
+
+  &.pending {
+    @include setBgColor($pendingbg, $pendingcolor);
+  }
+
+  &.confirmed {
+    @include setBgColor($confirmedbg, $confirmedcolor);
+  }
+
+  &.cancelled {
+    @include setBgColor(rgba($danger, 0.1), $danger);
+  }
+}
