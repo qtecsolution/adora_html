@@ -1,0 +1,15 @@
+@use '../global'as *;
+@use '../partials'as *;
+
+.favorites {
+  padding: size(32) size(0) size(48);
+
+  @include breakpoint(tab992) {
+    padding: size(32) size(0) size(80);
+  }
+
+  &-content {
+    @include flex-column;
+    gap: size(24);
+  }
+}

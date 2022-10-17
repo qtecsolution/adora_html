@@ -63,6 +63,18 @@
       gap: size(5);
       flex-wrap: wrap;
     }
+
+    .favoriteicon {
+      position: absolute;
+      top: size(8);
+      right: size(10);
+      @include square(21);
+      @include flex-center;
+
+      svg {
+        @include wh100;
+      }
+    }
   }
 
   &-body {
