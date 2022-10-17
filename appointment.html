@@ -654,7 +654,7 @@
                           </div>
 
                           <div class="writereview">
-                            <button class="btn-review" type="button">Write a Review</button>
+                            <button class="btn-review" type="button" data-bs-toggle="modal" data-bs-target="#reviewModal">Write a Review</button>
                           </div>
                         </div>
                       </div>
@@ -763,7 +763,7 @@
                           </div>
 
                           <div class="writereview">
-                            <button class="btn-review" type="button">Write a Review</button>
+                            <button class="btn-review" type="button" data-bs-toggle="modal" data-bs-target="#reviewModal">Write a Review</button>
                           </div>
                         </div>
                       </div>
@@ -872,7 +872,7 @@
                           </div>
 
                           <div class="writereview">
-                            <button class="btn-review" type="button">Write a Review</button>
+                            <button class="btn-review" type="button" data-bs-toggle="modal" data-bs-target="#reviewModal">Write a Review</button>
                           </div>
                         </div>
                       </div>
@@ -1100,6 +1100,25 @@
     </div>
   </footer>
   <!-- FOOTER END -->
+
+  <!-- REVIEW MODAL START -->
+  <div class="modal fade" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="reviewModalLabel">Add a review</h1>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn-close" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn-send">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- REVIEW MODAL END -->
 
   <!-- BOOTSTRAP (5.2) -->
   <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
