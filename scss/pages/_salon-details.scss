@@ -125,15 +125,12 @@
       }
     }
 
-    // @include breakpoint(tab992) {
-    //   @include h100;
-    // }
-
     .swiper-button-next,
     .swiper-button-prev {
       @include square(36);
       padding: size(10);
       border-color: $white;
+      top: 55%;
 
       @include breakpoint(tab992) {
         top: 45%;
@@ -153,11 +150,15 @@
     }
 
     .swiper-button-next {
-      right: size(20);
+      @include breakpoint(tab992) {
+        right: size(20);
+      }
     }
 
     .swiper-button-prev {
-      left: size(20);
+      @include breakpoint(tab992) {
+        left: size(20);
+      }
     }
   }
 }

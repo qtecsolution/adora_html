@@ -40,3 +40,203 @@
     
   }
 }
+
+.reviewmodal {
+  .modal-content {
+    @include radius(8);
+    box-shadow: $modalshadow;
+    border: none;
+    outline: none;
+  }
+
+  .modal-header {
+    padding: size(24) size(24) size(32);
+
+    .modal-title {
+      font-size: size(19);
+      font-weight: 500;
+    }
+  }
+  
+  .modal-body {
+    @include flex-column;
+    gap: size(24);
+    padding: size(0) size(24) size(28);
+
+    .reviewproduct {
+      @include flex;
+      gap: size(16);
+
+      &-thumbnail {
+        @include square(48);
+        @include radius(8);
+        @include flex-center;
+        overflow: hidden;
+
+        img {
+          @include wh100;
+          object-fit: cover;
+        }
+      }
+
+      &-details {
+        @include flex-column;
+
+        .date {
+          color: $gray;
+        }
+
+        .title {
+          font-weight: 400;
+        }
+      }
+    }
+
+    .ratingbox {
+      @include flex-column;
+      gap: size(12);
+
+      .title {
+        color: $primaryText;
+        font-weight: 400;
+      }
+
+      .ratinglist {
+        @include list-horizontal;
+        gap: size(4);
+
+        &-item {
+          cursor: pointer;
+          @include square(24);
+          @include flex-center;
+          overflow: hidden;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+    }
+
+    .reviewbox {
+      @include flex-column;
+      gap: size(8);
+
+      label {
+        font-weight: 400;
+        color: $primaryText;
+      }
+
+      textarea {
+        @include border(solid, 1, $signinborder);
+        @include radius(4);
+        color: $headingText;
+        font-size: size(15);
+        font-weight: 300;
+        padding: size(16);
+        @include transitionsall;
+
+        &:focus {
+          border-color: $primary;
+        }
+      }
+    }
+
+    .addimages {
+      @include flex-column;
+      gap: size(8);
+
+      .title {
+        font-weight: 400;
+        color: $primaryText;
+      }
+
+      .uploadimage {
+        @include square(112);
+        background: $uploadbg;
+        @include border(solid, 1, $signinborder);
+        @include radius(4);
+        cursor: pointer;
+        @include flex-center;
+        overflow: hidden;
+        position: relative;
+
+        label {
+          @include wh100;
+          cursor: pointer;
+          @include flex-center;
+          overflow: hidden;
+
+          .icon {
+            cursor: pointer;
+            @include square(30);
+            @include flex-center;
+            overflow: hidden;
+  
+            svg {
+              @include wh100;
+            }
+          }
+        }
+
+        .btn-remove {
+          position: absolute;
+          top: size(8);
+          right: size(8);
+          padding: size(8);
+          @include square(25);
+          background: rgba($danger, 0.1);
+          @include circle;
+          @include flex-center;
+          overflow: hidden;
+          z-index: 20;
+
+          svg {
+            @include wh100;
+          }
+        }
+      }
+    }
+  }
+
+  .modal-footer {
+    border-top: 0;
+    @include radius(0);
+    @include flex-center;
+    gap: size(12);
+    flex-wrap: nowrap;
+    padding: size(0) size(24) size(32);
+
+    .btn-close,
+    .btn-send {
+      box-shadow: $buttonshadow;
+      @include radius(4);
+      @include flex-center;
+      font-weight: 600;
+      width: 50%;
+      height: size(44);
+      text-align: center;
+      @include transitionsall;
+    }
+
+    .btn-close {
+      @include setBgColor($white, $textDark);
+      @include border(solid, 1, $buttonborder);
+      opacity: 1;
+
+      @include hover {
+        @include setBgColor($textDark, $white);
+        border-color: $textDark;
+      }
+    }
+
+    .btn-send {
+      @include setBgColor($confirmedcolor, $white);
+      @include border(solid, 1, $confirmedcolor);
+
+      @include hover {
+        @include setBgColor(transparent, $confirmedcolor);
+      }
+    }
+  }
+}

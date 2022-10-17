@@ -1793,7 +1793,7 @@ button:focus,
 
 .bookingheader {
   background: hsl(0deg, 0%, 100%);
-  filter: drop-shadow(0 0.125rem 0.375rem rgba(18, 18, 18, 0.05));
+  filter: drop-shadow(0 0.125rem 0.375rem hsla(0deg, 0%, 7%, 0.05));
 }
 .bookingheader-nav {
   display: flex;
@@ -2205,6 +2205,218 @@ button:focus,
 .modal-header .btn-close:not([disabled]):hover svg {
   transform: rotate(90deg);
 }
+.reviewmodal .modal-content {
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.25rem 1.5rem -0.25rem hsla(220deg, 43%, 11%, 0.08), 0 0.5rem 0.5rem -0.25rem hsla(220deg, 43%, 11%, 0.03);
+  border: none;
+  outline: none;
+}
+.reviewmodal .modal-header {
+  padding: 1.5rem 1.5rem 2rem;
+}
+.reviewmodal .modal-header .modal-title {
+  font-size: 1.1875rem;
+  font-weight: 500;
+}
+.reviewmodal .modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 0rem 1.5rem 1.75rem;
+}
+.reviewmodal .modal-body .reviewproduct {
+  display: flex;
+  gap: 1rem;
+}
+.reviewmodal .modal-body .reviewproduct-thumbnail {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.reviewmodal .modal-body .reviewproduct-thumbnail img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.reviewmodal .modal-body .reviewproduct-details {
+  display: flex;
+  flex-direction: column;
+}
+.reviewmodal .modal-body .reviewproduct-details .date {
+  color: hsla(0deg, 0%, 29%, 0.6);
+}
+.reviewmodal .modal-body .reviewproduct-details .title {
+  font-weight: 400;
+}
+.reviewmodal .modal-body .ratingbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.reviewmodal .modal-body .ratingbox .title {
+  color: hsl(0deg, 0%, 29%);
+  font-weight: 400;
+}
+.reviewmodal .modal-body .ratingbox .ratinglist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.reviewmodal .modal-body .ratingbox .ratinglist-item {
+  cursor: pointer;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.reviewmodal .modal-body .ratingbox .ratinglist-item svg {
+  width: 100%;
+  height: 100%;
+}
+.reviewmodal .modal-body .reviewbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.reviewmodal .modal-body .reviewbox label {
+  font-weight: 400;
+  color: hsl(0deg, 0%, 29%);
+}
+.reviewmodal .modal-body .reviewbox textarea {
+  border: solid 0.0625rem hsla(0deg, 0%, 29%, 0.1);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  color: hsl(0deg, 0%, 7%);
+  font-size: 0.9375rem;
+  font-weight: 300;
+  padding: 1rem;
+  transition: all 350ms ease-in-out;
+}
+.reviewmodal .modal-body .reviewbox textarea:focus {
+  border-color: hsl(18deg, 60%, 81%);
+}
+.reviewmodal .modal-body .addimages {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.reviewmodal .modal-body .addimages .title {
+  font-weight: 400;
+  color: hsl(0deg, 0%, 29%);
+}
+.reviewmodal .modal-body .addimages .uploadimage {
+  width: 7rem;
+  height: 7rem;
+  background: hsl(0deg, 0%, 98%);
+  border: solid 0.0625rem hsla(0deg, 0%, 29%, 0.1);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+.reviewmodal .modal-body .addimages .uploadimage label {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.reviewmodal .modal-body .addimages .uploadimage label .icon {
+  cursor: pointer;
+  width: 1.875rem;
+  height: 1.875rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.reviewmodal .modal-body .addimages .uploadimage label .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.reviewmodal .modal-body .addimages .uploadimage .btn-remove {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  padding: 0.5rem;
+  width: 1.5625rem;
+  height: 1.5625rem;
+  background: rgba(255, 56, 56, 0.1);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  z-index: 20;
+}
+.reviewmodal .modal-body .addimages .uploadimage .btn-remove svg {
+  width: 100%;
+  height: 100%;
+}
+.reviewmodal .modal-footer {
+  border-top: 0;
+  border-radius: 0rem;
+  border-radius: 0rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  flex-wrap: nowrap;
+  padding: 0rem 1.5rem 2rem;
+}
+.reviewmodal .modal-footer .btn-close,
+.reviewmodal .modal-footer .btn-send {
+  box-shadow: 0 0.0625rem 0.125rem hsla(220deg, 43%, 11%, 0.05);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  width: 50%;
+  height: 2.75rem;
+  text-align: center;
+  transition: all 350ms ease-in-out;
+}
+.reviewmodal .modal-footer .btn-close {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(218deg, 24%, 27%);
+  border: solid 0.0625rem hsl(217deg, 16%, 84%);
+  opacity: 1;
+}
+.reviewmodal .modal-footer .btn-close:not([disabled]):hover {
+  background: hsl(218deg, 24%, 27%);
+  color: hsl(0deg, 0%, 100%);
+  border-color: hsl(218deg, 24%, 27%);
+}
+.reviewmodal .modal-footer .btn-send {
+  background: hsl(173deg, 83%, 37%);
+  color: hsl(0deg, 0%, 100%);
+  border: solid 0.0625rem hsl(173deg, 83%, 37%);
+}
+.reviewmodal .modal-footer .btn-send:not([disabled]):hover {
+  background: transparent;
+  color: hsl(173deg, 83%, 37%);
+}
+
 .swiper-button-next, .swiper-button-prev {
   display: flex;
   align-items: center;
@@ -3664,6 +3876,7 @@ button:focus,
   height: 2.25rem;
   padding: 0.625rem;
   border-color: hsl(0deg, 0%, 100%);
+  top: 55%;
 }
 @media screen and (min-width: 62rem) {
   .salonbanner .rightcontent .swiper-button-next,
@@ -3681,11 +3894,15 @@ button:focus,
   background: #d78460;
   border-color: #d78460;
 }
-.salonbanner .rightcontent .swiper-button-next {
-  right: 1.25rem;
+@media screen and (min-width: 62rem) {
+  .salonbanner .rightcontent .swiper-button-next {
+    right: 1.25rem;
+  }
 }
-.salonbanner .rightcontent .swiper-button-prev {
-  left: 1.25rem;
+@media screen and (min-width: 62rem) {
+  .salonbanner .rightcontent .swiper-button-prev {
+    left: 1.25rem;
+  }
 }
 
 /**======= FEATURED-SALON =======**/
@@ -4720,7 +4937,7 @@ button:focus,
   height: 3rem;
   background: hsl(0deg, 0%, 100%);
   color: hsl(0deg, 0%, 29%);
-  box-shadow: 0 0.125rem 0.625rem rgba(125, 162, 255, 0.1);
+  box-shadow: 0 0.125rem 0.625rem hsla(223deg, 100%, 75%, 0.1);
   border: solid 0.0625rem hsl(0deg, 0%, 100%);
   border-radius: 0.5rem;
   border-radius: 0.5rem;
@@ -5119,7 +5336,7 @@ button:focus,
   border: solid 0.0625rem hsla(0deg, 0%, 7%, 0.1);
   border-radius: 0.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0 0.125rem 0.625rem rgba(183, 203, 255, 0.2);
+  box-shadow: 0 0.125rem 0.625rem hsla(223deg, 100%, 86%, 0.2);
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
