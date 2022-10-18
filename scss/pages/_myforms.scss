@@ -48,7 +48,8 @@
 
       &-button {
         border: none;
-        @include flex-center-between;
+        @include flex-column;
+        align-items: flex-start;
         padding-bottom: size(20);
         @include radius(0);
         flex-wrap: wrap;
@@ -56,6 +57,17 @@
         position: relative;
         box-shadow: none;
         @include border-single(bottom, solid, 1, transparent);
+
+        @include breakpoint(mobile480) {
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: space-between;
+          padding-right: size(48);
+        }
+
+        @include breakpoint(mobile576) {
+          padding-right: size(0);
+        }
 
         &:not(.collapsed) {
           background: transparent;
@@ -156,9 +168,6 @@
 
           .namebox {
             .name {
-              @include flex-center-vert;
-              gap: size(8);
-
               .title {
                 font-weight: 400;
               }
@@ -172,9 +181,6 @@
               flex-wrap: wrap;
 
               &-item {
-                @include flex-center-vert;
-                gap: size(8);
-
                 .title {
                   font-weight: 400;
                 }

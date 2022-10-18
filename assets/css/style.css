@@ -6199,9 +6199,8 @@ button:focus,
 .myforms-body .accordion-button {
   border: none;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
   padding-bottom: 1.25rem;
   border-radius: 0rem;
   border-radius: 0rem;
@@ -6210,6 +6209,19 @@ button:focus,
   position: relative;
   box-shadow: none;
   border-bottom: solid 0.0625rem transparent;
+}
+@media screen and (min-width: 30rem) {
+  .myforms-body .accordion-button {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-right: 3rem;
+  }
+}
+@media screen and (min-width: 36rem) {
+  .myforms-body .accordion-button {
+    padding-right: 0rem;
+  }
 }
 .myforms-body .accordion-button:not(.collapsed) {
   background: transparent;
@@ -6304,11 +6316,6 @@ button:focus,
 .myforms-body .accordion-body .forminfo .sessionid .idlink:not([disabled]):hover {
   color: hsl(202deg, 100%, 56%);
 }
-.myforms-body .accordion-body .forminfo .namebox .name {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
 .myforms-body .accordion-body .forminfo .namebox .name .title {
   font-weight: 400;
 }
@@ -6320,11 +6327,6 @@ button:focus,
   align-items: center;
   gap: 0.625rem;
   flex-wrap: wrap;
-}
-.myforms-body .accordion-body .forminfo .info-list-item {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
 }
 .myforms-body .accordion-body .forminfo .info-list-item .title {
   font-weight: 400;
