@@ -220,7 +220,6 @@
           background: transparent;
           box-shadow: none;
           color: inherit;
-          // @include border-single(bottom, solid, 1, rgba($primaryText, 0.2));
           border-color: rgba($primaryText, 0.2);
 
           &::after {

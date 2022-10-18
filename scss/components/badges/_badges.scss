@@ -47,9 +47,13 @@
   padding: size(5) size(24);
   @include flex-center;
   text-align: center;
-  font-size: size(16);
+  font-size: size(14);
   font-weight: 500;
   @include radius(18.5);
+
+  @include breakpoint(tab992) {
+    font-size: size(16);
+  }
 
   &.pending {
     @include setBgColor($pendingbg, $pendingcolor);
@@ -61,5 +65,34 @@
 
   &.cancelled {
     @include setBgColor(rgba($danger, 0.1), $danger);
+  }
+}
+
+.servicestatus {
+  padding: size(5) size(15);
+  @include flex-center;
+  text-align: center;
+  font-size: size(14);
+  font-weight: 500;
+  @include radius(18.5);
+
+  @include breakpoint(tab992) {
+    font-size: size(16);
+  }
+
+  &.skincare {
+    @include setBgColor($confirmedbg, $confirmedcolor);
+  }
+
+  &.makeup {
+    @include setBgColor($sidebg, $primaryText);
+  }
+
+  &.dermatologist {
+    @include setBgColor($dermatologistbg, $dermatologistcolor);
+  }
+
+  &.artist {
+    @include setBgColor(rgba($artistcolor, 0.1), $artistcolor);
   }
 }

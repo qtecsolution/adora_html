@@ -558,10 +558,15 @@ h6 {
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-size: 1rem;
+  font-size: 0.875rem;
   font-weight: 500;
   border-radius: 1.15625rem;
   border-radius: 1.15625rem;
+}
+@media screen and (min-width: 62rem) {
+  .status {
+    font-size: 1rem;
+  }
 }
 .status.pending {
   background: hsla(47deg, 100%, 51%, 0.1);
@@ -574,6 +579,39 @@ h6 {
 .status.cancelled {
   background: rgba(255, 56, 56, 0.1);
   color: hsl(0deg, 100%, 61%);
+}
+
+.servicestatus {
+  padding: 0.3125rem 0.9375rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border-radius: 1.15625rem;
+  border-radius: 1.15625rem;
+}
+@media screen and (min-width: 62rem) {
+  .servicestatus {
+    font-size: 1rem;
+  }
+}
+.servicestatus.skincare {
+  background: hsla(173deg, 83%, 37%, 0.1);
+  color: hsl(173deg, 83%, 37%);
+}
+.servicestatus.makeup {
+  background: hsla(18deg, 60%, 81%, 0.1);
+  color: hsl(0deg, 0%, 29%);
+}
+.servicestatus.dermatologist {
+  background: hsla(195deg, 100%, 32%, 0.1);
+  color: hsl(195deg, 100%, 32%);
+}
+.servicestatus.artist {
+  background: rgba(155, 88, 182, 0.1);
+  color: hsl(283deg, 39%, 53%);
 }
 
 button,
@@ -6113,6 +6151,188 @@ button:focus,
   color: hsl(0deg, 0%, 29%);
   font-weight: 400;
   letter-spacing: 0.02rem;
+}
+
+.myforms {
+  padding: 2rem 0rem 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .myforms {
+    padding: 2rem 0rem 5rem;
+  }
+}
+.myforms-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.myforms-header {
+  padding-bottom: 1.25rem;
+  border-bottom: solid 0.0625rem rgba(74, 74, 74, 0.2);
+}
+.myforms-header .title {
+  font-weight: 500;
+}
+.myforms-body {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+.myforms-body .accordion {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  background: transparent;
+}
+.myforms-body .accordion-item {
+  border: none;
+  border-bottom: solid 0.0625rem rgba(74, 74, 74, 0.2);
+  background: transparent;
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+.myforms-body .accordion-item:first-of-type .accordion-button, .myforms-body .accordion-item:last-of-type .accordion-button {
+  border-radius: 0rem;
+  border-radius: 0rem;
+}
+.myforms-body .accordion-button {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.25rem;
+  border-radius: 0rem;
+  border-radius: 0rem;
+  flex-wrap: wrap;
+  gap: 0.875rem;
+  position: relative;
+  box-shadow: none;
+  border-bottom: solid 0.0625rem transparent;
+}
+.myforms-body .accordion-button:not(.collapsed) {
+  background: transparent;
+  box-shadow: none;
+  color: inherit;
+  border-color: rgba(74, 74, 74, 0.2);
+}
+.myforms-body .accordion-button:not(.collapsed)::after {
+  background: transparent;
+  content: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.6012 0.500626C11.5167 0.418836 11.4032 0.373047 11.2851 0.373047C11.167 0.373047 11.0535 0.418836 10.969 0.500626L6.23793 5.07013L1.50781 0.500626C1.4233 0.418836 1.30985 0.373047 1.19171 0.373047C1.07357 0.373047 0.960121 0.418836 0.875609 0.500626C0.8344 0.540382 0.801646 0.587915 0.779281 0.640419C0.756916 0.692923 0.745394 0.749334 0.745394 0.806323C0.745394 0.863311 0.756916 0.919723 0.779281 0.972227C0.801646 1.02473 0.8344 1.07226 0.875609 1.11202L5.90764 5.97128C5.99601 6.05662 6.11453 6.10439 6.23793 6.10439C6.36134 6.10439 6.47986 6.05662 6.56823 5.97128L11.6003 1.11202C11.6415 1.07226 11.6742 1.02473 11.6966 0.972227C11.7189 0.919723 11.7305 0.863311 11.7305 0.806323C11.7305 0.749334 11.7189 0.692923 11.6966 0.640419C11.6742 0.587915 11.6424 0.540382 11.6012 0.500626Z' fill='%234B4B4B'/%3E%3C/svg%3E%0A");
+}
+.myforms-body .accordion-button::after {
+  width: auto;
+  height: auto;
+  width: 2rem;
+  height: 2rem;
+  border: solid 0.0625rem hsl(0deg, 0%, 29%);
+  border-radius: 100%;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  content: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.6012 0.500626C11.5167 0.418836 11.4032 0.373047 11.2851 0.373047C11.167 0.373047 11.0535 0.418836 10.969 0.500626L6.23793 5.07013L1.50781 0.500626C1.4233 0.418836 1.30985 0.373047 1.19171 0.373047C1.07357 0.373047 0.960121 0.418836 0.875609 0.500626C0.8344 0.540382 0.801646 0.587915 0.779281 0.640419C0.756916 0.692923 0.745394 0.749334 0.745394 0.806323C0.745394 0.863311 0.756916 0.919723 0.779281 0.972227C0.801646 1.02473 0.8344 1.07226 0.875609 1.11202L5.90764 5.97128C5.99601 6.05662 6.11453 6.10439 6.23793 6.10439C6.36134 6.10439 6.47986 6.05662 6.56823 5.97128L11.6003 1.11202C11.6415 1.07226 11.6742 1.02473 11.6966 0.972227C11.7189 0.919723 11.7305 0.863311 11.7305 0.806323C11.7305 0.749334 11.7189 0.692923 11.6966 0.640419C11.6742 0.587915 11.6424 0.540382 11.6012 0.500626Z' fill='%234B4B4B'/%3E%3C/svg%3E%0A");
+  transition: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+@media screen and (min-width: 48rem) {
+  .myforms-body .accordion-button::after {
+    position: static;
+  }
+}
+.myforms-body .accordion-button .details {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.myforms-body .accordion-button .details .thumbnail {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.myforms-body .accordion-button .details .thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.myforms-body .accordion-button .details .description {
+  display: flex;
+  flex-direction: column;
+}
+.myforms-body .accordion-button .details .description .title {
+  color: hsl(0deg, 0%, 7%);
+  font-weight: 500;
+}
+.myforms-body .accordion-button .details .description .date {
+  color: hsla(0deg, 0%, 29%, 0.6);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.myforms-body .accordion-button .details .description .time {
+  color: hsla(0deg, 0%, 29%, 0.6);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.myforms-body .accordion-body {
+  padding: 1.25rem 0rem;
+  background: transparent;
+}
+.myforms-body .accordion-body .forminfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+.myforms-body .accordion-body .forminfo .sessionid .idlink {
+  color: hsl(209deg, 100%, 50%);
+  font-size: 0.875rem;
+  font-weight: 400;
+  letter-spacing: 0.02rem;
+  transition: color 350ms ease-in-out;
+}
+@media screen and (min-width: 62rem) {
+  .myforms-body .accordion-body .forminfo .sessionid .idlink {
+    font-size: 1rem;
+  }
+}
+.myforms-body .accordion-body .forminfo .sessionid .idlink:not([disabled]):hover {
+  color: hsl(202deg, 100%, 56%);
+}
+.myforms-body .accordion-body .forminfo .namebox .name {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.myforms-body .accordion-body .forminfo .namebox .name .title {
+  font-weight: 400;
+}
+.myforms-body .accordion-body .forminfo .info-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  flex-wrap: wrap;
+}
+.myforms-body .accordion-body .forminfo .info-list-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.myforms-body .accordion-body .forminfo .info-list-item .title {
+  font-weight: 400;
+}
+.myforms-body .accordion-body .description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
 }
 
 .authentic-main {
