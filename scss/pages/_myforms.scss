@@ -60,12 +60,11 @@
 
         @include breakpoint(mobile480) {
           flex-direction: row;
-          align-items: flex-start;
           justify-content: space-between;
           padding-right: size(48);
         }
 
-        @include breakpoint(mobile576) {
+        @include breakpoint(mobile768) {
           padding-right: size(0);
         }
 
@@ -91,6 +90,7 @@
           @include flex-center;
           content: url("data:image/svg+xml,%3Csvg width='12' height='7' viewBox='0 0 12 7' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.6012 0.500626C11.5167 0.418836 11.4032 0.373047 11.2851 0.373047C11.167 0.373047 11.0535 0.418836 10.969 0.500626L6.23793 5.07013L1.50781 0.500626C1.4233 0.418836 1.30985 0.373047 1.19171 0.373047C1.07357 0.373047 0.960121 0.418836 0.875609 0.500626C0.8344 0.540382 0.801646 0.587915 0.779281 0.640419C0.756916 0.692923 0.745394 0.749334 0.745394 0.806323C0.745394 0.863311 0.756916 0.919723 0.779281 0.972227C0.801646 1.02473 0.8344 1.07226 0.875609 1.11202L5.90764 5.97128C5.99601 6.05662 6.11453 6.10439 6.23793 6.10439C6.36134 6.10439 6.47986 6.05662 6.56823 5.97128L11.6003 1.11202C11.6415 1.07226 11.6742 1.02473 11.6966 0.972227C11.7189 0.919723 11.7305 0.863311 11.7305 0.806323C11.7305 0.749334 11.7189 0.692923 11.6966 0.640419C11.6742 0.587915 11.6424 0.540382 11.6012 0.500626Z' fill='%234B4B4B'/%3E%3C/svg%3E%0A");;
           transition: none;
+          margin-left: 0;
 
           // ADDED NEW STYLE
           position: absolute;
@@ -136,6 +136,12 @@
               font-size: size(16);
               font-weight: 400;
             }
+          }
+        }
+
+        .servicestatus {
+          @include breakpoint(mobile480) {
+            margin-left: auto;
           }
         }
       }
