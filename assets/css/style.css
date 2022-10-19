@@ -1414,6 +1414,106 @@ button:focus,
   transform: translateY(-0.75rem);
 }
 
+.cardservice {
+  background: hsl(0deg, 0%, 100%);
+  border: solid 0.03125rem hsla(0deg, 0%, 29%, 0.1);
+  border-radius: 1rem;
+  border-radius: 1rem;
+  height: 100%;
+  position: relative;
+}
+.cardservice-header {
+  position: relative;
+  width: 100%;
+  height: 11.25rem;
+  overflow: hidden;
+  padding: 0.625rem 0.625rem 0rem;
+}
+.cardservice-header .badges {
+  position: absolute;
+  top: 1.125rem;
+  left: 1.125rem;
+  display: flex;
+  align-items: center;
+  gap: 0.3125rem;
+  flex-wrap: wrap;
+}
+.cardservice-header .service-thumbnail {
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.cardservice-header .service-thumbnail img {
+  transition: transform 350ms ease-in-out;
+}
+.cardservice-header .service-thumbnail img:not([disabled]):hover {
+  transform: scale(1.05);
+}
+.cardservice-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 0rem 1.25rem 1.875rem;
+}
+.cardservice-body .user-thumbnail {
+  width: 6.25rem;
+  height: 6.25rem;
+  border: solid 0.1875rem hsl(0deg, 0%, 100%);
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-top: -3.125rem;
+  position: relative;
+  z-index: 5;
+}
+.cardservice-body .user-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.cardservice-body .nameinfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.cardservice-body .nameinfo .name {
+  font-weight: 500;
+  transition: color 350ms ease-in-out;
+}
+.cardservice-body .nameinfo .name:not([disabled]):hover {
+  color: #d78460;
+}
+.cardservice-body .nameinfo .text {
+  color: hsl(0deg, 0%, 29%);
+  font-size: 0.875rem;
+  line-height: 1.2857142857;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  max-height: 3.375rem;
+}
+.cardservice .shadowbox {
+  width: 100%;
+  height: 2.5rem;
+  background: rgba(74, 74, 74, 0.15);
+  filter: blur(1.15625rem);
+  position: absolute;
+  left: auto;
+  right: auto;
+  top: auto;
+  bottom: -0.5rem;
+  display: none;
+  z-index: -1;
+}
+.cardservice:not([disabled]):hover .shadowbox {
+  display: block;
+}
+
 .header {
   background: hsl(13deg, 47%, 94%);
   display: flex;
@@ -6340,6 +6440,30 @@ button:focus,
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
+}
+
+.ourservices {
+  padding: 2rem 0rem 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .ourservices {
+    padding: 2rem 0rem 5rem;
+  }
+}
+.ourservices-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.ourservices-header {
+  padding-bottom: 0.625rem;
+  border-bottom: solid 0.0625rem rgba(74, 74, 74, 0.2);
+}
+.ourservices-header .title {
+  font-weight: 500;
+}
+.ourservices-body .cardservice {
+  width: 100%;
 }
 
 .authentic-main {
