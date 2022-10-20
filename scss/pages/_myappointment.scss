@@ -245,7 +245,7 @@
           right: 0;
 
           @include breakpoint(mobile768) {
-            position: static
+            position: static;
           }
         }
 
@@ -300,9 +300,16 @@
         .services,
         .price,
         .status {
-
           @include breakpoint(mobile768) {
             margin-left: auto;
+          }
+        }
+
+        .status {
+          width: size(110);
+
+          @include breakpoint(mobile768) {
+            width: auto;
           }
         }
       }
