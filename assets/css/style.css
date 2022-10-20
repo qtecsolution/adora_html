@@ -2835,6 +2835,7 @@ button:focus,
 
 .footer {
   padding-top: 2rem;
+  border-top: solid 0.0625rem rgba(74, 74, 74, 0.3);
 }
 @media screen and (min-width: 48rem) {
   .footer {
@@ -6684,6 +6685,82 @@ button:focus,
 }
 .mypromocode-header .title {
   font-weight: 500;
+}
+
+.support {
+  padding: 2rem 0rem 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .support {
+    padding: 2rem 0rem 5rem;
+  }
+}
+.support-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.support-header {
+  padding-bottom: 0.625rem;
+  border-bottom: solid 0.0625rem rgba(74, 74, 74, 0.2);
+}
+.support-header .title {
+  font-weight: 500;
+}
+.support-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.support-body .supportform {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+@media screen and (min-width: 30rem) {
+  .support-body .supportform {
+    max-width: 26.875rem;
+  }
+}
+.support-body .supportform .inputbox {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.support-body .supportform .inputbox .inputlabel {
+  font-weight: 400;
+  color: hsl(0deg, 0%, 29%);
+}
+.support-body .supportform .inputbox .inputfield {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 7%);
+  border: solid 0.0625rem hsla(0deg, 0%, 29%, 0.1);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  padding: 0.75rem 1rem;
+  transition: all 350ms ease-in-out;
+}
+.support-body .supportform .inputbox .inputfield::-moz-placeholder {
+  color: rgba(74, 74, 74, 0.3);
+}
+.support-body .supportform .inputbox .inputfield:-ms-input-placeholder {
+  color: rgba(74, 74, 74, 0.3);
+}
+.support-body .supportform .inputbox .inputfield::placeholder {
+  color: rgba(74, 74, 74, 0.3);
+}
+.support-body .supportform .inputbox .inputfield:focus {
+  border-color: hsl(18deg, 60%, 81%);
+}
+.support-body .supportform .inputbox .info .text {
+  font-size: 0.875rem;
+}
+.support-body .supportform .submitbox {
+  margin-top: 1rem;
+}
+.support-body .supportform .submitbox .submitinfo {
+  width: 12.5rem;
 }
 
 .myprofile {

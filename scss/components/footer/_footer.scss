@@ -3,6 +3,7 @@
 
 .footer {
   padding-top: size(32);
+  @include border-single(top, solid, 1, rgba($primaryText, 0.3));
 
   @include breakpoint(mobile768) {
     padding-top: size(48);
