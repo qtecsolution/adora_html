@@ -777,7 +777,7 @@
                           </div>
 
                           <div class="writereview">
-                            <button class="btn-review" type="button" data-bs-toggle="modal" data-bs-target="#reviewModal">Write a Review</button>
+                            <button class="btn-appoint" type="button" data-bs-toggle="modal" data-bs-target="#manageModal">Manage Appointment</button>
                           </div>
                         </div>
                       </div>
@@ -1166,6 +1166,103 @@
   </div>
   <!-- SEARCH-MODAL END -->
 
+  <!-- MANAGE-MODAL START -->
+  <div class="modal fade p-0 searchmodal" id="manageModal" tabindex="-1" aria-labelledby="manageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reviewModalLabel">Manage Appointment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 20L4 4M20 4L4 20" stroke="#121212" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="manageappointment">
+            <button class="btn-reschedule">
+              <span class="btninfo">
+                <span class="icon">
+                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.7419 1.25C20.2594 1.25 20.6794 1.67 20.6794 2.1875L20.68 3.24726C22.5051 3.3724 24.0209 3.99756 25.0938 5.07263C26.265 6.24888 26.8813 7.94013 26.8751 9.96888V21.3726C26.8751 25.5376 24.23 28.1251 19.9738 28.1251H9.40125C5.145 28.1251 2.5 25.5014 2.5 21.2776V9.96638C2.5 6.03787 4.85882 3.51618 8.70586 3.24769L8.70663 2.1875C8.70663 1.67 9.12663 1.25 9.64413 1.25C10.1616 1.25 10.5816 1.67 10.5816 2.1875L10.5813 3.22375H18.8038L18.8044 2.1875C18.8044 1.67 19.2244 1.25 19.7419 1.25ZM25 12.38H4.375V21.2776C4.375 24.4851 6.16 26.2501 9.40125 26.2501H19.9738C23.215 26.2501 25 24.5176 25 21.3726L25 12.38ZM20.2515 20.2454C20.769 20.2454 21.189 20.6654 21.189 21.1829C21.189 21.7004 20.769 22.1204 20.2515 22.1204C19.734 22.1204 19.309 21.7004 19.309 21.1829C19.309 20.6654 19.7228 20.2454 20.2403 20.2454H20.2515ZM14.7046 20.2454C15.2221 20.2454 15.6421 20.6654 15.6421 21.1829C15.6421 21.7004 15.2221 22.1204 14.7046 22.1204C14.1871 22.1204 13.7621 21.7004 13.7621 21.1829C13.7621 20.6654 14.1759 20.2454 14.6934 20.2454H14.7046ZM9.14613 20.2454C9.66363 20.2454 10.0836 20.6654 10.0836 21.1829C10.0836 21.7004 9.66363 22.1204 9.14613 22.1204C8.62863 22.1204 8.20238 21.7004 8.20238 21.1829C8.20238 20.6654 8.61738 20.2454 9.13488 20.2454H9.14613ZM20.2515 15.387C20.769 15.387 21.189 15.807 21.189 16.3245C21.189 16.842 20.769 17.262 20.2515 17.262C19.734 17.262 19.309 16.842 19.309 16.3245C19.309 15.807 19.7228 15.387 20.2403 15.387H20.2515ZM14.7046 15.387C15.2221 15.387 15.6421 15.807 15.6421 16.3245C15.6421 16.842 15.2221 17.262 14.7046 17.262C14.1871 17.262 13.7621 16.842 13.7621 16.3245C13.7621 15.807 14.1759 15.387 14.6934 15.387H14.7046ZM9.14613 15.387C9.66363 15.387 10.0836 15.807 10.0836 16.3245C10.0836 16.842 9.66363 17.262 9.14613 17.262C8.62863 17.262 8.20238 16.842 8.20238 16.3245C8.20238 15.807 8.61738 15.387 9.13488 15.387H9.14613ZM18.8038 5.09875H10.5813L10.5816 6.30125C10.5816 6.81875 10.1616 7.23875 9.64413 7.23875C9.12663 7.23875 8.70663 6.81875 8.70663 6.30125L8.70596 5.12713C5.90567 5.36237 4.375 7.05982 4.375 9.96638V10.505H25L25 9.96638C25.005 8.42263 24.59 7.22263 23.7663 6.39763C23.0431 5.67239 21.9861 5.23925 20.6804 5.12773L20.6794 6.30125C20.6794 6.81875 20.2594 7.23875 19.7419 7.23875C19.2244 7.23875 18.8044 6.81875 18.8044 6.30125L18.8038 5.09875Z" fill="#121212"/>
+                  </svg>
+                </span>
+                <span class="text">Reschedule appointment</span>
+              </span>
+              <span class="arrow">
+                <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.17808 0.176516C0.0639145 0.291916 0 0.446831 0 0.608145C0 0.76946 0.0639145 0.924375 0.17808 1.03977L6.55635 7.5L0.17808 13.9589C0.0639145 14.0743 0 14.2292 0 14.3906C0 14.5519 0.0639145 14.7068 0.17808 14.8222C0.233572 14.8785 0.29992 14.9232 0.373207 14.9537C0.446493 14.9843 0.525234 15 0.604781 15C0.684328 15 0.763069 14.9843 0.836356 14.9537C0.909642 14.9232 0.97599 14.8785 1.03148 14.8222L7.8142 7.95101C7.93333 7.83035 8 7.66851 8 7.5C8 7.33149 7.93333 7.16965 7.8142 7.04899L1.03148 0.177808C0.97599 0.121537 0.909642 0.0768117 0.836356 0.0462728C0.763069 0.0157338 0.684328 0 0.604781 0C0.525234 0 0.446493 0.0157338 0.373207 0.0462728C0.29992 0.0768117 0.233572 0.121537 0.17808 0.177808V0.176516Z" fill="#121212"/>
+                </svg>
+              </span>
+            </button>
+
+            <button class="btn-cancelappointment">
+              <span class="btninfo">
+                <span class="icon">
+                  <svg width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M19.2188 10.7812L10.7812 19.2188M10.7812 10.7812L19.2188 19.2188" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M15 26.7188C21.4721 26.7188 26.7188 21.4721 26.7188 15C26.7188 8.52791 21.4721 3.28125 15 3.28125C8.52791 3.28125 3.28125 8.52791 3.28125 15C3.28125 21.4721 8.52791 26.7188 15 26.7188Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+                <span class="text">Cancel appointment</span>
+              </span>
+              <span class="arrow">
+                <svg width="8" height="15" viewBox="0 0 8 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M0.17808 0.176516C0.0639145 0.291916 0 0.446831 0 0.608145C0 0.76946 0.0639145 0.924375 0.17808 1.03977L6.55635 7.5L0.17808 13.9589C0.0639145 14.0743 0 14.2292 0 14.3906C0 14.5519 0.0639145 14.7068 0.17808 14.8222C0.233572 14.8785 0.29992 14.9232 0.373207 14.9537C0.446493 14.9843 0.525234 15 0.604781 15C0.684328 15 0.763069 14.9843 0.836356 14.9537C0.909642 14.9232 0.97599 14.8785 1.03148 14.8222L7.8142 7.95101C7.93333 7.83035 8 7.66851 8 7.5C8 7.33149 7.93333 7.16965 7.8142 7.04899L1.03148 0.177808C0.97599 0.121537 0.909642 0.0768117 0.836356 0.0462728C0.763069 0.0157338 0.684328 0 0.604781 0C0.525234 0 0.446493 0.0157338 0.373207 0.0462728C0.29992 0.0768117 0.233572 0.121537 0.17808 0.177808V0.176516Z" fill="#121212"/>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- MANAGE-MODAL END -->
+
+  <!-- CANCEL-MANAGE-MODAL START -->
+  <div class="modal fade p-0 searchmodal" id="cancelManageModal" tabindex="-1" aria-labelledby="cancelManageModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reviewModalLabel">Are you sure you want to cancel?</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 20L4 4M20 4L4 20" stroke="#121212" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="canceldetail">
+            <div class="reviewproduct">
+              <figure class="reviewproduct-thumbnail">
+                <img src="https://images.pexels.com/photos/7755677/pexels-photo-7755677.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="reviewproduct-thumbnail">
+              </figure>
+  
+              <div class="reviewproduct-details">
+                <p class="date">Fri, 23 Sep 2022 at 11:30am</p>
+                <h5 class="title">Trendy Trim</h5>
+              </div>
+            </div>
+
+            <div class="description">
+              <p class="text">
+                If you want to change the appointment time, you can reschedule your appointment.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn-close" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn-yes">Yes, cancel</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- CANCEL-MANAGE-MODAL END -->
+
   <!-- REVIEW MODAL START -->
   <div class="modal fade p-0 reviewmodal" id="reviewModal" tabindex="-1" aria-labelledby="reviewModalLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered">
@@ -1284,6 +1381,8 @@
   <script src="assets/js/nice-select/nice-select2.js"></script>
   <!-- SELECT JS -->
   <script src="assets/js/nice-select/placeselect.js"></script>
+  <!-- MANAGE-MODAL -->
+  <script src="assets/js/modal/modal.js"></script>
 </body>
 </body>
 </html>

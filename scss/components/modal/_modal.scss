@@ -55,35 +55,6 @@
     gap: size(24);
     padding: size(0) size(24) size(28);
 
-    .reviewproduct {
-      @include flex;
-      gap: size(16);
-
-      &-thumbnail {
-        @include square(48);
-        @include radius(8);
-        @include flex-center;
-        overflow: hidden;
-
-        img {
-          @include wh100;
-          object-fit: cover;
-        }
-      }
-
-      &-details {
-        @include flex-column;
-
-        .date {
-          color: $gray;
-        }
-
-        .title {
-          font-weight: 400;
-        }
-      }
-    }
-
     .ratingbox {
       @include flex-column;
       gap: size(12);
@@ -190,45 +161,84 @@
       }
     }
   }
+}
 
-  .modal-footer {
-    border-top: 0;
-    @include radius(0);
+.reviewproduct {
+  @include flex;
+  gap: size(16);
+
+  &-thumbnail {
+    @include square(48);
+    @include radius(8);
     @include flex-center;
-    gap: size(12);
-    flex-wrap: nowrap;
-    padding: size(0) size(24) size(32);
+    overflow: hidden;
 
-    .btn-close,
-    .btn-send {
-      box-shadow: $buttonshadow;
-      @include radius(4);
-      @include flex-center;
-      font-weight: 600;
-      width: 50%;
-      height: size(44);
-      text-align: center;
-      @include transitionsall;
+    img {
+      @include wh100;
+      object-fit: cover;
+    }
+  }
+
+  &-details {
+    @include flex-column;
+
+    .date {
+      color: $gray;
     }
 
-    .btn-close {
-      @include setBgColor($white, $textDark);
-      @include border(solid, 1, $buttonborder);
-      opacity: 1;
-
-      @include hover {
-        @include setBgColor($textDark, $white);
-        border-color: $textDark;
-      }
+    .title {
+      font-weight: 400;
     }
+  }
+}
 
-    .btn-send {
-      @include setBgColor($confirmedcolor, $white);
-      @include border(solid, 1, $confirmedcolor);
+.modal-footer {
+  border-top: 0;
+  @include radius(0);
+  @include flex-center;
+  gap: size(12);
+  flex-wrap: nowrap;
+  padding: size(0) size(24) size(32);
 
-      @include hover {
-        @include setBgColor(transparent, $confirmedcolor);
-      }
+  .btn-close,
+  .btn-send,
+  .btn-yes {
+    box-shadow: $buttonshadow;
+    @include radius(4);
+    @include flex-center;
+    font-weight: 600;
+    width: 50%;
+    height: size(44);
+    text-align: center;
+    @include transitionsall;
+  }
+
+  .btn-close {
+    @include setBgColor($white, $textDark);
+    @include border(solid, 1, $buttonborder);
+    opacity: 1;
+
+    @include hover {
+      @include setBgColor($textDark, $white);
+      border-color: $textDark;
+    }
+  }
+
+  .btn-send {
+    @include setBgColor($confirmedcolor, $white);
+    @include border(solid, 1, $confirmedcolor);
+
+    @include hover {
+      @include setBgColor(transparent, $confirmedcolor);
+    }
+  }
+
+  .btn-yes {
+    @include setBgColor($danger, $white);
+    @include border(solid, 1, $danger);
+
+    @include hover {
+      @include setBgColor(transparent, $danger);
     }
   }
 }
@@ -302,6 +312,115 @@
           }
         }
       }
+    }
+  }
+}
+
+.manageappointment {
+  margin-top: size(16);
+  @include flex-center-column;
+  gap: size(24);
+
+  .btn-reschedule,
+  .btn-cancelappointment {
+    @include w100;
+    @include flex-center-between;
+
+    .btninfo {
+      @include flex-center-vert;
+      gap: size(8);
+
+      .icon {
+        @include square(30);
+        @include flex-center;
+        overflow: hidden;
+
+        svg {
+          @include wh100;
+        }
+      }
+
+      .text {
+        color: $headingText;
+        font-weight: 400;
+        font-size: size(19);
+      }
+    }
+
+    .arrow {
+      width: size(8);
+      height: size(15);
+      @include flex-center;
+      overflow: hidden;
+
+      svg {
+        @include wh100;
+      }
+    }
+  }
+
+
+  .btn-reschedule {
+    @include hover {
+      .btninfo {
+        .icon {
+          svg {
+            path {
+              fill: darken($primary, 25%);
+            }
+          }
+        }
+  
+        .text {
+          color: darken($primary, 25%);
+        }
+      }
+  
+      .arrow {
+        svg {
+          path {
+            fill: darken($primary, 25%);
+          }
+        }
+      }
+    }
+  }
+
+  .btn-cancelappointment {
+    @include hover {
+      .btninfo {
+        .icon {
+          svg {
+            path {
+              stroke: $danger;
+            }
+          }
+        }
+  
+        .text {
+          color: $danger;
+        }
+      }
+  
+      .arrow {
+        svg {
+          path {
+            fill: $danger;
+          }
+        }
+      }
+    }
+  }
+}
+
+.canceldetail {
+  @include flex-column;
+  gap: size(20);
+
+  .description {
+    .text {
+      color: $gray;
+      letter-spacing: size(0.32);
     }
   }
 }

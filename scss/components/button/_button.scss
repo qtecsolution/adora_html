@@ -166,3 +166,19 @@ button,
     @include setBgColor($confirmedcolor, $white);
   }
 }
+
+.btn-appoint {
+  width: size(200);
+  height: size(44);
+  @include setBgColor($white, $primaryText);
+  @include border(solid, 1, $primaryText);
+  @include radius(4);
+  @include flex-center;
+  font-weight: 400;
+  text-align: center;
+  @include transitionsbackground;
+
+  @include hover {
+    @include setBgColor($primaryText, $white);
+  }
+}
