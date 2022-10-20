@@ -2323,12 +2323,17 @@ button:focus,
   border-radius: 0.5rem;
 }
 
+.modal-content {
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 1.25rem 1.5rem -0.25rem hsla(220deg, 43%, 11%, 0.08), 0 0.5rem 0.5rem -0.25rem hsla(220deg, 43%, 11%, 0.03);
+}
 .modal-header {
   border-bottom: 0;
 }
 .modal-header .btn-close {
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2343,10 +2348,13 @@ button:focus,
 .modal-header .btn-close:not([disabled]):hover svg {
   transform: rotate(90deg);
 }
+.modal-header .btn-close:not([disabled]):hover svg path {
+  stroke: hsl(0deg, 100%, 61%);
+}
+
 .reviewmodal .modal-content {
   border-radius: 0.5rem;
   border-radius: 0.5rem;
-  box-shadow: 0 1.25rem 1.5rem -0.25rem hsla(220deg, 43%, 11%, 0.08), 0 0.5rem 0.5rem -0.25rem hsla(220deg, 43%, 11%, 0.03);
   border: none;
   outline: none;
 }
@@ -2553,6 +2561,80 @@ button:focus,
 .reviewmodal .modal-footer .btn-send:not([disabled]):hover {
   background: transparent;
   color: hsl(173deg, 83%, 37%);
+}
+
+.searchmodal .modal-header {
+  padding: 1.5rem;
+}
+.searchmodal .modal-header .modal-title {
+  font-size: 1.1875rem;
+  font-weight: 500;
+}
+.searchmodal .modal-body {
+  padding: 1.5rem;
+  padding-top: 0;
+}
+.searchmodal .modal-body .search {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.searchmodal .modal-body .search-header {
+  color: hsla(0deg, 0%, 29%, 0.6);
+  font-size: 1rem;
+  font-weight: 400;
+}
+.searchmodal .modal-body .search-body {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+.searchmodal .modal-body .search-body .inputbox {
+  padding: 0.625rem 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: solid 0.0625rem hsla(0deg, 0%, 29%, 0.1);
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  height: 3rem;
+  transition: all 350ms ease-in-out;
+}
+.searchmodal .modal-body .search-body .inputbox .icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0.3;
+}
+.searchmodal .modal-body .search-body .inputbox .icon svg {
+  width: 100%;
+  height: 100%;
+}
+.searchmodal .modal-body .search-body .inputbox .inputinfo {
+  width: calc(100% - 1.75rem);
+}
+.searchmodal .modal-body .search-body .inputbox .inputinfo .searchfield {
+  background: hsl(0deg, 0%, 100%);
+  color: hsl(0deg, 0%, 29%);
+  border: none;
+  font-size: 0.875rem;
+  width: 100%;
+}
+.searchmodal .modal-body .search-body .inputbox .inputinfo .searchfield::-moz-placeholder {
+  color: rgba(74, 74, 74, 0.3);
+}
+.searchmodal .modal-body .search-body .inputbox .inputinfo .searchfield:-ms-input-placeholder {
+  color: rgba(74, 74, 74, 0.3);
+}
+.searchmodal .modal-body .search-body .inputbox .inputinfo .searchfield::placeholder {
+  color: rgba(74, 74, 74, 0.3);
+}
+.searchmodal .modal-body .search-body .inputbox:focus-within {
+  border-color: hsl(18deg, 60%, 81%);
 }
 
 .swiper-button-next, .swiper-button-prev {

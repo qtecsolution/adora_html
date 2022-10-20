@@ -13,6 +13,8 @@
 
   <!-- BACK-TOP -->
   <link rel="stylesheet" href="assets/css/back-top/back.css">
+  <!-- NICE-SELECT CSS -->
+  <link rel="stylesheet" href="assets/css/nice-select/nice-select2.css">
   <!-- SWIPER CSS -->
   <link rel="stylesheet" href="assets/css/swiper/swiper-bundle.min.css">
   <!-- BOOTSTRAP (5.2) -->
@@ -153,14 +155,14 @@
             </li>
 
             <li class="desktoplist-item">
-              <a href="#" class="desktoplist-link">
+              <button type="button" data-bs-toggle="modal" data-bs-target="#searchModal" class="desktoplist-link">
                 <span class="icon">
                   <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M14 14L10.9306 10.9252M12.6316 6.81579C12.6316 8.35823 12.0188 9.8375 10.9282 10.9282C9.8375 12.0188 8.35823 12.6316 6.81579 12.6316C5.27335 12.6316 3.79408 12.0188 2.70341 10.9282C1.61273 9.8375 1 8.35823 1 6.81579C1 5.27335 1.61273 3.79408 2.70341 2.70341C3.79408 1.61273 5.27335 1 6.81579 1C8.35823 1 9.8375 1.61273 10.9282 2.70341C12.0188 3.79408 12.6316 5.27335 12.6316 6.81579V6.81579Z" stroke="#4B4B4B" stroke-linecap="round"/>
                   </svg>
                 </span>
                 <span class="text">Search</span>
-              </a>
+              </button>
             </li>
           </ul>
 
@@ -1059,6 +1061,57 @@
   </footer>
   <!-- FOOTER END -->
 
+  <!-- SEARCH-MODAL START -->
+  <div class="modal fade p-0 searchmodal" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="reviewModalLabel">Search</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 20L4 4M20 4L4 20" stroke="#121212" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </button>
+        </div>
+
+        <div class="modal-body">
+          <div class="search">
+            <div class="search-header">
+              <p class="text">Search your desire salon for exclusive service</p>
+            </div>
+
+            <div class="search-body">
+              <div class="inputbox">
+                <span class="icon">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M17.5 17.5L13.875 13.875M15.8333 9.16667C15.8333 12.8486 12.8486 15.8333 9.16667 15.8333C5.48477 15.8333 2.5 12.8486 2.5 9.16667C2.5 5.48477 5.48477 2.5 9.16667 2.5C12.8486 2.5 15.8333 5.48477 15.8333 9.16667Z" stroke="#4B4B4B" stroke-width="1.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                </span>
+
+                <div class="inputinfo">
+                  <input type="text" class="searchfield" placeholder="salon or service name , eg. haircut">
+                </div>
+              </div>
+
+              <div class="selectbox">
+                <select id="select-places">
+                  <option value="Uttara">Uttara</option>
+                  <option value="Khilkhet">Khilkhet</option>
+                  <option value="Airport">Airport</option>
+                </select>
+              </div>
+
+              <div class="submitbox">
+                <button class="btn-submit" type="submit">Search</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- SEARCH-MODAL END -->
+
   <!-- BOOTSTRAP (5.2) -->
   <script src="assets/js/bootstrap/bootstrap.bundle.min.js"></script>
   <!-- PRELOADER -->
@@ -1072,5 +1125,9 @@
   <script src="assets/js/swiper/swiper-bundle.min.js"></script>
   <!-- FAVORITE SLIDER -->
   <script src="assets/js/swiper/favorite.js"></script>
+  <!-- NICE-SELECT -->
+  <script src="assets/js/nice-select/nice-select2.js"></script>
+  <!-- SELECT JS -->
+  <script src="assets/js/nice-select/placeselect.js"></script>
 </body>
 </html>

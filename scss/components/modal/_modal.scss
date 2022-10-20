@@ -3,14 +3,15 @@
 
 .modal {
   &-content {
-    // @include radius(25);
+    @include radius(8);
+    box-shadow: $modalshadow;
   }
   
   &-header {
     border-bottom: 0;
 
     .btn-close {
-      @include square(20);
+      @include square(24);
       @include flex-center;
       overflow: hidden;
       opacity: 1;
@@ -18,10 +19,6 @@
       svg {
         @include wh100;
         @include transitiontransform;
-
-        path {
-          // fill: rgba($danger, 0.4);
-        }
       }
 
       @include hover {
@@ -29,22 +26,17 @@
           @include rotate(90);
 
           path {
-            // fill: $danger;
+            stroke: $danger;
           }
         }
       }
     }
-  }
-
-  &-body {
-    
   }
 }
 
 .reviewmodal {
   .modal-content {
     @include radius(8);
-    box-shadow: $modalshadow;
     border: none;
     outline: none;
   }
@@ -236,6 +228,79 @@
 
       @include hover {
         @include setBgColor(transparent, $confirmedcolor);
+      }
+    }
+  }
+}
+
+.searchmodal {
+  .modal-header {
+    padding: size(24);
+
+    .modal-title {
+      font-size: size(19);
+      font-weight: 500;
+    }
+  }
+
+  .modal-body {
+    padding: size(24);
+    padding-top: 0;
+
+    .search {
+      @include flex-column;
+      gap: size(24);
+
+      &-header {
+        color: $gray;
+        font-size: size(16);
+        font-weight: 400;
+      }
+
+      &-body {
+        @include flex-column;
+        gap: size(12);
+
+        .inputbox {
+          padding: size(10) size(14);
+          @include flex-center-vert;
+          gap: size(8);
+          @include border(solid, 1, $signinborder);
+          @include radius(4);
+          height: size(48);
+          @include transitionsall;
+
+          .icon {
+            @include square(20);
+            @include flex-center;
+            overflow: hidden;
+            cursor: pointer;
+            opacity: 0.3;
+
+            svg {
+              @include wh100;
+            }
+          }
+
+          .inputinfo {
+            width: calc(100% - size(28));
+
+            .searchfield {
+              @include setBgColor($white, $primaryText);
+              border: none;
+              font-size: size(14);
+              @include w100;
+
+              &::placeholder {
+                color: rgba($primaryText, 0.3);
+              }
+            }
+          }
+
+          &:focus-within {
+            border-color: $primary;
+          }
+        }
       }
     }
   }
