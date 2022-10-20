@@ -6569,6 +6569,27 @@ button:focus,
   font-weight: 500;
 }
 
+.myprofile {
+  padding: 2rem 0rem 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .myprofile {
+    padding: 2rem 0rem 5rem;
+  }
+}
+.myprofile-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.myprofile-header {
+  padding-bottom: 0.625rem;
+  border-bottom: solid 0.0625rem rgba(74, 74, 74, 0.2);
+}
+.myprofile-header .title {
+  font-weight: 500;
+}
+
 .myreviews {
   padding: 2rem 0rem 3rem;
 }
@@ -6588,6 +6609,126 @@ button:focus,
 }
 .myreviews-header .title {
   font-weight: 500;
+}
+.myreviews-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.myreviews-body .review {
+  border-bottom: solid 0.0625rem rgba(74, 74, 74, 0.2);
+  padding-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.myreviews-body .review-header {
+  display: flex;
+  gap: 1rem;
+}
+.myreviews-body .review-header .review-thumbnail {
+  width: 4rem;
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.myreviews-body .review-header .review-thumbnail img {
+  width: 100%;
+  height: 100%;
+}
+.myreviews-body .review-header .details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.myreviews-body .review-header .details .titlebox-editbox {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+.myreviews-body .review-header .details .titlebox-editbox .titlebox .title {
+  color: hsl(0deg, 0%, 7%);
+  font-size: 1.1875rem;
+  font-weight: 400;
+}
+.myreviews-body .review-header .details .titlebox-editbox .editbox {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.myreviews-body .review-header .details .titlebox-editbox .editbox .btn-edit {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border: none;
+}
+.myreviews-body .review-header .details .titlebox-editbox .editbox .btn-edit svg {
+  width: 100%;
+  height: 100%;
+}
+.myreviews-body .review-header .details .titlebox-editbox .editbox .btn-edit:focus:not(:focus-visible) {
+  outline: none;
+  border: none;
+}
+.myreviews-body .review-header .details .reviewlist-datetime {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.myreviews-body .review-header .details .reviewlist-datetime .reviewlist {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+.myreviews-body .review-header .details .reviewlist-datetime .reviewlist-item {
+  cursor: pointer;
+}
+.myreviews-body .review-header .details .reviewlist-datetime .reviewlist-item svg {
+  width: 100%;
+  height: 100%;
+}
+.myreviews-body .review-header .details .reviewlist-datetime .datetime {
+  display: inline-block;
+  margin-top: 0.1875rem;
+}
+.myreviews-body .review-header .details .reviewlist-datetime .datetime .date {
+  font-size: 0.875rem;
+  color: hsl(0deg, 0%, 29%);
+}
+.myreviews-body .review-body {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.myreviews-body .review-body .text {
+  color: hsl(0deg, 0%, 29%);
+}
+.myreviews-body .review-body .reviewthumb {
+  width: 9.375rem;
+  height: 9.375rem;
+  border-radius: 0.25rem;
+  border-radius: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.myreviews-body .review-body .reviewthumb img {
+  width: 100%;
+  height: 100%;
 }
 
 /**==========================================
