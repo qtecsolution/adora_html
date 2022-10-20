@@ -6548,6 +6548,51 @@ button:focus,
   width: 100%;
 }
 
+.mypromocode {
+  padding: 2rem 0rem 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .mypromocode {
+    padding: 2rem 0rem 5rem;
+  }
+}
+.mypromocode-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.mypromocode-header {
+  padding-bottom: 0.625rem;
+  border-bottom: solid 0.0625rem rgba(74, 74, 74, 0.2);
+}
+.mypromocode-header .title {
+  font-weight: 500;
+}
+
+.myreviews {
+  padding: 2rem 0rem 3rem;
+}
+@media screen and (min-width: 62rem) {
+  .myreviews {
+    padding: 2rem 0rem 5rem;
+  }
+}
+.myreviews-content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+.myreviews-header {
+  padding-bottom: 0.625rem;
+  border-bottom: solid 0.0625rem rgba(74, 74, 74, 0.2);
+}
+.myreviews-header .title {
+  font-weight: 500;
+}
+
+/**==========================================
+***               VIEW-PROFILE
+**========================================**/
 .authentic-main {
   width: 100%;
   min-height: 100vh;
