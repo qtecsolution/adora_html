@@ -428,7 +428,6 @@
   }
 }
 
-
 .spycheck {
   padding-bottom: size(16);
   @include border-single(bottom, solid, 1, rgba($primaryText, 0.3));
@@ -589,7 +588,7 @@
         color: $primaryText;
         font-weight: 400;
       }
-      
+
       .price {
         color: $primaryText;
         font-weight: 400;
@@ -856,6 +855,146 @@
 
         svg {
           @include wh100;
+        }
+      }
+    }
+  }
+}
+
+/**======= PROFILE-BANNER =======**/
+.bannerprofile {
+  padding: size(16) size(0) size(32);
+
+  @include breakpoint(tab992) {
+    padding: size(16) size(0) size(48);
+  }
+
+  &-content {
+    background: rgba($primary, 0.3);
+    @include radius(8);
+    overflow: hidden;
+    padding: size(48) size(16) size(0);
+
+    @include breakpoint(tab992) {
+      padding-top: size(64) size(0) size(0);
+    }
+  }
+
+  .leftcontent {
+    @include flex-center;
+    @include wh100;
+    overflow: hidden;
+
+    img {
+      @include wh100;
+    }
+  }
+
+  .rightcontent {
+    @include breakpoint(tab992) {
+      padding-bottom: size(48);
+    }
+
+    .consult {
+      @include flex-column;
+      gap: size(40);
+
+      &-header {
+        @include flex-center-vert;
+        gap: size(10);
+        flex-wrap: wrap;
+      }
+
+      &-body {
+        @include flex-column;
+        gap: size(24);
+      }
+
+      &-footer {
+        @include flex-column;
+        gap: size(24);
+
+        @include breakpoint(tab992) {
+          gap: size(40);
+        }
+
+        .ratings-favorite {
+          @include flex-center;
+          gap: size(24);
+
+          @include breakpoint(mobile576) {
+            gap: size(40);
+            justify-content: flex-start;
+          }
+
+          .ratings {
+            @include flex-center-vert;
+            gap: size(8);
+
+            .ratinglist {
+              @include list-horizontal;
+              gap: size(4);
+
+              &-item {
+                @include square(18);
+                @include flex-center;
+                overflow: hidden;
+
+                svg {
+                  @include wh100;
+                }
+              }
+            }
+
+            .ratingnumber {
+              color: $headingText;
+              font-weight: 400;
+            }
+          }
+
+          .favorite {
+            .btn-favorite {
+              @include flex-center-vert;
+              gap: size(4);
+
+              .icon {
+                @include square(21);
+                @include flex-center;
+                overflow: hidden;
+
+                svg {
+                  @include wh100;
+                }
+              }
+
+              .text {
+                color: $headingText;
+                font-weight: 400;
+              }
+
+              @include hover {
+                .icon {
+                  svg {
+                    path {
+                      fill: darken($primary, 20%);
+                    }
+                  }
+                }
+                .text {
+                  color: darken($primary, 20%);
+                }
+              }
+            }
+          }
+        }
+
+        .bookinfo {
+          width: size(200);
+          margin-inline: auto;
+
+          @include breakpoint(mobile576) {
+            margin: 0;
+          }
         }
       }
     }

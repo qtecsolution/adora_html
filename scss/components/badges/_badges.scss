@@ -1,5 +1,5 @@
-@use '../../global' as *;
-@use '../../partials' as *;
+@use "../../global" as *;
+@use "../../partials" as *;
 
 .slidebadge {
   @include setBgColor($primary, $headingText);
@@ -95,4 +95,13 @@
   &.artist {
     @include setBgColor(rgba($artistcolor, 0.1), $artistcolor);
   }
+}
+
+.badge-consult {
+  @include setBgColor($primary, $headingText);
+  @include radius(12.5);
+  font-size: size(12);
+  font-weight: 400;
+  padding: size(5) size(10);
+  text-align: center;
 }
