@@ -267,6 +267,11 @@
           .pointnumber {
             font-weight: 400;
           }
+
+          .pointdate {
+            @include flex-center-vert;
+            gap: size(12);
+          }
         }
 
         &.earned-point {
