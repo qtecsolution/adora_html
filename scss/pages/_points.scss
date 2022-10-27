@@ -1,0 +1,166 @@
+@use "../global" as *;
+@use "../partials" as *;
+
+.pointsbanner {
+  padding: size(32) size(0) size(48);
+
+  @include breakpoint(tab992) {
+    padding: size(14) size(0) size(86);
+  }
+
+  &-content {
+    background: url(../images/banner/banner-bg.png) no-repeat;
+    background-size: cover;
+    padding: size(16);
+    @include radius(8);
+    overflow: hidden;
+
+    @include breakpoint(mobile480) {
+      padding: size(24);
+    }
+
+    @include breakpoint(tab992) {
+      padding: size(54) size(0);
+      background-position: center;
+    }
+
+    .mypoint {
+      background: $white;
+      padding: size(20) size(10) size(32);
+      @include radius(8);
+      @include flex-center-column;
+      gap: size(20);
+
+      &-header {
+        .title {
+          font-weight: 500;
+          letter-spacing: size(0.32);
+          text-transform: uppercase;
+        }
+      }
+
+      &-body {
+        @include flex;
+        gap: size(12);
+
+        .username {
+          @include square(48);
+          @include border(solid, 0.34, $green);
+          @include circle;
+          @include flex-center;
+          color: $headingText;
+          padding: size(12);
+          font-size: size(12);
+          font-weight: 500;
+          letter-spacing: size(0.32);
+          text-transform: uppercase;
+          overflow: hidden;
+
+          @include breakpoint(mobile768) {
+            @include square(100);
+            font-size: size(20);
+          }
+
+          @include breakpoint(tab992) {
+            @include square(150);
+            font-size: size(28);
+          }
+        }
+
+        .userdetail {
+          width: calc(100% - size(60));
+          @include flex-column;
+          gap: size(16);
+
+          @include breakpoint(mobile768) {
+            width: calc(100% - size(112));
+          }
+
+          @include breakpoint(tab992) {
+            width: calc(100% - size(162));
+          }
+
+          &-header {
+            @include flex-column;
+            gap: size(8);
+
+            .name {
+              color: $headingText;
+              font-size: size(16);
+              font-weight: 400;
+              letter-spacing: size(0.32);
+              text-transform: capitalize;
+
+              @include breakpoint(mobile768) {
+                font-size: size(18);
+              }
+
+              @include breakpoint(tab992) {
+                font-size: size(24);
+              }
+            }
+
+            .prograsspoint {
+              @include flex-center-vert;
+              gap: size(4);
+
+              .progress {
+                width: calc(100% - size(84));
+                height: size(4);
+                background: $progressbg;
+                @include radius(0);
+
+                @include breakpoint(mobile768) {
+                  width: 74%;
+                }
+
+                &-bar {
+                  background: $green;
+                }
+              }
+
+              .pointinfo {
+                width: size(80);
+                margin-top: size(-3);
+                display: inline-block;
+
+                @include breakpoint(mobile768) {
+                  width: 26%;
+                }
+
+                .point {
+                  color: $green;
+                  font-size: size(10);
+                  line-height: 1;
+
+                  @include breakpoint(mobile768) {
+                    font-size: size(12);
+                  }
+
+                  @include breakpoint(tab992) {
+                    font-size: size(14);
+                  }
+                }
+              }
+            }
+          }
+
+          &-body {
+            .text {
+              color: $primaryText;
+              font-size: size(12);
+
+              @include breakpoint(mobile768) {
+                font-size: size(14);
+              }
+
+              @include breakpoint(tab992) {
+                font-size: size(16);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
