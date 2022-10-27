@@ -23,6 +23,7 @@ $pillbg: hsla(0, 0%, 85%, 0.3); //rgba(217, 217, 217, 0.3)
 $sidebg: hsla(18, 60%, 81%, 0.1); //rgba(236, 195, 178, 0.1)
 $gray: hsla(0, 0%, 29%, 0.6); //rgba(75, 75, 75, 0.6)
 $uploadbg: hsl(0, 0%, 98%); //#F9F9F9
+$btnbg: hsla(18, 60%, 81%, 0.3); //rgba(236, 195, 178, 0.3)
 
 $pendingbg: hsla(47, 100%, 51%, 0.1); //rgba(255, 201, 7, 0.1)
 $pendingcolor: hsl(47, 100%, 51%); //#FFC907
@@ -64,3 +65,6 @@ $timeshadow: 0 0.125rem 0.625rem $timeshade;
 $modalshadow: 0 1.25rem 1.5rem -0.25rem $modshadow-1,
   0 0.5rem 0.5rem -0.25rem $modshadow-2;
 $buttonshadow: 0 0.0625rem 0.125rem $btnshadow;
+
+$textshade: rgba(18, 18, 18, 0.25);
+$textshadow: 0 0.25rem 0.5rem $textshade;

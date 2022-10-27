@@ -1,10 +1,10 @@
-@use '../../global' as *;
-@use '../../partials' as *;
+@use "../../global" as *;
+@use "../../partials" as *;
 
-button, 
-[type='button'], 
-[type='reset'], 
-[type='submit'] {
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
   cursor: pointer;
   border: none;
   @include transparent-button;
@@ -180,5 +180,32 @@ button,
 
   @include hover {
     @include setBgColor($primaryText, $white);
+  }
+}
+
+.btn-point {
+  @include setBgColor($white, $headingText);
+  @include border(solid, 0.5, $linkborder);
+  @include radius(18.5);
+  @include flex-center;
+  height: size(38);
+  font-size: size(14);
+  font-weight: 400;
+  padding: size(8) size(16);
+  text-align: center;
+  @include transitionsall;
+
+  @include breakpoint(tab992) {
+    font-size: size(16);
+  }
+
+  &:hover:not(.active) {
+    background: $btnbg;
+    border-color: transparent;
+  }
+
+  &.active {
+    background: $btnbg;
+    border-color: transparent;
   }
 }

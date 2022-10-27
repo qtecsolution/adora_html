@@ -1,2 +1,55 @@
 @use "../global" as *;
 @use "../partials" as *;
+
+.loyaltybanner {
+  padding: size(32) size(0) size(48);
+
+  @include breakpoint(tab992) {
+    padding: size(14) size(0) size(84);
+  }
+
+  .loyaltycontent {
+    height: size(300);
+    @include flex-center;
+    position: relative;
+    background: url(../images/banner/banner-bg.png) no-repeat;
+    background-size: cover;
+    padding: size(16);
+    @include radius(8);
+    overflow: hidden;
+
+    @include breakpoint(mobile480) {
+      padding: size(24);
+    }
+
+    @include breakpoint(tab992) {
+      height: size(450);
+      background-position: center;
+    }
+
+    .details {
+      position: relative;
+      @include wh100;
+      @include flex-center;
+      @include radius(8);
+      text-align: center;
+      z-index: 1;
+    }
+
+    .title {
+      color: $white;
+      letter-spacing: size(0.32);
+      font-weight: 700;
+      text-align: center;
+      text-transform: uppercase;
+      text-shadow: $textshadow;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba($black, 0.4);
+      @include radius(8);
+    }
+  }
+}
