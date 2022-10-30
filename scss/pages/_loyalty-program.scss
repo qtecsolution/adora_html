@@ -56,7 +56,8 @@
 
 .beautysquad,
 .accumulatepoints,
-.passtiers {
+.passtiers,
+.allprograms {
   padding-bottom: size(64);
 
   @include breakpoint(tab992) {
@@ -325,6 +326,84 @@
   }
 }
 
+.allprograms {
+  @include flex-column;
+  gap: size(80);
+
+  @include breakpoint(tab992) {
+    gap: size(120);
+  }
+
+  .program {
+    padding-left: size(12);
+    padding-right: size(12);
+
+    &-thumbnail {
+      @include w100;
+      max-width: size(390);
+      height: size(240);
+      @include radius(8);
+      @include flex-center;
+      overflow: hidden;
+
+      @include breakpoint(mobile576) {
+        height: size(280);
+      }
+
+      @include breakpoint(mobile768) {
+        height: size(340);
+      }
+
+      @include breakpoint(tab992) {
+        height: size(390);
+      }
+
+      img {
+        @include wh100;
+        object-fit: cover;
+        @include transitiontransform;
+
+        @include hover {
+          @include scale(1.1);
+        }
+      }
+    }
+
+    &-details {
+      @include flex-column;
+      gap: size(24);
+
+      @include breakpoint(tab992) {
+        gap: size(48);
+      }
+
+      .bigtitle-2,
+      .subtitle {
+        color: $black;
+        font-weight: 500;
+      }
+
+      .details {
+        max-width: size(420);
+
+        .text {
+          color: $primaryText;
+          letter-spacing: size(0.32);
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      padding: size(48) size(12) size(60);
+      background: $primary;
+
+      @include breakpoint(tab992) {
+        padding: size(98) size(0) size(123);
+      }
+    }
+  }
+}
+
 .howitwoks {
   padding-bottom: size(64);
 
@@ -334,6 +413,10 @@
 
     @include breakpoint(tab992) {
       gap: size(48);
+    }
+
+    @include breakpoint(desktop1200) {
+      gap: size(64);
     }
 
     @include breakpoint(desktop1200) {
