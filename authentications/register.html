@@ -1,174 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Adora Beauty | Register</title>
-  <!-- FAVICON -->
-  <link rel="shortcut icon" href="../assets/images/logo/favicon.svg" type="image/svg+xml">
-  <!-- NICE-SELECT CSS -->
-  <link rel="stylesheet" href="../assets/css/nice-select/nice-select2.css">
-  <!-- BOOTSTRAP CSS (5.2) -->
-  <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css">
-  <!-- ADORA CSS -->
-  <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-<body>
-  <!-- PAGE-LOADER START -->
-  <div class="preloader" id="preloader">
-    <div class="loader">
-      <div class="loader-box">
-        <span>A</span>
-        <span>d</span>
-        <span>o</span>
-        <span>r</span>
-        <span>a</span>
-      </div>
-    </div>
-  </div>
-  <!-- PAGE-LOADER END -->
-
-  <!-- AUTHENTICATION START -->
-  <main class="authentic-main">
-    <div class="authentic">
-      <div class="authentic-header">
-        <figure class="logo">
-          <img src="../assets//images/logo/logo.svg" alt="logo">
-        </figure>
-
-        <div class="headerinfo">
-          <h2 class="title">Create An Account</h2>
-          <p class="text">Create your account, find the finest beauty service near you</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adora Beauty | Register</title>
+    <!-- FAVICON -->
+    <link
+      rel="shortcut icon"
+      href="../assets/images/logo/favicon.svg"
+      type="image/svg+xml"
+    />
+    <!-- NICE-SELECT CSS -->
+    <link rel="stylesheet" href="../assets/css/nice-select/nice-select2.css" />
+    <!-- BOOTSTRAP CSS (5.2) -->
+    <link rel="stylesheet" href="../assets/css/bootstrap/bootstrap.min.css" />
+    <!-- ADORA CSS -->
+    <link rel="stylesheet" href="../assets/css/style.min.css" />
+  </head>
+  <body>
+    <!-- PAGE-LOADER START -->
+    <div class="preloader" id="preloader">
+      <div class="loader">
+        <div class="loader-box">
+          <span>A</span>
+          <span>d</span>
+          <span>o</span>
+          <span>r</span>
+          <span>a</span>
         </div>
       </div>
+    </div>
+    <!-- PAGE-LOADER END -->
 
-      <div class="authentic-body">
-        <div class="login">
-          <div class="login-header">
-            <div class="inputbox">
-              <input type="text" placeholder="Enter your name" class="inputfield">
-              
-              <div class="error-message">
-                <p class="message">This field is required</p>
+    <!-- AUTHENTICATION START -->
+    <main class="authentic-main">
+      <div class="authentic">
+        <div class="authentic-header">
+          <figure class="logo">
+            <img src="../assets//images/logo/logo.svg" alt="logo" />
+          </figure>
+
+          <div class="headerinfo">
+            <h2 class="title">Create An Account</h2>
+            <p class="text">
+              Create your account, find the finest beauty service near you
+            </p>
+          </div>
+        </div>
+
+        <div class="authentic-body">
+          <div class="login">
+            <div class="login-header">
+              <div class="inputbox">
+                <input
+                  type="text"
+                  placeholder="Enter your name"
+                  class="inputfield"
+                />
+
+                <div class="error-message">
+                  <p class="message">This field is required</p>
+                </div>
+              </div>
+
+              <div class="selectbox">
+                <select id="select-gender">
+                  <option value="Male">Male</option>
+                  <option value="Female">Female</option>
+                  <option value="Others">Others</option>
+                </select>
+              </div>
+
+              <div class="inputbox">
+                <input
+                  type="email"
+                  placeholder="Enter email address"
+                  class="inputfield"
+                />
+
+                <div class="error-message">
+                  <p class="message">This field is required</p>
+                </div>
+              </div>
+
+              <div class="inputbox">
+                <input
+                  type="tel"
+                  placeholder="Enter phone number"
+                  class="inputfield"
+                />
+
+                <div class="error-message">
+                  <p class="message">This field is required</p>
+                </div>
+              </div>
+
+              <div class="inputbox">
+                <div class="inputinfo">
+                  <input
+                    type="password"
+                    placeholder="Enter your password"
+                    class="inputfield passfield"
+                  />
+                  <button class="btn-toggle" type="button">
+                    <svg
+                      class="showpassicon"
+                      width="21"
+                      height="21"
+                      viewBox="0 0 21 21"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10.4122 3.36816C12.1358 3.36816 13.7699 3.96614 15.1927 5.07321C16.6154 6.1722 17.8268 7.78028 18.6967 9.79241C18.7618 9.94594 18.7618 10.1237 18.6967 10.2692C16.9569 14.2934 13.8593 16.7015 10.4122 16.7015H10.4041C6.96504 16.7015 3.86748 14.2934 2.12764 10.2692C2.0626 10.1237 2.0626 9.94594 2.12764 9.79241C3.86748 5.76816 6.96504 3.36816 10.4041 3.36816H10.4122ZM10.4122 6.80251C8.61544 6.80251 7.16016 8.24897 7.16016 10.0348C7.16016 11.8126 8.61544 13.2591 10.4122 13.2591C12.2008 13.2591 13.6561 11.8126 13.6561 10.0348C13.6561 8.24897 12.2008 6.80251 10.4122 6.80251ZM10.4132 8.01285C11.527 8.01285 12.4376 8.9179 12.4376 10.0331C12.4376 11.1401 11.527 12.0452 10.4132 12.0452C9.29122 12.0452 8.38065 11.1401 8.38065 10.0331C8.38065 9.89568 8.39691 9.76639 8.4213 9.63709H8.46195C9.36439 9.63709 10.0961 8.92598 10.1286 8.03709C10.218 8.02093 10.3156 8.01285 10.4132 8.01285Z"
+                        fill="#C9C9C9"
+                      />
+                    </svg>
+
+                    <svg
+                      class="hidepassicon"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 20 20"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <g opacity="0.3">
+                        <path
+                          d="M15.9754 3.09519C16.2193 2.85727 16.6015 2.85727 16.8373 3.09519C17.0812 3.33311 17.0812 3.72692 16.8373 3.96484L15.3574 5.45801C16.5364 6.54097 17.5366 8.00132 18.2846 9.75703C18.3497 9.91291 18.3497 10.0934 18.2846 10.2411C16.5446 14.3268 13.4466 16.7717 9.99898 16.7717H9.99085C8.42154 16.7717 6.91728 16.2548 5.5919 15.3113L4.01446 16.9029C3.89249 17.026 3.738 17.0834 3.5835 17.0834C3.42901 17.0834 3.26639 17.026 3.15255 16.9029C2.94927 16.6978 2.91675 16.3696 3.07937 16.1317L3.10377 16.0989L15.1297 3.96484C15.146 3.94843 15.1623 3.93202 15.1704 3.91561C15.1867 3.89921 15.2029 3.8828 15.2111 3.86639L15.9754 3.09519ZM10.0012 3.23786C11.1639 3.23786 12.2942 3.51681 13.335 4.04188L10.6191 6.78209C10.424 6.74928 10.2126 6.72466 10.0012 6.72466C8.20419 6.72466 6.74872 8.19322 6.74872 10.0064C6.74872 10.2197 6.77311 10.433 6.80564 10.6299L3.79711 13.6654C2.98399 12.7138 2.27658 11.5652 1.71553 10.2443C1.65049 10.0966 1.65049 9.91611 1.71553 9.76023C3.4556 5.67452 6.55357 3.23786 9.99305 3.23786H10.0012ZM12.6823 8.15721L11.796 9.05147C11.9423 9.33041 12.0236 9.65858 12.0236 10.0032C12.0236 11.1271 11.113 12.046 9.99898 12.046C9.65748 12.046 9.33223 11.964 9.05577 11.8163L8.16947 12.7106C8.68987 13.0633 9.3241 13.2766 9.99898 13.2766C11.7878 13.2766 13.2433 11.8081 13.2433 10.0032C13.2433 9.32221 13.0319 8.68228 12.6823 8.15721Z"
+                          fill="#4B4B4B"
+                        />
+                      </g>
+                    </svg>
+                  </button>
+                </div>
+
+                <div class="info">
+                  <p class="text">
+                    * Password must be at least 6 characters long.
+                  </p>
+                </div>
+
+                <div class="error-message">
+                  <p class="message">This field is required</p>
+                </div>
+              </div>
+
+              <div class="customcheck">
+                <input
+                  type="checkbox"
+                  id="remember"
+                  class="customcheck-box"
+                  checked
+                  hidden
+                />
+                <label for="remember" class="customcheck-label">
+                  I agree to Adora’s
+                  <a href="#" class="link">Terms of Service</a> and
+                  <a href="#" class="link">Privacy Policy</a>
+                </label>
+              </div>
+
+              <div class="submitbox">
+                <button class="btn-submit" type="submit">Sign In</button>
               </div>
             </div>
 
-            <div class="selectbox">
-              <select id="select-gender">
-                <option value="Male">Male</option>
-                <option value="Female">Female</option>
-                <option value="Others">Others</option>
-              </select>
-            </div>
-
-            <div class="inputbox">
-              <input type="email" placeholder="Enter email address" class="inputfield">
-              
-              <div class="error-message">
-                <p class="message">This field is required</p>
-              </div>
-            </div>
-
-            <div class="inputbox">
-              <input type="tel" placeholder="Enter phone number" class="inputfield">
-              
-              <div class="error-message">
-                <p class="message">This field is required</p>
-              </div>
-            </div>
-
-            <div class="inputbox">
-              <div class="inputinfo">
-                <input type="password" placeholder="Enter your password" class="inputfield passfield">
-                <button class="btn-toggle" type="button">
-                  <svg class="showpassicon" width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M10.4122 3.36816C12.1358 3.36816 13.7699 3.96614 15.1927 5.07321C16.6154 6.1722 17.8268 7.78028 18.6967 9.79241C18.7618 9.94594 18.7618 10.1237 18.6967 10.2692C16.9569 14.2934 13.8593 16.7015 10.4122 16.7015H10.4041C6.96504 16.7015 3.86748 14.2934 2.12764 10.2692C2.0626 10.1237 2.0626 9.94594 2.12764 9.79241C3.86748 5.76816 6.96504 3.36816 10.4041 3.36816H10.4122ZM10.4122 6.80251C8.61544 6.80251 7.16016 8.24897 7.16016 10.0348C7.16016 11.8126 8.61544 13.2591 10.4122 13.2591C12.2008 13.2591 13.6561 11.8126 13.6561 10.0348C13.6561 8.24897 12.2008 6.80251 10.4122 6.80251ZM10.4132 8.01285C11.527 8.01285 12.4376 8.9179 12.4376 10.0331C12.4376 11.1401 11.527 12.0452 10.4132 12.0452C9.29122 12.0452 8.38065 11.1401 8.38065 10.0331C8.38065 9.89568 8.39691 9.76639 8.4213 9.63709H8.46195C9.36439 9.63709 10.0961 8.92598 10.1286 8.03709C10.218 8.02093 10.3156 8.01285 10.4132 8.01285Z" fill="#C9C9C9"/>
+            <div class="login-body">
+              <div class="titlebox">
+                <span class="line">
+                  <svg
+                    width="189"
+                    height="1"
+                    viewBox="0 0 189 1"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      opacity="0.3"
+                      x1="0.5"
+                      y1="0.5"
+                      x2="188.5"
+                      y2="0.5"
+                      stroke="#4B4B4B"
+                      stroke-linecap="round"
+                    />
                   </svg>
-  
-                  <svg class="hidepassicon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <g opacity="0.3">
-                      <path d="M15.9754 3.09519C16.2193 2.85727 16.6015 2.85727 16.8373 3.09519C17.0812 3.33311 17.0812 3.72692 16.8373 3.96484L15.3574 5.45801C16.5364 6.54097 17.5366 8.00132 18.2846 9.75703C18.3497 9.91291 18.3497 10.0934 18.2846 10.2411C16.5446 14.3268 13.4466 16.7717 9.99898 16.7717H9.99085C8.42154 16.7717 6.91728 16.2548 5.5919 15.3113L4.01446 16.9029C3.89249 17.026 3.738 17.0834 3.5835 17.0834C3.42901 17.0834 3.26639 17.026 3.15255 16.9029C2.94927 16.6978 2.91675 16.3696 3.07937 16.1317L3.10377 16.0989L15.1297 3.96484C15.146 3.94843 15.1623 3.93202 15.1704 3.91561C15.1867 3.89921 15.2029 3.8828 15.2111 3.86639L15.9754 3.09519ZM10.0012 3.23786C11.1639 3.23786 12.2942 3.51681 13.335 4.04188L10.6191 6.78209C10.424 6.74928 10.2126 6.72466 10.0012 6.72466C8.20419 6.72466 6.74872 8.19322 6.74872 10.0064C6.74872 10.2197 6.77311 10.433 6.80564 10.6299L3.79711 13.6654C2.98399 12.7138 2.27658 11.5652 1.71553 10.2443C1.65049 10.0966 1.65049 9.91611 1.71553 9.76023C3.4556 5.67452 6.55357 3.23786 9.99305 3.23786H10.0012ZM12.6823 8.15721L11.796 9.05147C11.9423 9.33041 12.0236 9.65858 12.0236 10.0032C12.0236 11.1271 11.113 12.046 9.99898 12.046C9.65748 12.046 9.33223 11.964 9.05577 11.8163L8.16947 12.7106C8.68987 13.0633 9.3241 13.2766 9.99898 13.2766C11.7878 13.2766 13.2433 11.8081 13.2433 10.0032C13.2433 9.32221 13.0319 8.68228 12.6823 8.15721Z" fill="#4B4B4B"/>
-                    </g>
+                </span>
+                <span class="title">Or Sign up with</span>
+                <span class="line">
+                  <svg
+                    width="189"
+                    height="1"
+                    viewBox="0 0 189 1"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <line
+                      opacity="0.3"
+                      x1="0.5"
+                      y1="0.5"
+                      x2="188.5"
+                      y2="0.5"
+                      stroke="#4B4B4B"
+                      stroke-linecap="round"
+                    />
                   </svg>
+                </span>
+              </div>
+
+              <div class="signwithsocial">
+                <button class="btn-signin" type="button">
+                  <span class="icon">
+                    <svg
+                      width="26"
+                      height="27"
+                      viewBox="0 0 26 27"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M26 13.9788C26 6.79962 20.1791 0.97876 13 0.97876C5.82086 0.97876 0 6.79962 0 13.9788C0 20.4668 4.75325 25.8452 10.9689 26.8217V17.7375H7.66727V13.9788H10.9689V11.114C10.9689 7.85621 12.9104 6.05549 15.8793 6.05549C17.3016 6.05549 18.7897 6.30959 18.7897 6.30959V9.50891H17.1499C15.5357 9.50891 15.0311 10.5107 15.0311 11.54V13.9787H18.636L18.0602 17.7374H15.0309V26.8215C21.2467 25.847 25.9998 20.4686 25.9998 13.9787L26 13.9788Z"
+                        fill="#1977F3"
+                      />
+                      <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M18.0604 17.7373L18.6363 13.9786H15.0313V11.5399C15.0313 10.5125 15.534 9.50885 17.1501 9.50885H18.79V6.30953C18.79 6.30953 17.3019 6.05542 15.8795 6.05542C12.9107 6.05542 10.9692 7.85437 10.9692 11.114V13.9787H7.66748V17.7374H10.9692V26.8216C11.6309 26.9256 12.3092 26.9787 13.0002 26.9787C13.6913 26.9787 14.3695 26.9238 15.0313 26.8216V17.7374H18.0605L18.0604 17.7373Z"
+                        fill="#FEFEFE"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text">Sign up with Facebook</span>
+                </button>
+
+                <button class="btn-signin" type="button">
+                  <span class="icon">
+                    <svg
+                      width="27"
+                      height="26"
+                      viewBox="0 0 27 26"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M26.8431 13.2985C26.8431 12.4148 26.7704 11.5264 26.6153 10.657H14.1807V15.663H21.3014C21.0059 17.2776 20.0565 18.7059 18.6662 19.6134V22.8616H22.9145C25.4092 20.5974 26.8431 17.2537 26.8431 13.2985Z"
+                        fill="#4285F4"
+                      />
+                      <path
+                        d="M14.1807 26.0001C17.7362 26.0001 20.7347 24.8489 22.9193 22.8617L18.6711 19.6135C17.4891 20.4065 15.9633 20.8556 14.1855 20.8556C10.7462 20.8556 7.8301 18.5674 6.78378 15.4912H2.3999V18.8397C4.63787 23.2297 9.19612 26.0001 14.1807 26.0001Z"
+                        fill="#34A853"
+                      />
+                      <path
+                        d="M6.77894 15.4912C6.22671 13.8767 6.22671 12.1284 6.77894 10.5138V7.16528H2.39991C0.530107 10.8386 0.530107 15.1664 2.39991 18.8396L6.77894 15.4912Z"
+                        fill="#FBBC04"
+                      />
+                      <path
+                        d="M14.1807 5.14473C16.0601 5.11608 17.8767 5.81347 19.2378 7.09367L23.0016 3.38209C20.6184 1.17523 17.4552 -0.0380705 14.1807 0.00014363C9.1961 0.00014363 4.63787 2.77068 2.3999 7.16531L6.77893 10.5138C7.82039 7.4328 10.7414 5.14473 14.1807 5.14473Z"
+                        fill="#EA4335"
+                      />
+                    </svg>
+                  </span>
+                  <span class="text">Sign up with Google</span>
                 </button>
               </div>
-  
-              <div class="info">
-                <p class="text">* Password must be at least 6 characters long.</p>
+
+              <div class="infobox">
+                <p class="text">
+                  Already have an account?
+                  <a href="./login.html" class="link">Sign in</a>
+                </p>
               </div>
-              
-              <div class="error-message">
-                <p class="message">This field is required</p>
-              </div>
-            </div>
-
-            <div class="customcheck">
-              <input type="checkbox" id="remember" class="customcheck-box" checked hidden>
-              <label for="remember" class="customcheck-label">
-                I agree to Adora’s <a href="#" class="link">Terms of Service</a> and <a href="#" class="link">Privacy Policy</a>
-              </label>
-            </div>
-    
-            <div class="submitbox">
-              <button class="btn-submit" type="submit">Sign In</button>
-            </div>
-          </div>
-
-          <div class="login-body">
-            <div class="titlebox">
-              <span class="line">
-                <svg width="189" height="1" viewBox="0 0 189 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <line opacity="0.3" x1="0.5" y1="0.5" x2="188.5" y2="0.5" stroke="#4B4B4B" stroke-linecap="round"/>
-                </svg>
-              </span>
-              <span class="title">Or Sign up with</span>
-              <span class="line">
-                <svg width="189" height="1" viewBox="0 0 189 1" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <line opacity="0.3" x1="0.5" y1="0.5" x2="188.5" y2="0.5" stroke="#4B4B4B" stroke-linecap="round"/>
-                </svg>
-              </span>
-            </div>
-
-            <div class="signwithsocial">
-              <button class="btn-signin" type="button">
-                <span class="icon">
-                  <svg width="26" height="27" viewBox="0 0 26 27" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M26 13.9788C26 6.79962 20.1791 0.97876 13 0.97876C5.82086 0.97876 0 6.79962 0 13.9788C0 20.4668 4.75325 25.8452 10.9689 26.8217V17.7375H7.66727V13.9788H10.9689V11.114C10.9689 7.85621 12.9104 6.05549 15.8793 6.05549C17.3016 6.05549 18.7897 6.30959 18.7897 6.30959V9.50891H17.1499C15.5357 9.50891 15.0311 10.5107 15.0311 11.54V13.9787H18.636L18.0602 17.7374H15.0309V26.8215C21.2467 25.847 25.9998 20.4686 25.9998 13.9787L26 13.9788Z" fill="#1977F3"/>
-                    <path fill-rule="evenodd" clip-rule="evenodd" d="M18.0604 17.7373L18.6363 13.9786H15.0313V11.5399C15.0313 10.5125 15.534 9.50885 17.1501 9.50885H18.79V6.30953C18.79 6.30953 17.3019 6.05542 15.8795 6.05542C12.9107 6.05542 10.9692 7.85437 10.9692 11.114V13.9787H7.66748V17.7374H10.9692V26.8216C11.6309 26.9256 12.3092 26.9787 13.0002 26.9787C13.6913 26.9787 14.3695 26.9238 15.0313 26.8216V17.7374H18.0605L18.0604 17.7373Z" fill="#FEFEFE"/>
-                  </svg>
-                </span>
-                <span class="text">Sign up with Facebook</span>
-              </button>
-
-              <button class="btn-signin" type="button">
-                <span class="icon">
-                  <svg width="27" height="26" viewBox="0 0 27 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M26.8431 13.2985C26.8431 12.4148 26.7704 11.5264 26.6153 10.657H14.1807V15.663H21.3014C21.0059 17.2776 20.0565 18.7059 18.6662 19.6134V22.8616H22.9145C25.4092 20.5974 26.8431 17.2537 26.8431 13.2985Z" fill="#4285F4"/>
-                    <path d="M14.1807 26.0001C17.7362 26.0001 20.7347 24.8489 22.9193 22.8617L18.6711 19.6135C17.4891 20.4065 15.9633 20.8556 14.1855 20.8556C10.7462 20.8556 7.8301 18.5674 6.78378 15.4912H2.3999V18.8397C4.63787 23.2297 9.19612 26.0001 14.1807 26.0001Z" fill="#34A853"/>
-                    <path d="M6.77894 15.4912C6.22671 13.8767 6.22671 12.1284 6.77894 10.5138V7.16528H2.39991C0.530107 10.8386 0.530107 15.1664 2.39991 18.8396L6.77894 15.4912Z" fill="#FBBC04"/>
-                    <path d="M14.1807 5.14473C16.0601 5.11608 17.8767 5.81347 19.2378 7.09367L23.0016 3.38209C20.6184 1.17523 17.4552 -0.0380705 14.1807 0.00014363C9.1961 0.00014363 4.63787 2.77068 2.3999 7.16531L6.77893 10.5138C7.82039 7.4328 10.7414 5.14473 14.1807 5.14473Z" fill="#EA4335"/>
-                  </svg>
-                </span>
-                <span class="text">Sign up with Google</span>
-              </button>
-            </div>
-
-            <div class="infobox">
-              <p class="text">Already have an account? <a href="./login.html" class="link">Sign in</a></p>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  </main>
-  <!-- AUTHENTICATION END -->
+    </main>
+    <!-- AUTHENTICATION END -->
 
-  <!-- PRELOADER -->
-  <script src="../assets/js/loader/pageloader.js"></script>
-  <!-- NICE-SELECT -->
-  <script src="../assets/js/nice-select/nice-select2.js"></script>
-  <!-- SELECT JS -->
-  <script src="../assets/js/nice-select/customselect.js"></script>
-</body>
+    <!-- PRELOADER -->
+    <script src="../assets/js/loader/pageloader.js"></script>
+    <!-- NICE-SELECT -->
+    <script src="../assets/js/nice-select/nice-select2.js"></script>
+    <!-- SELECT JS -->
+    <script src="../assets/js/nice-select/customselect.js"></script>
+  </body>
 </html>

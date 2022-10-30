@@ -1,12 +1,11 @@
-@use '../global' as *;
-@use '../partials' as *;
+@use "../global" as *;
+@use "../partials" as *;
 
 .authentic-main {
   @include w100;
   min-height: 100vh;
   padding: size(20);
   @include flex-center-vert;
-  height: 100vh;
 
   .authentic {
     @include flex-column;
@@ -202,20 +201,20 @@
               .showpassicon {
                 display: none;
               }
-  
+
               .hidepassicon {
                 display: block;
               }
             }
 
             @include hover {
-              .showpassicon  {
+              .showpassicon {
                 path {
                   fill: $primary;
                 }
               }
 
-              .hidepassicon  {
+              .hidepassicon {
                 g {
                   opacity: 1;
 
@@ -255,7 +254,6 @@
         }
       }
 
-
       .verifications {
         .verify {
           @include flex-center;
@@ -271,11 +269,11 @@
             font-weight: 500;
             @include transitionsall;
             text-align: center;
-  
+
             &:focus {
               border-color: $primary;
             }
-  
+
             &::placeholder {
               color: rgba($primaryText, 0.3);
             }
@@ -300,11 +298,11 @@
         @include wh100;
       }
     }
-    
+
     .info {
       @include flex-center-column;
       gap: size(12);
-    
+
       .link {
         color: $headingText;
         @include font($primaryFont, 16, medium, normal, 24);
