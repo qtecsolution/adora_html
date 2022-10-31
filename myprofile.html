@@ -923,7 +923,163 @@
             <h3 class="title">My Profile</h3>
           </div>
 
-          <div class="myprofile-body"></div>
+          <div class="myprofile-body">
+            <div class="row col-md-6 col-lg-4 mx-md-auto">
+              <div class="profile">
+                <div class="profile-header">
+                  <figure class="profile-thumbnail">
+                    <img
+                      src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+                      alt="profile-thumbnail"
+                      class="profileimage d-none"
+                    />
+
+                    <!-- IF PROFILE DOESN'T EXISTS -->
+                    <span class="icon">
+                      <svg
+                        width="48"
+                        height="48"
+                        viewBox="0 0 48 48"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <g opacity="0.6">
+                          <path
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                            d="M39.68 36.3863C39.68 42.9783 30.64 43.7403 23.842 43.7403L23.3555 43.7399C19.0244 43.7294 8 43.4559 8 36.3463C8 29.8888 16.6767 29.0258 23.423 28.9933L24.3285 28.9927C28.6593 29.0033 39.68 29.2767 39.68 36.3863ZM23.842 31.9923C15.32 31.9923 11 33.4563 11 36.3463C11 39.2623 15.32 40.7403 23.842 40.7403C32.362 40.7403 36.68 39.2763 36.68 36.3863C36.68 33.4703 32.362 31.9923 23.842 31.9923ZM23.842 3.99951C29.698 3.99951 34.46 8.76351 34.46 14.6195C34.46 20.4755 29.698 25.2375 23.842 25.2375H23.778C17.934 25.2195 13.2 20.4535 13.2199 14.6135C13.2199 8.76351 17.984 3.99951 23.842 3.99951ZM23.842 6.85551C19.56 6.85551 16.076 10.3375 16.076 14.6195C16.062 18.8875 19.52 22.3675 23.784 22.3835L23.842 23.8115V22.3835C28.122 22.3835 31.604 18.8995 31.604 14.6195C31.604 10.3375 28.122 6.85551 23.842 6.85551Z"
+                            fill="#4B4B4B"
+                          />
+                        </g>
+                      </svg>
+                    </span>
+
+                    <div class="filebox">
+                      <label for="uploadimage" class="labelfile">
+                        <span class="icon">
+                          <svg
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M8.619 1.5273C8.9295 1.5273 9.1815 1.7793 9.1815 2.0898C9.1815 2.4003 8.9295 2.6523 8.619 2.6523H5.81475C3.87675 2.6523 2.625 3.9798 2.625 6.03405V12.2696C2.625 14.3238 3.87675 15.6513 5.81475 15.6513H12.4327C14.3707 15.6513 15.6233 14.3238 15.6233 12.2696V9.24855C15.6233 8.93805 15.8753 8.68605 16.1858 8.68605C16.4963 8.68605 16.7483 8.93805 16.7483 9.24855V12.2696C16.7483 14.9651 15.0135 16.7763 12.4327 16.7763H5.81475C3.234 16.7763 1.5 14.9651 1.5 12.2696V6.03405C1.5 3.33855 3.234 1.5273 5.81475 1.5273H8.619ZM15.1512 2.18625L16.0639 3.099C16.5087 3.543 16.7532 4.13325 16.7525 4.76175C16.7525 5.39025 16.5079 5.97975 16.0639 6.423L10.4322 12.0548C10.019 12.468 9.46845 12.696 8.88345 12.696H6.07395C5.92245 12.696 5.77695 12.6345 5.6712 12.5258C5.56545 12.4178 5.5077 12.2715 5.51145 12.1193L5.58195 9.285C5.5962 8.721 5.82345 8.19075 6.22245 7.791H6.2232L11.828 2.18625C12.7445 1.27125 14.2347 1.27125 15.1512 2.18625ZM11.3663 4.23825L7.0182 8.58675C6.82395 8.781 6.7137 9.039 6.70695 9.31275L6.6507 11.571H8.88345C9.16845 11.571 9.43545 11.4608 9.6372 11.259L14.0115 6.8835L11.3663 4.23825ZM12.6229 2.982L12.1613 3.4425L14.8065 6.0885L15.269 5.62725C15.5 5.39625 15.6275 5.08875 15.6275 4.76175C15.6275 4.434 15.5 4.12575 15.269 3.89475L14.3562 2.982C13.8785 2.50575 13.1014 2.50575 12.6229 2.982Z"
+                              fill="#10AB99"
+                            />
+                          </svg>
+                        </span>
+                      </label>
+                      <input type="file" id="uploadimage" hidden />
+                    </div>
+                  </figure>
+                </div>
+
+                <div class="profile-body">
+                  <div class="profileform">
+                    <div class="inputbox">
+                      <div class="inputbox-header">
+                        <label for="fullname" class="inputlabel"
+                          >Full Name</label
+                        >
+                        <button class="btn-edit">
+                          <svg
+                            width="18"
+                            height="18"
+                            viewBox="0 0 18 18"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                            data-bs-toggle="tooltip"
+                            data-bs-placement="left"
+                            data-bs-title="Edit Profile"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              clip-rule="evenodd"
+                              d="M8.619 1.5273C8.9295 1.5273 9.1815 1.7793 9.1815 2.0898C9.1815 2.4003 8.9295 2.6523 8.619 2.6523H5.81475C3.87675 2.6523 2.625 3.9798 2.625 6.03405V12.2696C2.625 14.3238 3.87675 15.6513 5.81475 15.6513H12.4327C14.3707 15.6513 15.6233 14.3238 15.6233 12.2696V9.24855C15.6233 8.93805 15.8753 8.68605 16.1858 8.68605C16.4963 8.68605 16.7483 8.93805 16.7483 9.24855V12.2696C16.7483 14.9651 15.0135 16.7763 12.4327 16.7763H5.81475C3.234 16.7763 1.5 14.9651 1.5 12.2696V6.03405C1.5 3.33855 3.234 1.5273 5.81475 1.5273H8.619ZM15.1512 2.18625L16.064 3.099C16.5087 3.543 16.7532 4.13325 16.7525 4.76175C16.7525 5.39025 16.508 5.97975 16.064 6.423L10.4322 12.0548C10.019 12.468 9.46845 12.696 8.88345 12.696H6.07395C5.92245 12.696 5.77695 12.6345 5.6712 12.5258C5.56545 12.4178 5.5077 12.2715 5.51145 12.1193L5.58195 9.285C5.5962 8.721 5.82345 8.19075 6.22245 7.791H6.2232L11.828 2.18625C12.7445 1.27125 14.2347 1.27125 15.1512 2.18625ZM11.3662 4.23825L7.0182 8.58675C6.82395 8.781 6.7137 9.039 6.70695 9.31275L6.6507 11.571H8.88345C9.16845 11.571 9.43545 11.4608 9.6372 11.259L14.0115 6.8835L11.3662 4.23825ZM12.6229 2.982L12.1613 3.4425L14.8065 6.0885L15.269 5.62725C15.5 5.39625 15.6275 5.08875 15.6275 4.76175C15.6275 4.434 15.5 4.12575 15.269 3.89475L14.3562 2.982C13.8785 2.50575 13.1014 2.50575 12.6229 2.982Z"
+                              fill="#ecc3b1"
+                            />
+                          </svg>
+                        </button>
+                      </div>
+
+                      <input
+                        type="text"
+                        id="fullname"
+                        class="inputfield"
+                        placeholder="Naomi Farzan Afrin"
+                        autocomplete="off"
+                        disabled="true"
+                      />
+                    </div>
+
+                    <div class="inputbox">
+                      <label for="phonenumber" class="inputlabel"
+                        >Mobile number</label
+                      >
+                      <input
+                        type="tel"
+                        id="phonenumber"
+                        class="inputfield"
+                        placeholder="016597541222"
+                        autocomplete="off"
+                        disabled="true"
+                      />
+                    </div>
+
+                    <div class="inputbox">
+                      <label for="emailaddress" class="inputlabel"
+                        >Email address</label
+                      >
+                      <input
+                        type="text"
+                        id="emailaddress"
+                        class="inputfield"
+                        placeholder="naomifarzana@gmail.com"
+                        autocomplete="off"
+                        disabled="true"
+                      />
+                    </div>
+
+                    <div class="inputbox">
+                      <label for="dob" class="inputlabel">Date of birth</label>
+                      <input
+                        type="text"
+                        id="dob"
+                        class="inputfield"
+                        placeholder="22 September 1993"
+                        autocomplete="off"
+                        disabled="true"
+                      />
+                    </div>
+
+                    <div class="inputbox">
+                      <label for="gender" class="inputlabel">Gender</label>
+                      <select
+                        id="select-gender"
+                        class="selectinput"
+                        autocomplete="off"
+                        disabled="true"
+                      >
+                        <option value="">Male</option>
+                        <option value="">Female</option>
+                        <option value="">Others</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="log">
+                    <a href="./authentications/login.html" class="log-out"
+                      >Logout</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1271,6 +1427,8 @@
     <!-- NICE-SELECT -->
     <script src="assets/js/nice-select/nice-select2.js"></script>
     <!-- SELECT JS -->
-    <script src="assets/js/nice-select/placeselect.js"></script>
+    <script src="assets/js/nice-select/genderselect.js"></script>
+    <!-- EDIT JS -->
+    <script src="assets/js/edit-profile/edit.js"></script>
   </body>
 </html>
