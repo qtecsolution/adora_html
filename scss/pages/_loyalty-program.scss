@@ -392,15 +392,6 @@
         }
       }
     }
-
-    &:nth-child(even) {
-      padding: size(48) size(12) size(60);
-      background: $primary;
-
-      @include breakpoint(tab992) {
-        padding: size(98) size(0) size(123);
-      }
-    }
   }
 }
 
@@ -457,6 +448,7 @@
         @include flex-center-column;
         gap: size(24);
         text-align: center;
+        @include transitionsall;
 
         &-header {
           @include flex-center-column;
@@ -479,6 +471,10 @@
             text-transform: uppercase;
             letter-spacing: size(0.32);
           }
+        }
+
+        @include hover {
+          @include translateY(size(-12));
         }
       }
     }

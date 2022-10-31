@@ -1,5 +1,5 @@
-@use '../global' as *;
-@use '../partials' as *;
+@use "../global" as *;
+@use "../partials" as *;
 
 /**======= STEP-PROGRESS =======**/
 .stepprogress {
@@ -50,21 +50,21 @@
           padding: size(4);
           border: none;
           top: 60%;
-  
+
           svg {
             @include wh100;
           }
-  
+
           @include hover {
             background: transparent;
             border: transparent;
           }
         }
-  
+
         .swiper-button-prev {
           left: size(-10);
         }
-  
+
         .swiper-button-next {
           right: size(-10);
         }
@@ -94,14 +94,14 @@
               width: calc(100% - size(35));
               overflow: hidden;
               @include text-overflow;
-  
+
               .title {
                 color: $headingText;
                 font-size: size(14);
                 font-weight: 400;
               }
             }
-  
+
             .count {
               @include square(24);
               @include border(solid, 0.5, rgba($primaryText, 0.3));
@@ -120,16 +120,16 @@
             &.active {
               background: rgba($primary, 0.3);
               border-color: transparent;
-  
+
               .count {
                 border-color: transparent;
               }
             }
-  
+
             &:active {
               background: rgba($primary, 0.3);
               border-color: transparent;
-  
+
               .count {
                 border-color: transparent;
               }
@@ -145,13 +145,13 @@
         .service-detail {
           @include flex-column;
           gap: size(32);
-  
+
           &-header {
             .title {
               font-weight: 500;
             }
           }
-  
+
           &-body {
             @include flex-column;
             gap: size(20);
@@ -195,34 +195,34 @@
             padding: size(4);
             border: none;
             top: 8.5%;
-    
+
             svg {
               @include wh100;
             }
-    
+
             @include hover {
               background: transparent;
               border: transparent;
             }
           }
-    
+
           .swiper-button-prev {
             left: size(-10);
           }
-    
+
           .swiper-button-next {
             right: size(-10);
           }
-    
+
           .calendarslider {
             padding: size(16) size(0);
             @include flex-column;
             gap: size(64);
-    
+
             .calendarlist {
               @include list-horizontal;
               position: relative;
-    
+
               &-link {
                 @include wh100;
                 border: none;
@@ -233,7 +233,7 @@
                 color: $headingText;
                 @include flex-center-column;
                 gap: size(14);
-  
+
                 .activeicon {
                   @include flex-center;
                   width: size(26);
@@ -241,67 +241,67 @@
                   overflow: hidden;
                   opacity: 0;
                   visibility: hidden;
-  
+
                   svg {
                     @include wh100;
                   }
                 }
-  
+
                 .linkinfo {
                   @include flex-center-column;
                   gap: size(2);
                   text-align: center;
-  
+
                   span {
                     color: rgba($headingText, 0.3);
                     @include font($primaryFont, 17, normal, normal, 24);
-                  
+
                     @include breakpoint(mobile768) {
                       font-size: size(19);
                     }
-                  
+
                     @include breakpoint(tab992) {
                       font-size: size(21);
                     }
                   }
                 }
-  
+
                 &:hover:not(.active) {
                   background: transparent;
-  
+
                   .activeicon {
                     opacity: 1;
                     visibility: visible;
                   }
-  
+
                   .linkinfo {
                     span {
                       color: $headingText;
                     }
                   }
                 }
-  
+
                 &.active {
                   background: transparent;
-  
+
                   .activeicon {
                     opacity: 1;
                     visibility: visible;
                   }
-  
+
                   .linkinfo {
                     span {
                       color: $headingText;
                     }
                   }
                 }
-      
+
                 &:active {
                   .activeicon {
                     opacity: 1;
                     visibility: visible;
                   }
-  
+
                   .linkinfo {
                     span {
                       color: $headingText;
@@ -323,6 +323,7 @@
         @include flex-center;
         flex-wrap: wrap;
         gap: size(12);
+        padding-right: size(4);
 
         @include breakpoint(mobile576) {
           gap: size(16);
@@ -386,7 +387,7 @@
             .title {
               color: $primaryText;
             }
-  
+
             .text {
               color: $primaryText;
             }
@@ -482,13 +483,13 @@
           margin-top: size(8);
           @include flex-center;
           text-align: center;
-  
+
           .text {
             .link {
               font-weight: 500;
               color: $primaryText;
               @include transitionscolor;
-  
+
               @include hover {
                 color: darken($primary, 20%);
               }
@@ -513,6 +514,20 @@
     &-body {
       @include flex-column;
       gap: size(36);
+
+      .applydiscount {
+        @include flex-column;
+        gap: size(16);
+
+        .title {
+          font-weight: 500;
+        }
+
+        .radios {
+          @include flex-center-vert;
+          gap: size(32);
+        }
+      }
 
       .couponcode {
         @include flex-column;
@@ -587,6 +602,53 @@
         }
       }
 
+      .vouchers {
+        @include flex-column;
+        gap: size(32);
+
+        &-header {
+          .title {
+            font-weight: 300;
+          }
+        }
+
+        &-body {
+          @include flex-center-vert;
+          gap: size(20);
+          flex-wrap: wrap;
+
+          .voucher {
+            width: calc((100% / 3) - size(20));
+
+            .voucherinput {
+              &:checked ~ .voucherlabel {
+                @include setBgColor($textSuccess, $white);
+                font-weight: 600;
+              }
+            }
+
+            .voucherlabel {
+              @include setBgColor($white, $primaryText);
+              box-shadow: $btnshade;
+              @include radius(8);
+              cursor: pointer;
+              @include flex-center;
+              font-weight: 400;
+              letter-spacing: size(0.32);
+              @include w100;
+              height: size(64);
+              text-align: center;
+              @include transitionsall;
+
+              @include hover {
+                @include setBgColor($textSuccess, $white);
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+
       .bookingnotes {
         @include flex-column;
         gap: size(16);
@@ -650,10 +712,10 @@
       .inputbox {
         @include flex-column;
         gap: size(6);
-        
+
         .inputlabel {
           font-weight: 400;
-          
+
           span {
             color: $danger;
           }
@@ -680,7 +742,7 @@
       .selectbox {
         @include flex-column;
         gap: size(6);
-        
+
         .selectlabel {
           font-weight: 400;
 
@@ -713,10 +775,10 @@
       .inputbox {
         @include flex-column;
         gap: size(6);
-        
+
         .inputlabel {
           font-weight: 400;
-          
+
           span {
             color: $danger;
           }
@@ -748,7 +810,7 @@
       .selectbox {
         @include flex-column;
         gap: size(6);
-        
+
         .selectlabel {
           font-weight: 400;
 
@@ -824,7 +886,7 @@
 
         .prices {
           @include flex-column;
-          
+
           .currentprice {
             color: $headingText;
           }
