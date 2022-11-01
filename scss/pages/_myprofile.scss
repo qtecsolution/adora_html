@@ -241,9 +241,30 @@
           font-weight: 400;
           font-size: size(17);
           letter-spacing: size(0.32);
+          @include transitionscolor;
 
           @include breakpoint(tab992) {
             font-size: size(19);
+          }
+
+          @include hover {
+            color: lighten($danger, 10%);
+          }
+        }
+
+        .btn-update {
+          color: $green;
+          font-weight: 400;
+          font-size: size(17);
+          letter-spacing: size(0.32);
+          @include transitionscolor;
+
+          @include breakpoint(tab992) {
+            font-size: size(19);
+          }
+
+          @include hover {
+            color: darken($green, 5%);
           }
         }
       }
