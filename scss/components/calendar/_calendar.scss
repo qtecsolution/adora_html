@@ -1,14 +1,6 @@
 @use "../../global" as *;
 @use "../../partials" as *;
 
-// #dob {
-//   &:focus {
-//     .calendar-popup {
-//       opacity: 1;
-//     }
-//   }
-// }
-
 .calendar-popup {
   background: $white;
   @include radius(4);
