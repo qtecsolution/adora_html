@@ -110,6 +110,7 @@
         .inputbox {
           @include flex-column;
           gap: size(12);
+          position: relative;
 
           .inputlabel {
             color: $primaryText;
@@ -225,6 +226,12 @@
               svg {
                 @include wh100;
               }
+            }
+          }
+
+          &.open {
+            .calendar-popup {
+              display: block;
             }
           }
         }
