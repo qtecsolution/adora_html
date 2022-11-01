@@ -1,5 +1,5 @@
-@use '../global'as *;
-@use '../partials'as *;
+@use "../global" as *;
+@use "../partials" as *;
 
 /**======= HOME-BANNER =======**/
 .homebanner {
@@ -30,7 +30,7 @@
         }
       }
 
-      .row>* {
+      .row > * {
         flex-shrink: 1;
       }
     }
@@ -292,7 +292,6 @@
         }
 
         .titles {
-
           .subtitle,
           .title {
             color: $headingText;
@@ -588,7 +587,7 @@
       max-width: 95%;
       overflow: hidden;
       overflow-x: scroll;
-      // padding-bottom: size(8);
+      padding-bottom: size(12);
 
       &::-webkit-scrollbar {
         height: size(4);
@@ -634,19 +633,20 @@
       gap: size(96);
     }
   }
-  
+
   &-header {
     .counterbox {
       @include flex-center-column;
       gap: size(12);
       text-align: center;
 
-      h1, h4 {
+      h1,
+      h4 {
         color: $headingText;
       }
     }
   }
-  
+
   &-body {
     @include flex-center;
 
@@ -668,7 +668,6 @@
     }
   }
 }
-
 
 /**======= BOOK-APPOINTMENT =======**/
 .bookappointment {
